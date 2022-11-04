@@ -235,6 +235,54 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+mainmenu.o: mainmenu.cpp.o
+.PHONY : mainmenu.o
+
+# target to build an object file
+mainmenu.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/mainmenu.cpp.o
+.PHONY : mainmenu.cpp.o
+
+mainmenu.i: mainmenu.cpp.i
+.PHONY : mainmenu.i
+
+# target to preprocess a source file
+mainmenu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/mainmenu.cpp.i
+.PHONY : mainmenu.cpp.i
+
+mainmenu.s: mainmenu.cpp.s
+.PHONY : mainmenu.s
+
+# target to generate assembly for a file
+mainmenu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/mainmenu.cpp.s
+.PHONY : mainmenu.cpp.s
+
+src_autogen/OIBSYM6ORI/qrc_resourses.o: src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o
+.PHONY : src_autogen/OIBSYM6ORI/qrc_resourses.o
+
+# target to build an object file
+src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o
+.PHONY : src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o
+
+src_autogen/OIBSYM6ORI/qrc_resourses.i: src_autogen/OIBSYM6ORI/qrc_resourses.cpp.i
+.PHONY : src_autogen/OIBSYM6ORI/qrc_resourses.i
+
+# target to preprocess a source file
+src_autogen/OIBSYM6ORI/qrc_resourses.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src_autogen/OIBSYM6ORI/qrc_resourses.cpp.i
+.PHONY : src_autogen/OIBSYM6ORI/qrc_resourses.cpp.i
+
+src_autogen/OIBSYM6ORI/qrc_resourses.s: src_autogen/OIBSYM6ORI/qrc_resourses.cpp.s
+.PHONY : src_autogen/OIBSYM6ORI/qrc_resourses.s
+
+# target to generate assembly for a file
+src_autogen/OIBSYM6ORI/qrc_resourses.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src_autogen/OIBSYM6ORI/qrc_resourses.cpp.s
+.PHONY : src_autogen/OIBSYM6ORI/qrc_resourses.cpp.s
+
 src_autogen/mocs_compilation.o: src_autogen/mocs_compilation.cpp.o
 .PHONY : src_autogen/mocs_compilation.o
 
@@ -279,6 +327,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... mainmenu.o"
+	@echo "... mainmenu.i"
+	@echo "... mainmenu.s"
+	@echo "... src_autogen/OIBSYM6ORI/qrc_resourses.o"
+	@echo "... src_autogen/OIBSYM6ORI/qrc_resourses.i"
+	@echo "... src_autogen/OIBSYM6ORI/qrc_resourses.s"
 	@echo "... src_autogen/mocs_compilation.o"
 	@echo "... src_autogen/mocs_compilation.i"
 	@echo "... src_autogen/mocs_compilation.s"

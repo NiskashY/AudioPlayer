@@ -1,0 +1,19 @@
+{
+	"BUILD_DIR" : "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen",
+	"CMAKE_BINARY_DIR" : "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/mint/GitRepos/AudioPlayer/src",
+	"CMAKE_SOURCE_DIR" : "/home/mint/GitRepos/AudioPlayer/src",
+	"INCLUDE_DIR" : "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen/include",
+	"INPUTS" : [],
+	"LOCK_FILE" : "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/CMakeFiles/src_autogen.dir/AutoRcc_resourses_4UGIYD6VGQ_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "resourses" ],
+	"OUTPUT_CHECKSUM" : "4UGIYD6VGQ",
+	"OUTPUT_NAME" : "qrc_resourses.cpp",
+	"RCC_EXECUTABLE" : "/usr/bin/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/CMakeFiles/src_autogen.dir/AutoRcc_resourses_4UGIYD6VGQ_Used.txt",
+	"SOURCE" : "/home/mint/GitRepos/AudioPlayer/src/images/resourses.qrc",
+	"VERBOSITY" : 0
+}

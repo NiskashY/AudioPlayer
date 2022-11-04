@@ -17,6 +17,8 @@ int main(int argc, char *argv[])
         std::cerr << "Cant Open database parametrs file!" << std::endl;
     } else {
 
+        // ReadToList because file_stream.readline() returns "<some strin>\n"
+        // because of \n symbol i cant get correct string
         QList wholeFile = file_stream.readLine().split(' ');
         QString driver_name = wholeFile[0];
         QString db_name = wholeFile[1];
@@ -36,7 +38,6 @@ int main(int argc, char *argv[])
             // Start of Application == Login
             LoginWindow login_window;
             login_window.show();
-
             return a.exec();
         }
     }
