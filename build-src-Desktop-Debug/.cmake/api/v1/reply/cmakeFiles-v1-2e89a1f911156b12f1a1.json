@@ -327,6 +327,9 @@
 		{
 			"isExternal" : true,
 			"path" : "/usr/lib64/cmake/Qt5Core/Qt5CoreConfig.cmake"
+		},
+		{
+			"path" : "Images/resourses.qrc"
 		}
 	],
 	"kind" : "cmakeFiles",

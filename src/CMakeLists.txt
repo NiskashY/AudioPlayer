@@ -19,6 +19,12 @@ set(PROJECT_SOURCES
         loginwindow.h
         loginwindow.cpp
         loginwindow.ui
+
+        mainmenu.h
+        mainmenu.cpp
+        mainmenu.ui
+
+        Images/resourses.qrc
 )
 
 add_executable(src

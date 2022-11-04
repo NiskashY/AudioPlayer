@@ -83,7 +83,8 @@
 		"/usr/lib64/cmake/Qt5Sql/Qt5Sql_QSQLiteDriverPlugin.cmake",
 		"/usr/lib64/cmake/Qt5Sql/Qt5Sql_QTDSDriverPlugin.cmake",
 		"/usr/lib64/cmake/Qt5Core/Qt5CoreConfigVersion.cmake",
-		"/usr/lib64/cmake/Qt5Core/Qt5CoreConfig.cmake"
+		"/usr/lib64/cmake/Qt5Core/Qt5CoreConfig.cmake",
+		"/home/mint/GitRepos/AudioPlayer/src/Images/resourses.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "/home/mint/GitRepos/AudioPlayer/src",
 	"DEP_FILE" : "",
@@ -94,6 +95,12 @@
 			"/home/mint/GitRepos/AudioPlayer/src/loginwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_loginwindow.cpp",
+			null
+		],
+		[
+			"/home/mint/GitRepos/AudioPlayer/src/mainmenu.h",
+			"MU",
+			"EWIEGA46WW/moc_mainmenu.cpp",
 			null
 		]
 	],
@@ -151,7 +158,8 @@
 	"SOURCES" : 
 	[
 		[ "/home/mint/GitRepos/AudioPlayer/src/loginwindow.cpp", "MU", null ],
-		[ "/home/mint/GitRepos/AudioPlayer/src/main.cpp", "MU", null ]
+		[ "/home/mint/GitRepos/AudioPlayer/src/main.cpp", "MU", null ],
+		[ "/home/mint/GitRepos/AudioPlayer/src/mainmenu.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

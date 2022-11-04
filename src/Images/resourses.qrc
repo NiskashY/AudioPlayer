@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/resourses/songsCovers">
+        <file>kotik.jpg</file>
+        <file>hamster.jpg</file>
+        <file>sound.jpg</file>
+    </qresource>
+</RCC>

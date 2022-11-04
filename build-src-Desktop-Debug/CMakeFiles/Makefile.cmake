@@ -10,6 +10,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.24.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.24.2/CMakeSystem.cmake"
   "/home/mint/GitRepos/AudioPlayer/src/CMakeLists.txt"
+  "/home/mint/GitRepos/AudioPlayer/src/Images/resourses.qrc"
   "/usr/lib64/cmake/Qt5/Qt5Config.cmake"
   "/usr/lib64/cmake/Qt5/Qt5ConfigVersion.cmake"
   "/usr/lib64/cmake/Qt5/Qt5ModuleLocation.cmake"
@@ -93,6 +94,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/src_autogen.dir/AutogenInfo.json"
+  "CMakeFiles/src_autogen.dir/AutoRcc_resourses_OIBSYM6ORI_Info.json"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
