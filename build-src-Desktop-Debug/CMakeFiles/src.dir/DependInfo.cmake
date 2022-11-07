@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/mint/GitRepos/AudioPlayer/src/mainmenu.cpp" "CMakeFiles/src.dir/mainmenu.cpp.o" "gcc" "CMakeFiles/src.dir/mainmenu.cpp.o.d"
   "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen/OIBSYM6ORI/qrc_resourses.cpp" "CMakeFiles/src.dir/src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o" "gcc" "CMakeFiles/src.dir/src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o.d"
   "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen/mocs_compilation.cpp" "CMakeFiles/src.dir/src_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/src.dir/src_autogen/mocs_compilation.cpp.o.d"
+  "/home/mint/GitRepos/AudioPlayer/src/startwindow.cpp" "CMakeFiles/src.dir/startwindow.cpp.o" "gcc" "CMakeFiles/src.dir/startwindow.cpp.o.d"
   )
 
 # Targets to which this target links.

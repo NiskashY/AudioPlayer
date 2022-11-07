@@ -102,6 +102,12 @@
 			"MU",
 			"EWIEGA46WW/moc_mainmenu.cpp",
 			null
+		],
+		[
+			"/home/mint/GitRepos/AudioPlayer/src/startwindow.h",
+			"MU",
+			"EWIEGA46WW/moc_startwindow.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -159,7 +165,8 @@
 	[
 		[ "/home/mint/GitRepos/AudioPlayer/src/loginwindow.cpp", "MU", null ],
 		[ "/home/mint/GitRepos/AudioPlayer/src/main.cpp", "MU", null ],
-		[ "/home/mint/GitRepos/AudioPlayer/src/mainmenu.cpp", "MU", null ]
+		[ "/home/mint/GitRepos/AudioPlayer/src/mainmenu.cpp", "MU", null ],
+		[ "/home/mint/GitRepos/AudioPlayer/src/startwindow.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

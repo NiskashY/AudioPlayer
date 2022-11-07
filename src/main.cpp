@@ -8,6 +8,7 @@
 #include <string>
 
 #include "loginwindow.h"
+#include "startwindow.h"
 
 int main(int argc, char *argv[])
 {

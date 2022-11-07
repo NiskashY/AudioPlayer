@@ -307,6 +307,30 @@ src_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src_autogen/mocs_compilation.cpp.s
 .PHONY : src_autogen/mocs_compilation.cpp.s
 
+startwindow.o: startwindow.cpp.o
+.PHONY : startwindow.o
+
+# target to build an object file
+startwindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/startwindow.cpp.o
+.PHONY : startwindow.cpp.o
+
+startwindow.i: startwindow.cpp.i
+.PHONY : startwindow.i
+
+# target to preprocess a source file
+startwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/startwindow.cpp.i
+.PHONY : startwindow.cpp.i
+
+startwindow.s: startwindow.cpp.s
+.PHONY : startwindow.s
+
+# target to generate assembly for a file
+startwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/startwindow.cpp.s
+.PHONY : startwindow.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -336,6 +360,9 @@ help:
 	@echo "... src_autogen/mocs_compilation.o"
 	@echo "... src_autogen/mocs_compilation.i"
 	@echo "... src_autogen/mocs_compilation.s"
+	@echo "... startwindow.o"
+	@echo "... startwindow.i"
+	@echo "... startwindow.s"
 .PHONY : help
 
 

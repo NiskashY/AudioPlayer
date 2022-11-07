@@ -24,6 +24,11 @@ set(PROJECT_SOURCES
         mainmenu.cpp
         mainmenu.ui
 
+
+        startwindow.h
+        startwindow.cpp
+        startwindow.ui
+
         Images/resourses.qrc
 )
 
