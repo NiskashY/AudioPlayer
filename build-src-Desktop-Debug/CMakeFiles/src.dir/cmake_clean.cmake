@@ -12,6 +12,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/src.dir/src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o.d"
   "CMakeFiles/src.dir/src_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/src.dir/src_autogen/mocs_compilation.cpp.o.d"
+  "CMakeFiles/src.dir/startwindow.cpp.o"
+  "CMakeFiles/src.dir/startwindow.cpp.o.d"
   "src"
   "src.pdb"
   "src_autogen/OIBSYM6ORI/qrc_resourses.cpp"

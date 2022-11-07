@@ -11,11 +11,11 @@ LoginWindow::LoginWindow(QWidget *parent) :
     ui->setupUi(this);
     this->setWindowTitle("Login page");
 
-    QPixmap pix(":/resourses/songsCovers/sound.jpg");
-    int width  = ui->appCover->width();
-    int height = ui->appCover->height();
+//    QPixmap pix(":/resourses/songsCovers/sound.jpg");
+//    int width  = ui->appCover->width();
+//    int height = ui->appCover->height();
 
-    ui->appCover->setPixmap(pix.scaled(width, height, Qt::KeepAspectRatio));
+//    ui->appCover->setPixmap(pix.scaled(width, height, Qt::KeepAspectRatio));
 }
 
 LoginWindow::~LoginWindow()
@@ -35,6 +35,7 @@ void LoginWindow::on_signUpButton_clicked()
 
 void LoginWindow::on_signInButton_clicked()
 {
+/*
     QString username_input_value = ui->usernameEditLine->text();
     QString password_input_value = ui->passwordEditLine->text();
 
@@ -50,5 +51,6 @@ void LoginWindow::on_signInButton_clicked()
         // или
         // Сообщить, что введенный пароль не верен
     }
+*/
 }
 
