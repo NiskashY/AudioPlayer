@@ -16,19 +16,17 @@ find_package(Qt5 REQUIRED COMPONENTS Widgets Sql Core)
 set(PROJECT_SOURCES
         main.cpp
 
+        # Login Window files
         loginwindow.h
         loginwindow.cpp
         loginwindow.ui
 
-        mainmenu.h
-        mainmenu.cpp
-        mainmenu.ui
+        # Main Window files
+        mainwindow.h
+        mainwindow.cpp
+        mainwindow.ui
 
-
-        startwindow.h
-        startwindow.cpp
-        startwindow.ui
-
+        # There stored all images for program
         Images/resourses.qrc
 )
 

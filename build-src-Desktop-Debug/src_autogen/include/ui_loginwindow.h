@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'loginwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.15.6
+** Created by: Qt User Interface Compiler version 5.15.7
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -56,7 +56,7 @@ public:
     {
         if (LoginWindow->objectName().isEmpty())
             LoginWindow->setObjectName(QString::fromUtf8("LoginWindow"));
-        LoginWindow->resize(1162, 658);
+        LoginWindow->resize(745, 545);
         LoginWindow->setLayoutDirection(Qt::LeftToRight);
         centralwidget = new QWidget(LoginWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));

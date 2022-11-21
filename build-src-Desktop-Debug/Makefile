@@ -235,29 +235,29 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-mainmenu.o: mainmenu.cpp.o
-.PHONY : mainmenu.o
+mainwindow.o: mainwindow.cpp.o
+.PHONY : mainwindow.o
 
 # target to build an object file
-mainmenu.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/mainmenu.cpp.o
-.PHONY : mainmenu.cpp.o
+mainwindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/mainwindow.cpp.o
+.PHONY : mainwindow.cpp.o
 
-mainmenu.i: mainmenu.cpp.i
-.PHONY : mainmenu.i
+mainwindow.i: mainwindow.cpp.i
+.PHONY : mainwindow.i
 
 # target to preprocess a source file
-mainmenu.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/mainmenu.cpp.i
-.PHONY : mainmenu.cpp.i
+mainwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/mainwindow.cpp.i
+.PHONY : mainwindow.cpp.i
 
-mainmenu.s: mainmenu.cpp.s
-.PHONY : mainmenu.s
+mainwindow.s: mainwindow.cpp.s
+.PHONY : mainwindow.s
 
 # target to generate assembly for a file
-mainmenu.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/mainmenu.cpp.s
-.PHONY : mainmenu.cpp.s
+mainwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/mainwindow.cpp.s
+.PHONY : mainwindow.cpp.s
 
 src_autogen/OIBSYM6ORI/qrc_resourses.o: src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o
 .PHONY : src_autogen/OIBSYM6ORI/qrc_resourses.o
@@ -307,30 +307,6 @@ src_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src_autogen/mocs_compilation.cpp.s
 .PHONY : src_autogen/mocs_compilation.cpp.s
 
-startwindow.o: startwindow.cpp.o
-.PHONY : startwindow.o
-
-# target to build an object file
-startwindow.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/startwindow.cpp.o
-.PHONY : startwindow.cpp.o
-
-startwindow.i: startwindow.cpp.i
-.PHONY : startwindow.i
-
-# target to preprocess a source file
-startwindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/startwindow.cpp.i
-.PHONY : startwindow.cpp.i
-
-startwindow.s: startwindow.cpp.s
-.PHONY : startwindow.s
-
-# target to generate assembly for a file
-startwindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/startwindow.cpp.s
-.PHONY : startwindow.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -351,18 +327,15 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... mainmenu.o"
-	@echo "... mainmenu.i"
-	@echo "... mainmenu.s"
+	@echo "... mainwindow.o"
+	@echo "... mainwindow.i"
+	@echo "... mainwindow.s"
 	@echo "... src_autogen/OIBSYM6ORI/qrc_resourses.o"
 	@echo "... src_autogen/OIBSYM6ORI/qrc_resourses.i"
 	@echo "... src_autogen/OIBSYM6ORI/qrc_resourses.s"
 	@echo "... src_autogen/mocs_compilation.o"
 	@echo "... src_autogen/mocs_compilation.i"
 	@echo "... src_autogen/mocs_compilation.s"
-	@echo "... startwindow.o"
-	@echo "... startwindow.i"
-	@echo "... startwindow.s"
 .PHONY : help
 
 
