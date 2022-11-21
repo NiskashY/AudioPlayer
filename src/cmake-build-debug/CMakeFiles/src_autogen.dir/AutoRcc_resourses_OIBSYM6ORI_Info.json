@@ -1,0 +1,25 @@
+{
+	"BUILD_DIR" : "/home/mint/GitRepos/AudioPlayer/src/cmake-build-debug/src_autogen",
+	"CMAKE_BINARY_DIR" : "/home/mint/GitRepos/AudioPlayer/src/cmake-build-debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/mint/GitRepos/AudioPlayer/src/cmake-build-debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/mint/GitRepos/AudioPlayer/src",
+	"CMAKE_SOURCE_DIR" : "/home/mint/GitRepos/AudioPlayer/src",
+	"INCLUDE_DIR" : "/home/mint/GitRepos/AudioPlayer/src/cmake-build-debug/src_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/mint/GitRepos/AudioPlayer/src/Images/default_song_cover.jpg",
+		"/home/mint/GitRepos/AudioPlayer/src/Images/kotik.jpg",
+		"/home/mint/GitRepos/AudioPlayer/src/Images/sound.jpg",
+		"/home/mint/GitRepos/AudioPlayer/src/Images/hamster.jpg"
+	],
+	"LOCK_FILE" : "/home/mint/GitRepos/AudioPlayer/src/cmake-build-debug/CMakeFiles/src_autogen.dir/AutoRcc_resourses_OIBSYM6ORI_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "resourses" ],
+	"OUTPUT_CHECKSUM" : "OIBSYM6ORI",
+	"OUTPUT_NAME" : "qrc_resourses.cpp",
+	"RCC_EXECUTABLE" : "/usr/bin/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/mint/GitRepos/AudioPlayer/src/cmake-build-debug/CMakeFiles/src_autogen.dir/AutoRcc_resourses_OIBSYM6ORI_Used.txt",
+	"SOURCE" : "/home/mint/GitRepos/AudioPlayer/src/Images/resourses.qrc",
+	"VERBOSITY" : 0
+}

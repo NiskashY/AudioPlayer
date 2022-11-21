@@ -1,8 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/src_autogen"
   "src_autogen/include/ui_loginwindow.h"
-  "src_autogen/include/ui_mainmenu.h"
-  "src_autogen/include/ui_startwindow.h"
+  "src_autogen/include/ui_mainwindow.h"
   "src_autogen/mocs_compilation.cpp"
 )
 

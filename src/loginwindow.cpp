@@ -3,7 +3,6 @@
 #include "loginwindow.h"
 #include "ui_loginwindow.h"
 
-#include "mainmenu.h"
 LoginWindow::LoginWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::LoginWindow)
@@ -24,7 +23,7 @@ LoginWindow::~LoginWindow()
 }
 
 
-
+/*
 void LoginWindow::on_signUpButton_clicked()
 {
     hide();
@@ -35,7 +34,6 @@ void LoginWindow::on_signUpButton_clicked()
 
 void LoginWindow::on_signInButton_clicked()
 {
-/*
     QString username_input_value = ui->usernameEditLine->text();
     QString password_input_value = ui->passwordEditLine->text();
 
@@ -51,6 +49,6 @@ void LoginWindow::on_signInButton_clicked()
         // или
         // Сообщить, что введенный пароль не верен
     }
-*/
-}
 
+}
+*/
