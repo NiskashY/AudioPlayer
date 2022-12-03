@@ -16,27 +16,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f37bbdd-04a0-4525-a241-7813e8e3ccfe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Images/resourses.qrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mainmenu.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mainmenu.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mainmenu.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.cmake/api/v1/reply.prev/cmakeFiles-v1-284b90d74f7e06ad5691.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.cmake/api/v1/reply.prev/codemodel-v2-5044328847df0ada91c8.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.cmake/api/v1/reply.prev/directory-.-Debug-a0c876f51c06019fb002.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.cmake/api/v1/reply.prev/index-2022-11-03T18-22-49-0689.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.cmake/api/v1/reply.prev/target-src-Debug-cc1f2a6fc637e747264a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.cmake/api/v1/reply/cmakeFiles-v1-284b90d74f7e06ad5691.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.cmake/api/v1/reply/codemodel-v2-5044328847df0ada91c8.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.cmake/api/v1/reply/directory-.-Debug-a0c876f51c06019fb002.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.cmake/api/v1/reply/index-2022-11-04T06-32-17-0314.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.cmake/api/v1/reply/target-src-Debug-cc1f2a6fc637e747264a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.qtc_clangd/.cache/clangd/index/QDialog.7E0FF9D62DB06A5E.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/.qtc_clangd/.cache/clangd/index/QDialog.7E0FF9D62DB06A5E.idx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainwindow.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainwindow.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainwindow.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainPage.xcf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PantusVisioRamka.vsdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program_templates/FirstDiagram.mwb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program_templates/MainPage.xcf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program_templates/PantusVisioRamka.vsdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program_templates/plan.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program_templates/procentovka_1.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.cmake/api/v1/reply.prev/codemodel-v2-94846d8775a822c23ea8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.cmake/api/v1/reply.prev/directory-.-Debug-726ad59c0a89fdb15bda.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.cmake/api/v1/reply.prev/index-2022-11-04T09-15-43-0643.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.cmake/api/v1/reply.prev/target-src-Debug-8944e72bb2696117dda0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.cmake/api/v1/reply/codemodel-v2-ac4a13425e73957ce33b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.cmake/api/v1/reply/directory-.-Debug-c2428253247c9e78a667.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.cmake/api/v1/reply/index-2022-11-07T16-42-50-0540.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.cmake/api/v1/reply/target-src-Debug-b97450fa572c77f8dc40.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.qtc_clangd/.cache/clangd/index/loginwindow.cpp.7B666E9417D584BE.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/.qtc_clangd/.cache/clangd/index/loginwindow.cpp.7B666E9417D584BE.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.qtc_clangd/.cache/clangd/index/main.cpp.40F9510EC5920667.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/.qtc_clangd/.cache/clangd/index/main.cpp.40F9510EC5920667.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.qtc_clangd/.cache/clangd/index/qboxlayout.h.2C17861AA72F3C25.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/.qtc_clangd/.cache/clangd/index/qboxlayout.h.2C17861AA72F3C25.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.qtc_clangd/.cache/clangd/index/qlabel.h.C3E745A089F32501.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/.qtc_clangd/.cache/clangd/index/qlabel.h.C3E745A089F32501.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.qtc_clangd/.cache/clangd/index/qlayout.h.47DE182400BA4273.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/.qtc_clangd/.cache/clangd/index/qlayout.h.47DE182400BA4273.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.qtc_clangd/.cache/clangd/index/qlayoutitem.h.27971C7471CE0792.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/.qtc_clangd/.cache/clangd/index/qlayoutitem.h.27971C7471CE0792.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.qtc_clangd/.cache/clangd/index/ranges_uninitialized.h.FF632BB0E3D2E55D.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/.qtc_clangd/.cache/clangd/index/ranges_uninitialized.h.FF632BB0E3D2E55D.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.qtc_clangd/.cache/clangd/index/ui_loginwindow.h.3FE04A5A73DD6CF1.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/.qtc_clangd/.cache/clangd/index/ui_loginwindow.h.3FE04A5A73DD6CF1.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/.qtc_clangd/compile_commands.json" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/.qtc_clangd/compile_commands.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/CMakeFiles/src.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/CMakeFiles/src.dir/DependInfo.cmake" afterDir="false" />
@@ -46,6 +54,8 @@
       <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/CMakeFiles/src.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/CMakeFiles/src.dir/compiler_depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/CMakeFiles/src.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/CMakeFiles/src.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/CMakeFiles/src.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/CMakeFiles/src.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/CMakeFiles/src_autogen.dir/AutoRcc_resourses_OIBSYM6ORI_Info.json" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/CMakeFiles/src_autogen.dir/AutoRcc_resourses_OIBSYM6ORI_Info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/CMakeFiles/src_autogen.dir/AutoRcc_resourses_OIBSYM6ORI_Used.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/CMakeFiles/src_autogen.dir/AutoRcc_resourses_OIBSYM6ORI_Used.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/CMakeFiles/src_autogen.dir/AutogenInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/CMakeFiles/src_autogen.dir/AutogenInfo.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/CMakeFiles/src_autogen.dir/ParseCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/CMakeFiles/src_autogen.dir/ParseCache.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/CMakeFiles/src_autogen.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/CMakeFiles/src_autogen.dir/cmake_clean.cmake" afterDir="false" />
@@ -53,16 +63,30 @@
       <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/src" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/src" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/src_autogen/EWIEGA46WW/moc_loginwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/src_autogen/EWIEGA46WW/moc_loginwindow.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/src_autogen/OIBSYM6ORI/qrc_resourses.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/src_autogen/OIBSYM6ORI/qrc_resourses.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/src_autogen/include/ui_loginwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/src_autogen/include/ui_loginwindow.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-src-Desktop-Debug/src_autogen/mocs_compilation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/build-src-Desktop-Debug/src_autogen/mocs_compilation.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/class_diagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plan.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/procentovka_1.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/procentovka_2.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/something.puml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt.user" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resourses/resourses.qrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/resourses.qrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/resourses.qrc" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/resourses.qrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/loginwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/loginwindow.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/loginwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/loginwindow.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/loginwindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/src/loginwindow.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources.qrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainmenu.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainmenu.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainmenu.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/startwindow.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/startwindow.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/startwindow.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/state-diagram.vsdx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,14 +128,14 @@
     "WebServerToolWindowFactoryState": "false",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "/home/mint/GitRepos/AudioPlayer",
+    "last_opened_file_path": "/home/mint/GitRepos/AudioPlayer/src",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -125,6 +149,8 @@
       <updated>1667570856181</updated>
       <workItem from="1667570860799" duration="232000" />
       <workItem from="1667571111221" duration="8083000" />
+      <workItem from="1667671391686" duration="19000" />
+      <workItem from="1669054872910" duration="13000" />
     </task>
     <servers />
   </component>

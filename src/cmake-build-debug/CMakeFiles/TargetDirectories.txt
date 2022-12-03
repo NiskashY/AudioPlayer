@@ -1,0 +1,9 @@
+/home/mint/GitRepos/AudioPlayer/src/cmake-build-debug/CMakeFiles/src.dir
+/home/mint/GitRepos/AudioPlayer/src/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/mint/GitRepos/AudioPlayer/src/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/mint/GitRepos/AudioPlayer/src/cmake-build-debug/CMakeFiles/list_install_components.dir
+/home/mint/GitRepos/AudioPlayer/src/cmake-build-debug/CMakeFiles/install.dir
+/home/mint/GitRepos/AudioPlayer/src/cmake-build-debug/CMakeFiles/install/local.dir
+/home/mint/GitRepos/AudioPlayer/src/cmake-build-debug/CMakeFiles/install/strip.dir
+/home/mint/GitRepos/AudioPlayer/src/cmake-build-debug/CMakeFiles/src_autogen_timestamp_deps.dir
+/home/mint/GitRepos/AudioPlayer/src/cmake-build-debug/CMakeFiles/src_autogen.dir

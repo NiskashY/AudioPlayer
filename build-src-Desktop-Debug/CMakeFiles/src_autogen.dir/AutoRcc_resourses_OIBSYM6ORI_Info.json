@@ -7,6 +7,7 @@
 	"INCLUDE_DIR" : "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen/include",
 	"INPUTS" : 
 	[
+		"/home/mint/GitRepos/AudioPlayer/src/Images/default_song_cover.jpg",
 		"/home/mint/GitRepos/AudioPlayer/src/Images/kotik.jpg",
 		"/home/mint/GitRepos/AudioPlayer/src/Images/sound.jpg",
 		"/home/mint/GitRepos/AudioPlayer/src/Images/hamster.jpg"

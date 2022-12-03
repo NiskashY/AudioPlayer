@@ -8,6 +8,8 @@
 #include <string>
 
 #include "loginwindow.h"
+#include "mainwindow.h"
+
 
 int main(int argc, char *argv[])
 {
@@ -38,6 +40,13 @@ int main(int argc, char *argv[])
             // Start of Application == Login
             LoginWindow login_window;
             login_window.show();
+
+            while(login_window.isActiveWindow()) {
+
+            }
+
+            MainWindow mw;
+            mw.show();
             return a.exec();
         }
     }
