@@ -159,10 +159,10 @@
         "-ferror-limit=1000",
         "-x",
         "c++",
-        "/home/mint/GitRepos/AudioPlayer/src/mainmenu.cpp"
+        "/home/mint/GitRepos/AudioPlayer/src/mainwindow.cpp"
     ],
     "directory": "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/.qtc_clangd",
-    "file": "/home/mint/GitRepos/AudioPlayer/src/mainmenu.cpp"
+    "file": "/home/mint/GitRepos/AudioPlayer/src/mainwindow.cpp"
 },
 {
     "arguments": [
@@ -269,9 +269,9 @@
         "-ferror-limit=1000",
         "-x",
         "c++-header",
-        "/home/mint/GitRepos/AudioPlayer/src/mainmenu.h"
+        "/home/mint/GitRepos/AudioPlayer/src/mainwindow.h"
     ],
     "directory": "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/.qtc_clangd",
-    "file": "/home/mint/GitRepos/AudioPlayer/src/mainmenu.h"
+    "file": "/home/mint/GitRepos/AudioPlayer/src/mainwindow.h"
 }
 ]

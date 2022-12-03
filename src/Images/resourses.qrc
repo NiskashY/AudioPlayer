@@ -3,5 +3,6 @@
         <file>kotik.jpg</file>
         <file>hamster.jpg</file>
         <file>sound.jpg</file>
+        <file>default_song_cover.jpg</file>
     </qresource>
 </RCC>

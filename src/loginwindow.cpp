@@ -3,7 +3,6 @@
 #include "loginwindow.h"
 #include "ui_loginwindow.h"
 
-#include "mainmenu.h"
 LoginWindow::LoginWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::LoginWindow)
@@ -11,11 +10,11 @@ LoginWindow::LoginWindow(QWidget *parent) :
     ui->setupUi(this);
     this->setWindowTitle("Login page");
 
-    QPixmap pix(":/resourses/songsCovers/sound.jpg");
-    int width  = ui->appCover->width();
-    int height = ui->appCover->height();
+//    QPixmap pix(":/resourses/songsCovers/sound.jpg");
+//    int width  = ui->appCover->width();
+//    int height = ui->appCover->height();
 
-    ui->appCover->setPixmap(pix.scaled(width, height, Qt::KeepAspectRatio));
+//    ui->appCover->setPixmap(pix.scaled(width, height, Qt::KeepAspectRatio));
 }
 
 LoginWindow::~LoginWindow()
@@ -24,7 +23,7 @@ LoginWindow::~LoginWindow()
 }
 
 
-
+/*
 void LoginWindow::on_signUpButton_clicked()
 {
     hide();
@@ -50,5 +49,6 @@ void LoginWindow::on_signInButton_clicked()
         // или
         // Сообщить, что введенный пароль не верен
     }
-}
 
+}
+*/

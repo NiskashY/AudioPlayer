@@ -391,21 +391,15 @@ CMakeFiles/src.dir/loginwindow.cpp.o: /home/mint/GitRepos/AudioPlayer/src/loginw
   /usr/include/qt/QtGui/qinputmethod.h \
   /usr/include/qt/QtCore/qlocale.h \
   /usr/include/qt/QtCore/qvariant.h \
-  /usr/include/qt/QtWidgets/QFormLayout \
-  /usr/include/qt/QtWidgets/qformlayout.h \
-  /usr/include/qt/QtWidgets/QLayout \
+  /usr/include/qt/QtWidgets/QHBoxLayout \
+  /usr/include/qt/QtWidgets/qboxlayout.h \
   /usr/include/qt/QtWidgets/qlayout.h \
   /usr/include/qt/QtWidgets/qlayoutitem.h \
   /usr/include/qt/QtWidgets/qboxlayout.h \
-  /usr/include/qt/QtWidgets/qlayout.h \
   /usr/include/qt/QtWidgets/qgridlayout.h \
-  /usr/include/qt/QtWidgets/QGroupBox \
-  /usr/include/qt/QtWidgets/qgroupbox.h \
-  /usr/include/qt/QtWidgets/qframe.h \
-  /usr/include/qt/QtWidgets/QHBoxLayout \
-  /usr/include/qt/QtWidgets/qboxlayout.h \
   /usr/include/qt/QtWidgets/QLabel \
   /usr/include/qt/QtWidgets/qlabel.h \
+  /usr/include/qt/QtWidgets/qframe.h \
   /usr/include/qt/QtWidgets/QLineEdit \
   /usr/include/qt/QtWidgets/qlineedit.h \
   /usr/include/qt/QtGui/qtextcursor.h \
@@ -420,10 +414,7 @@ CMakeFiles/src.dir/loginwindow.cpp.o: /home/mint/GitRepos/AudioPlayer/src/loginw
   /usr/include/qt/QtWidgets/qlayoutitem.h \
   /usr/include/qt/QtWidgets/QVBoxLayout \
   /usr/include/qt/QtWidgets/QWidget \
-  /usr/include/qt/QtWidgets/qwidget.h \
-  /home/mint/GitRepos/AudioPlayer/src/mainmenu.h \
-  /usr/include/qt/QtWidgets/QDialog \
-  /usr/include/qt/QtWidgets/qdialog.h
+  /usr/include/qt/QtWidgets/qwidget.h
 
 CMakeFiles/src.dir/main.cpp.o: /home/mint/GitRepos/AudioPlayer/src/main.cpp \
   /usr/include/stdc-predef.h \
@@ -1134,13 +1125,14 @@ CMakeFiles/src.dir/main.cpp.o: /home/mint/GitRepos/AudioPlayer/src/main.cpp \
   /usr/include/c++/12.2.0/bits/fstream.tcc \
   /home/mint/GitRepos/AudioPlayer/src/loginwindow.h \
   /usr/include/qt/QtWidgets/QMainWindow \
-  /usr/include/qt/QtWidgets/qmainwindow.h
+  /usr/include/qt/QtWidgets/qmainwindow.h \
+  /home/mint/GitRepos/AudioPlayer/src/mainwindow.h
 
-CMakeFiles/src.dir/mainmenu.cpp.o: /home/mint/GitRepos/AudioPlayer/src/mainmenu.cpp \
+CMakeFiles/src.dir/mainwindow.cpp.o: /home/mint/GitRepos/AudioPlayer/src/mainwindow.cpp \
   /usr/include/stdc-predef.h \
-  /home/mint/GitRepos/AudioPlayer/src/mainmenu.h \
-  /usr/include/qt/QtWidgets/QDialog \
-  /usr/include/qt/QtWidgets/qdialog.h \
+  /home/mint/GitRepos/AudioPlayer/src/mainwindow.h \
+  /usr/include/qt/QtWidgets/QMainWindow \
+  /usr/include/qt/QtWidgets/qmainwindow.h \
   /usr/include/qt/QtWidgets/qtwidgetsglobal.h \
   /usr/include/qt/QtGui/qtguiglobal.h \
   /usr/include/qt/QtCore/qglobal.h \
@@ -1507,7 +1499,9 @@ CMakeFiles/src.dir/mainmenu.cpp.o: /home/mint/GitRepos/AudioPlayer/src/mainmenu.
   /usr/include/qt/QtWidgets/qsizepolicy.h \
   /usr/include/qt/QtGui/qcursor.h \
   /usr/include/qt/QtGui/qkeysequence.h \
-  src_autogen/include/ui_mainmenu.h \
+  /usr/include/qt/QtWidgets/qtabwidget.h \
+  /usr/include/qt/QtGui/qicon.h \
+  src_autogen/include/ui_mainwindow.h \
   /usr/include/qt/QtCore/QVariant \
   /usr/include/qt/QtCore/qvariant.h \
   /usr/include/qt/QtCore/qmap.h \
@@ -1521,11 +1515,34 @@ CMakeFiles/src.dir/mainmenu.cpp.o: /home/mint/GitRepos/AudioPlayer/src/mainmenu.
   /usr/include/qt/QtGui/qinputmethod.h \
   /usr/include/qt/QtCore/qlocale.h \
   /usr/include/qt/QtCore/qvariant.h \
-  /usr/include/qt/QtWidgets/QDialog \
+  /usr/include/qt/QtWidgets/QHBoxLayout \
+  /usr/include/qt/QtWidgets/qboxlayout.h \
+  /usr/include/qt/QtWidgets/qlayout.h \
+  /usr/include/qt/QtWidgets/qlayoutitem.h \
+  /usr/include/qt/QtWidgets/qboxlayout.h \
+  /usr/include/qt/QtWidgets/qgridlayout.h \
+  /usr/include/qt/QtWidgets/QLabel \
+  /usr/include/qt/QtWidgets/qlabel.h \
+  /usr/include/qt/QtWidgets/qframe.h \
+  /usr/include/qt/QtWidgets/QMainWindow \
+  /usr/include/qt/QtWidgets/QMenuBar \
+  /usr/include/qt/QtWidgets/qmenubar.h \
+  /usr/include/qt/QtWidgets/qmenu.h \
+  /usr/include/qt/QtWidgets/qaction.h \
+  /usr/include/qt/QtWidgets/qactiongroup.h \
   /usr/include/qt/QtWidgets/QPushButton \
   /usr/include/qt/QtWidgets/qpushbutton.h \
   /usr/include/qt/QtWidgets/qabstractbutton.h \
-  /usr/include/qt/QtGui/qicon.h
+  /usr/include/qt/QtWidgets/QSlider \
+  /usr/include/qt/QtWidgets/qslider.h \
+  /usr/include/qt/QtWidgets/qabstractslider.h \
+  /usr/include/qt/QtWidgets/QSpacerItem \
+  /usr/include/qt/QtWidgets/qlayoutitem.h \
+  /usr/include/qt/QtWidgets/QStatusBar \
+  /usr/include/qt/QtWidgets/qstatusbar.h \
+  /usr/include/qt/QtWidgets/QVBoxLayout \
+  /usr/include/qt/QtWidgets/QWidget \
+  /usr/include/qt/QtWidgets/qwidget.h
 
 CMakeFiles/src.dir/src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o: src_autogen/OIBSYM6ORI/qrc_resourses.cpp \
   /usr/include/stdc-predef.h
@@ -1904,21 +1921,29 @@ CMakeFiles/src.dir/src_autogen/mocs_compilation.cpp.o: src_autogen/mocs_compilat
   /usr/include/qt/QtGui/qkeysequence.h \
   /usr/include/qt/QtWidgets/qtabwidget.h \
   /usr/include/qt/QtGui/qicon.h \
-  src_autogen/EWIEGA46WW/moc_mainmenu.cpp \
-  /home/mint/GitRepos/AudioPlayer/src/mainmenu.h \
-  /usr/include/qt/QtWidgets/QDialog \
-  /usr/include/qt/QtWidgets/qdialog.h
+  src_autogen/EWIEGA46WW/moc_mainwindow.cpp \
+  /home/mint/GitRepos/AudioPlayer/src/mainwindow.h
 
 
-src_autogen/EWIEGA46WW/moc_mainmenu.cpp:
+src_autogen/EWIEGA46WW/moc_mainwindow.cpp:
 
 src_autogen/EWIEGA46WW/moc_loginwindow.cpp:
 
 src_autogen/mocs_compilation.cpp:
 
-src_autogen/include/ui_mainmenu.h:
+/usr/include/qt/QtWidgets/QStatusBar:
 
-/home/mint/GitRepos/AudioPlayer/src/mainmenu.cpp:
+/usr/include/qt/QtWidgets/qaction.h:
+
+/usr/include/qt/QtWidgets/qmenu.h:
+
+/usr/include/qt/QtWidgets/qmenubar.h:
+
+/usr/include/qt/QtWidgets/QMenuBar:
+
+src_autogen/include/ui_mainwindow.h:
+
+/home/mint/GitRepos/AudioPlayer/src/mainwindow.h:
 
 /usr/include/c++/12.2.0/fstream:
 
@@ -2028,22 +2053,6 @@ src_autogen/include/ui_mainmenu.h:
 
 /usr/include/qt/QtCore/qreadwritelock.h:
 
-/usr/include/c++/12.2.0/bits/random.tcc:
-
-/usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/opt_random.h:
-
-/usr/include/c++/12.2.0/bits/random.h:
-
-/usr/include/qt/QtSql/qsqlrecord.h:
-
-/usr/include/c++/12.2.0/random:
-
-/usr/include/qt/QtCore/qrandom.h:
-
-/usr/include/qt/QtCore/qqueue.h:
-
-/usr/include/qt/QtCore/qvariantanimation.h:
-
 /usr/include/qt/QtCore/qtransposeproxymodel.h:
 
 /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/atomic_word.h:
@@ -2130,6 +2139,8 @@ src_autogen/OIBSYM6ORI/qrc_resourses.cpp:
 
 /usr/include/c++/12.2.0/bits/ostream_insert.h:
 
+/usr/include/qt/QtCore/qrandom.h:
+
 /usr/include/bits/locale.h:
 
 /usr/include/locale.h:
@@ -2161,6 +2172,8 @@ src_autogen/OIBSYM6ORI/qrc_resourses.cpp:
 /usr/include/qt/QtCore/qlibrary.h:
 
 /usr/include/c++/12.2.0/cwchar:
+
+/usr/include/qt/QtCore/qvariantanimation.h:
 
 /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/error_constants.h:
 
@@ -2209,6 +2222,8 @@ src_autogen/OIBSYM6ORI/qrc_resourses.cpp:
 /usr/include/bits/xopen_lim.h:
 
 /usr/include/qt/QtCore/qsharedpointer.h:
+
+/usr/include/qt/QtWidgets/qactiongroup.h:
 
 /usr/include/c++/12.2.0/bits/new_allocator.h:
 
@@ -2272,6 +2287,10 @@ src_autogen/OIBSYM6ORI/qrc_resourses.cpp:
 
 /usr/include/c++/12.2.0/ios:
 
+/usr/include/qt/QtCore/qtemporarydir.h:
+
+/usr/include/qt/QtGui/qguiapplication.h:
+
 /usr/include/sched.h:
 
 /usr/include/wctype.h:
@@ -2279,8 +2298,6 @@ src_autogen/OIBSYM6ORI/qrc_resourses.cpp:
 /usr/include/bits/fp-fast.h:
 
 /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/gthr-default.h:
-
-/usr/include/qt/QtWidgets/QGroupBox:
 
 /usr/include/c++/12.2.0/bits/algorithmfwd.h:
 
@@ -2327,8 +2344,6 @@ src_autogen/OIBSYM6ORI/qrc_resourses.cpp:
 /usr/include/c++/12.2.0/bits/ios_base.h:
 
 /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/c++allocator.h:
-
-/usr/include/qt/QtWidgets/QDialog:
 
 /usr/include/bits/local_lim.h:
 
@@ -2514,6 +2529,8 @@ src_autogen/OIBSYM6ORI/qrc_resourses.cpp:
 
 /usr/include/sys/cdefs.h:
 
+/home/mint/GitRepos/AudioPlayer/src/mainwindow.cpp:
+
 /usr/include/bits/long-double.h:
 
 /usr/include/c++/12.2.0/bits/atomic_timed_wait.h:
@@ -2620,6 +2637,8 @@ src_autogen/OIBSYM6ORI/qrc_resourses.cpp:
 
 /usr/include/bits/select.h:
 
+/usr/include/qt/QtWidgets/qstatusbar.h:
+
 /usr/include/c++/12.2.0/bits/atomic_lockfree_defines.h:
 
 /usr/include/bits/types/sigset_t.h:
@@ -2662,6 +2681,8 @@ src_autogen/OIBSYM6ORI/qrc_resourses.cpp:
 
 /usr/include/c++/12.2.0/bits/uses_allocator_args.h:
 
+/usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/opt_random.h:
+
 /usr/include/c++/12.2.0/cstdint:
 
 /usr/include/bits/types/struct_timeval.h:
@@ -2687,8 +2708,6 @@ src_autogen/OIBSYM6ORI/qrc_resourses.cpp:
 /usr/include/qt/QtCore/qlist.h:
 
 /usr/include/qt/QtCore/qdeadlinetimer.h:
-
-/usr/include/qt/QtWidgets/qformlayout.h:
 
 /usr/include/c++/12.2.0/cmath:
 
@@ -2854,8 +2873,6 @@ src_autogen/OIBSYM6ORI/qrc_resourses.cpp:
 
 /usr/include/qt/QtCore/qpoint.h:
 
-/usr/include/qt/QtWidgets/qgroupbox.h:
-
 /usr/include/qt/QtGui/qrgb.h:
 
 /usr/include/qt/QtGui/qrgba64.h:
@@ -2958,14 +2975,6 @@ src_autogen/include/ui_loginwindow.h:
 
 /usr/include/qt/QtGui/qinputmethod.h:
 
-/usr/include/qt/QtCore/qtemporarydir.h:
-
-/usr/include/qt/QtGui/qguiapplication.h:
-
-/usr/include/qt/QtWidgets/QFormLayout:
-
-/usr/include/qt/QtWidgets/QLayout:
-
 /usr/include/qt/QtGui/qtguiglobal.h:
 
 /usr/include/qt/QtWidgets/QHBoxLayout:
@@ -2989,8 +2998,6 @@ src_autogen/include/ui_loginwindow.h:
 /usr/include/qt/QtWidgets/qpushbutton.h:
 
 /usr/include/qt/QtWidgets/qabstractbutton.h:
-
-/home/mint/GitRepos/AudioPlayer/src/mainmenu.h:
 
 /home/mint/GitRepos/AudioPlayer/src/main.cpp:
 
@@ -3114,6 +3121,8 @@ src_autogen/include/ui_loginwindow.h:
 
 /usr/include/qt/QtCore/qrunnable.h:
 
+/usr/include/qt/QtWidgets/QSlider:
+
 /usr/include/c++/12.2.0/bits/unique_lock.h:
 
 /usr/include/qt/QtCore/qfuturewatcher.h:
@@ -3189,3 +3198,13 @@ src_autogen/include/ui_loginwindow.h:
 /usr/include/qt/QtCore/qmargins.h:
 
 /usr/include/qt/QtCore/qpluginloader.h:
+
+/usr/include/qt/QtCore/qqueue.h:
+
+/usr/include/qt/QtSql/qsqlrecord.h:
+
+/usr/include/c++/12.2.0/random:
+
+/usr/include/c++/12.2.0/bits/random.h:
+
+/usr/include/c++/12.2.0/bits/random.tcc:

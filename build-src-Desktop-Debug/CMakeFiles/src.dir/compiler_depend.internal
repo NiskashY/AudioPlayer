@@ -392,21 +392,15 @@ CMakeFiles/src.dir/loginwindow.cpp.o
  /usr/include/qt/QtGui/qinputmethod.h
  /usr/include/qt/QtCore/qlocale.h
  /usr/include/qt/QtCore/qvariant.h
- /usr/include/qt/QtWidgets/QFormLayout
- /usr/include/qt/QtWidgets/qformlayout.h
- /usr/include/qt/QtWidgets/QLayout
+ /usr/include/qt/QtWidgets/QHBoxLayout
+ /usr/include/qt/QtWidgets/qboxlayout.h
  /usr/include/qt/QtWidgets/qlayout.h
  /usr/include/qt/QtWidgets/qlayoutitem.h
  /usr/include/qt/QtWidgets/qboxlayout.h
- /usr/include/qt/QtWidgets/qlayout.h
  /usr/include/qt/QtWidgets/qgridlayout.h
- /usr/include/qt/QtWidgets/QGroupBox
- /usr/include/qt/QtWidgets/qgroupbox.h
- /usr/include/qt/QtWidgets/qframe.h
- /usr/include/qt/QtWidgets/QHBoxLayout
- /usr/include/qt/QtWidgets/qboxlayout.h
  /usr/include/qt/QtWidgets/QLabel
  /usr/include/qt/QtWidgets/qlabel.h
+ /usr/include/qt/QtWidgets/qframe.h
  /usr/include/qt/QtWidgets/QLineEdit
  /usr/include/qt/QtWidgets/qlineedit.h
  /usr/include/qt/QtGui/qtextcursor.h
@@ -422,9 +416,6 @@ CMakeFiles/src.dir/loginwindow.cpp.o
  /usr/include/qt/QtWidgets/QVBoxLayout
  /usr/include/qt/QtWidgets/QWidget
  /usr/include/qt/QtWidgets/qwidget.h
- /home/mint/GitRepos/AudioPlayer/src/mainmenu.h
- /usr/include/qt/QtWidgets/QDialog
- /usr/include/qt/QtWidgets/qdialog.h
 
 CMakeFiles/src.dir/main.cpp.o
  /home/mint/GitRepos/AudioPlayer/src/main.cpp
@@ -1137,13 +1128,14 @@ CMakeFiles/src.dir/main.cpp.o
  /home/mint/GitRepos/AudioPlayer/src/loginwindow.h
  /usr/include/qt/QtWidgets/QMainWindow
  /usr/include/qt/QtWidgets/qmainwindow.h
+ /home/mint/GitRepos/AudioPlayer/src/mainwindow.h
 
-CMakeFiles/src.dir/mainmenu.cpp.o
- /home/mint/GitRepos/AudioPlayer/src/mainmenu.cpp
+CMakeFiles/src.dir/mainwindow.cpp.o
+ /home/mint/GitRepos/AudioPlayer/src/mainwindow.cpp
  /usr/include/stdc-predef.h
- /home/mint/GitRepos/AudioPlayer/src/mainmenu.h
- /usr/include/qt/QtWidgets/QDialog
- /usr/include/qt/QtWidgets/qdialog.h
+ /home/mint/GitRepos/AudioPlayer/src/mainwindow.h
+ /usr/include/qt/QtWidgets/QMainWindow
+ /usr/include/qt/QtWidgets/qmainwindow.h
  /usr/include/qt/QtWidgets/qtwidgetsglobal.h
  /usr/include/qt/QtGui/qtguiglobal.h
  /usr/include/qt/QtCore/qglobal.h
@@ -1510,7 +1502,9 @@ CMakeFiles/src.dir/mainmenu.cpp.o
  /usr/include/qt/QtWidgets/qsizepolicy.h
  /usr/include/qt/QtGui/qcursor.h
  /usr/include/qt/QtGui/qkeysequence.h
- /home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen/include/ui_mainmenu.h
+ /usr/include/qt/QtWidgets/qtabwidget.h
+ /usr/include/qt/QtGui/qicon.h
+ /home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen/include/ui_mainwindow.h
  /usr/include/qt/QtCore/QVariant
  /usr/include/qt/QtCore/qvariant.h
  /usr/include/qt/QtCore/qmap.h
@@ -1524,11 +1518,34 @@ CMakeFiles/src.dir/mainmenu.cpp.o
  /usr/include/qt/QtGui/qinputmethod.h
  /usr/include/qt/QtCore/qlocale.h
  /usr/include/qt/QtCore/qvariant.h
- /usr/include/qt/QtWidgets/QDialog
+ /usr/include/qt/QtWidgets/QHBoxLayout
+ /usr/include/qt/QtWidgets/qboxlayout.h
+ /usr/include/qt/QtWidgets/qlayout.h
+ /usr/include/qt/QtWidgets/qlayoutitem.h
+ /usr/include/qt/QtWidgets/qboxlayout.h
+ /usr/include/qt/QtWidgets/qgridlayout.h
+ /usr/include/qt/QtWidgets/QLabel
+ /usr/include/qt/QtWidgets/qlabel.h
+ /usr/include/qt/QtWidgets/qframe.h
+ /usr/include/qt/QtWidgets/QMainWindow
+ /usr/include/qt/QtWidgets/QMenuBar
+ /usr/include/qt/QtWidgets/qmenubar.h
+ /usr/include/qt/QtWidgets/qmenu.h
+ /usr/include/qt/QtWidgets/qaction.h
+ /usr/include/qt/QtWidgets/qactiongroup.h
  /usr/include/qt/QtWidgets/QPushButton
  /usr/include/qt/QtWidgets/qpushbutton.h
  /usr/include/qt/QtWidgets/qabstractbutton.h
- /usr/include/qt/QtGui/qicon.h
+ /usr/include/qt/QtWidgets/QSlider
+ /usr/include/qt/QtWidgets/qslider.h
+ /usr/include/qt/QtWidgets/qabstractslider.h
+ /usr/include/qt/QtWidgets/QSpacerItem
+ /usr/include/qt/QtWidgets/qlayoutitem.h
+ /usr/include/qt/QtWidgets/QStatusBar
+ /usr/include/qt/QtWidgets/qstatusbar.h
+ /usr/include/qt/QtWidgets/QVBoxLayout
+ /usr/include/qt/QtWidgets/QWidget
+ /usr/include/qt/QtWidgets/qwidget.h
 
 CMakeFiles/src.dir/src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o
  /home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen/OIBSYM6ORI/qrc_resourses.cpp
@@ -1909,8 +1926,6 @@ CMakeFiles/src.dir/src_autogen/mocs_compilation.cpp.o
  /usr/include/qt/QtGui/qkeysequence.h
  /usr/include/qt/QtWidgets/qtabwidget.h
  /usr/include/qt/QtGui/qicon.h
- /home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen/EWIEGA46WW/moc_mainmenu.cpp
- /home/mint/GitRepos/AudioPlayer/src/mainmenu.h
- /usr/include/qt/QtWidgets/QDialog
- /usr/include/qt/QtWidgets/qdialog.h
+ /home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen/EWIEGA46WW/moc_mainwindow.cpp
+ /home/mint/GitRepos/AudioPlayer/src/mainwindow.h
 
