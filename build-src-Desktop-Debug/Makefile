@@ -235,6 +235,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+mainsss.o: mainsss.cpp.o
+.PHONY : mainsss.o
+
+# target to build an object file
+mainsss.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/mainsss.cpp.o
+.PHONY : mainsss.cpp.o
+
+mainsss.i: mainsss.cpp.i
+.PHONY : mainsss.i
+
+# target to preprocess a source file
+mainsss.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/mainsss.cpp.i
+.PHONY : mainsss.cpp.i
+
+mainsss.s: mainsss.cpp.s
+.PHONY : mainsss.s
+
+# target to generate assembly for a file
+mainsss.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/mainsss.cpp.s
+.PHONY : mainsss.cpp.s
+
 mainwindow.o: mainwindow.cpp.o
 .PHONY : mainwindow.o
 
@@ -258,6 +282,30 @@ mainwindow.s: mainwindow.cpp.s
 mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
+
+signupwindow.o: signupwindow.cpp.o
+.PHONY : signupwindow.o
+
+# target to build an object file
+signupwindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/signupwindow.cpp.o
+.PHONY : signupwindow.cpp.o
+
+signupwindow.i: signupwindow.cpp.i
+.PHONY : signupwindow.i
+
+# target to preprocess a source file
+signupwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/signupwindow.cpp.i
+.PHONY : signupwindow.cpp.i
+
+signupwindow.s: signupwindow.cpp.s
+.PHONY : signupwindow.s
+
+# target to generate assembly for a file
+signupwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/signupwindow.cpp.s
+.PHONY : signupwindow.cpp.s
 
 src_autogen/OIBSYM6ORI/qrc_resourses.o: src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o
 .PHONY : src_autogen/OIBSYM6ORI/qrc_resourses.o
@@ -327,9 +375,15 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... mainsss.o"
+	@echo "... mainsss.i"
+	@echo "... mainsss.s"
 	@echo "... mainwindow.o"
 	@echo "... mainwindow.i"
 	@echo "... mainwindow.s"
+	@echo "... signupwindow.o"
+	@echo "... signupwindow.i"
+	@echo "... signupwindow.s"
 	@echo "... src_autogen/OIBSYM6ORI/qrc_resourses.o"
 	@echo "... src_autogen/OIBSYM6ORI/qrc_resourses.i"
 	@echo "... src_autogen/OIBSYM6ORI/qrc_resourses.s"

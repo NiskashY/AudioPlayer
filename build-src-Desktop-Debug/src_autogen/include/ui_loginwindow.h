@@ -56,7 +56,7 @@ public:
     {
         if (LoginWindow->objectName().isEmpty())
             LoginWindow->setObjectName(QString::fromUtf8("LoginWindow"));
-        LoginWindow->resize(745, 545);
+        LoginWindow->resize(508, 456);
         LoginWindow->setLayoutDirection(Qt::LeftToRight);
         centralwidget = new QWidget(LoginWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
@@ -104,6 +104,7 @@ public:
 
         lineEdit_2 = new QLineEdit(centralwidget);
         lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        lineEdit_2->setEchoMode(QLineEdit::Normal);
 
         InputLayout->addWidget(lineEdit_2);
 
@@ -141,6 +142,7 @@ public:
 
         lineEdit = new QLineEdit(centralwidget);
         lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        lineEdit->setEchoMode(QLineEdit::Password);
 
         InputLayout_2->addWidget(lineEdit);
 
