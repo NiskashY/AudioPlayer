@@ -9,47 +9,70 @@
 
 #include "loginwindow.h"
 #include "mainwindow.h"
+#include "mainsss.h"
+#include "signupwindow.h"
+
+
+extern "C" {
+#include <arpa/inet.h>
+#include <string>
+#include <sys/socket.h>
+#include <unistd.h>
+
+int connect(int socket, const struct sockaddr *address, socklen_t address_len);
+}
+
+#include <iostream>
 
 
 int main(int argc, char *argv[])
 {
-    const QString& file_with_db_parametrs= ".db_parametrs";
-    QFile file_stream(file_with_db_parametrs);
-    if (!file_stream.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        std::cerr << "Cant Open database parametrs file!" << std::endl;
-    } else {
+    QApplication a(argc, argv);
+    // Start of Application == Login
 
-        // ReadToList because file_stream.readline() returns "<some strin>\n"
-        // because of \n symbol i cant get correct string
-        QList wholeFile = file_stream.readLine().split(' ');
-        QString driver_name = wholeFile[0];
-        QString db_name = wholeFile[1];
-        QString user_name = wholeFile[2];
-        QString pass = wholeFile[3];
-        QString host_name = wholeFile[4];
+    LoginWindow login_window;
+    login_window.show();
+    SignUpWindow signUp_window;
+    signUp_window.show();
+
+    MainWindow mw;
+    mw.show();
+    mw.close();
+
+    const int& kPort = 9999;
+    int sock = 0, valread = 0, client_fd = 0;
+    sockaddr_in serv_addr;
 
 
-        QSqlDatabase db = QSqlDatabase::addDatabase(driver_name);
-        db.setDatabaseName(db_name);
-        db.setHostName(host_name);
-        db.setUserName(user_name);
-        db.setPassword(pass);
+    sock = socket(AF_INET, SOCK_STREAM, 0);
+    if (sock < 0) {
+        int line = __LINE__ + 1;
+        std::cout << line << '\n';
+        return 0;
+    }
 
-        if (db.open()) {
-            QApplication a(argc, argv);
-            // Start of Application == Login
-            LoginWindow login_window;
-            login_window.show();
+    serv_addr.sin_family = AF_INET;
+    serv_addr.sin_port = htons(kPort);
 
-            while(login_window.isActiveWindow()) {
-
-            }
-
-            MainWindow mw;
-            mw.show();
-            return a.exec();
-        }
+    if (inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr) <= 0) {
+        int line = __LINE__ + 1;
+        std::cout << line << '\n';
+        return 0;
     }
 
 
+    client_fd = connect(sock, (struct sockaddr*)&serv_addr, sizeof(serv_addr));
+
+    if (client_fd < 0) {
+        int line = __LINE__ + 1;
+        std::cout << line << '\n';
+        return 0;
+    }
+
+    std::cout << "????????";
+
+    mainsss dw(sock);
+    dw.show();
+
+    return a.exec();
 }

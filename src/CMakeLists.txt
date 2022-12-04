@@ -21,6 +21,11 @@ set(PROJECT_SOURCES
         loginwindow.cpp
         loginwindow.ui
 
+        #Sign Up Window files
+        signupwindow.h
+        signupwindow.cpp
+        signupwindow.ui
+
         # Main Window files
         mainwindow.h
         mainwindow.cpp
@@ -28,6 +33,13 @@ set(PROJECT_SOURCES
 
         # There stored all images for program
         Images/resourses.qrc
+
+        # Testing
+        mainsss.h
+        mainsss.cpp
+        mainsss.ui
+
+
 )
 
 add_executable(src
