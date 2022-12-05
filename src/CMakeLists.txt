@@ -21,10 +21,20 @@ set(PROJECT_SOURCES
         loginwindow.cpp
         loginwindow.ui
 
+        #Sign Up Window files
+        signupwindow.h
+        signupwindow.cpp
+        signupwindow.ui
+
         # Main Window files
-        mainwindow.h
-        mainwindow.cpp
-        mainwindow.ui
+#        mainwindow.h
+ #       mainwindow.cpp
+  #      mainwindow.ui
+
+        # Main Page files
+        mainpage.h
+        mainpage.cpp
+        mainpage.ui
 
         # There stored all images for program
         Images/resourses.qrc
