@@ -35,25 +35,28 @@ public:
     QSpacerItem *horizontalSpacer_2;
     QHBoxLayout *InputLayout;
     QSpacerItem *horizontalSpacer;
-    QLineEdit *lineEdit_2;
+    QLineEdit *usernameInput;
     QVBoxLayout *PasswordLayout;
     QHBoxLayout *TextLayout_2;
     QLabel *label_2;
     QSpacerItem *horizontalSpacer_3;
     QHBoxLayout *InputLayout_2;
     QSpacerItem *horizontalSpacer_4;
-    QLineEdit *lineEdit;
+    QLineEdit *passwordInput;
     QVBoxLayout *ConfirmLayout;
     QHBoxLayout *TextLayout_3;
     QLabel *label_3;
     QSpacerItem *horizontalSpacer_5;
     QHBoxLayout *InputLayout_3;
     QSpacerItem *horizontalSpacer_6;
-    QLineEdit *lineEdit_3;
+    QLineEdit *confirmPasswordInput;
+    QSpacerItem *verticalSpacer_3;
     QHBoxLayout *ButtonsLayout;
-    QPushButton *SignUpButton;
-    QSpacerItem *verticalSpacer_2;
+    QSpacerItem *horizontalSpacer_7;
     QPushButton *BackButton;
+    QSpacerItem *verticalSpacer_2;
+    QPushButton *RegistreButton;
+    QSpacerItem *horizontalSpacer_8;
     QSpacerItem *verticalSpacer;
     QSpacerItem *spacer_right;
 
@@ -61,7 +64,7 @@ public:
     {
         if (SignUpWindow->objectName().isEmpty())
             SignUpWindow->setObjectName(QString::fromUtf8("SignUpWindow"));
-        SignUpWindow->resize(508, 520);
+        SignUpWindow->resize(649, 657);
         horizontalLayout = new QHBoxLayout(SignUpWindow);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         spacer_left = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
@@ -105,11 +108,11 @@ public:
 
         InputLayout->addItem(horizontalSpacer);
 
-        lineEdit_2 = new QLineEdit(SignUpWindow);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
-        lineEdit_2->setEchoMode(QLineEdit::Normal);
+        usernameInput = new QLineEdit(SignUpWindow);
+        usernameInput->setObjectName(QString::fromUtf8("usernameInput"));
+        usernameInput->setEchoMode(QLineEdit::Normal);
 
-        InputLayout->addWidget(lineEdit_2);
+        InputLayout->addWidget(usernameInput);
 
         InputLayout->setStretch(0, 1);
         InputLayout->setStretch(1, 9);
@@ -144,11 +147,11 @@ public:
 
         InputLayout_2->addItem(horizontalSpacer_4);
 
-        lineEdit = new QLineEdit(SignUpWindow);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setEchoMode(QLineEdit::Password);
+        passwordInput = new QLineEdit(SignUpWindow);
+        passwordInput->setObjectName(QString::fromUtf8("passwordInput"));
+        passwordInput->setEchoMode(QLineEdit::Password);
 
-        InputLayout_2->addWidget(lineEdit);
+        InputLayout_2->addWidget(passwordInput);
 
         InputLayout_2->setStretch(0, 1);
         InputLayout_2->setStretch(1, 9);
@@ -183,11 +186,11 @@ public:
 
         InputLayout_3->addItem(horizontalSpacer_6);
 
-        lineEdit_3 = new QLineEdit(SignUpWindow);
-        lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
-        lineEdit_3->setEchoMode(QLineEdit::Password);
+        confirmPasswordInput = new QLineEdit(SignUpWindow);
+        confirmPasswordInput->setObjectName(QString::fromUtf8("confirmPasswordInput"));
+        confirmPasswordInput->setEchoMode(QLineEdit::Password);
 
-        InputLayout_3->addWidget(lineEdit_3);
+        InputLayout_3->addWidget(confirmPasswordInput);
 
         InputLayout_3->setStretch(0, 1);
         InputLayout_3->setStretch(1, 9);
@@ -199,22 +202,38 @@ public:
 
         MainForm->addLayout(ConfirmLayout);
 
+        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        MainForm->addItem(verticalSpacer_3);
+
         ButtonsLayout = new QHBoxLayout();
         ButtonsLayout->setObjectName(QString::fromUtf8("ButtonsLayout"));
-        SignUpButton = new QPushButton(SignUpWindow);
-        SignUpButton->setObjectName(QString::fromUtf8("SignUpButton"));
+        horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        ButtonsLayout->addWidget(SignUpButton);
-
-        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        ButtonsLayout->addItem(verticalSpacer_2);
+        ButtonsLayout->addItem(horizontalSpacer_7);
 
         BackButton = new QPushButton(SignUpWindow);
         BackButton->setObjectName(QString::fromUtf8("BackButton"));
 
         ButtonsLayout->addWidget(BackButton);
 
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        ButtonsLayout->addItem(verticalSpacer_2);
+
+        RegistreButton = new QPushButton(SignUpWindow);
+        RegistreButton->setObjectName(QString::fromUtf8("RegistreButton"));
+
+        ButtonsLayout->addWidget(RegistreButton);
+
+        horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        ButtonsLayout->addItem(horizontalSpacer_8);
+
+        ButtonsLayout->setStretch(0, 1);
+        ButtonsLayout->setStretch(1, 2);
+        ButtonsLayout->setStretch(3, 2);
+        ButtonsLayout->setStretch(4, 1);
 
         MainForm->addLayout(ButtonsLayout);
 
@@ -227,7 +246,8 @@ public:
         MainForm->setStretch(2, 2);
         MainForm->setStretch(3, 2);
         MainForm->setStretch(4, 1);
-        MainForm->setStretch(5, 1);
+        MainForm->setStretch(5, 2);
+        MainForm->setStretch(6, 1);
 
         horizontalLayout->addLayout(MainForm);
 
@@ -248,8 +268,8 @@ public:
         label->setText(QCoreApplication::translate("SignUpWindow", "Username:", nullptr));
         label_2->setText(QCoreApplication::translate("SignUpWindow", "Password:", nullptr));
         label_3->setText(QCoreApplication::translate("SignUpWindow", "Confirm Password:", nullptr));
-        SignUpButton->setText(QCoreApplication::translate("SignUpWindow", "Back", nullptr));
-        BackButton->setText(QCoreApplication::translate("SignUpWindow", "Sign UP", nullptr));
+        BackButton->setText(QCoreApplication::translate("SignUpWindow", "Back", nullptr));
+        RegistreButton->setText(QCoreApplication::translate("SignUpWindow", "Registrer", nullptr));
     } // retranslateUi
 
 };

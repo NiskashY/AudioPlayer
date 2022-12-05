@@ -23,32 +23,33 @@ LoginWindow::~LoginWindow()
 }
 
 
-/*
-void LoginWindow::on_signUpButton_clicked()
+void LoginWindow::on_SignUpButton_clicked()
 {
-    hide();
-    QMessageBox::about(this, "NNN???", "are you participated in NNN ??");
-    show();
+    this->hide();
+
+    SignUpWindow signUp_form;
+    signUp_form.setModal(true);
+    signUp_form.exec();
+
+    this->show();
 }
 
 
-void LoginWindow::on_signInButton_clicked()
+void LoginWindow::on_SignInButton_clicked()
 {
-    QString username_input_value = ui->usernameEditLine->text();
-    QString password_input_value = ui->passwordEditLine->text();
+    QString username_input_value = ui->usernameInput->text();
+    QString password_input_value = ui->passwordInput->text();
 
     if (username_input_value == "admin" && password_input_value == "admin") {
-        hide();
-        MainMenu main_menu;
-        main_menu.setModal(true);
-        main_menu.exec();
-        show();
+        this->hide();
+
+        MainPage main_page;
+        main_page.setModal(true);
+        main_page.exec();
+
+        this->show();
     } else {
         QMessageBox::critical(this, "Authorisation failed", "Wrong username or password");
-        // Сообщить о том, что нет такого пользователя
-        // или
-        // Сообщить, что введенный пароль не верен
     }
-
 }
-*/
+

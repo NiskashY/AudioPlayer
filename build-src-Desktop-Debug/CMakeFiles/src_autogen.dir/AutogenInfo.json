@@ -98,15 +98,9 @@
 			null
 		],
 		[
-			"/home/mint/GitRepos/AudioPlayer/src/mainsss.h",
+			"/home/mint/GitRepos/AudioPlayer/src/mainpage.h",
 			"MU",
-			"EWIEGA46WW/moc_mainsss.cpp",
-			null
-		],
-		[
-			"/home/mint/GitRepos/AudioPlayer/src/mainwindow.h",
-			"MU",
-			"EWIEGA46WW/moc_mainwindow.cpp",
+			"EWIEGA46WW/moc_mainpage.cpp",
 			null
 		],
 		[
@@ -171,8 +165,7 @@
 	[
 		[ "/home/mint/GitRepos/AudioPlayer/src/loginwindow.cpp", "MU", null ],
 		[ "/home/mint/GitRepos/AudioPlayer/src/main.cpp", "MU", null ],
-		[ "/home/mint/GitRepos/AudioPlayer/src/mainsss.cpp", "MU", null ],
-		[ "/home/mint/GitRepos/AudioPlayer/src/mainwindow.cpp", "MU", null ],
+		[ "/home/mint/GitRepos/AudioPlayer/src/mainpage.cpp", "MU", null ],
 		[ "/home/mint/GitRepos/AudioPlayer/src/signupwindow.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],

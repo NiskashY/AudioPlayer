@@ -10,8 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/mint/GitRepos/AudioPlayer/src/loginwindow.cpp" "CMakeFiles/src.dir/loginwindow.cpp.o" "gcc" "CMakeFiles/src.dir/loginwindow.cpp.o.d"
   "/home/mint/GitRepos/AudioPlayer/src/main.cpp" "CMakeFiles/src.dir/main.cpp.o" "gcc" "CMakeFiles/src.dir/main.cpp.o.d"
-  "/home/mint/GitRepos/AudioPlayer/src/mainsss.cpp" "CMakeFiles/src.dir/mainsss.cpp.o" "gcc" "CMakeFiles/src.dir/mainsss.cpp.o.d"
-  "/home/mint/GitRepos/AudioPlayer/src/mainwindow.cpp" "CMakeFiles/src.dir/mainwindow.cpp.o" "gcc" "CMakeFiles/src.dir/mainwindow.cpp.o.d"
+  "/home/mint/GitRepos/AudioPlayer/src/mainpage.cpp" "CMakeFiles/src.dir/mainpage.cpp.o" "gcc" "CMakeFiles/src.dir/mainpage.cpp.o.d"
   "/home/mint/GitRepos/AudioPlayer/src/signupwindow.cpp" "CMakeFiles/src.dir/signupwindow.cpp.o" "gcc" "CMakeFiles/src.dir/signupwindow.cpp.o.d"
   "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen/OIBSYM6ORI/qrc_resourses.cpp" "CMakeFiles/src.dir/src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o" "gcc" "CMakeFiles/src.dir/src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o.d"
   "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen/mocs_compilation.cpp" "CMakeFiles/src.dir/src_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/src.dir/src_autogen/mocs_compilation.cpp.o.d"

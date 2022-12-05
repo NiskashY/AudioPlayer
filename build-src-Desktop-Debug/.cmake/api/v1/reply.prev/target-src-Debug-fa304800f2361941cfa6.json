@@ -31,19 +31,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 45,
+				"line" : 43,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 59,
+				"line" : 57,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 49,
+				"line" : 47,
 				"parent" : 0
 			},
 			{
@@ -174,7 +174,7 @@
 				3,
 				6,
 				9,
-				13,
+				12,
 				19
 			]
 		}
@@ -254,7 +254,7 @@
 				3,
 				6,
 				9,
-				13,
+				12,
 				19
 			]
 		},
@@ -265,7 +265,7 @@
 				2,
 				5,
 				8,
-				12,
+				11,
 				15,
 				16,
 				17,
@@ -279,7 +279,7 @@
 				4,
 				7,
 				10,
-				11,
+				13,
 				14
 			]
 		},
@@ -356,23 +356,23 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Images/resourses.qrc",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "mainsss.h",
+			"path" : "mainpage.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "mainsss.cpp",
+			"path" : "mainpage.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "mainsss.ui",
+			"path" : "mainpage.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Images/resourses.qrc",
 			"sourceGroupIndex" : 2
 		},
 		{
@@ -396,7 +396,7 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen/include/ui_mainsss.h",
+			"path" : "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen/include/ui_mainpage.h",
 			"sourceGroupIndex" : 1
 		},
 		{
