@@ -1,15 +1,11 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
-
-#include <QMainWindow>
-
-
+#pragma once
+#include <QDialog>
 
 namespace Ui {
 class MainWindow;
 }
 
-class MainWindow : public QMainWindow
+class MainWindow : public QDialog
 {
     Q_OBJECT
 
@@ -20,5 +16,3 @@ public:
 private:
     Ui::MainWindow *ui;
 };
-
-#endif // MAINWINDOW_H

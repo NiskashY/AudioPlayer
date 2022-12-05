@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>508</width>
-    <height>520</height>
+    <width>649</width>
+    <height>657</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,7 +28,7 @@
     </spacer>
    </item>
    <item>
-    <layout class="QVBoxLayout" name="MainForm" stretch="3,2,2,2,1,1">
+    <layout class="QVBoxLayout" name="MainForm" stretch="3,2,2,2,1,2,1">
      <item>
       <layout class="QHBoxLayout" name="LogoLayout">
        <item>
@@ -91,7 +91,7 @@
           </spacer>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_2">
+          <widget class="QLineEdit" name="usernameInput">
            <property name="echoMode">
             <enum>QLineEdit::Normal</enum>
            </property>
@@ -146,7 +146,7 @@
           </spacer>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit">
+          <widget class="QLineEdit" name="passwordInput">
            <property name="echoMode">
             <enum>QLineEdit::Password</enum>
            </property>
@@ -201,7 +201,7 @@
           </spacer>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_3">
+          <widget class="QLineEdit" name="confirmPasswordInput">
            <property name="echoMode">
             <enum>QLineEdit::Password</enum>
            </property>
@@ -212,9 +212,35 @@
       </layout>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="ButtonsLayout">
+      <spacer name="verticalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="ButtonsLayout" stretch="1,2,0,2,1">
        <item>
-        <widget class="QPushButton" name="SignUpButton">
+        <spacer name="horizontalSpacer_7">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="BackButton">
          <property name="text">
           <string>Back</string>
          </property>
@@ -234,11 +260,24 @@
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="BackButton">
+        <widget class="QPushButton" name="RegistreButton">
          <property name="text">
-          <string>Sign UP</string>
+          <string>Registrer</string>
          </property>
         </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_8">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
        </item>
       </layout>
      </item>

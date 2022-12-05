@@ -5,4 +5,7 @@
         <file>sound.jpg</file>
         <file>default_song_cover.jpg</file>
     </qresource>
+    <qresource prefix="/styleSheets">
+        <file>Combinear.qss</file>
+    </qresource>
 </RCC>
