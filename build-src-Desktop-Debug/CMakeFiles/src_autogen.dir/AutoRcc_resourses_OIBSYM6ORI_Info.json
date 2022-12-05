@@ -10,7 +10,8 @@
 		"/home/mint/GitRepos/AudioPlayer/src/Images/default_song_cover.jpg",
 		"/home/mint/GitRepos/AudioPlayer/src/Images/kotik.jpg",
 		"/home/mint/GitRepos/AudioPlayer/src/Images/sound.jpg",
-		"/home/mint/GitRepos/AudioPlayer/src/Images/hamster.jpg"
+		"/home/mint/GitRepos/AudioPlayer/src/Images/hamster.jpg",
+		"/home/mint/GitRepos/AudioPlayer/src/Images/Combinear.qss"
 	],
 	"LOCK_FILE" : "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/CMakeFiles/src_autogen.dir/AutoRcc_resourses_OIBSYM6ORI_Lock.lock",
 	"MULTI_CONFIG" : false,

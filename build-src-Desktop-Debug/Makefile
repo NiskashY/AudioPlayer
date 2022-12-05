@@ -235,29 +235,53 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-mainwindow.o: mainwindow.cpp.o
-.PHONY : mainwindow.o
+mainpage.o: mainpage.cpp.o
+.PHONY : mainpage.o
 
 # target to build an object file
-mainwindow.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/mainwindow.cpp.o
-.PHONY : mainwindow.cpp.o
+mainpage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/mainpage.cpp.o
+.PHONY : mainpage.cpp.o
 
-mainwindow.i: mainwindow.cpp.i
-.PHONY : mainwindow.i
+mainpage.i: mainpage.cpp.i
+.PHONY : mainpage.i
 
 # target to preprocess a source file
-mainwindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/mainwindow.cpp.i
-.PHONY : mainwindow.cpp.i
+mainpage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/mainpage.cpp.i
+.PHONY : mainpage.cpp.i
 
-mainwindow.s: mainwindow.cpp.s
-.PHONY : mainwindow.s
+mainpage.s: mainpage.cpp.s
+.PHONY : mainpage.s
 
 # target to generate assembly for a file
-mainwindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/mainwindow.cpp.s
-.PHONY : mainwindow.cpp.s
+mainpage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/mainpage.cpp.s
+.PHONY : mainpage.cpp.s
+
+signupwindow.o: signupwindow.cpp.o
+.PHONY : signupwindow.o
+
+# target to build an object file
+signupwindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/signupwindow.cpp.o
+.PHONY : signupwindow.cpp.o
+
+signupwindow.i: signupwindow.cpp.i
+.PHONY : signupwindow.i
+
+# target to preprocess a source file
+signupwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/signupwindow.cpp.i
+.PHONY : signupwindow.cpp.i
+
+signupwindow.s: signupwindow.cpp.s
+.PHONY : signupwindow.s
+
+# target to generate assembly for a file
+signupwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/signupwindow.cpp.s
+.PHONY : signupwindow.cpp.s
 
 src_autogen/OIBSYM6ORI/qrc_resourses.o: src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o
 .PHONY : src_autogen/OIBSYM6ORI/qrc_resourses.o
@@ -327,9 +351,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... mainwindow.o"
-	@echo "... mainwindow.i"
-	@echo "... mainwindow.s"
+	@echo "... mainpage.o"
+	@echo "... mainpage.i"
+	@echo "... mainpage.s"
+	@echo "... signupwindow.o"
+	@echo "... signupwindow.i"
+	@echo "... signupwindow.s"
 	@echo "... src_autogen/OIBSYM6ORI/qrc_resourses.o"
 	@echo "... src_autogen/OIBSYM6ORI/qrc_resourses.i"
 	@echo "... src_autogen/OIBSYM6ORI/qrc_resourses.s"

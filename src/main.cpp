@@ -1,55 +1,29 @@
 #include <QApplication>
-#include <QtSql/QSqlDatabase>
-#include <QtSql/QtSql>
 #include <QFile>
 
-#include <iostream>
-#include <fstream>
-#include <string>
-
+// Include fiels with information about windows
 #include "loginwindow.h"
-#include "mainwindow.h"
+
+void SetAppStyleSheet(QApplication&);
 
 
 int main(int argc, char *argv[])
-{
-    const QString& file_with_db_parametrs= ".db_parametrs";
-    QFile file_stream(file_with_db_parametrs);
-    if (!file_stream.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        std::cerr << "Cant Open database parametrs file!" << std::endl;
-    } else {
+{    
+    QApplication app(argc, argv);
+    // Setting up style sheet of buttons, font, background etc...
+    SetAppStyleSheet(app);
 
-        // ReadToList because file_stream.readline() returns "<some strin>\n"
-        // because of \n symbol i cant get correct string
-        QList wholeFile = file_stream.readLine().split(' ');
-        QString driver_name = wholeFile[0];
-        QString db_name = wholeFile[1];
-        QString user_name = wholeFile[2];
-        QString pass = wholeFile[3];
-        QString host_name = wholeFile[4];
+    LoginWindow lw;
+    lw.show();
 
+    return QApplication::exec();
+}
 
-        QSqlDatabase db = QSqlDatabase::addDatabase(driver_name);
-        db.setDatabaseName(db_name);
-        db.setHostName(host_name);
-        db.setUserName(user_name);
-        db.setPassword(pass);
+void SetAppStyleSheet(QApplication& app) {
+    const QString& kFileName = ":/styleSheets/Combinear.qss";
+    QFile styleSheetFile(kFileName);
+    styleSheetFile.open(QFile::ReadOnly);
 
-        if (db.open()) {
-            QApplication a(argc, argv);
-            // Start of Application == Login
-            LoginWindow login_window;
-            login_window.show();
-
-            while(login_window.isActiveWindow()) {
-
-            }
-
-            MainWindow mw;
-            mw.show();
-            return a.exec();
-        }
-    }
-
-
+    QString styleSheet = QLatin1String(styleSheetFile.readAll());
+    app.setStyleSheet(styleSheet);
 }
