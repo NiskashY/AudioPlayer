@@ -14,6 +14,9 @@ public:
     explicit MainPage(QWidget *parent = nullptr);
     ~MainPage();
 
+private slots:
+    void on_backLogo_clicked();
+
 private:
     Ui::MainPage *ui;
 };
