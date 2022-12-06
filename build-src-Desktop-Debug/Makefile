@@ -187,6 +187,30 @@ src_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/src_autogen.dir/build.make CMakeFiles/src_autogen.dir/build
 .PHONY : src_autogen/fast
 
+checker/checker.o: checker/checker.cpp.o
+.PHONY : checker/checker.o
+
+# target to build an object file
+checker/checker.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/checker/checker.cpp.o
+.PHONY : checker/checker.cpp.o
+
+checker/checker.i: checker/checker.cpp.i
+.PHONY : checker/checker.i
+
+# target to preprocess a source file
+checker/checker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/checker/checker.cpp.i
+.PHONY : checker/checker.cpp.i
+
+checker/checker.s: checker/checker.cpp.s
+.PHONY : checker/checker.s
+
+# target to generate assembly for a file
+checker/checker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/checker/checker.cpp.s
+.PHONY : checker/checker.cpp.s
+
 loginwindow.o: loginwindow.cpp.o
 .PHONY : loginwindow.o
 
@@ -345,6 +369,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... src_autogen"
 	@echo "... src"
+	@echo "... checker/checker.o"
+	@echo "... checker/checker.i"
+	@echo "... checker/checker.s"
 	@echo "... loginwindow.o"
 	@echo "... loginwindow.i"
 	@echo "... loginwindow.s"

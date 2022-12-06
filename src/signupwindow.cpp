@@ -17,40 +17,36 @@ void SignUpWindow::on_BackButton_clicked() {
     this->close();
 }
 
-bool SignUpWindow::isPasswordContainWrongSymbols(const QString& password) {
-    for (const QChar& symbol : password) {
-        if (wrongSymbols.contains(symbol)) {
-            return true;
-        }
-    }
-    return false;
-}
-
 void SignUpWindow::on_RegistreButton_clicked() {
     const QString msg_box_error_title = "Registration failed";
     const QString msg_box_success_title = "Cheers!";
+    const QString msg_box_success = "You have successfully registered";
 
     const QString username_input_value = ui->usernameInput->text();
     const QString password_input_value = ui->passwordInput->text();
     const QString confirm_password_input_value = ui->confirmPasswordInput->text();
 
-
-    // паттерн цепочка обязанностей может быть?
-
-    if (username_input_value.isEmpty() || password_input_value.isEmpty() || confirm_password_input_value.isEmpty()) {
-        QMessageBox::critical(this, msg_box_error_title, "All fields must be non-empty");
-    }
-    else if (password_input_value.size() < kMinPasswordSize) {
-        QMessageBox::warning(this, msg_box_error_title, QString("Minimal password size is %1").arg(kMinPasswordSize));
-    }
-    else if (isPasswordContainWrongSymbols(password_input_value)) {
-        QMessageBox::warning(this, msg_box_error_title, "Password can't contain " + wrongSymbols);
-    }
-    else if (password_input_value != confirm_password_input_value) {
+    if (confirm_password_input_value.isEmpty()) {
+        QMessageBox::warning(this, msg_box_error_title, "All fields must be non-empty");
+        return;
+    } else if (password_input_value != confirm_password_input_value) {
         QMessageBox::warning(this, msg_box_error_title, "Password and confirmation must match");
+        return;
+    }
+
+    std::shared_ptr<Checker> wrongSymbolsChecker = std::make_shared<WrongSymbolsChecker>(nullptr);
+    std::shared_ptr<Checker> minSizeChecker = std::make_shared<PasswordSizeChecker>(wrongSymbolsChecker);
+    std::shared_ptr<Checker> emptyChecker = std::make_shared<EmptyChecker>(minSizeChecker);
+
+    auto [isFieldsOk, error_msg] = emptyChecker->doFilter(username_input_value, password_input_value);
+
+    if (isFieldsOk) {
+        QMessageBox::information(this, msg_box_success_title, msg_box_success);
     } else {
-        QMessageBox::information(this, msg_box_success_title, "You have successfully registered");
-        // Push to database
+        QMessageBox::warning(this, msg_box_error_title, error_msg);
+    }
+
+    if (isFieldsOk) {
         SignUpWindow::on_BackButton_clicked();
     }
 }

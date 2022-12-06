@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/mint/GitRepos/AudioPlayer/src/checker/checker.cpp" "CMakeFiles/src.dir/checker/checker.cpp.o" "gcc" "CMakeFiles/src.dir/checker/checker.cpp.o.d"
   "/home/mint/GitRepos/AudioPlayer/src/loginwindow.cpp" "CMakeFiles/src.dir/loginwindow.cpp.o" "gcc" "CMakeFiles/src.dir/loginwindow.cpp.o.d"
   "/home/mint/GitRepos/AudioPlayer/src/main.cpp" "CMakeFiles/src.dir/main.cpp.o" "gcc" "CMakeFiles/src.dir/main.cpp.o.d"
   "/home/mint/GitRepos/AudioPlayer/src/mainpage.cpp" "CMakeFiles/src.dir/mainpage.cpp.o" "gcc" "CMakeFiles/src.dir/mainpage.cpp.o.d"

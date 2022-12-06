@@ -84,6 +84,11 @@
 		"/usr/lib64/cmake/Qt5Sql/Qt5Sql_QTDSDriverPlugin.cmake",
 		"/usr/lib64/cmake/Qt5Core/Qt5CoreConfigVersion.cmake",
 		"/usr/lib64/cmake/Qt5Core/Qt5CoreConfig.cmake",
+		"/usr/lib64/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake",
+		"/usr/lib64/cmake/Qt5Network/Qt5NetworkConfig.cmake",
+		"/usr/lib64/cmake/Qt5Network/Qt5Network_QConnmanEnginePlugin.cmake",
+		"/usr/lib64/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake",
+		"/usr/lib64/cmake/Qt5Network/Qt5Network_QNetworkManagerEnginePlugin.cmake",
 		"/home/mint/GitRepos/AudioPlayer/src/Images/resourses.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "/home/mint/GitRepos/AudioPlayer/src",
@@ -91,6 +96,12 @@
 	"DEP_FILE_RULE_NAME" : "",
 	"HEADERS" : 
 	[
+		[
+			"/home/mint/GitRepos/AudioPlayer/src/checker/checker.h",
+			"MU",
+			"JPFYYQWDSP/moc_checker.cpp",
+			null
+		],
 		[
 			"/home/mint/GitRepos/AudioPlayer/src/loginwindow.h",
 			"MU",
@@ -113,7 +124,14 @@
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen/include",
 	"MOC_COMPILATION_FILE" : "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen/mocs_compilation.cpp",
-	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_SQL_LIB", "QT_WIDGETS_LIB" ],
+	"MOC_DEFINITIONS" : 
+	[
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_NETWORK_LIB",
+		"QT_SQL_LIB",
+		"QT_WIDGETS_LIB"
+	],
 	"MOC_DEPEND_FILTERS" : 
 	[
 		[
@@ -131,6 +149,7 @@
 		"/usr/include/qt/QtCore",
 		"/usr/lib/qt/mkspecs/linux-g++",
 		"/usr/include/qt/QtSql",
+		"/usr/include/qt/QtNetwork",
 		"/usr/include/c++/12.2.0",
 		"/usr/include/c++/12.2.0/x86_64-pc-linux-gnu",
 		"/usr/include/c++/12.2.0/backward",
@@ -163,6 +182,7 @@
 	"SETTINGS_FILE" : "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/CMakeFiles/src_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "/home/mint/GitRepos/AudioPlayer/src/checker/checker.cpp", "MU", null ],
 		[ "/home/mint/GitRepos/AudioPlayer/src/loginwindow.cpp", "MU", null ],
 		[ "/home/mint/GitRepos/AudioPlayer/src/main.cpp", "MU", null ],
 		[ "/home/mint/GitRepos/AudioPlayer/src/mainpage.cpp", "MU", null ],

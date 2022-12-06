@@ -4,6 +4,8 @@
 #include <QDialog>
 #include <QMessageBox>
 
+#include "checker/checker.h"
+
 namespace Ui {
 class SignUpWindow;
 }
@@ -19,9 +21,6 @@ public:
 private slots:
     void on_BackButton_clicked();
     void on_RegistreButton_clicked();
-
-private: // Private Funcitons
-    bool isPasswordContainWrongSymbols(const QString&);
 
 private: // Private variables;
     Ui::SignUpWindow *ui;
