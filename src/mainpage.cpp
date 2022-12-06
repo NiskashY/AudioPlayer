@@ -7,9 +7,16 @@ MainPage::MainPage(QWidget *parent) :
 {
     ui->setupUi(this);
     this->setWindowTitle("Main Page");
+    ui->backLogo->setStyleSheet("border-image:url(:/resourses/songsCovers/sound.jpg);");
 }
 
 MainPage::~MainPage()
 {
     delete ui;
 }
+
+void MainPage::on_backLogo_clicked()
+{
+    this->close();
+}
+

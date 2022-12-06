@@ -29,7 +29,7 @@ public:
     QHBoxLayout *TopWindowLayout;
     QVBoxLayout *SidePannelLayout;
     QVBoxLayout *AppLogo;
-    QLabel *Logo;
+    QPushButton *backLogo;
     QVBoxLayout *SideMenuLayout;
     QSpacerItem *verticalSpacer;
     QHBoxLayout *LikesLayout;
@@ -78,20 +78,18 @@ public:
         SidePannelLayout->setObjectName(QString::fromUtf8("SidePannelLayout"));
         AppLogo = new QVBoxLayout();
         AppLogo->setObjectName(QString::fromUtf8("AppLogo"));
-        AppLogo->setSizeConstraint(QLayout::SetMinimumSize);
-        AppLogo->setContentsMargins(20, 20, 20, 20);
-        Logo = new QLabel(MainPage);
-        Logo->setObjectName(QString::fromUtf8("Logo"));
-        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy.setHorizontalStretch(1);
+        AppLogo->setSizeConstraint(QLayout::SetMaximumSize);
+        AppLogo->setContentsMargins(0, 0, 0, 0);
+        backLogo = new QPushButton(MainPage);
+        backLogo->setObjectName(QString::fromUtf8("backLogo"));
+        QSizePolicy sizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
+        sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(1);
-        sizePolicy.setHeightForWidth(Logo->sizePolicy().hasHeightForWidth());
-        Logo->setSizePolicy(sizePolicy);
-        Logo->setMinimumSize(QSize(20, 40));
-        Logo->setPixmap(QPixmap(QString::fromUtf8(":/resourses/songsCovers/sound.jpg")));
-        Logo->setScaledContents(true);
+        sizePolicy.setHeightForWidth(backLogo->sizePolicy().hasHeightForWidth());
+        backLogo->setSizePolicy(sizePolicy);
+        backLogo->setMaximumSize(QSize(10000, 10000));
 
-        AppLogo->addWidget(Logo);
+        AppLogo->addWidget(backLogo);
 
 
         SidePannelLayout->addLayout(AppLogo);
@@ -200,7 +198,7 @@ public:
 
         TopWindowLayout->addLayout(SongInfoLayout);
 
-        TopWindowLayout->setStretch(0, 1);
+        TopWindowLayout->setStretch(0, 2);
         TopWindowLayout->setStretch(1, 10);
 
         MainWindowLayout->addLayout(TopWindowLayout);
@@ -297,7 +295,7 @@ public:
     void retranslateUi(QDialog *MainPage)
     {
         MainPage->setWindowTitle(QCoreApplication::translate("MainPage", "Dialog", nullptr));
-        Logo->setText(QString());
+        backLogo->setText(QString());
         DownloadedTracksButton->setText(QCoreApplication::translate("MainPage", "Likes", nullptr));
         SearchTracksButton->setText(QCoreApplication::translate("MainPage", "Donwloaded", nullptr));
         LikedTracksButton->setText(QCoreApplication::translate("MainPage", "SearchEngine", nullptr));
