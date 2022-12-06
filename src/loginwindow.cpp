@@ -2,6 +2,7 @@
 
 #include "loginwindow.h"
 #include "ui_loginwindow.h"
+#include "communicatewithserver.h"
 
 LoginWindow::LoginWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -9,12 +10,6 @@ LoginWindow::LoginWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     this->setWindowTitle("Login page");
-
-//    QPixmap pix(":/resourses/songsCovers/sound.jpg");
-//    int width  = ui->appCover->width();
-//    int height = ui->appCover->height();
-
-//    ui->appCover->setPixmap(pix.scaled(width, height, Qt::KeepAspectRatio));
 }
 
 LoginWindow::~LoginWindow()
@@ -40,16 +35,22 @@ void LoginWindow::on_SignInButton_clicked()
     QString username_input_value = ui->usernameInput->text();
     QString password_input_value = ui->passwordInput->text();
 
-    if (username_input_value == "admin" && password_input_value == "admin") {
-        this->hide();
+    try {
+        CommunicateWithServer server;
+        auto result = server.CheckAccount(username_input_value, password_input_value);
+        if (result.second == Existance::Exist_And_Password_Correct) {
+            this->hide();
 
-        MainPage main_page;
-        main_page.setModal(true);
-        main_page.exec();
+            MainPage main_page;
+            main_page.setModal(true);
+            main_page.exec();
 
-        this->show();
-    } else {
-        QMessageBox::critical(this, "Authorisation failed", "Wrong username or password");
+            this->show();
+        } else {
+            QMessageBox::critical(this, "Authorisation failed", "Wrong username or password");
+        }
+    } catch (std::runtime_error& e) {
+        QMessageBox::critical(this, "Server Problem", e.what());
     }
 }
 

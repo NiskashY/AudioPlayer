@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "src_autogen"
   "CMakeFiles/src.dir/checker/checker.cpp.o"
   "CMakeFiles/src.dir/checker/checker.cpp.o.d"
+  "CMakeFiles/src.dir/communicatewithserver.cpp.o"
+  "CMakeFiles/src.dir/communicatewithserver.cpp.o.d"
   "CMakeFiles/src.dir/loginwindow.cpp.o"
   "CMakeFiles/src.dir/loginwindow.cpp.o.d"
   "CMakeFiles/src.dir/main.cpp.o"

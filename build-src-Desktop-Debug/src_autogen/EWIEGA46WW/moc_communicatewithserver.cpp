@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_CommunicateWithServer_t {
-    QByteArrayData data[6];
-    char stringdata0[69];
+    QByteArrayData data[9];
+    char stringdata0[109];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -37,11 +37,15 @@ QT_MOC_LITERAL(1, 22, 9), // "sockReady"
 QT_MOC_LITERAL(2, 32, 0), // ""
 QT_MOC_LITERAL(3, 33, 8), // "sockDisc"
 QT_MOC_LITERAL(4, 42, 12), // "CheckAccount"
-QT_MOC_LITERAL(5, 55, 13) // "CreateAccount"
+QT_MOC_LITERAL(5, 55, 21), // "QPair<bool,Existance>"
+QT_MOC_LITERAL(6, 77, 13), // "CreateAccount"
+QT_MOC_LITERAL(7, 91, 8), // "username"
+QT_MOC_LITERAL(8, 100, 8) // "password"
 
     },
     "CommunicateWithServer\0sockReady\0\0"
-    "sockDisc\0CheckAccount\0CreateAccount"
+    "sockDisc\0CheckAccount\0QPair<bool,Existance>\0"
+    "CreateAccount\0username\0password"
 };
 #undef QT_MOC_LITERAL
 
@@ -62,13 +66,13 @@ static const uint qt_meta_data_CommunicateWithServer[] = {
        1,    0,   34,    2, 0x0a /* Public */,
        3,    0,   35,    2, 0x0a /* Public */,
        4,    2,   36,    2, 0x0a /* Public */,
-       5,    0,   41,    2, 0x0a /* Public */,
+       6,    2,   41,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Bool, QMetaType::QString, QMetaType::QString,    2,    2,
-    QMetaType::Void,
+    0x80000000 | 5, QMetaType::QString, QMetaType::QString,    2,    2,
+    QMetaType::Void, QMetaType::QString, QMetaType::QString,    7,    8,
 
        0        // eod
 };
@@ -81,9 +85,9 @@ void CommunicateWithServer::qt_static_metacall(QObject *_o, QMetaObject::Call _c
         switch (_id) {
         case 0: _t->sockReady(); break;
         case 1: _t->sockDisc(); break;
-        case 2: { bool _r = _t->CheckAccount((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2])));
-            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 3: _t->CreateAccount(); break;
+        case 2: { QPair<bool,Existance> _r = _t->CheckAccount((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2])));
+            if (_a[0]) *reinterpret_cast< QPair<bool,Existance>*>(_a[0]) = std::move(_r); }  break;
+        case 3: _t->CreateAccount((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
         default: ;
         }
     }

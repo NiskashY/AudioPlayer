@@ -103,6 +103,12 @@
 			null
 		],
 		[
+			"/home/mint/GitRepos/AudioPlayer/src/communicatewithserver.h",
+			"MU",
+			"EWIEGA46WW/moc_communicatewithserver.cpp",
+			null
+		],
+		[
 			"/home/mint/GitRepos/AudioPlayer/src/loginwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_loginwindow.cpp",
@@ -183,6 +189,11 @@
 	"SOURCES" : 
 	[
 		[ "/home/mint/GitRepos/AudioPlayer/src/checker/checker.cpp", "MU", null ],
+		[
+			"/home/mint/GitRepos/AudioPlayer/src/communicatewithserver.cpp",
+			"MU",
+			null
+		],
 		[ "/home/mint/GitRepos/AudioPlayer/src/loginwindow.cpp", "MU", null ],
 		[ "/home/mint/GitRepos/AudioPlayer/src/main.cpp", "MU", null ],
 		[ "/home/mint/GitRepos/AudioPlayer/src/mainpage.cpp", "MU", null ],

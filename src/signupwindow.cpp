@@ -1,6 +1,8 @@
 #include "signupwindow.h"
 #include "ui_signupwindow.h"
 
+#include "communicatewithserver.h"
+
 SignUpWindow::SignUpWindow(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::SignUpWindow)
@@ -41,12 +43,24 @@ void SignUpWindow::on_RegistreButton_clicked() {
     auto [isFieldsOk, error_msg] = emptyChecker->doFilter(username_input_value, password_input_value);
 
     if (isFieldsOk) {
-        QMessageBox::information(this, msg_box_success_title, msg_box_success);
-    } else {
-        QMessageBox::warning(this, msg_box_error_title, error_msg);
+        try {
+            CommunicateWithServer server;
+            bool isAlreadyExist = server.CheckAccount(username_input_value, password_input_value).first;
+            if (isAlreadyExist) {
+                error_msg = "Account with this Nickname already Exist";
+                isFieldsOk = false;
+            } else {
+                server.CreateAccount(username_input_value, password_input_value);
+                QMessageBox::information(this, msg_box_success_title, msg_box_success);
+            }
+        } catch (std::runtime_error& e) {
+            QMessageBox::critical(this, msg_box_error_title, e.what());
+        }
     }
 
     if (isFieldsOk) {
         SignUpWindow::on_BackButton_clicked();
+    } else {
+        QMessageBox::warning(this, msg_box_error_title, error_msg);
     }
 }
