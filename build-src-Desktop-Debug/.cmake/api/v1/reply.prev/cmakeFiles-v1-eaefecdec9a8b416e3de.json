@@ -329,6 +329,26 @@
 			"path" : "/usr/lib64/cmake/Qt5Core/Qt5CoreConfig.cmake"
 		},
 		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/Qt5Network/Qt5NetworkConfig.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/Qt5Network/Qt5Network_QConnmanEnginePlugin.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib64/cmake/Qt5Network/Qt5Network_QNetworkManagerEnginePlugin.cmake"
+		},
+		{
 			"path" : "Images/resourses.qrc"
 		}
 	],

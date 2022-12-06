@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/src_autogen.dir/AutogenUsed.txt"
   "CMakeFiles/src_autogen.dir/ParseCache.txt"
   "src_autogen"
+  "CMakeFiles/src.dir/checker/checker.cpp.o"
+  "CMakeFiles/src.dir/checker/checker.cpp.o.d"
   "CMakeFiles/src.dir/loginwindow.cpp.o"
   "CMakeFiles/src.dir/loginwindow.cpp.o.d"
   "CMakeFiles/src.dir/main.cpp.o"

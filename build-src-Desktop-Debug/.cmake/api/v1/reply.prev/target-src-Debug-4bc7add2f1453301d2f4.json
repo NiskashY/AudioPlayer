@@ -31,19 +31,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 43,
+				"line" : 45,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 57,
+				"line" : 59,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 47,
+				"line" : 49,
 				"parent" : 0
 			},
 			{
@@ -108,6 +108,10 @@
 				},
 				{
 					"backtrace" : 3,
+					"define" : "QT_NETWORK_LIB"
+				},
+				{
+					"backtrace" : 3,
 					"define" : "QT_SQL_LIB"
 				},
 				{
@@ -156,6 +160,11 @@
 					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "/usr/include/qt/QtSql"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/usr/include/qt/QtNetwork"
 				}
 			],
 			"language" : "CXX",
@@ -174,7 +183,8 @@
 				3,
 				6,
 				9,
-				12,
+				13,
+				14,
 				19
 			]
 		}
@@ -224,6 +234,11 @@
 				"role" : "libraries"
 			},
 			{
+				"backtrace" : 3,
+				"fragment" : "/usr/lib/libQt5Network.so.5.15.7",
+				"role" : "libraries"
+			},
+			{
 				"backtrace" : 9,
 				"fragment" : "/usr/lib/libQt5Gui.so.5.15.7",
 				"role" : "libraries"
@@ -254,7 +269,8 @@
 				3,
 				6,
 				9,
-				12,
+				13,
+				14,
 				19
 			]
 		},
@@ -265,7 +281,7 @@
 				2,
 				5,
 				8,
-				11,
+				12,
 				15,
 				16,
 				17,
@@ -279,8 +295,7 @@
 				4,
 				7,
 				10,
-				13,
-				14
+				11
 			]
 		},
 		{
@@ -340,22 +355,6 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "mainwindow.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "mainwindow.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "mainwindow.ui",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
 			"path" : "mainpage.h",
 			"sourceGroupIndex" : 1
 		},
@@ -376,6 +375,28 @@
 			"sourceGroupIndex" : 2
 		},
 		{
+			"backtrace" : 1,
+			"path" : "communicatewithserver.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "communicatewithserver.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "checker/checker.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "checker/checker.h",
+			"sourceGroupIndex" : 1
+		},
+		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen/include/ui_loginwindow.h",
@@ -385,12 +406,6 @@
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen/include/ui_signupwindow.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 0,
-			"isGenerated" : true,
-			"path" : "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen/include/ui_mainwindow.h",
 			"sourceGroupIndex" : 1
 		},
 		{
