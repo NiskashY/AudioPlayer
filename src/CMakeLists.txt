@@ -35,8 +35,8 @@ set(PROJECT_SOURCES
         Images/resourses.qrc
 
         # Class For Communicating with Server
-        #communicatewithserver.h
-        #communicatewithserver.cpp
+        communicatewithserver.h
+        communicatewithserver.cpp
 
         # Checker For Logins & Passwords
         checker/checker.cpp

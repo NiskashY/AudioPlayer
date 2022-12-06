@@ -211,6 +211,30 @@ checker/checker.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/checker/checker.cpp.s
 .PHONY : checker/checker.cpp.s
 
+communicatewithserver.o: communicatewithserver.cpp.o
+.PHONY : communicatewithserver.o
+
+# target to build an object file
+communicatewithserver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/communicatewithserver.cpp.o
+.PHONY : communicatewithserver.cpp.o
+
+communicatewithserver.i: communicatewithserver.cpp.i
+.PHONY : communicatewithserver.i
+
+# target to preprocess a source file
+communicatewithserver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/communicatewithserver.cpp.i
+.PHONY : communicatewithserver.cpp.i
+
+communicatewithserver.s: communicatewithserver.cpp.s
+.PHONY : communicatewithserver.s
+
+# target to generate assembly for a file
+communicatewithserver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/communicatewithserver.cpp.s
+.PHONY : communicatewithserver.cpp.s
+
 loginwindow.o: loginwindow.cpp.o
 .PHONY : loginwindow.o
 
@@ -372,6 +396,9 @@ help:
 	@echo "... checker/checker.o"
 	@echo "... checker/checker.i"
 	@echo "... checker/checker.s"
+	@echo "... communicatewithserver.o"
+	@echo "... communicatewithserver.i"
+	@echo "... communicatewithserver.s"
 	@echo "... loginwindow.o"
 	@echo "... loginwindow.i"
 	@echo "... loginwindow.s"

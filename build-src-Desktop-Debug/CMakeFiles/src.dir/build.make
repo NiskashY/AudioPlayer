@@ -150,10 +150,24 @@ CMakeFiles/src.dir/mainpage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/mainpage.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mint/GitRepos/AudioPlayer/src/mainpage.cpp -o CMakeFiles/src.dir/mainpage.cpp.s
 
+CMakeFiles/src.dir/communicatewithserver.cpp.o: CMakeFiles/src.dir/flags.make
+CMakeFiles/src.dir/communicatewithserver.cpp.o: /home/mint/GitRepos/AudioPlayer/src/communicatewithserver.cpp
+CMakeFiles/src.dir/communicatewithserver.cpp.o: CMakeFiles/src.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/src.dir/communicatewithserver.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/src.dir/communicatewithserver.cpp.o -MF CMakeFiles/src.dir/communicatewithserver.cpp.o.d -o CMakeFiles/src.dir/communicatewithserver.cpp.o -c /home/mint/GitRepos/AudioPlayer/src/communicatewithserver.cpp
+
+CMakeFiles/src.dir/communicatewithserver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/communicatewithserver.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mint/GitRepos/AudioPlayer/src/communicatewithserver.cpp > CMakeFiles/src.dir/communicatewithserver.cpp.i
+
+CMakeFiles/src.dir/communicatewithserver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/communicatewithserver.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mint/GitRepos/AudioPlayer/src/communicatewithserver.cpp -o CMakeFiles/src.dir/communicatewithserver.cpp.s
+
 CMakeFiles/src.dir/checker/checker.cpp.o: CMakeFiles/src.dir/flags.make
 CMakeFiles/src.dir/checker/checker.cpp.o: /home/mint/GitRepos/AudioPlayer/src/checker/checker.cpp
 CMakeFiles/src.dir/checker/checker.cpp.o: CMakeFiles/src.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/src.dir/checker/checker.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/src.dir/checker/checker.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/src.dir/checker/checker.cpp.o -MF CMakeFiles/src.dir/checker/checker.cpp.o.d -o CMakeFiles/src.dir/checker/checker.cpp.o -c /home/mint/GitRepos/AudioPlayer/src/checker/checker.cpp
 
 CMakeFiles/src.dir/checker/checker.cpp.i: cmake_force
@@ -167,7 +181,7 @@ CMakeFiles/src.dir/checker/checker.cpp.s: cmake_force
 CMakeFiles/src.dir/src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o: CMakeFiles/src.dir/flags.make
 CMakeFiles/src.dir/src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o: src_autogen/OIBSYM6ORI/qrc_resourses.cpp
 CMakeFiles/src.dir/src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o: CMakeFiles/src.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/src.dir/src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/src.dir/src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/src.dir/src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o -MF CMakeFiles/src.dir/src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o.d -o CMakeFiles/src.dir/src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o -c /home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen/OIBSYM6ORI/qrc_resourses.cpp
 
 CMakeFiles/src.dir/src_autogen/OIBSYM6ORI/qrc_resourses.cpp.i: cmake_force
@@ -185,6 +199,7 @@ src_OBJECTS = \
 "CMakeFiles/src.dir/loginwindow.cpp.o" \
 "CMakeFiles/src.dir/signupwindow.cpp.o" \
 "CMakeFiles/src.dir/mainpage.cpp.o" \
+"CMakeFiles/src.dir/communicatewithserver.cpp.o" \
 "CMakeFiles/src.dir/checker/checker.cpp.o" \
 "CMakeFiles/src.dir/src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o"
 
@@ -196,6 +211,7 @@ src: CMakeFiles/src.dir/main.cpp.o
 src: CMakeFiles/src.dir/loginwindow.cpp.o
 src: CMakeFiles/src.dir/signupwindow.cpp.o
 src: CMakeFiles/src.dir/mainpage.cpp.o
+src: CMakeFiles/src.dir/communicatewithserver.cpp.o
 src: CMakeFiles/src.dir/checker/checker.cpp.o
 src: CMakeFiles/src.dir/src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o
 src: CMakeFiles/src.dir/build.make
@@ -205,7 +221,7 @@ src: /usr/lib/libQt5Network.so.5.15.7
 src: /usr/lib/libQt5Gui.so.5.15.7
 src: /usr/lib/libQt5Core.so.5.15.7
 src: CMakeFiles/src.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable src"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable src"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/src.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
