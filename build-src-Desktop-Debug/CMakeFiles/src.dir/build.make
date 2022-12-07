@@ -217,6 +217,7 @@ src: CMakeFiles/src.dir/src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o
 src: CMakeFiles/src.dir/build.make
 src: /usr/lib/libQt5Widgets.so.5.15.7
 src: /usr/lib/libQt5Sql.so.5.15.7
+src: /usr/lib/libQt5Multimedia.so.5.15.7
 src: /usr/lib/libQt5Network.so.5.15.7
 src: /usr/lib/libQt5Gui.so.5.15.7
 src: /usr/lib/libQt5Core.so.5.15.7

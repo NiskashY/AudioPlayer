@@ -89,6 +89,15 @@
 		"/usr/lib64/cmake/Qt5Network/Qt5Network_QConnmanEnginePlugin.cmake",
 		"/usr/lib64/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake",
 		"/usr/lib64/cmake/Qt5Network/Qt5Network_QNetworkManagerEnginePlugin.cmake",
+		"/usr/lib64/cmake/Qt5Multimedia/Qt5MultimediaConfigVersion.cmake",
+		"/usr/lib64/cmake/Qt5Multimedia/Qt5MultimediaConfig.cmake",
+		"/usr/lib64/cmake/Qt5Multimedia/Qt5Multimedia_CameraBinServicePlugin.cmake",
+		"/usr/lib64/cmake/Qt5Multimedia/Qt5Multimedia_QAlsaPlugin.cmake",
+		"/usr/lib64/cmake/Qt5Multimedia/Qt5Multimedia_QGstreamerAudioDecoderServicePlugin.cmake",
+		"/usr/lib64/cmake/Qt5Multimedia/Qt5Multimedia_QGstreamerCaptureServicePlugin.cmake",
+		"/usr/lib64/cmake/Qt5Multimedia/Qt5Multimedia_QGstreamerPlayerServicePlugin.cmake",
+		"/usr/lib64/cmake/Qt5Multimedia/Qt5Multimedia_QM3uPlaylistPlugin.cmake",
+		"/usr/lib64/cmake/Qt5Multimedia/Qt5Multimedia_QPulseAudioPlugin.cmake",
 		"/home/mint/GitRepos/AudioPlayer/src/Images/resourses.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "/home/mint/GitRepos/AudioPlayer/src",
@@ -134,6 +143,7 @@
 	[
 		"QT_CORE_LIB",
 		"QT_GUI_LIB",
+		"QT_MULTIMEDIA_LIB",
 		"QT_NETWORK_LIB",
 		"QT_SQL_LIB",
 		"QT_WIDGETS_LIB"
@@ -156,6 +166,7 @@
 		"/usr/lib/qt/mkspecs/linux-g++",
 		"/usr/include/qt/QtSql",
 		"/usr/include/qt/QtNetwork",
+		"/usr/include/qt/QtMultimedia",
 		"/usr/include/c++/12.2.0",
 		"/usr/include/c++/12.2.0/x86_64-pc-linux-gnu",
 		"/usr/include/c++/12.2.0/backward",

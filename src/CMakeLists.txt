@@ -11,7 +11,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt5 REQUIRED COMPONENTS Widgets Sql Core Network)
+find_package(Qt5 REQUIRED COMPONENTS Widgets Sql Core Network Multimedia)
 
 set(PROJECT_SOURCES
         main.cpp
@@ -47,7 +47,7 @@ add_executable(src
     ${PROJECT_SOURCES}
 )
 
-target_link_libraries(src PRIVATE Qt5::Widgets Qt5::Sql Qt5::Core Qt5::Network)
+target_link_libraries(src PRIVATE Qt5::Widgets Qt5::Sql Qt5::Core Qt5::Network Qt5::Multimedia)
 
 set_target_properties(src PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com

@@ -1032,17 +1032,64 @@ CMakeFiles/src.dir/loginwindow.cpp.o: /home/mint/GitRepos/AudioPlayer/src/loginw
   /home/mint/GitRepos/AudioPlayer/src/mainpage.h \
   /usr/include/qt/QtWidgets/QDialog \
   /usr/include/qt/QtWidgets/qdialog.h \
+  /usr/include/qt/QtWidgets/QFileDialog \
+  /usr/include/qt/QtWidgets/qfiledialog.h \
+  /usr/include/qt/QtCore/qdir.h \
+  /usr/include/qt/QtCore/qfileinfo.h \
+  /usr/include/qt/QtCore/qfile.h \
+  /usr/include/qt/QtCore/qfiledevice.h \
+  /usr/include/qt/QtCore/qurl.h \
+  /usr/include/qt/QtCore/QMap \
+  /usr/include/qt/QtCore/qmap.h \
+  /usr/include/qt/QtWidgets/QLabel \
+  /usr/include/qt/QtWidgets/qlabel.h \
+  /usr/include/qt/QtWidgets/qframe.h \
+  /usr/include/qt/QtWidgets/QCheckBox \
+  /usr/include/qt/QtWidgets/qcheckbox.h \
+  /usr/include/qt/QtWidgets/qabstractbutton.h \
+  /usr/include/qt/QtWidgets/QHBoxLayout \
+  /usr/include/qt/QtWidgets/qboxlayout.h \
+  /usr/include/qt/QtWidgets/qlayout.h \
+  /usr/include/qt/QtWidgets/qlayoutitem.h \
+  /usr/include/qt/QtWidgets/qboxlayout.h \
+  /usr/include/qt/QtWidgets/qgridlayout.h \
+  /usr/include/qt/QtMultimedia/QMediaPlayer \
+  /usr/include/qt/QtMultimedia/qmediaplayer.h \
+  /usr/include/qt/QtMultimedia/qtmultimediaglobal.h \
+  /usr/include/qt/QtMultimedia/qtmultimedia-config.h \
+  /usr/include/qt/QtMultimedia/qmediaobject.h \
+  /usr/include/qt/QtMultimedia/qmultimedia.h \
+  /usr/include/qt/QtMultimedia/qmediacontent.h \
+  /usr/include/qt/QtMultimedia/qmediaresource.h \
+  /usr/include/qt/QtCore/qmap.h \
+  /usr/include/qt/QtNetwork/qnetworkrequest.h \
+  /usr/include/qt/QtNetwork/qtnetworkglobal.h \
+  /usr/include/qt/QtNetwork/qtnetwork-config.h \
+  /usr/include/qt/QtCore/QSharedDataPointer \
+  /usr/include/qt/QtCore/qshareddata.h \
+  /usr/include/qt/QtCore/QString \
+  /usr/include/qt/QtCore/qstring.h \
+  /usr/include/qt/QtCore/QUrl \
+  /usr/include/qt/QtCore/qurl.h \
+  /usr/include/qt/QtCore/QVariant \
+  /usr/include/qt/QtCore/qvariant.h \
+  /usr/include/c++/12.2.0/variant \
+  /usr/include/qt/QtMultimedia/qmediaenumdebug.h \
+  /usr/include/qt/QtCore/qmetaobject.h \
+  /usr/include/qt/QtCore/qvariant.h \
+  /usr/include/qt/QtCore/qdebug.h \
+  /usr/include/qt/QtCore/qtextstream.h \
+  /usr/include/qt/QtCore/qlocale.h \
+  /usr/include/qt/QtCore/qset.h \
+  /usr/include/qt/QtCore/qcontiguouscache.h \
+  /usr/include/qt/QtMultimedia/qaudio.h \
+  /usr/include/qt/QtNetwork/qnetworkconfiguration.h \
   /home/mint/GitRepos/AudioPlayer/src/signupwindow.h \
   /home/mint/GitRepos/AudioPlayer/src/checker/checker.h \
   /usr/include/qt/QtCore/QPair \
   /usr/include/qt/QtCore/qpair.h \
   /usr/include/qt/QtCore/QString \
-  /usr/include/qt/QtCore/qstring.h \
   src_autogen/include/ui_loginwindow.h \
-  /usr/include/qt/QtCore/QVariant \
-  /usr/include/qt/QtCore/qvariant.h \
-  /usr/include/qt/QtCore/qmap.h \
-  /usr/include/c++/12.2.0/variant \
   /usr/include/qt/QtWidgets/QApplication \
   /usr/include/qt/QtWidgets/qapplication.h \
   /usr/include/qt/QtCore/qcoreapplication.h \
@@ -1050,17 +1097,8 @@ CMakeFiles/src.dir/loginwindow.cpp.o: /home/mint/GitRepos/AudioPlayer/src/loginw
   /usr/include/qt/QtCore/qeventloop.h \
   /usr/include/qt/QtGui/qguiapplication.h \
   /usr/include/qt/QtGui/qinputmethod.h \
-  /usr/include/qt/QtCore/qlocale.h \
-  /usr/include/qt/QtCore/qvariant.h \
   /usr/include/qt/QtWidgets/QHBoxLayout \
-  /usr/include/qt/QtWidgets/qboxlayout.h \
-  /usr/include/qt/QtWidgets/qlayout.h \
-  /usr/include/qt/QtWidgets/qlayoutitem.h \
-  /usr/include/qt/QtWidgets/qboxlayout.h \
-  /usr/include/qt/QtWidgets/qgridlayout.h \
   /usr/include/qt/QtWidgets/QLabel \
-  /usr/include/qt/QtWidgets/qlabel.h \
-  /usr/include/qt/QtWidgets/qframe.h \
   /usr/include/qt/QtWidgets/QLineEdit \
   /usr/include/qt/QtWidgets/qlineedit.h \
   /usr/include/qt/QtGui/qtextcursor.h \
@@ -1070,7 +1108,6 @@ CMakeFiles/src.dir/loginwindow.cpp.o: /home/mint/GitRepos/AudioPlayer/src/loginw
   /usr/include/qt/QtWidgets/QMainWindow \
   /usr/include/qt/QtWidgets/QPushButton \
   /usr/include/qt/QtWidgets/qpushbutton.h \
-  /usr/include/qt/QtWidgets/qabstractbutton.h \
   /usr/include/qt/QtWidgets/QSpacerItem \
   /usr/include/qt/QtWidgets/qlayoutitem.h \
   /usr/include/qt/QtWidgets/QVBoxLayout \
@@ -1079,13 +1116,7 @@ CMakeFiles/src.dir/loginwindow.cpp.o: /home/mint/GitRepos/AudioPlayer/src/loginw
   /home/mint/GitRepos/AudioPlayer/src/communicatewithserver.h \
   /usr/include/qt/QtNetwork/QTcpSocket \
   /usr/include/qt/QtNetwork/qtcpsocket.h \
-  /usr/include/qt/QtNetwork/qtnetworkglobal.h \
-  /usr/include/qt/QtNetwork/qtnetwork-config.h \
   /usr/include/qt/QtNetwork/qabstractsocket.h \
-  /usr/include/qt/QtCore/qdebug.h \
-  /usr/include/qt/QtCore/qtextstream.h \
-  /usr/include/qt/QtCore/qset.h \
-  /usr/include/qt/QtCore/qcontiguouscache.h \
   /usr/include/qt/QtNetwork/QTcpServer \
   /usr/include/qt/QtNetwork/qtcpserver.h \
   /usr/include/qt/QtNetwork/qhostaddress.h \
@@ -1096,7 +1127,6 @@ CMakeFiles/src.dir/loginwindow.cpp.o: /home/mint/GitRepos/AudioPlayer/src/loginw
   /usr/include/qt/QtCore/qdatetime.h \
   /usr/include/qt/QtCore/qcborcommon.h \
   /usr/include/qt/QtCore/qregularexpression.h \
-  /usr/include/qt/QtCore/qurl.h \
   /usr/include/qt/QtCore/quuid.h \
   /usr/include/qt/QtCore/QJsonArray \
   /usr/include/qt/QtCore/qjsonarray.h \
@@ -1493,15 +1523,61 @@ CMakeFiles/src.dir/main.cpp.o: /home/mint/GitRepos/AudioPlayer/src/main.cpp \
   /home/mint/GitRepos/AudioPlayer/src/mainpage.h \
   /usr/include/qt/QtWidgets/QDialog \
   /usr/include/qt/QtWidgets/qdialog.h \
+  /usr/include/qt/QtWidgets/QFileDialog \
+  /usr/include/qt/QtWidgets/qfiledialog.h \
+  /usr/include/qt/QtCore/qdir.h \
+  /usr/include/qt/QtCore/qfileinfo.h \
+  /usr/include/qt/QtCore/qfile.h \
+  /usr/include/qt/QtCore/qurl.h \
+  /usr/include/qt/QtWidgets/qdialog.h \
+  /usr/include/qt/QtCore/QMap \
+  /usr/include/qt/QtCore/qmap.h \
+  /usr/include/qt/QtWidgets/QLabel \
+  /usr/include/qt/QtWidgets/qlabel.h \
+  /usr/include/qt/QtWidgets/qframe.h \
+  /usr/include/qt/QtWidgets/QCheckBox \
+  /usr/include/qt/QtWidgets/qcheckbox.h \
+  /usr/include/qt/QtWidgets/qabstractbutton.h \
+  /usr/include/qt/QtWidgets/QHBoxLayout \
+  /usr/include/qt/QtWidgets/qboxlayout.h \
+  /usr/include/qt/QtWidgets/qlayout.h \
+  /usr/include/qt/QtWidgets/qlayoutitem.h \
+  /usr/include/qt/QtWidgets/qboxlayout.h \
+  /usr/include/qt/QtWidgets/qgridlayout.h \
+  /usr/include/qt/QtMultimedia/QMediaPlayer \
+  /usr/include/qt/QtMultimedia/qmediaplayer.h \
+  /usr/include/qt/QtMultimedia/qtmultimediaglobal.h \
+  /usr/include/qt/QtMultimedia/qtmultimedia-config.h \
+  /usr/include/qt/QtMultimedia/qmediaobject.h \
+  /usr/include/qt/QtMultimedia/qmultimedia.h \
+  /usr/include/qt/QtMultimedia/qmediacontent.h \
+  /usr/include/qt/QtMultimedia/qmediaresource.h \
+  /usr/include/qt/QtNetwork/qnetworkrequest.h \
+  /usr/include/qt/QtNetwork/qtnetworkglobal.h \
+  /usr/include/qt/QtNetwork/qtnetwork-config.h \
+  /usr/include/qt/QtCore/QSharedDataPointer \
+  /usr/include/qt/QtCore/qshareddata.h \
+  /usr/include/qt/QtCore/QString \
+  /usr/include/qt/QtCore/qstring.h \
+  /usr/include/qt/QtCore/QUrl \
+  /usr/include/qt/QtCore/qurl.h \
+  /usr/include/qt/QtCore/QVariant \
+  /usr/include/qt/QtCore/qvariant.h \
+  /usr/include/qt/QtMultimedia/qmediaenumdebug.h \
+  /usr/include/qt/QtCore/qmetaobject.h \
+  /usr/include/qt/QtCore/qdebug.h \
+  /usr/include/qt/QtCore/qtextstream.h \
+  /usr/include/qt/QtCore/qset.h \
+  /usr/include/qt/QtCore/qcontiguouscache.h \
+  /usr/include/qt/QtMultimedia/qaudio.h \
+  /usr/include/qt/QtNetwork/qnetworkconfiguration.h \
   /home/mint/GitRepos/AudioPlayer/src/signupwindow.h \
   /usr/include/qt/QtWidgets/QMessageBox \
   /usr/include/qt/QtWidgets/qmessagebox.h \
-  /usr/include/qt/QtWidgets/qdialog.h \
   /home/mint/GitRepos/AudioPlayer/src/checker/checker.h \
   /usr/include/qt/QtCore/QPair \
   /usr/include/qt/QtCore/qpair.h \
-  /usr/include/qt/QtCore/QString \
-  /usr/include/qt/QtCore/qstring.h
+  /usr/include/qt/QtCore/QString
 
 CMakeFiles/src.dir/mainpage.cpp.o: /home/mint/GitRepos/AudioPlayer/src/mainpage.cpp \
   /usr/include/stdc-predef.h \
@@ -1874,11 +1950,61 @@ CMakeFiles/src.dir/mainpage.cpp.o: /home/mint/GitRepos/AudioPlayer/src/mainpage.
   /usr/include/qt/QtWidgets/qsizepolicy.h \
   /usr/include/qt/QtGui/qcursor.h \
   /usr/include/qt/QtGui/qkeysequence.h \
-  src_autogen/include/ui_mainpage.h \
+  /usr/include/qt/QtWidgets/QFileDialog \
+  /usr/include/qt/QtWidgets/qfiledialog.h \
+  /usr/include/qt/QtCore/qdir.h \
+  /usr/include/qt/QtCore/qfileinfo.h \
+  /usr/include/qt/QtCore/qfile.h \
+  /usr/include/qt/QtCore/qfiledevice.h \
+  /usr/include/qt/QtCore/qurl.h \
+  /usr/include/qt/QtWidgets/qdialog.h \
+  /usr/include/qt/QtCore/QMap \
+  /usr/include/qt/QtCore/qmap.h \
+  /usr/include/qt/QtWidgets/QLabel \
+  /usr/include/qt/QtWidgets/qlabel.h \
+  /usr/include/qt/QtWidgets/qframe.h \
+  /usr/include/qt/QtWidgets/QCheckBox \
+  /usr/include/qt/QtWidgets/qcheckbox.h \
+  /usr/include/qt/QtWidgets/qabstractbutton.h \
+  /usr/include/qt/QtGui/qicon.h \
+  /usr/include/qt/QtWidgets/QHBoxLayout \
+  /usr/include/qt/QtWidgets/qboxlayout.h \
+  /usr/include/qt/QtWidgets/qlayout.h \
+  /usr/include/qt/QtWidgets/qlayoutitem.h \
+  /usr/include/qt/QtWidgets/qboxlayout.h \
+  /usr/include/qt/QtWidgets/qgridlayout.h \
+  /usr/include/qt/QtMultimedia/QMediaPlayer \
+  /usr/include/qt/QtMultimedia/qmediaplayer.h \
+  /usr/include/qt/QtMultimedia/qtmultimediaglobal.h \
+  /usr/include/qt/QtMultimedia/qtmultimedia-config.h \
+  /usr/include/qt/QtMultimedia/qmediaobject.h \
+  /usr/include/qt/QtMultimedia/qmultimedia.h \
+  /usr/include/qt/QtMultimedia/qmediacontent.h \
+  /usr/include/qt/QtMultimedia/qmediaresource.h \
+  /usr/include/qt/QtCore/qmap.h \
+  /usr/include/qt/QtNetwork/qnetworkrequest.h \
+  /usr/include/qt/QtNetwork/qtnetworkglobal.h \
+  /usr/include/qt/QtNetwork/qtnetwork-config.h \
+  /usr/include/qt/QtCore/QSharedDataPointer \
+  /usr/include/qt/QtCore/qshareddata.h \
+  /usr/include/qt/QtCore/QString \
+  /usr/include/qt/QtCore/qstring.h \
+  /usr/include/qt/QtCore/QUrl \
+  /usr/include/qt/QtCore/qurl.h \
   /usr/include/qt/QtCore/QVariant \
   /usr/include/qt/QtCore/qvariant.h \
-  /usr/include/qt/QtCore/qmap.h \
   /usr/include/c++/12.2.0/variant \
+  /usr/include/qt/QtMultimedia/qmediaenumdebug.h \
+  /usr/include/qt/QtCore/qmetaobject.h \
+  /usr/include/qt/QtCore/qvariant.h \
+  /usr/include/qt/QtCore/qdebug.h \
+  /usr/include/qt/QtCore/qtextstream.h \
+  /usr/include/qt/QtCore/qlocale.h \
+  /usr/include/qt/QtCore/qset.h \
+  /usr/include/qt/QtCore/qcontiguouscache.h \
+  /usr/include/qt/QtMultimedia/qaudio.h \
+  /usr/include/qt/QtNetwork/qnetworkconfiguration.h \
+  src_autogen/include/ui_mainpage.h \
   /usr/include/qt/QtWidgets/QApplication \
   /usr/include/qt/QtWidgets/qapplication.h \
   /usr/include/qt/QtCore/qcoreapplication.h \
@@ -1886,28 +2012,24 @@ CMakeFiles/src.dir/mainpage.cpp.o: /home/mint/GitRepos/AudioPlayer/src/mainpage.
   /usr/include/qt/QtCore/qeventloop.h \
   /usr/include/qt/QtGui/qguiapplication.h \
   /usr/include/qt/QtGui/qinputmethod.h \
-  /usr/include/qt/QtCore/qlocale.h \
-  /usr/include/qt/QtCore/qvariant.h \
   /usr/include/qt/QtWidgets/QDialog \
   /usr/include/qt/QtWidgets/QHBoxLayout \
-  /usr/include/qt/QtWidgets/qboxlayout.h \
-  /usr/include/qt/QtWidgets/qlayout.h \
-  /usr/include/qt/QtWidgets/qlayoutitem.h \
-  /usr/include/qt/QtWidgets/qboxlayout.h \
-  /usr/include/qt/QtWidgets/qgridlayout.h \
-  /usr/include/qt/QtWidgets/QLabel \
-  /usr/include/qt/QtWidgets/qlabel.h \
-  /usr/include/qt/QtWidgets/qframe.h \
   /usr/include/qt/QtWidgets/QPushButton \
   /usr/include/qt/QtWidgets/qpushbutton.h \
-  /usr/include/qt/QtWidgets/qabstractbutton.h \
-  /usr/include/qt/QtGui/qicon.h \
+  /usr/include/qt/QtWidgets/QScrollArea \
+  /usr/include/qt/QtWidgets/qscrollarea.h \
+  /usr/include/qt/QtWidgets/qabstractscrollarea.h \
   /usr/include/qt/QtWidgets/QSlider \
   /usr/include/qt/QtWidgets/qslider.h \
   /usr/include/qt/QtWidgets/qabstractslider.h \
   /usr/include/qt/QtWidgets/QSpacerItem \
   /usr/include/qt/QtWidgets/qlayoutitem.h \
-  /usr/include/qt/QtWidgets/QVBoxLayout
+  /usr/include/qt/QtWidgets/QTabWidget \
+  /usr/include/qt/QtWidgets/qtabwidget.h \
+  /usr/include/qt/QtWidgets/QVBoxLayout \
+  /usr/include/qt/QtWidgets/QWidget \
+  /usr/include/qt/QtWidgets/qwidget.h \
+  /usr/include/qt/QtWidgets/QSpacerItem
 
 CMakeFiles/src.dir/signupwindow.cpp.o: /home/mint/GitRepos/AudioPlayer/src/signupwindow.cpp \
   /usr/include/stdc-predef.h \
@@ -2763,15 +2885,55 @@ CMakeFiles/src.dir/src_autogen/mocs_compilation.cpp.o: src_autogen/mocs_compilat
   /home/mint/GitRepos/AudioPlayer/src/mainpage.h \
   /usr/include/qt/QtWidgets/QDialog \
   /usr/include/qt/QtWidgets/qdialog.h \
+  /usr/include/qt/QtWidgets/QFileDialog \
+  /usr/include/qt/QtWidgets/qfiledialog.h \
+  /usr/include/qt/QtCore/qdir.h \
+  /usr/include/qt/QtCore/qfileinfo.h \
+  /usr/include/qt/QtCore/qfile.h \
+  /usr/include/qt/QtCore/qfiledevice.h \
+  /usr/include/qt/QtWidgets/qdialog.h \
+  /usr/include/qt/QtCore/QMap \
+  /usr/include/qt/QtCore/qmap.h \
+  /usr/include/qt/QtWidgets/QLabel \
+  /usr/include/qt/QtWidgets/qlabel.h \
+  /usr/include/qt/QtWidgets/qframe.h \
+  /usr/include/qt/QtWidgets/QCheckBox \
+  /usr/include/qt/QtWidgets/qcheckbox.h \
+  /usr/include/qt/QtWidgets/qabstractbutton.h \
+  /usr/include/qt/QtWidgets/QHBoxLayout \
+  /usr/include/qt/QtWidgets/qboxlayout.h \
+  /usr/include/qt/QtWidgets/qlayout.h \
+  /usr/include/qt/QtWidgets/qlayoutitem.h \
+  /usr/include/qt/QtWidgets/qboxlayout.h \
+  /usr/include/qt/QtWidgets/qgridlayout.h \
+  /usr/include/qt/QtMultimedia/QMediaPlayer \
+  /usr/include/qt/QtMultimedia/qmediaplayer.h \
+  /usr/include/qt/QtMultimedia/qtmultimediaglobal.h \
+  /usr/include/qt/QtMultimedia/qtmultimedia-config.h \
+  /usr/include/qt/QtMultimedia/qmediaobject.h \
+  /usr/include/qt/QtMultimedia/qmultimedia.h \
+  /usr/include/qt/QtMultimedia/qmediacontent.h \
+  /usr/include/qt/QtMultimedia/qmediaresource.h \
+  /usr/include/qt/QtNetwork/qnetworkrequest.h \
+  /usr/include/qt/QtCore/QSharedDataPointer \
+  /usr/include/qt/QtCore/qshareddata.h \
+  /usr/include/qt/QtCore/QString \
+  /usr/include/qt/QtCore/qstring.h \
+  /usr/include/qt/QtCore/QUrl \
+  /usr/include/qt/QtCore/qurl.h \
+  /usr/include/qt/QtCore/QVariant \
+  /usr/include/qt/QtCore/qvariant.h \
+  /usr/include/qt/QtMultimedia/qmediaenumdebug.h \
+  /usr/include/qt/QtCore/qmetaobject.h \
+  /usr/include/qt/QtMultimedia/qaudio.h \
+  /usr/include/qt/QtNetwork/qnetworkconfiguration.h \
   /home/mint/GitRepos/AudioPlayer/src/signupwindow.h \
   /usr/include/qt/QtWidgets/QMessageBox \
   /usr/include/qt/QtWidgets/qmessagebox.h \
-  /usr/include/qt/QtWidgets/qdialog.h \
   /home/mint/GitRepos/AudioPlayer/src/checker/checker.h \
   /usr/include/qt/QtCore/QPair \
   /usr/include/qt/QtCore/qpair.h \
   /usr/include/qt/QtCore/QString \
-  /usr/include/qt/QtCore/qstring.h \
   src_autogen/EWIEGA46WW/moc_mainpage.cpp \
   src_autogen/EWIEGA46WW/moc_signupwindow.cpp \
   /home/mint/GitRepos/AudioPlayer/src/signupwindow.h
@@ -2783,15 +2945,11 @@ src_autogen/include/ui_signupwindow.h:
 
 /home/mint/GitRepos/AudioPlayer/src/signupwindow.cpp:
 
-/usr/include/qt/QtCore/qfiledevice.h:
+/usr/include/qt/QtWidgets/qscrollarea.h:
 
-/usr/include/qt/QtCore/qfile.h:
+/usr/include/qt/QtWidgets/QScrollArea:
 
 /home/mint/GitRepos/AudioPlayer/src/main.cpp:
-
-/usr/include/qt/QtWidgets/QWidget:
-
-/usr/include/qt/QtWidgets/qabstractbutton.h:
 
 /usr/include/qt/QtWidgets/qpushbutton.h:
 
@@ -2803,12 +2961,6 @@ src_autogen/include/ui_signupwindow.h:
 
 /usr/include/qt/QtGui/qtextcursor.h:
 
-/usr/include/qt/QtWidgets/QLabel:
-
-/usr/include/qt/QtWidgets/qboxlayout.h:
-
-/usr/include/qt/QtWidgets/QHBoxLayout:
-
 /usr/include/qt/QtGui/qinputmethod.h:
 
 /usr/include/qt/QtCore/qcoreevent.h:
@@ -2818,6 +2970,40 @@ src_autogen/include/ui_signupwindow.h:
 /usr/include/qt/QtWidgets/QApplication:
 
 src_autogen/include/ui_loginwindow.h:
+
+/usr/include/qt/QtNetwork/qnetworkconfiguration.h:
+
+/usr/include/qt/QtMultimedia/qaudio.h:
+
+/usr/include/qt/QtMultimedia/qmediaenumdebug.h:
+
+/usr/include/qt/QtCore/QUrl:
+
+/usr/include/qt/QtCore/qmetaobject.h:
+
+/usr/include/qt/QtMultimedia/qmediaresource.h:
+
+/usr/include/qt/QtMultimedia/qmediacontent.h:
+
+/usr/include/qt/QtMultimedia/qmultimedia.h:
+
+/usr/include/qt/QtMultimedia/qtmultimediaglobal.h:
+
+/usr/include/qt/QtWidgets/QWidget:
+
+/usr/include/qt/QtMultimedia/qmediaplayer.h:
+
+/usr/include/qt/QtWidgets/qboxlayout.h:
+
+/usr/include/qt/QtWidgets/QHBoxLayout:
+
+/usr/include/qt/QtWidgets/qabstractbutton.h:
+
+/usr/include/qt/QtWidgets/QLabel:
+
+/usr/include/qt/QtCore/qfiledevice.h:
+
+/usr/include/qt/QtCore/qfile.h:
 
 /usr/include/qt/QtGui/qicon.h:
 
@@ -2849,6 +3035,8 @@ src_autogen/include/ui_loginwindow.h:
 
 /usr/include/qt/QtGui/qrgba64.h:
 
+/usr/include/qt/QtMultimedia/qmediaobject.h:
+
 /usr/include/qt/QtGui/qrgb.h:
 
 /usr/include/qt/QtCore/qpoint.h:
@@ -2873,6 +3061,8 @@ src_autogen/EWIEGA46WW/moc_communicatewithserver.cpp:
 
 /home/mint/GitRepos/AudioPlayer/src/loginwindow.cpp:
 
+/usr/include/qt/QtNetwork/qnetworkrequest.h:
+
 /usr/include/qt/QtCore/qjsonobject.h:
 
 /usr/include/qt/QtCore/qjsonarray.h:
@@ -2892,6 +3082,8 @@ src_autogen/EWIEGA46WW/moc_communicatewithserver.cpp:
 /usr/include/qt/QtNetwork/qhostaddress.h:
 
 /usr/include/qt/QtNetwork/QTcpServer:
+
+/usr/include/qt/QtMultimedia/QMediaPlayer:
 
 /usr/include/qt/QtCore/qcontiguouscache.h:
 
@@ -2925,6 +3117,8 @@ src_autogen/EWIEGA46WW/moc_communicatewithserver.cpp:
 
 /usr/include/c++/12.2.0/bits/chrono.h:
 
+/usr/include/qt/QtCore/qfileinfo.h:
+
 /usr/include/c++/12.2.0/chrono:
 
 /usr/include/c++/12.2.0/bits/stl_multimap.h:
@@ -2954,6 +3148,10 @@ src_autogen/EWIEGA46WW/moc_communicatewithserver.cpp:
 /usr/include/qt/QtGui/qcolor.h:
 
 /usr/include/qt/QtCore/qcontainertools_impl.h:
+
+/usr/include/qt/QtWidgets/qcheckbox.h:
+
+/usr/include/qt/QtWidgets/QCheckBox:
 
 /usr/include/qt/QtCore/qvector.h:
 
@@ -3205,6 +3403,10 @@ src_autogen/EWIEGA46WW/moc_signupwindow.cpp:
 
 /usr/include/bits/floatn.h:
 
+/usr/include/qt/QtWidgets/QTabWidget:
+
+/usr/include/qt/QtWidgets/QFileDialog:
+
 /usr/include/qt/QtCore/qstringalgorithms.h:
 
 /usr/include/c++/12.2.0/pstl/pstl_config.h:
@@ -3298,6 +3500,8 @@ src_autogen/EWIEGA46WW/moc_signupwindow.cpp:
 /usr/include/c++/12.2.0/bits/nested_exception.h:
 
 /usr/include/qt/QtCore/qprocessordetection.h:
+
+/usr/include/qt/QtWidgets/qabstractscrollarea.h:
 
 /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/cpu_defines.h:
 
@@ -3411,6 +3615,8 @@ src_autogen/include/ui_mainpage.h:
 
 /usr/include/bits/types/__mbstate_t.h:
 
+/usr/include/qt/QtCore/qdir.h:
+
 /usr/include/bits/stdio_lim.h:
 
 /usr/include/c++/12.2.0/bits/uses_allocator.h:
@@ -3507,6 +3713,8 @@ src_autogen/include/ui_mainpage.h:
 
 /usr/include/bits/uio_lim.h:
 
+/usr/include/qt/QtMultimedia/qtmultimedia-config.h:
+
 /usr/include/unistd.h:
 
 /usr/include/bits/confname.h:
@@ -3556,6 +3764,8 @@ src_autogen/include/ui_mainpage.h:
 /usr/include/bits/sched.h:
 
 /usr/include/bits/types/__FILE.h:
+
+/usr/include/qt/QtCore/QMap:
 
 /usr/include/bits/types/FILE.h:
 
@@ -3612,6 +3822,8 @@ src_autogen/EWIEGA46WW/moc_loginwindow.cpp:
 /usr/include/c++/12.2.0/bits/locale_classes.h:
 
 /usr/include/c++/12.2.0/bits/alloc_traits.h:
+
+/usr/include/qt/QtWidgets/qfiledialog.h:
 
 /usr/include/c++/12.2.0/string_view:
 
@@ -3692,6 +3904,8 @@ src_autogen/EWIEGA46WW/moc_loginwindow.cpp:
 /usr/include/c++/12.2.0/ext/atomicity.h:
 
 /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/atomic_word.h:
+
+/usr/include/qt/QtCore/QSharedDataPointer:
 
 /usr/include/c++/12.2.0/memory:
 
