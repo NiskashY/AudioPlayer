@@ -13,11 +13,13 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHBoxLayout>
-#include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QScrollArea>
 #include <QtWidgets/QSlider>
 #include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QTabWidget>
 #include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -32,20 +34,23 @@ public:
     QPushButton *backLogo;
     QVBoxLayout *SideMenuLayout;
     QSpacerItem *verticalSpacer;
-    QHBoxLayout *LikesLayout;
-    QPushButton *DownloadedTracksButton;
-    QHBoxLayout *DownloadedLayout;
-    QPushButton *SearchTracksButton;
     QHBoxLayout *SearchLayout;
-    QPushButton *LikedTracksButton;
+    QPushButton *addFromDeviceButton;
     QSpacerItem *verticalSpacer_2;
-    QHBoxLayout *SongInfoLayout;
-    QSpacerItem *horizontalSpacer;
+    QHBoxLayout *tabsLayout;
     QVBoxLayout *vertLayout;
-    QSpacerItem *verticalSpacer_4;
-    QLabel *SongCover;
+    QTabWidget *tabWidget;
+    QWidget *likedTracks;
+    QHBoxLayout *horizontalLayout;
+    QVBoxLayout *verticalLayout_2;
     QSpacerItem *verticalSpacer_3;
-    QSpacerItem *horizontalSpacer_2;
+    QWidget *downloadedTracks;
+    QHBoxLayout *horizontalLayout_2;
+    QScrollArea *scrollArea;
+    QWidget *scrollAreaWidgetContents;
+    QVBoxLayout *verticalLayout_4;
+    QVBoxLayout *downVLayout;
+    QSpacerItem *verticalSpacer_4;
     QHBoxLayout *BottomWindowLayout;
     QHBoxLayout *SettingsLayout;
     QVBoxLayout *SongPlayerLayout;
@@ -101,47 +106,18 @@ public:
 
         SideMenuLayout->addItem(verticalSpacer);
 
-        LikesLayout = new QHBoxLayout();
-        LikesLayout->setObjectName(QString::fromUtf8("LikesLayout"));
-        LikesLayout->setSizeConstraint(QLayout::SetDefaultConstraint);
-        DownloadedTracksButton = new QPushButton(MainPage);
-        DownloadedTracksButton->setObjectName(QString::fromUtf8("DownloadedTracksButton"));
-        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Preferred);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(DownloadedTracksButton->sizePolicy().hasHeightForWidth());
-        DownloadedTracksButton->setSizePolicy(sizePolicy1);
-
-        LikesLayout->addWidget(DownloadedTracksButton);
-
-        LikesLayout->setStretch(0, 3);
-
-        SideMenuLayout->addLayout(LikesLayout);
-
-        DownloadedLayout = new QHBoxLayout();
-        DownloadedLayout->setSpacing(0);
-        DownloadedLayout->setObjectName(QString::fromUtf8("DownloadedLayout"));
-        DownloadedLayout->setSizeConstraint(QLayout::SetDefaultConstraint);
-        DownloadedLayout->setContentsMargins(0, -1, -1, -1);
-        SearchTracksButton = new QPushButton(MainPage);
-        SearchTracksButton->setObjectName(QString::fromUtf8("SearchTracksButton"));
-        sizePolicy1.setHeightForWidth(SearchTracksButton->sizePolicy().hasHeightForWidth());
-        SearchTracksButton->setSizePolicy(sizePolicy1);
-
-        DownloadedLayout->addWidget(SearchTracksButton);
-
-
-        SideMenuLayout->addLayout(DownloadedLayout);
-
         SearchLayout = new QHBoxLayout();
         SearchLayout->setObjectName(QString::fromUtf8("SearchLayout"));
         SearchLayout->setSizeConstraint(QLayout::SetDefaultConstraint);
-        LikedTracksButton = new QPushButton(MainPage);
-        LikedTracksButton->setObjectName(QString::fromUtf8("LikedTracksButton"));
-        sizePolicy1.setHeightForWidth(LikedTracksButton->sizePolicy().hasHeightForWidth());
-        LikedTracksButton->setSizePolicy(sizePolicy1);
+        addFromDeviceButton = new QPushButton(MainPage);
+        addFromDeviceButton->setObjectName(QString::fromUtf8("addFromDeviceButton"));
+        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(addFromDeviceButton->sizePolicy().hasHeightForWidth());
+        addFromDeviceButton->setSizePolicy(sizePolicy1);
 
-        SearchLayout->addWidget(LikedTracksButton);
+        SearchLayout->addWidget(addFromDeviceButton);
 
         SearchLayout->setStretch(0, 3);
 
@@ -159,44 +135,61 @@ public:
 
         TopWindowLayout->addLayout(SidePannelLayout);
 
-        SongInfoLayout = new QHBoxLayout();
-        SongInfoLayout->setObjectName(QString::fromUtf8("SongInfoLayout"));
-        SongInfoLayout->setContentsMargins(-1, 0, 0, 0);
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        SongInfoLayout->addItem(horizontalSpacer);
-
+        tabsLayout = new QHBoxLayout();
+        tabsLayout->setObjectName(QString::fromUtf8("tabsLayout"));
+        tabsLayout->setContentsMargins(-1, 0, 0, 0);
         vertLayout = new QVBoxLayout();
         vertLayout->setObjectName(QString::fromUtf8("vertLayout"));
-        verticalSpacer_4 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        vertLayout->addItem(verticalSpacer_4);
-
-        SongCover = new QLabel(MainPage);
-        SongCover->setObjectName(QString::fromUtf8("SongCover"));
-        SongCover->setPixmap(QPixmap(QString::fromUtf8(":/resourses/songsCovers/default_song_cover.jpg")));
-        SongCover->setScaledContents(true);
-        SongCover->setAlignment(Qt::AlignCenter);
-        SongCover->setMargin(0);
-        SongCover->setIndent(0);
-
-        vertLayout->addWidget(SongCover);
-
+        tabWidget = new QTabWidget(MainPage);
+        tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
+        likedTracks = new QWidget();
+        likedTracks->setObjectName(QString::fromUtf8("likedTracks"));
+        horizontalLayout = new QHBoxLayout(likedTracks);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        verticalLayout_2 = new QVBoxLayout();
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        vertLayout->addItem(verticalSpacer_3);
+        verticalLayout_2->addItem(verticalSpacer_3);
 
 
-        SongInfoLayout->addLayout(vertLayout);
+        horizontalLayout->addLayout(verticalLayout_2);
 
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        tabWidget->addTab(likedTracks, QString());
+        downloadedTracks = new QWidget();
+        downloadedTracks->setObjectName(QString::fromUtf8("downloadedTracks"));
+        horizontalLayout_2 = new QHBoxLayout(downloadedTracks);
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        scrollArea = new QScrollArea(downloadedTracks);
+        scrollArea->setObjectName(QString::fromUtf8("scrollArea"));
+        scrollArea->setWidgetResizable(true);
+        scrollAreaWidgetContents = new QWidget();
+        scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 590, 439));
+        verticalLayout_4 = new QVBoxLayout(scrollAreaWidgetContents);
+        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
+        downVLayout = new QVBoxLayout();
+        downVLayout->setObjectName(QString::fromUtf8("downVLayout"));
+        verticalSpacer_4 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        SongInfoLayout->addItem(horizontalSpacer_2);
+        downVLayout->addItem(verticalSpacer_4);
 
-        SongInfoLayout->setStretch(0, 1);
-        SongInfoLayout->setStretch(2, 1);
 
-        TopWindowLayout->addLayout(SongInfoLayout);
+        verticalLayout_4->addLayout(downVLayout);
+
+        scrollArea->setWidget(scrollAreaWidgetContents);
+
+        horizontalLayout_2->addWidget(scrollArea);
+
+        tabWidget->addTab(downloadedTracks, QString());
+
+        vertLayout->addWidget(tabWidget);
+
+
+        tabsLayout->addLayout(vertLayout);
+
+
+        TopWindowLayout->addLayout(tabsLayout);
 
         TopWindowLayout->setStretch(0, 2);
         TopWindowLayout->setStretch(1, 10);
@@ -289,6 +282,9 @@ public:
 
         retranslateUi(MainPage);
 
+        tabWidget->setCurrentIndex(1);
+
+
         QMetaObject::connectSlotsByName(MainPage);
     } // setupUi
 
@@ -296,10 +292,9 @@ public:
     {
         MainPage->setWindowTitle(QCoreApplication::translate("MainPage", "Dialog", nullptr));
         backLogo->setText(QString());
-        DownloadedTracksButton->setText(QCoreApplication::translate("MainPage", "Likes", nullptr));
-        SearchTracksButton->setText(QCoreApplication::translate("MainPage", "Donwloaded", nullptr));
-        LikedTracksButton->setText(QCoreApplication::translate("MainPage", "SearchEngine", nullptr));
-        SongCover->setText(QString());
+        addFromDeviceButton->setText(QCoreApplication::translate("MainPage", "Add Track From Device", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(likedTracks), QCoreApplication::translate("MainPage", "Tab 1", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(downloadedTracks), QCoreApplication::translate("MainPage", "Tab 2", nullptr));
         ShuffleButton->setText(QCoreApplication::translate("MainPage", "SHUFFLE", nullptr));
         PrevButton->setText(QCoreApplication::translate("MainPage", "PREV", nullptr));
         PauseButton->setText(QCoreApplication::translate("MainPage", "PAUSE", nullptr));

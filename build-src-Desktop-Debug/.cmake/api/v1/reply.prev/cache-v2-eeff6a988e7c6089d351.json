@@ -6414,6 +6414,30 @@
 			"value" : "/usr/lib64/cmake/Qt5Gui"
 		},
 		{
+			"name" : "Qt5Mediaplayer_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for Qt5Mediaplayer."
+				}
+			],
+			"type" : "PATH",
+			"value" : "Qt5Mediaplayer_DIR-NOTFOUND"
+		},
+		{
+			"name" : "Qt5Multimedia_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for Qt5Multimedia."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/usr/lib64/cmake/Qt5Multimedia"
+		},
+		{
 			"name" : "Qt5Network_DIR",
 			"properties" : 
 			[
