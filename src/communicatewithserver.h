@@ -41,3 +41,5 @@ private: // Private Variables
 };
 
 QJsonArray CovertToJsonFormat(const QString& data);
+
+char* GetCurrentTime();

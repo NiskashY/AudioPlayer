@@ -7,10 +7,16 @@
 	"INCLUDE_DIR" : "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen/include",
 	"INPUTS" : 
 	[
+		"/home/mint/GitRepos/AudioPlayer/src/Images/shuffle_song.png",
+		"/home/mint/GitRepos/AudioPlayer/src/Images/repeat_song.png",
 		"/home/mint/GitRepos/AudioPlayer/src/Images/default_song_cover.jpg",
+		"/home/mint/GitRepos/AudioPlayer/src/Images/prev_song.png",
+		"/home/mint/GitRepos/AudioPlayer/src/Images/query_song.png",
 		"/home/mint/GitRepos/AudioPlayer/src/Images/kotik.jpg",
 		"/home/mint/GitRepos/AudioPlayer/src/Images/sound.jpg",
 		"/home/mint/GitRepos/AudioPlayer/src/Images/hamster.jpg",
+		"/home/mint/GitRepos/AudioPlayer/src/Images/pause_song.png",
+		"/home/mint/GitRepos/AudioPlayer/src/Images/next_song.png",
 		"/home/mint/GitRepos/AudioPlayer/src/Images/Combinear.qss"
 	],
 	"LOCK_FILE" : "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/CMakeFiles/src_autogen.dir/AutoRcc_resourses_OIBSYM6ORI_Lock.lock",

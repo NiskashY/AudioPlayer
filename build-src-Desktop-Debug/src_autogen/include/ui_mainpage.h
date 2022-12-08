@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QScrollArea>
 #include <QtWidgets/QSlider>
@@ -33,6 +34,8 @@ public:
     QVBoxLayout *AppLogo;
     QPushButton *backLogo;
     QVBoxLayout *SideMenuLayout;
+    QLabel *timeInfoLabel;
+    QLabel *lastUpdateTimeLabel;
     QSpacerItem *verticalSpacer;
     QHBoxLayout *SearchLayout;
     QPushButton *addFromDeviceButton;
@@ -42,15 +45,16 @@ public:
     QTabWidget *tabWidget;
     QWidget *likedTracks;
     QHBoxLayout *horizontalLayout;
-    QVBoxLayout *verticalLayout_2;
-    QSpacerItem *verticalSpacer_3;
+    QScrollArea *scrollArea_2;
+    QWidget *scrollAreaWidgetContentsLikes;
+    QVBoxLayout *verticalLayout_3;
+    QVBoxLayout *likesVLayout;
     QWidget *downloadedTracks;
     QHBoxLayout *horizontalLayout_2;
     QScrollArea *scrollArea;
-    QWidget *scrollAreaWidgetContents;
+    QWidget *scrollAreaWidgetContentsDownload;
     QVBoxLayout *verticalLayout_4;
     QVBoxLayout *downVLayout;
-    QSpacerItem *verticalSpacer_4;
     QHBoxLayout *BottomWindowLayout;
     QHBoxLayout *SettingsLayout;
     QVBoxLayout *SongPlayerLayout;
@@ -60,11 +64,11 @@ public:
     QSpacerItem *horizontalSpacer_12;
     QHBoxLayout *TrackControllLayout;
     QSpacerItem *horizontalSpacer_9;
-    QPushButton *ShuffleButton;
-    QPushButton *PrevButton;
-    QPushButton *PauseButton;
-    QPushButton *NextButton;
-    QPushButton *RepeatButton;
+    QPushButton *shuffleButton;
+    QPushButton *prevButton;
+    QPushButton *pauseButton;
+    QPushButton *nextButton;
+    QPushButton *repeatButton;
     QSpacerItem *horizontalSpacer_10;
 
     void setupUi(QDialog *MainPage)
@@ -102,6 +106,16 @@ public:
         SideMenuLayout = new QVBoxLayout();
         SideMenuLayout->setObjectName(QString::fromUtf8("SideMenuLayout"));
         SideMenuLayout->setContentsMargins(0, -1, 0, -1);
+        timeInfoLabel = new QLabel(MainPage);
+        timeInfoLabel->setObjectName(QString::fromUtf8("timeInfoLabel"));
+
+        SideMenuLayout->addWidget(timeInfoLabel);
+
+        lastUpdateTimeLabel = new QLabel(MainPage);
+        lastUpdateTimeLabel->setObjectName(QString::fromUtf8("lastUpdateTimeLabel"));
+
+        SideMenuLayout->addWidget(lastUpdateTimeLabel);
+
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
         SideMenuLayout->addItem(verticalSpacer);
@@ -146,14 +160,22 @@ public:
         likedTracks->setObjectName(QString::fromUtf8("likedTracks"));
         horizontalLayout = new QHBoxLayout(likedTracks);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        verticalLayout_2 = new QVBoxLayout();
-        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        scrollArea_2 = new QScrollArea(likedTracks);
+        scrollArea_2->setObjectName(QString::fromUtf8("scrollArea_2"));
+        scrollArea_2->setWidgetResizable(true);
+        scrollAreaWidgetContentsLikes = new QWidget();
+        scrollAreaWidgetContentsLikes->setObjectName(QString::fromUtf8("scrollAreaWidgetContentsLikes"));
+        scrollAreaWidgetContentsLikes->setGeometry(QRect(0, 0, 590, 419));
+        verticalLayout_3 = new QVBoxLayout(scrollAreaWidgetContentsLikes);
+        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
+        likesVLayout = new QVBoxLayout();
+        likesVLayout->setObjectName(QString::fromUtf8("likesVLayout"));
 
-        verticalLayout_2->addItem(verticalSpacer_3);
+        verticalLayout_3->addLayout(likesVLayout);
 
+        scrollArea_2->setWidget(scrollAreaWidgetContentsLikes);
 
-        horizontalLayout->addLayout(verticalLayout_2);
+        horizontalLayout->addWidget(scrollArea_2);
 
         tabWidget->addTab(likedTracks, QString());
         downloadedTracks = new QWidget();
@@ -163,21 +185,17 @@ public:
         scrollArea = new QScrollArea(downloadedTracks);
         scrollArea->setObjectName(QString::fromUtf8("scrollArea"));
         scrollArea->setWidgetResizable(true);
-        scrollAreaWidgetContents = new QWidget();
-        scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 590, 439));
-        verticalLayout_4 = new QVBoxLayout(scrollAreaWidgetContents);
+        scrollAreaWidgetContentsDownload = new QWidget();
+        scrollAreaWidgetContentsDownload->setObjectName(QString::fromUtf8("scrollAreaWidgetContentsDownload"));
+        scrollAreaWidgetContentsDownload->setGeometry(QRect(0, 0, 590, 419));
+        verticalLayout_4 = new QVBoxLayout(scrollAreaWidgetContentsDownload);
         verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
         downVLayout = new QVBoxLayout();
         downVLayout->setObjectName(QString::fromUtf8("downVLayout"));
-        verticalSpacer_4 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        downVLayout->addItem(verticalSpacer_4);
-
 
         verticalLayout_4->addLayout(downVLayout);
 
-        scrollArea->setWidget(scrollAreaWidgetContents);
+        scrollArea->setWidget(scrollAreaWidgetContentsDownload);
 
         horizontalLayout_2->addWidget(scrollArea);
 
@@ -192,7 +210,7 @@ public:
         TopWindowLayout->addLayout(tabsLayout);
 
         TopWindowLayout->setStretch(0, 2);
-        TopWindowLayout->setStretch(1, 10);
+        TopWindowLayout->setStretch(1, 9);
 
         MainWindowLayout->addLayout(TopWindowLayout);
 
@@ -235,36 +253,43 @@ public:
 
         TrackControllLayout->addItem(horizontalSpacer_9);
 
-        ShuffleButton = new QPushButton(MainPage);
-        ShuffleButton->setObjectName(QString::fromUtf8("ShuffleButton"));
+        shuffleButton = new QPushButton(MainPage);
+        shuffleButton->setObjectName(QString::fromUtf8("shuffleButton"));
 
-        TrackControllLayout->addWidget(ShuffleButton);
+        TrackControllLayout->addWidget(shuffleButton);
 
-        PrevButton = new QPushButton(MainPage);
-        PrevButton->setObjectName(QString::fromUtf8("PrevButton"));
+        prevButton = new QPushButton(MainPage);
+        prevButton->setObjectName(QString::fromUtf8("prevButton"));
 
-        TrackControllLayout->addWidget(PrevButton);
+        TrackControllLayout->addWidget(prevButton);
 
-        PauseButton = new QPushButton(MainPage);
-        PauseButton->setObjectName(QString::fromUtf8("PauseButton"));
-        PauseButton->setIconSize(QSize(5, 5));
+        pauseButton = new QPushButton(MainPage);
+        pauseButton->setObjectName(QString::fromUtf8("pauseButton"));
+        pauseButton->setIconSize(QSize(5, 5));
 
-        TrackControllLayout->addWidget(PauseButton);
+        TrackControllLayout->addWidget(pauseButton);
 
-        NextButton = new QPushButton(MainPage);
-        NextButton->setObjectName(QString::fromUtf8("NextButton"));
+        nextButton = new QPushButton(MainPage);
+        nextButton->setObjectName(QString::fromUtf8("nextButton"));
 
-        TrackControllLayout->addWidget(NextButton);
+        TrackControllLayout->addWidget(nextButton);
 
-        RepeatButton = new QPushButton(MainPage);
-        RepeatButton->setObjectName(QString::fromUtf8("RepeatButton"));
+        repeatButton = new QPushButton(MainPage);
+        repeatButton->setObjectName(QString::fromUtf8("repeatButton"));
 
-        TrackControllLayout->addWidget(RepeatButton);
+        TrackControllLayout->addWidget(repeatButton);
 
         horizontalSpacer_10 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         TrackControllLayout->addItem(horizontalSpacer_10);
 
+        TrackControllLayout->setStretch(0, 2);
+        TrackControllLayout->setStretch(1, 2);
+        TrackControllLayout->setStretch(2, 2);
+        TrackControllLayout->setStretch(3, 2);
+        TrackControllLayout->setStretch(4, 2);
+        TrackControllLayout->setStretch(5, 2);
+        TrackControllLayout->setStretch(6, 2);
 
         SongPlayerLayout->addLayout(TrackControllLayout);
 
@@ -276,13 +301,15 @@ public:
 
         MainWindowLayout->addLayout(BottomWindowLayout);
 
+        MainWindowLayout->setStretch(0, 6);
+        MainWindowLayout->setStretch(1, 1);
 
         verticalLayout->addLayout(MainWindowLayout);
 
 
         retranslateUi(MainPage);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainPage);
@@ -292,14 +319,16 @@ public:
     {
         MainPage->setWindowTitle(QCoreApplication::translate("MainPage", "Dialog", nullptr));
         backLogo->setText(QString());
+        timeInfoLabel->setText(QCoreApplication::translate("MainPage", "Last Update Time:", nullptr));
+        lastUpdateTimeLabel->setText(QString());
         addFromDeviceButton->setText(QCoreApplication::translate("MainPage", "Add Track From Device", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(likedTracks), QCoreApplication::translate("MainPage", "Tab 1", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(downloadedTracks), QCoreApplication::translate("MainPage", "Tab 2", nullptr));
-        ShuffleButton->setText(QCoreApplication::translate("MainPage", "SHUFFLE", nullptr));
-        PrevButton->setText(QCoreApplication::translate("MainPage", "PREV", nullptr));
-        PauseButton->setText(QCoreApplication::translate("MainPage", "PAUSE", nullptr));
-        NextButton->setText(QCoreApplication::translate("MainPage", "NEXT", nullptr));
-        RepeatButton->setText(QCoreApplication::translate("MainPage", "REPEAT", nullptr));
+        shuffleButton->setText(QString());
+        prevButton->setText(QString());
+        pauseButton->setText(QString());
+        nextButton->setText(QString());
+        repeatButton->setText(QString());
     } // retranslateUi
 
 };

@@ -118,6 +118,12 @@
 			null
 		],
 		[
+			"/home/mint/GitRepos/AudioPlayer/src/layoutsdeleter.h",
+			"MU",
+			"EWIEGA46WW/moc_layoutsdeleter.cpp",
+			null
+		],
+		[
 			"/home/mint/GitRepos/AudioPlayer/src/loginwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_loginwindow.cpp",
@@ -205,6 +211,7 @@
 			"MU",
 			null
 		],
+		[ "/home/mint/GitRepos/AudioPlayer/src/layoutsdeleter.cpp", "MU", null ],
 		[ "/home/mint/GitRepos/AudioPlayer/src/loginwindow.cpp", "MU", null ],
 		[ "/home/mint/GitRepos/AudioPlayer/src/main.cpp", "MU", null ],
 		[ "/home/mint/GitRepos/AudioPlayer/src/mainpage.cpp", "MU", null ],

@@ -4,6 +4,12 @@
         <file>hamster.jpg</file>
         <file>sound.jpg</file>
         <file>default_song_cover.jpg</file>
+        <file>query_song.png</file>
+        <file>pause_song.png</file>
+        <file>prev_song.png</file>
+        <file>repeat_song.png</file>
+        <file>shuffle_song.png</file>
+        <file>next_song.png</file>
     </qresource>
     <qresource prefix="/styleSheets">
         <file>Combinear.qss</file>

@@ -41,13 +41,23 @@ set(PROJECT_SOURCES
         # Checker For Logins & Passwords
         checker/checker.cpp
         checker/checker.h
+
+        # Layouts deleter
+        layoutsdeleter.h
+        layoutsdeleter.cpp
 )
 
 add_executable(src
     ${PROJECT_SOURCES}
 )
 
-target_link_libraries(src PRIVATE Qt5::Widgets Qt5::Sql Qt5::Core Qt5::Network Qt5::Multimedia)
+target_link_libraries(src PRIVATE
+    Qt5::Widgets
+    Qt5::Sql
+    Qt5::Core
+    Qt5::Network
+    Qt5::Multimedia
+)
 
 set_target_properties(src PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
