@@ -235,6 +235,30 @@ communicatewithserver.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/communicatewithserver.cpp.s
 .PHONY : communicatewithserver.cpp.s
 
+layoutsdeleter.o: layoutsdeleter.cpp.o
+.PHONY : layoutsdeleter.o
+
+# target to build an object file
+layoutsdeleter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/layoutsdeleter.cpp.o
+.PHONY : layoutsdeleter.cpp.o
+
+layoutsdeleter.i: layoutsdeleter.cpp.i
+.PHONY : layoutsdeleter.i
+
+# target to preprocess a source file
+layoutsdeleter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/layoutsdeleter.cpp.i
+.PHONY : layoutsdeleter.cpp.i
+
+layoutsdeleter.s: layoutsdeleter.cpp.s
+.PHONY : layoutsdeleter.s
+
+# target to generate assembly for a file
+layoutsdeleter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/layoutsdeleter.cpp.s
+.PHONY : layoutsdeleter.cpp.s
+
 loginwindow.o: loginwindow.cpp.o
 .PHONY : loginwindow.o
 
@@ -399,6 +423,9 @@ help:
 	@echo "... communicatewithserver.o"
 	@echo "... communicatewithserver.i"
 	@echo "... communicatewithserver.s"
+	@echo "... layoutsdeleter.o"
+	@echo "... layoutsdeleter.i"
+	@echo "... layoutsdeleter.s"
 	@echo "... loginwindow.o"
 	@echo "... loginwindow.i"
 	@echo "... loginwindow.s"

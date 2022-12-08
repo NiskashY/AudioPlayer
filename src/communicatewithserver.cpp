@@ -81,3 +81,10 @@ void CommunicateWithServer::CreateAccount(const QString& username, const QString
 
     socket->write(sql_query.c_str());
 }
+
+char* GetCurrentTime() {
+    auto current_seconds = std::chrono::system_clock::now();
+    std::time_t current_time = std::chrono::system_clock::to_time_t(current_seconds);
+
+    return std::ctime(&current_time);
+}

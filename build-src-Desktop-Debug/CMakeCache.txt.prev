@@ -391,6 +391,15 @@ XKB_LIBRARY:FILEPATH=/usr/lib/libxkbcommon.so
 pkgcfg_lib_PKG_XKB_xkbcommon:FILEPATH=/usr/lib/libxkbcommon.so
 
 //Value Computed by CMake
+rolldownwindw_BINARY_DIR:STATIC=/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug
+
+//Value Computed by CMake
+rolldownwindw_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+rolldownwindw_SOURCE_DIR:STATIC=/home/mint/GitRepos/AudioPlayer/src
+
+//Value Computed by CMake
 src_BINARY_DIR:STATIC=/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug
 
 //Value Computed by CMake

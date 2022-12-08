@@ -15,9 +15,9 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <layout class="QVBoxLayout" name="MainWindowLayout">
+    <layout class="QVBoxLayout" name="MainWindowLayout" stretch="6,1">
      <item>
-      <layout class="QHBoxLayout" name="TopWindowLayout" stretch="2,10">
+      <layout class="QHBoxLayout" name="TopWindowLayout" stretch="2,9">
        <item>
         <layout class="QVBoxLayout" name="SidePannelLayout" stretch="1,5">
          <property name="spacing">
@@ -69,6 +69,20 @@
            <property name="rightMargin">
             <number>0</number>
            </property>
+           <item>
+            <widget class="QLabel" name="timeInfoLabel">
+             <property name="text">
+              <string>Last Update Time:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="lastUpdateTimeLabel">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
            <item>
             <spacer name="verticalSpacer">
              <property name="orientation">
@@ -135,7 +149,7 @@
            <item>
             <widget class="QTabWidget" name="tabWidget">
              <property name="currentIndex">
-              <number>1</number>
+              <number>0</number>
              </property>
              <widget class="QWidget" name="likedTracks">
               <attribute name="title">
@@ -143,21 +157,26 @@
               </attribute>
               <layout class="QHBoxLayout" name="horizontalLayout">
                <item>
-                <layout class="QVBoxLayout" name="verticalLayout_2">
-                 <item>
-                  <spacer name="verticalSpacer_3">
-                   <property name="orientation">
-                    <enum>Qt::Vertical</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>20</width>
-                     <height>40</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                </layout>
+                <widget class="QScrollArea" name="scrollArea_2">
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <widget class="QWidget" name="scrollAreaWidgetContentsLikes">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>590</width>
+                    <height>419</height>
+                   </rect>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_3">
+                   <item>
+                    <layout class="QVBoxLayout" name="likesVLayout"/>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
                </item>
               </layout>
              </widget>
@@ -171,32 +190,18 @@
                  <property name="widgetResizable">
                   <bool>true</bool>
                  </property>
-                 <widget class="QWidget" name="scrollAreaWidgetContents">
+                 <widget class="QWidget" name="scrollAreaWidgetContentsDownload">
                   <property name="geometry">
                    <rect>
                     <x>0</x>
                     <y>0</y>
                     <width>590</width>
-                    <height>439</height>
+                    <height>419</height>
                    </rect>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_4">
                    <item>
-                    <layout class="QVBoxLayout" name="downVLayout">
-                     <item>
-                      <spacer name="verticalSpacer_4">
-                       <property name="orientation">
-                        <enum>Qt::Vertical</enum>
-                       </property>
-                       <property name="sizeHint" stdset="0">
-                        <size>
-                         <width>20</width>
-                         <height>40</height>
-                        </size>
-                       </property>
-                      </spacer>
-                     </item>
-                    </layout>
+                    <layout class="QVBoxLayout" name="downVLayout"/>
                    </item>
                   </layout>
                  </widget>
@@ -257,7 +262,7 @@
           </layout>
          </item>
          <item>
-          <layout class="QHBoxLayout" name="TrackControllLayout">
+          <layout class="QHBoxLayout" name="TrackControllLayout" stretch="2,2,2,2,2,2,2">
            <property name="spacing">
             <number>20</number>
            </property>
@@ -278,23 +283,23 @@
             </spacer>
            </item>
            <item>
-            <widget class="QPushButton" name="ShuffleButton">
+            <widget class="QPushButton" name="shuffleButton">
              <property name="text">
-              <string>SHUFFLE</string>
+              <string/>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="PrevButton">
+            <widget class="QPushButton" name="prevButton">
              <property name="text">
-              <string>PREV</string>
+              <string/>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="PauseButton">
+            <widget class="QPushButton" name="pauseButton">
              <property name="text">
-              <string>PAUSE</string>
+              <string/>
              </property>
              <property name="iconSize">
               <size>
@@ -305,16 +310,16 @@
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="NextButton">
+            <widget class="QPushButton" name="nextButton">
              <property name="text">
-              <string>NEXT</string>
+              <string/>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="RepeatButton">
+            <widget class="QPushButton" name="repeatButton">
              <property name="text">
-              <string>REPEAT</string>
+              <string/>
              </property>
             </widget>
            </item>

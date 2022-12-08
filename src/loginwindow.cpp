@@ -32,8 +32,8 @@ void LoginWindow::on_SignUpButton_clicked()
 
 void LoginWindow::on_SignInButton_clicked()
 {
-    QString username_input_value = ui->usernameInput->text();
-    QString password_input_value = ui->passwordInput->text();
+    QString username_input_value = "repkep2018";//ui->usernameInput->text();
+    QString password_input_value = "repkep2018";//ui->passwordInput->text();
 
     try {
         CommunicateWithServer server;
