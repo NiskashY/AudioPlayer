@@ -60,7 +60,7 @@ public:
     QVBoxLayout *SongPlayerLayout;
     QHBoxLayout *SliderLayout;
     QSpacerItem *horizontalSpacer_11;
-    QSlider *horizontalSlider;
+    QSlider *songSlider;
     QSpacerItem *horizontalSpacer_12;
     QHBoxLayout *TrackControllLayout;
     QSpacerItem *horizontalSpacer_9;
@@ -229,11 +229,11 @@ public:
 
         SliderLayout->addItem(horizontalSpacer_11);
 
-        horizontalSlider = new QSlider(MainPage);
-        horizontalSlider->setObjectName(QString::fromUtf8("horizontalSlider"));
-        horizontalSlider->setOrientation(Qt::Horizontal);
+        songSlider = new QSlider(MainPage);
+        songSlider->setObjectName(QString::fromUtf8("songSlider"));
+        songSlider->setOrientation(Qt::Horizontal);
 
-        SliderLayout->addWidget(horizontalSlider);
+        SliderLayout->addWidget(songSlider);
 
         horizontalSpacer_12 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 

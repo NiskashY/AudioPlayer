@@ -713,8 +713,10 @@
  mdp:/usr/include/qt/QtWidgets/QLabel
  mdp:/usr/include/qt/QtWidgets/QMainWindow
  mdp:/usr/include/qt/QtWidgets/QMessageBox
+ mdp:/usr/include/qt/QtWidgets/QSlider
  mdp:/usr/include/qt/QtWidgets/QWidget
  mdp:/usr/include/qt/QtWidgets/qabstractbutton.h
+ mdp:/usr/include/qt/QtWidgets/qabstractslider.h
  mdp:/usr/include/qt/QtWidgets/qboxlayout.h
  mdp:/usr/include/qt/QtWidgets/qcheckbox.h
  mdp:/usr/include/qt/QtWidgets/qdialog.h
@@ -727,6 +729,7 @@
  mdp:/usr/include/qt/QtWidgets/qmainwindow.h
  mdp:/usr/include/qt/QtWidgets/qmessagebox.h
  mdp:/usr/include/qt/QtWidgets/qsizepolicy.h
+ mdp:/usr/include/qt/QtWidgets/qslider.h
  mdp:/usr/include/qt/QtWidgets/qtabwidget.h
  mdp:/usr/include/qt/QtWidgets/qtwidgets-config.h
  mdp:/usr/include/qt/QtWidgets/qtwidgetsglobal.h
@@ -1128,8 +1131,10 @@
  mdp:/usr/include/qt/QtWidgets/QHBoxLayout
  mdp:/usr/include/qt/QtWidgets/QLabel
  mdp:/usr/include/qt/QtWidgets/QMessageBox
+ mdp:/usr/include/qt/QtWidgets/QSlider
  mdp:/usr/include/qt/QtWidgets/QWidget
  mdp:/usr/include/qt/QtWidgets/qabstractbutton.h
+ mdp:/usr/include/qt/QtWidgets/qabstractslider.h
  mdp:/usr/include/qt/QtWidgets/qboxlayout.h
  mdp:/usr/include/qt/QtWidgets/qcheckbox.h
  mdp:/usr/include/qt/QtWidgets/qdialog.h
@@ -1141,6 +1146,7 @@
  mdp:/usr/include/qt/QtWidgets/qlayoutitem.h
  mdp:/usr/include/qt/QtWidgets/qmessagebox.h
  mdp:/usr/include/qt/QtWidgets/qsizepolicy.h
+ mdp:/usr/include/qt/QtWidgets/qslider.h
  mdp:/usr/include/qt/QtWidgets/qtwidgets-config.h
  mdp:/usr/include/qt/QtWidgets/qtwidgetsglobal.h
  mdp:/usr/include/qt/QtWidgets/qwidget.h

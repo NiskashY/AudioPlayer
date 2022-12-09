@@ -10,6 +10,8 @@
         <file>repeat_song.png</file>
         <file>shuffle_song.png</file>
         <file>next_song.png</file>
+        <file>repeat_on_song.png</file>
+        <file>shuffle_on_song.png</file>
     </qresource>
     <qresource prefix="/styleSheets">
         <file>Combinear.qss</file>
