@@ -1,20 +1,24 @@
-#ifndef LOGINWINDOW_H
-#define LOGINWINDOW_H
+#pragma once
 
+// Qt modules
 #include <QMainWindow>
-#include "mainpage.h"
+#include <QMessageBox>
+
+// Custom flies
+#include "communicatewithserver.h"
 #include "signupwindow.h"
+#include "account.h"
 
 namespace Ui {
 class LoginWindow;
 }
 
-class LoginWindow : public QMainWindow
+class LoginWindow : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit LoginWindow(QWidget *parent = nullptr);
+    explicit LoginWindow(Account*& account, QWidget *parent = nullptr);
     ~LoginWindow();
 
 private slots:
@@ -24,6 +28,7 @@ private slots:
 
 private:
     Ui::LoginWindow *ui;
+    Account* main_page_account = nullptr;
 };
 
-#endif // LOGINWINDOW_H
+bool StartLoginProccess(QMainWindow* parent, Account*& account);

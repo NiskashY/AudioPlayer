@@ -31,10 +31,9 @@ set(PROJECT_SOURCES
         mainpage.cpp
         mainpage.ui
 
-        #del
-        #mainpage_cp.h
-        #mainpage_cp.cpp
-        #mainpage_cp.ui
+        # Account files
+        account.h
+        account.cpp
 
         # There stored all images for program
         Images/resourses.qrc
@@ -46,10 +45,14 @@ set(PROJECT_SOURCES
         # Checker For Logins & Passwords
         checker/checker.cpp
         checker/checker.h
+        checker/ensuremessagebox.ui
+        checker/ensuremessagebox.h
+        checker/ensuremessagebox.cpp
 
         # Layouts deleter
         layoutsdeleter.h
         layoutsdeleter.cpp
+
 )
 
 add_executable(src

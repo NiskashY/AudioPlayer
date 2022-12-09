@@ -187,6 +187,30 @@ src_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/src_autogen.dir/build.make CMakeFiles/src_autogen.dir/build
 .PHONY : src_autogen/fast
 
+account.o: account.cpp.o
+.PHONY : account.o
+
+# target to build an object file
+account.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/account.cpp.o
+.PHONY : account.cpp.o
+
+account.i: account.cpp.i
+.PHONY : account.i
+
+# target to preprocess a source file
+account.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/account.cpp.i
+.PHONY : account.cpp.i
+
+account.s: account.cpp.s
+.PHONY : account.s
+
+# target to generate assembly for a file
+account.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/account.cpp.s
+.PHONY : account.cpp.s
+
 checker/checker.o: checker/checker.cpp.o
 .PHONY : checker/checker.o
 
@@ -210,6 +234,30 @@ checker/checker.s: checker/checker.cpp.s
 checker/checker.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/checker/checker.cpp.s
 .PHONY : checker/checker.cpp.s
+
+checker/ensuremessagebox.o: checker/ensuremessagebox.cpp.o
+.PHONY : checker/ensuremessagebox.o
+
+# target to build an object file
+checker/ensuremessagebox.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/checker/ensuremessagebox.cpp.o
+.PHONY : checker/ensuremessagebox.cpp.o
+
+checker/ensuremessagebox.i: checker/ensuremessagebox.cpp.i
+.PHONY : checker/ensuremessagebox.i
+
+# target to preprocess a source file
+checker/ensuremessagebox.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/checker/ensuremessagebox.cpp.i
+.PHONY : checker/ensuremessagebox.cpp.i
+
+checker/ensuremessagebox.s: checker/ensuremessagebox.cpp.s
+.PHONY : checker/ensuremessagebox.s
+
+# target to generate assembly for a file
+checker/ensuremessagebox.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/checker/ensuremessagebox.cpp.s
+.PHONY : checker/ensuremessagebox.cpp.s
 
 communicatewithserver.o: communicatewithserver.cpp.o
 .PHONY : communicatewithserver.o
@@ -417,9 +465,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... src_autogen"
 	@echo "... src"
+	@echo "... account.o"
+	@echo "... account.i"
+	@echo "... account.s"
 	@echo "... checker/checker.o"
 	@echo "... checker/checker.i"
 	@echo "... checker/checker.s"
+	@echo "... checker/ensuremessagebox.o"
+	@echo "... checker/ensuremessagebox.i"
+	@echo "... checker/ensuremessagebox.s"
 	@echo "... communicatewithserver.o"
 	@echo "... communicatewithserver.i"
 	@echo "... communicatewithserver.s"

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/src_autogen"
+  "src_autogen/include/checker/ui_ensuremessagebox.h"
   "src_autogen/include/ui_loginwindow.h"
   "src_autogen/include/ui_mainpage.h"
   "src_autogen/include/ui_signupwindow.h"

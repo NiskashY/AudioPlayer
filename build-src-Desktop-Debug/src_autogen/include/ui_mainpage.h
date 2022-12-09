@@ -38,6 +38,8 @@ public:
     QLabel *timeInfoLabel;
     QLabel *lastUpdateTimeLabel;
     QSpacerItem *verticalSpacer;
+    QLabel *accountLabel;
+    QSpacerItem *verticalSpacer_3;
     QPushButton *changeDirButton;
     QHBoxLayout *SearchLayout;
     QPushButton *addFromDeviceButton;
@@ -87,7 +89,7 @@ public:
     {
         if (MainPage->objectName().isEmpty())
             MainPage->setObjectName(QString::fromUtf8("MainPage"));
-        MainPage->resize(800, 600);
+        MainPage->resize(946, 600);
         centralwidget = new QWidget(MainPage);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         horizontalLayout_7 = new QHBoxLayout(centralwidget);
@@ -133,6 +135,16 @@ public:
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
         SideMenuLayout->addItem(verticalSpacer);
+
+        accountLabel = new QLabel(centralwidget);
+        accountLabel->setObjectName(QString::fromUtf8("accountLabel"));
+        accountLabel->setAlignment(Qt::AlignCenter);
+
+        SideMenuLayout->addWidget(accountLabel);
+
+        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        SideMenuLayout->addItem(verticalSpacer_3);
 
         changeDirButton = new QPushButton(centralwidget);
         changeDirButton->setObjectName(QString::fromUtf8("changeDirButton"));
@@ -184,7 +196,7 @@ public:
         scrollArea_2->setWidgetResizable(true);
         scrollAreaWidgetContentsLikes = new QWidget();
         scrollAreaWidgetContentsLikes->setObjectName(QString::fromUtf8("scrollAreaWidgetContentsLikes"));
-        scrollAreaWidgetContentsLikes->setGeometry(QRect(0, 0, 599, 428));
+        scrollAreaWidgetContentsLikes->setGeometry(QRect(0, 0, 723, 428));
         verticalLayout_7 = new QVBoxLayout(scrollAreaWidgetContentsLikes);
         verticalLayout_7->setObjectName(QString::fromUtf8("verticalLayout_7"));
         likesVLayout = new QVBoxLayout();
@@ -206,7 +218,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContentsDownload = new QWidget();
         scrollAreaWidgetContentsDownload->setObjectName(QString::fromUtf8("scrollAreaWidgetContentsDownload"));
-        scrollAreaWidgetContentsDownload->setGeometry(QRect(0, 0, 599, 428));
+        scrollAreaWidgetContentsDownload->setGeometry(QRect(0, 0, 723, 428));
         verticalLayout_8 = new QVBoxLayout(scrollAreaWidgetContentsDownload);
         verticalLayout_8->setObjectName(QString::fromUtf8("verticalLayout_8"));
         downVLayout = new QVBoxLayout();
@@ -401,8 +413,9 @@ public:
         exitAccountButton->setText(QString());
         timeInfoLabel->setText(QCoreApplication::translate("MainPage", "Last Update Time:", nullptr));
         lastUpdateTimeLabel->setText(QString());
+        accountLabel->setText(QString());
         changeDirButton->setText(QCoreApplication::translate("MainPage", "Change Standard Dir", nullptr));
-        addFromDeviceButton->setText(QCoreApplication::translate("MainPage", "Add Track From Device", nullptr));
+        addFromDeviceButton->setText(QCoreApplication::translate("MainPage", " Add From Device ", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(likedTracks), QCoreApplication::translate("MainPage", "Tab 1", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(downloadedTracks), QCoreApplication::translate("MainPage", "Tab 2", nullptr));
         label->setText(QCoreApplication::translate("MainPage", "Volume", nullptr));

@@ -43,14 +43,14 @@ QT_MOC_LITERAL(7, 126, 21), // "on_nextButton_clicked"
 QT_MOC_LITERAL(8, 148, 21), // "on_prevButton_clicked"
 QT_MOC_LITERAL(9, 170, 24), // "on_shuffleButton_clicked"
 QT_MOC_LITERAL(10, 195, 23), // "on_repeatButton_clicked"
-QT_MOC_LITERAL(11, 219, 8), // "PlaySong"
-QT_MOC_LITERAL(12, 228, 24), // "SetCurrentSliderPosition"
-QT_MOC_LITERAL(13, 253, 20), // "SetMaxSliderPosition"
-QT_MOC_LITERAL(14, 274, 16), // "SetSongNameLabel"
-QT_MOC_LITERAL(15, 291, 19), // "SliderPositionMoved"
-QT_MOC_LITERAL(16, 311, 26), // "on_changeDirButton_clicked"
-QT_MOC_LITERAL(17, 338, 29), // "on_verticalSlider_sliderMoved"
-QT_MOC_LITERAL(18, 368, 8) // "position"
+QT_MOC_LITERAL(11, 219, 26), // "on_changeDirButton_clicked"
+QT_MOC_LITERAL(12, 246, 29), // "on_verticalSlider_sliderMoved"
+QT_MOC_LITERAL(13, 276, 8), // "position"
+QT_MOC_LITERAL(14, 285, 8), // "PlaySong"
+QT_MOC_LITERAL(15, 294, 24), // "SetCurrentSliderPosition"
+QT_MOC_LITERAL(16, 319, 20), // "SetMaxSliderPosition"
+QT_MOC_LITERAL(17, 340, 16), // "SetSongNameLabel"
+QT_MOC_LITERAL(18, 357, 19) // "SliderPositionMoved"
 
     },
     "MainPage\0on_exitAccountButton_clicked\0"
@@ -58,11 +58,12 @@ QT_MOC_LITERAL(18, 368, 8) // "position"
     "on_tabWidget_tabBarClicked\0index\0"
     "on_pauseButton_clicked\0on_nextButton_clicked\0"
     "on_prevButton_clicked\0on_shuffleButton_clicked\0"
-    "on_repeatButton_clicked\0PlaySong\0"
-    "SetCurrentSliderPosition\0SetMaxSliderPosition\0"
-    "SetSongNameLabel\0SliderPositionMoved\0"
+    "on_repeatButton_clicked\0"
     "on_changeDirButton_clicked\0"
-    "on_verticalSlider_sliderMoved\0position"
+    "on_verticalSlider_sliderMoved\0position\0"
+    "PlaySong\0SetCurrentSliderPosition\0"
+    "SetMaxSliderPosition\0SetSongNameLabel\0"
+    "SliderPositionMoved"
 };
 #undef QT_MOC_LITERAL
 
@@ -89,12 +90,12 @@ static const uint qt_meta_data_MainPage[] = {
        9,    0,   97,    2, 0x08 /* Private */,
       10,    0,   98,    2, 0x08 /* Private */,
       11,    0,   99,    2, 0x08 /* Private */,
-      12,    0,  100,    2, 0x08 /* Private */,
-      13,    0,  101,    2, 0x08 /* Private */,
-      14,    0,  102,    2, 0x08 /* Private */,
-      15,    0,  103,    2, 0x08 /* Private */,
-      16,    0,  104,    2, 0x08 /* Private */,
-      17,    1,  105,    2, 0x08 /* Private */,
+      12,    1,  100,    2, 0x08 /* Private */,
+      14,    0,  103,    2, 0x08 /* Private */,
+      15,    0,  104,    2, 0x08 /* Private */,
+      16,    0,  105,    2, 0x08 /* Private */,
+      17,    0,  106,    2, 0x08 /* Private */,
+      18,    0,  107,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -106,12 +107,12 @@ static const uint qt_meta_data_MainPage[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,   13,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,   18,
 
        0        // eod
 };
@@ -130,13 +131,13 @@ void MainPage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 5: _t->on_prevButton_clicked(); break;
         case 6: _t->on_shuffleButton_clicked(); break;
         case 7: _t->on_repeatButton_clicked(); break;
-        case 8: _t->PlaySong(); break;
-        case 9: _t->SetCurrentSliderPosition(); break;
-        case 10: _t->SetMaxSliderPosition(); break;
-        case 11: _t->SetSongNameLabel(); break;
-        case 12: _t->SliderPositionMoved(); break;
-        case 13: _t->on_changeDirButton_clicked(); break;
-        case 14: _t->on_verticalSlider_sliderMoved((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 8: _t->on_changeDirButton_clicked(); break;
+        case 9: _t->on_verticalSlider_sliderMoved((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 10: _t->PlaySong(); break;
+        case 11: _t->SetCurrentSliderPosition(); break;
+        case 12: _t->SetMaxSliderPosition(); break;
+        case 13: _t->SetSongNameLabel(); break;
+        case 14: _t->SliderPositionMoved(); break;
         default: ;
         }
     }

@@ -91,6 +91,7 @@ MainPage::MainPage(QWidget *parent) :
 
     // Refresh Page
     Q_EMIT ui->tabWidget->tabBarClicked(ui->tabWidget->currentIndex());
+    ui->exitAccountButton->click();
 
     // Setup Volume of sound and ui elements for this
     const int& kSoundVolume = 30;
@@ -99,6 +100,9 @@ MainPage::MainPage(QWidget *parent) :
 
     // Connect Sound Signals for player and UI
     MainPage::ConnectionManipulation(true); // connect slots
+
+    // Set Account Label
+    ui->accountLabel->setText("Account is not selected");
 }
 
 MainPage::~MainPage()
@@ -113,7 +117,19 @@ MainPage::~MainPage()
 }
 
 void MainPage::on_exitAccountButton_clicked() {
-    QMessageBox::information(this, "Ogo", "Vi nashli sekret");
+    if (account != nullptr) {
+        EnsureMessageBox* ensure = new EnsureMessageBox;
+        ensure->setModal(true);
+        ensure->exec();
+
+        if (ensure->getIsNeedToExist()) {
+            ui->accountLabel->setText("Account is not selected");
+            ui->accountLabel->setStyleSheet("QLabel { color : red; }");
+            delete account;
+            account = nullptr;
+        }
+        delete ensure;
+    }
 }
 
 void MainPage::on_addFromDeviceButton_clicked() {
@@ -165,9 +181,14 @@ void MainPage::on_tabWidget_tabBarClicked(int index) {
             AddTrackToDownloadedTab(file_name);
             received_playlist->addMedia(QUrl::fromLocalFile(working_dir_path + file_name));
         }
-
     } else {
-
+        bool isLogged = StartLoginProccess(this, account);
+        if (isLogged) {
+            ui->accountLabel->setText("Account: " + account->getUsername());
+            ui->accountLabel->setStyleSheet("QLabel { color : green; }");
+        } else {
+            account = nullptr;
+        }
     }
 
     ui->lastUpdateTimeLabel->setText(GetCurrentTime()); // set last update time

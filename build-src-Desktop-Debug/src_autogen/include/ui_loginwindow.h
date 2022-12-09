@@ -11,23 +11,21 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QDialog>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
-#include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
-#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_LoginWindow
 {
 public:
-    QWidget *centralwidget;
     QHBoxLayout *horizontalLayout;
-    QSpacerItem *horizontalSpacer_9;
+    QSpacerItem *horizontalSpacer_7;
     QVBoxLayout *MainForm;
     QHBoxLayout *LogoLayout;
     QLabel *Logo;
@@ -52,27 +50,24 @@ public:
     QSpacerItem *verticalSpacer_2;
     QPushButton *SignUpButton;
     QSpacerItem *horizontalSpacer_6;
-    QSpacerItem *horizontalSpacer_10;
+    QSpacerItem *horizontalSpacer_8;
 
-    void setupUi(QMainWindow *LoginWindow)
+    void setupUi(QDialog *LoginWindow)
     {
         if (LoginWindow->objectName().isEmpty())
             LoginWindow->setObjectName(QString::fromUtf8("LoginWindow"));
-        LoginWindow->resize(542, 504);
-        LoginWindow->setLayoutDirection(Qt::LeftToRight);
-        centralwidget = new QWidget(LoginWindow);
-        centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        horizontalLayout = new QHBoxLayout(centralwidget);
+        LoginWindow->resize(508, 522);
+        horizontalLayout = new QHBoxLayout(LoginWindow);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout->addItem(horizontalSpacer_9);
+        horizontalLayout->addItem(horizontalSpacer_7);
 
         MainForm = new QVBoxLayout();
         MainForm->setObjectName(QString::fromUtf8("MainForm"));
         LogoLayout = new QHBoxLayout();
         LogoLayout->setObjectName(QString::fromUtf8("LogoLayout"));
-        Logo = new QLabel(centralwidget);
+        Logo = new QLabel(LoginWindow);
         Logo->setObjectName(QString::fromUtf8("Logo"));
         Logo->setPixmap(QPixmap(QString::fromUtf8(":/resourses/songsCovers/sound.jpg")));
         Logo->setAlignment(Qt::AlignCenter);
@@ -86,7 +81,7 @@ public:
         UserNameLayout->setObjectName(QString::fromUtf8("UserNameLayout"));
         TextLayout = new QHBoxLayout();
         TextLayout->setObjectName(QString::fromUtf8("TextLayout"));
-        label = new QLabel(centralwidget);
+        label = new QLabel(LoginWindow);
         label->setObjectName(QString::fromUtf8("label"));
 
         TextLayout->addWidget(label);
@@ -104,7 +99,7 @@ public:
 
         InputLayout->addItem(horizontalSpacer);
 
-        usernameInput = new QLineEdit(centralwidget);
+        usernameInput = new QLineEdit(LoginWindow);
         usernameInput->setObjectName(QString::fromUtf8("usernameInput"));
         usernameInput->setEchoMode(QLineEdit::Normal);
 
@@ -124,7 +119,7 @@ public:
         PasswordLayout->setObjectName(QString::fromUtf8("PasswordLayout"));
         TextLayout_2 = new QHBoxLayout();
         TextLayout_2->setObjectName(QString::fromUtf8("TextLayout_2"));
-        label_2 = new QLabel(centralwidget);
+        label_2 = new QLabel(LoginWindow);
         label_2->setObjectName(QString::fromUtf8("label_2"));
 
         TextLayout_2->addWidget(label_2);
@@ -142,7 +137,7 @@ public:
 
         InputLayout_2->addItem(horizontalSpacer_4);
 
-        passwordInput = new QLineEdit(centralwidget);
+        passwordInput = new QLineEdit(LoginWindow);
         passwordInput->setObjectName(QString::fromUtf8("passwordInput"));
         passwordInput->setEchoMode(QLineEdit::Password);
 
@@ -168,7 +163,7 @@ public:
 
         horizontalLayout_2->addItem(horizontalSpacer_5);
 
-        SignInButton = new QPushButton(centralwidget);
+        SignInButton = new QPushButton(LoginWindow);
         SignInButton->setObjectName(QString::fromUtf8("SignInButton"));
         SignInButton->setStyleSheet(QString::fromUtf8(""));
 
@@ -178,7 +173,7 @@ public:
 
         horizontalLayout_2->addItem(verticalSpacer_2);
 
-        SignUpButton = new QPushButton(centralwidget);
+        SignUpButton = new QPushButton(LoginWindow);
         SignUpButton->setObjectName(QString::fromUtf8("SignUpButton"));
 
         horizontalLayout_2->addWidget(SignUpButton);
@@ -202,20 +197,19 @@ public:
 
         horizontalLayout->addLayout(MainForm);
 
-        horizontalSpacer_10 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout->addItem(horizontalSpacer_10);
+        horizontalLayout->addItem(horizontalSpacer_8);
 
-        LoginWindow->setCentralWidget(centralwidget);
 
         retranslateUi(LoginWindow);
 
         QMetaObject::connectSlotsByName(LoginWindow);
     } // setupUi
 
-    void retranslateUi(QMainWindow *LoginWindow)
+    void retranslateUi(QDialog *LoginWindow)
     {
-        LoginWindow->setWindowTitle(QCoreApplication::translate("LoginWindow", "MainWindow", nullptr));
+        LoginWindow->setWindowTitle(QCoreApplication::translate("LoginWindow", "Dialog", nullptr));
         Logo->setText(QString());
         label->setText(QCoreApplication::translate("LoginWindow", "Username:", nullptr));
         label_2->setText(QCoreApplication::translate("LoginWindow", "Password:", nullptr));
