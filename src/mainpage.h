@@ -14,8 +14,11 @@
 #include <QSpacerItem>
 
 // Custom headers
+#include "checker/ensuremessagebox.h"
 #include "layoutsdeleter.h"
 #include "communicatewithserver.h"
+#include "account.h"
+#include "loginwindow.h"
 
 namespace Ui {
 class MainPage;
@@ -44,6 +47,8 @@ private slots:
     void on_prevButton_clicked();
     void on_shuffleButton_clicked();
     void on_repeatButton_clicked();
+    void on_changeDirButton_clicked();
+    void on_verticalSlider_sliderMoved(int position);
 
     // Sound Manipulation
     void PlaySong();                 // start song & change elements of ui for that
@@ -52,9 +57,6 @@ private slots:
     void SetSongNameLabel();         // set ui current song name
     void SliderPositionMoved();      // move soundtrack player to new position
 
-    void on_changeDirButton_clicked();
-
-    void on_verticalSlider_sliderMoved(int position);
 
 private:
     void AddTrackToDownloadedTab(const QString& file_name);
@@ -64,6 +66,7 @@ private:
     void ChangeState(SetPlayerState player_state = SetPlayerState::Default);
     void ConnectionManipulation(bool isConnect);
 
+    Account* account = nullptr;         // account for network operations
     Ui::MainPage *ui;
     QMediaPlayer* player = nullptr;
     QMediaPlaylist* active_playlist = nullptr;

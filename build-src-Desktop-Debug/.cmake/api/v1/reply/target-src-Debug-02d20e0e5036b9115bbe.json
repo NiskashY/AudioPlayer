@@ -31,19 +31,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 55,
+				"line" : 58,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 75,
+				"line" : 78,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 59,
+				"line" : 62,
 				"parent" : 0
 			},
 			{
@@ -192,10 +192,12 @@
 				3,
 				6,
 				9,
-				13,
-				14,
-				17,
-				21
+				12,
+				15,
+				16,
+				20,
+				22,
+				27
 			]
 		}
 	],
@@ -284,10 +286,12 @@
 				3,
 				6,
 				9,
-				13,
-				14,
-				17,
-				21
+				12,
+				15,
+				16,
+				20,
+				22,
+				27
 			]
 		},
 		{
@@ -297,12 +301,15 @@
 				2,
 				5,
 				8,
-				12,
-				15,
-				16,
-				18,
+				11,
+				14,
+				17,
 				19,
-				20
+				21,
+				23,
+				24,
+				25,
+				26
 			]
 		},
 		{
@@ -312,14 +319,15 @@
 				4,
 				7,
 				10,
-				11
+				13,
+				18
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				22
+				28
 			]
 		}
 	],
@@ -388,6 +396,17 @@
 		},
 		{
 			"backtrace" : 1,
+			"path" : "account.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "account.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
 			"path" : "Images/resourses.qrc",
 			"sourceGroupIndex" : 2
 		},
@@ -412,6 +431,22 @@
 			"backtrace" : 1,
 			"path" : "checker/checker.h",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "checker/ensuremessagebox.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "checker/ensuremessagebox.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "checker/ensuremessagebox.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
@@ -440,6 +475,12 @@
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen/include/ui_mainpage.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen/include/checker/ui_ensuremessagebox.h",
 			"sourceGroupIndex" : 1
 		},
 		{

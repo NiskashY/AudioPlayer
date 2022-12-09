@@ -1,5 +1,0 @@
-/home/mint/GitRepos/AudioPlayer/cmake-build-debug/CMakeFiles/AudioPlayer.dir
-/home/mint/GitRepos/AudioPlayer/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/mint/GitRepos/AudioPlayer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/mint/GitRepos/AudioPlayer/cmake-build-debug/CMakeFiles/AudioPlayer_autogen_timestamp_deps.dir
-/home/mint/GitRepos/AudioPlayer/cmake-build-debug/CMakeFiles/AudioPlayer_autogen.dir

@@ -106,9 +106,21 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/mint/GitRepos/AudioPlayer/src/account.h",
+			"MU",
+			"EWIEGA46WW/moc_account.cpp",
+			null
+		],
+		[
 			"/home/mint/GitRepos/AudioPlayer/src/checker/checker.h",
 			"MU",
 			"JPFYYQWDSP/moc_checker.cpp",
+			null
+		],
+		[
+			"/home/mint/GitRepos/AudioPlayer/src/checker/ensuremessagebox.h",
+			"MU",
+			"JPFYYQWDSP/moc_ensuremessagebox.cpp",
 			null
 		],
 		[
@@ -205,7 +217,13 @@
 	"SETTINGS_FILE" : "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/CMakeFiles/src_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "/home/mint/GitRepos/AudioPlayer/src/account.cpp", "MU", null ],
 		[ "/home/mint/GitRepos/AudioPlayer/src/checker/checker.cpp", "MU", null ],
+		[
+			"/home/mint/GitRepos/AudioPlayer/src/checker/ensuremessagebox.cpp",
+			"MU",
+			null
+		],
 		[
 			"/home/mint/GitRepos/AudioPlayer/src/communicatewithserver.cpp",
 			"MU",

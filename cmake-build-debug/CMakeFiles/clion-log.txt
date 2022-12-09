@@ -1,1 +1,0 @@
-CMakeLists.txt not found in /home/mint/GitRepos/AudioPlayer Select CMakeLists.txt
