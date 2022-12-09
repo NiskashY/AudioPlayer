@@ -97,6 +97,13 @@
             </spacer>
            </item>
            <item>
+            <widget class="QPushButton" name="changeDirButton">
+             <property name="text">
+              <string>Change Standard Dir</string>
+             </property>
+            </widget>
+           </item>
+           <item>
             <layout class="QHBoxLayout" name="SearchLayout" stretch="3">
              <property name="sizeConstraint">
               <enum>QLayout::SetDefaultConstraint</enum>
@@ -167,7 +174,7 @@
                     <x>0</x>
                     <y>0</y>
                     <width>590</width>
-                    <height>419</height>
+                    <height>411</height>
                    </rect>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -196,7 +203,7 @@
                     <x>0</x>
                     <y>0</y>
                     <width>590</width>
-                    <height>419</height>
+                    <height>411</height>
                    </rect>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -218,14 +225,89 @@
       </layout>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="BottomWindowLayout" stretch="1,10">
+      <layout class="QHBoxLayout" name="BottomWindowLayout" stretch="0,1,10">
        <item>
-        <layout class="QHBoxLayout" name="SettingsLayout"/>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="SongPlayerLayout">
+        <layout class="QVBoxLayout" name="volumeLayout">
          <item>
-          <layout class="QHBoxLayout" name="SliderLayout" stretch="1,3,1">
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Volume</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="volumeSliderLayout">
+           <item>
+            <widget class="QSlider" name="verticalSlider">
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="SongPlayerLayout" stretch="1,1,2">
+         <item>
+          <layout class="QHBoxLayout" name="SongNameLayout">
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="songNameLabel">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="SliderLayout" stretch="1,0,3,0,1">
            <item>
             <spacer name="horizontalSpacer_11">
              <property name="orientation">
@@ -240,9 +322,35 @@
             </spacer>
            </item>
            <item>
+            <widget class="QLabel" name="currentTimeLabel">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>00:00</string>
+             </property>
+            </widget>
+           </item>
+           <item>
             <widget class="QSlider" name="songSlider">
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="totalTimeLabel">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>00:00</string>
              </property>
             </widget>
            </item>

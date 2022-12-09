@@ -37,6 +37,7 @@ public:
     QLabel *timeInfoLabel;
     QLabel *lastUpdateTimeLabel;
     QSpacerItem *verticalSpacer;
+    QPushButton *changeDirButton;
     QHBoxLayout *SearchLayout;
     QPushButton *addFromDeviceButton;
     QSpacerItem *verticalSpacer_2;
@@ -56,11 +57,21 @@ public:
     QVBoxLayout *verticalLayout_4;
     QVBoxLayout *downVLayout;
     QHBoxLayout *BottomWindowLayout;
-    QHBoxLayout *SettingsLayout;
+    QSpacerItem *horizontalSpacer_3;
+    QVBoxLayout *volumeLayout;
+    QLabel *label;
+    QHBoxLayout *volumeSliderLayout;
+    QSlider *verticalSlider;
     QVBoxLayout *SongPlayerLayout;
+    QHBoxLayout *SongNameLayout;
+    QSpacerItem *horizontalSpacer;
+    QLabel *songNameLabel;
+    QSpacerItem *horizontalSpacer_2;
     QHBoxLayout *SliderLayout;
     QSpacerItem *horizontalSpacer_11;
+    QLabel *currentTimeLabel;
     QSlider *songSlider;
+    QLabel *totalTimeLabel;
     QSpacerItem *horizontalSpacer_12;
     QHBoxLayout *TrackControllLayout;
     QSpacerItem *horizontalSpacer_9;
@@ -120,6 +131,11 @@ public:
 
         SideMenuLayout->addItem(verticalSpacer);
 
+        changeDirButton = new QPushButton(MainPage);
+        changeDirButton->setObjectName(QString::fromUtf8("changeDirButton"));
+
+        SideMenuLayout->addWidget(changeDirButton);
+
         SearchLayout = new QHBoxLayout();
         SearchLayout->setObjectName(QString::fromUtf8("SearchLayout"));
         SearchLayout->setSizeConstraint(QLayout::SetDefaultConstraint);
@@ -165,7 +181,7 @@ public:
         scrollArea_2->setWidgetResizable(true);
         scrollAreaWidgetContentsLikes = new QWidget();
         scrollAreaWidgetContentsLikes->setObjectName(QString::fromUtf8("scrollAreaWidgetContentsLikes"));
-        scrollAreaWidgetContentsLikes->setGeometry(QRect(0, 0, 590, 419));
+        scrollAreaWidgetContentsLikes->setGeometry(QRect(0, 0, 590, 411));
         verticalLayout_3 = new QVBoxLayout(scrollAreaWidgetContentsLikes);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
         likesVLayout = new QVBoxLayout();
@@ -187,7 +203,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContentsDownload = new QWidget();
         scrollAreaWidgetContentsDownload->setObjectName(QString::fromUtf8("scrollAreaWidgetContentsDownload"));
-        scrollAreaWidgetContentsDownload->setGeometry(QRect(0, 0, 590, 419));
+        scrollAreaWidgetContentsDownload->setGeometry(QRect(0, 0, 590, 411));
         verticalLayout_4 = new QVBoxLayout(scrollAreaWidgetContentsDownload);
         verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
         downVLayout = new QVBoxLayout();
@@ -216,18 +232,68 @@ public:
 
         BottomWindowLayout = new QHBoxLayout();
         BottomWindowLayout->setObjectName(QString::fromUtf8("BottomWindowLayout"));
-        SettingsLayout = new QHBoxLayout();
-        SettingsLayout->setObjectName(QString::fromUtf8("SettingsLayout"));
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        BottomWindowLayout->addLayout(SettingsLayout);
+        BottomWindowLayout->addItem(horizontalSpacer_3);
+
+        volumeLayout = new QVBoxLayout();
+        volumeLayout->setObjectName(QString::fromUtf8("volumeLayout"));
+        label = new QLabel(MainPage);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setAlignment(Qt::AlignCenter);
+
+        volumeLayout->addWidget(label);
+
+        volumeSliderLayout = new QHBoxLayout();
+        volumeSliderLayout->setObjectName(QString::fromUtf8("volumeSliderLayout"));
+        verticalSlider = new QSlider(MainPage);
+        verticalSlider->setObjectName(QString::fromUtf8("verticalSlider"));
+        verticalSlider->setMaximum(100);
+        verticalSlider->setOrientation(Qt::Vertical);
+
+        volumeSliderLayout->addWidget(verticalSlider);
+
+
+        volumeLayout->addLayout(volumeSliderLayout);
+
+
+        BottomWindowLayout->addLayout(volumeLayout);
 
         SongPlayerLayout = new QVBoxLayout();
         SongPlayerLayout->setObjectName(QString::fromUtf8("SongPlayerLayout"));
+        SongNameLayout = new QHBoxLayout();
+        SongNameLayout->setObjectName(QString::fromUtf8("SongNameLayout"));
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        SongNameLayout->addItem(horizontalSpacer);
+
+        songNameLabel = new QLabel(MainPage);
+        songNameLabel->setObjectName(QString::fromUtf8("songNameLabel"));
+
+        SongNameLayout->addWidget(songNameLabel);
+
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        SongNameLayout->addItem(horizontalSpacer_2);
+
+
+        SongPlayerLayout->addLayout(SongNameLayout);
+
         SliderLayout = new QHBoxLayout();
         SliderLayout->setObjectName(QString::fromUtf8("SliderLayout"));
         horizontalSpacer_11 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         SliderLayout->addItem(horizontalSpacer_11);
+
+        currentTimeLabel = new QLabel(MainPage);
+        currentTimeLabel->setObjectName(QString::fromUtf8("currentTimeLabel"));
+        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(currentTimeLabel->sizePolicy().hasHeightForWidth());
+        currentTimeLabel->setSizePolicy(sizePolicy2);
+
+        SliderLayout->addWidget(currentTimeLabel);
 
         songSlider = new QSlider(MainPage);
         songSlider->setObjectName(QString::fromUtf8("songSlider"));
@@ -235,13 +301,20 @@ public:
 
         SliderLayout->addWidget(songSlider);
 
+        totalTimeLabel = new QLabel(MainPage);
+        totalTimeLabel->setObjectName(QString::fromUtf8("totalTimeLabel"));
+        sizePolicy2.setHeightForWidth(totalTimeLabel->sizePolicy().hasHeightForWidth());
+        totalTimeLabel->setSizePolicy(sizePolicy2);
+
+        SliderLayout->addWidget(totalTimeLabel);
+
         horizontalSpacer_12 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         SliderLayout->addItem(horizontalSpacer_12);
 
         SliderLayout->setStretch(0, 1);
-        SliderLayout->setStretch(1, 3);
-        SliderLayout->setStretch(2, 1);
+        SliderLayout->setStretch(2, 3);
+        SliderLayout->setStretch(4, 1);
 
         SongPlayerLayout->addLayout(SliderLayout);
 
@@ -293,11 +366,14 @@ public:
 
         SongPlayerLayout->addLayout(TrackControllLayout);
 
+        SongPlayerLayout->setStretch(0, 1);
+        SongPlayerLayout->setStretch(1, 1);
+        SongPlayerLayout->setStretch(2, 2);
 
         BottomWindowLayout->addLayout(SongPlayerLayout);
 
-        BottomWindowLayout->setStretch(0, 1);
-        BottomWindowLayout->setStretch(1, 10);
+        BottomWindowLayout->setStretch(1, 1);
+        BottomWindowLayout->setStretch(2, 10);
 
         MainWindowLayout->addLayout(BottomWindowLayout);
 
@@ -321,9 +397,14 @@ public:
         backLogo->setText(QString());
         timeInfoLabel->setText(QCoreApplication::translate("MainPage", "Last Update Time:", nullptr));
         lastUpdateTimeLabel->setText(QString());
+        changeDirButton->setText(QCoreApplication::translate("MainPage", "Change Standard Dir", nullptr));
         addFromDeviceButton->setText(QCoreApplication::translate("MainPage", "Add Track From Device", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(likedTracks), QCoreApplication::translate("MainPage", "Tab 1", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(downloadedTracks), QCoreApplication::translate("MainPage", "Tab 2", nullptr));
+        label->setText(QCoreApplication::translate("MainPage", "Volume", nullptr));
+        songNameLabel->setText(QString());
+        currentTimeLabel->setText(QCoreApplication::translate("MainPage", "00:00", nullptr));
+        totalTimeLabel->setText(QCoreApplication::translate("MainPage", "00:00", nullptr));
         shuffleButton->setText(QString());
         prevButton->setText(QString());
         pauseButton->setText(QString());

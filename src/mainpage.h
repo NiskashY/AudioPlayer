@@ -45,8 +45,15 @@ private slots:
     void on_repeatButton_clicked();
 
     // Sound Manipulation
-    void PlaySong();
-    void SetMaxSliderDuration();
+    void PlaySong();                 // start song & change elements of ui for that
+    void SetCurrentSliderPosition(); // get player_position and set ui_slider position
+    void SetMaxSliderPosition();     // get max player position set ui_slider max position
+    void SetSongNameLabel();         // set ui current song name
+    void SliderPositionMoved();      // move soundtrack player to new position
+
+    void on_changeDirButton_clicked();
+
+    void on_verticalSlider_sliderMoved(int position);
 
 private:
     void AddTrackToDownloadedTab(const QString& file_name);
@@ -54,6 +61,7 @@ private:
                                   const QString& file_name,
                                   bool isDownloaded);
     void ChangeState(SetPlayerState player_state = SetPlayerState::Default);
+    void ConnectionManipulation(bool isConnect);
 
     Ui::MainPage *ui;
     QMediaPlayer* player = nullptr;
@@ -61,12 +69,12 @@ private:
     QMediaPlaylist* received_playlist = nullptr;
 
     // TODO: пусть пользователь сам меняет свою рабочую директорию
-    const QString working_dir_path = "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/saved-tracks/";
+    QString working_dir_path = "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/saved-tracks/";
     const QString style_sheet_parametr = "border-image:url(:/resourses/songsCovers/%1);"; // for setting up buttons images
 
     QMap<QString, std::pair<QString, int>> downloadedFiles; // first -> file_name, second -> file_path
     QHash<QPushButton*, QHBoxLayout*> mButtonToLayoutMap;
-    QStringList tracks_list;
+    QStringList tracks_list, final_tracks_list;
 };
 
 

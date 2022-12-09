@@ -1,6 +1,10 @@
 #include "mainpage.h"
 #include "ui_mainpage.h"
 
+#define cnct connect
+#define disct disconnect
+#define CUSTOM_CONNECTION(connection_handler) (connection_handler == "connect" ? cnct : disct)
+
 #include <QSpacerItem>
 
 QString GetFileNameFromPath(const QString& path) {
@@ -14,6 +18,48 @@ QString GetFileNameFromPath(const QString& path) {
     return resultFileName;
 }
 
+void MainPage::ConnectionManipulation(bool isConnect)
+{
+    if (isConnect) {
+        // Connect Sound Signals for player and UI
+        connect (
+                player, &QMediaPlayer::positionChanged,
+                this, &MainPage::SetCurrentSliderPosition
+        ); // song 'progress bar' update
+
+        connect (
+                player, &QMediaPlayer::durationChanged,
+                this, &MainPage::SetMaxSliderPosition
+        ); // song time update
+        connect (
+                player, &QMediaPlayer::currentMediaChanged,
+                this, &MainPage::SetSongNameLabel
+        ); // song name update
+        connect (
+                ui->songSlider, &QSlider::sliderMoved,
+                this, &MainPage::SliderPositionMoved
+        ); // slider moved -> change position in the soundtrack
+    } else {
+        // Disconnect  Sound Signals for player and UI
+        disconnect (
+                player, &QMediaPlayer::positionChanged,
+                this, &MainPage::SetCurrentSliderPosition
+        ); // song 'progress bar' update
+
+        disconnect (
+                player, &QMediaPlayer::durationChanged,
+                this, &MainPage::SetMaxSliderPosition
+        ); // song time update
+        disconnect (
+                player, &QMediaPlayer::currentMediaChanged,
+                this, &MainPage::SetSongNameLabel
+        ); // song name update
+        disconnect (
+                ui->songSlider, &QSlider::sliderMoved,
+                this, &MainPage::SliderPositionMoved
+        ); // slider moved -> change position in the soundtrack
+    }
+}
 
 MainPage::MainPage(QWidget *parent) :
     QDialog(parent),
@@ -42,29 +88,35 @@ MainPage::MainPage(QWidget *parent) :
     auto current_tab_layout = current_tab_layouts.at(kNeededPosOfLayout);
     current_tab_layout->addStretch(2);
 
-    ui->tabWidget->tabBarClicked(ui->tabWidget->currentIndex());  // Refresh likes page
+    Q_EMIT ui->tabWidget->tabBarClicked(ui->tabWidget->currentIndex());  // Refresh likes page
 
+    // Initialize player
     player = new QMediaPlayer();
     active_playlist = new QMediaPlaylist();
     received_playlist = new QMediaPlaylist();
     player->setPlaylist(active_playlist);
     player->playlist()->setPlaybackMode(QMediaPlaylist::PlaybackMode::Loop);
 
-    connect(player, &QMediaPlayer::positionChanged,
-            ui->songSlider, &QSlider::setValue);
-    connect(player, &QMediaPlayer::durationChanged,
-            this, &MainPage::SetMaxSliderDuration);
+    // Setup Volume of sound and ui elements for this
+    const int& kSoundVolume = 30;
+    ui->verticalSlider->setSliderPosition(kSoundVolume);
+    player->setVolume(kSoundVolume);
 
+    // Connect Sound Signals for player and UI
+    MainPage::ConnectionManipulation(true); // connect slots
 }
 
 MainPage::~MainPage()
 {
+    MainPage::ConnectionManipulation(false);    // disconnect slots
     delete ui;
     player->stop();
+    player->playlist()->clear();
+    delete received_playlist;
+    delete active_playlist;
     delete player;
 }
 
-#pragma region on_Buttons_clicked
 
 void MainPage::on_backLogo_clicked()
 {
@@ -100,6 +152,7 @@ void MainPage::on_tabWidget_tabBarClicked(int index) {
 
     tracks_list.clear();
     downloadedFiles.clear();
+    mButtonToLayoutMap.clear();
 
     if (kRefreshDownload == index) {
         // Get all files with file extension = {.mp3, .wav}
@@ -159,10 +212,8 @@ void MainPage::on_nextButton_clicked()
     // Therefore i need to swap buttons =>  next = prev; prev = next
     const int kCurrentPosInPlaylist = player->playlist()->currentIndex();
     int kNextPos = player->playlist()->previousIndex(); // swapped
-//    const int kBeginPos = (int)player->playlist()->mediaCount() - 1, kEndPos = 0;
-//    if (kCurrentPosInPlaylist == kEndPos) {
-//        kNextPos = kBeginPos;
-//    }
+
+    // Check if i need to shuffle tracks
     if (player->playlist()->playbackMode() == QMediaPlaylist::Random) {
         srand(time(0));
         const int totalMediaCount = (player->playlist()->mediaCount());
@@ -179,10 +230,7 @@ void MainPage::on_prevButton_clicked()
     // Therefore i need to swap buttons =>  next = prev; prev = next
     const int kCurrentPosInPlaylist = player->playlist()->currentIndex();
     int kNextPos = player->playlist()->nextIndex(); // swapped
-//    const int kBeginPos = 0, kEndPos = (int)player->playlist()->mediaCount() - 1;
-//    if (kCurrentPosInPlaylist == kEndPos) {
-//        kNextPos = kBeginPos;
-//    }
+
     if (player->playlist()->playbackMode() == QMediaPlaylist::Random) {
         srand(time(0));
         const int totalMediaCount = (player->playlist()->mediaCount());
@@ -220,11 +268,6 @@ void MainPage::on_repeatButton_clicked()
         ui->repeatButton->setStyleSheet(style_sheet_parametr.arg("repeat_song.png"));
     }
 }
-
-#pragma endregion on_Buttons_clicked
-
-
-#pragma region songs_manipulataion
 
 QHBoxLayout* MainPage::CreateSongLayout(QWidget*& parent_widget,
                                         const QString& file_name,
@@ -271,6 +314,7 @@ void MainPage::ChangeState(SetPlayerState player_state) {
         player_state == SetPlayerState::ForcePlay)
     {
         player->play();
+        MainPage::SetSongNameLabel();
     } else {
         player->pause();
         button_cover_image = "query_song.png";
@@ -288,23 +332,72 @@ void MainPage::PlaySong() {
                 song_layout->itemAt(kFileNamePos)->widget()
     )->text();
 
-    QMediaPlaylist::PlaybackMode prev_playback_mode_state
-            = player->playlist()->playbackMode();
+    player->stop();
 
     if (!received_playlist->isEmpty()) {
-        delete active_playlist; // delete pointer to old_playlist
-        active_playlist = received_playlist;    // copy pointer (that pointer will be deleted on next playlist change)
+        QMediaPlaylist::PlaybackMode prev_playback_mode_state
+                = player->playlist()->playbackMode();
+        disconnect(
+                player, &QMediaPlayer::currentMediaChanged,
+                this, &MainPage::SetSongNameLabel
+        );                                        // disconnect slot to prevent asking from deleted area
+
+        delete active_playlist;                   // delete pointer to old_playlist
+        active_playlist = received_playlist;      // copy pointer (that pointer will be deleted on next playlist change)
         received_playlist = new QMediaPlaylist(); // disconnect received_playlist ptr from memory,
-                                              // that now belongs to active_playlist
+                                                  // that now belongs to active_playlist
+        std::swap(final_tracks_list, tracks_list);// swap to avoid copying
+
+        connect(
+                player, &QMediaPlayer::currentMediaChanged,
+                this, &MainPage::SetSongNameLabel
+        );                                        // connect again to change song name label
+
+        player->setPlaylist(active_playlist);
+        player->playlist()->setPlaybackMode(prev_playback_mode_state);
     }
-    player->setVolume(30);
-    player->setPlaylist(active_playlist);
-    player->playlist()->setPlaybackMode(prev_playback_mode_state);
+
     player->playlist()->setCurrentIndex(downloadedFiles[file_name].second);
     MainPage::ChangeState(SetPlayerState::ForcePlay);
 }
 
-void MainPage::SetMaxSliderDuration() {
-    ui->songSlider->setMaximum(player->duration());
+void MainPage::SetCurrentSliderPosition() {
+    const int current_player_position= player->position();
+    ui->songSlider->setValue(current_player_position);
+    ui->currentTimeLabel->setText(TimeConvertFromMiliseconds(current_player_position));
 }
-#pragma endregion songs_manipulataion
+
+void MainPage::SetMaxSliderPosition() {
+    const int current_duration = player->duration();
+    ui->songSlider->setMaximum(current_duration );
+    ui->totalTimeLabel->setText(TimeConvertFromMiliseconds(current_duration));
+}
+
+void MainPage::SetSongNameLabel() {
+    auto cur_index = player->playlist()->currentIndex();
+    ui->songNameLabel->setText(
+        final_tracks_list.at(cur_index)
+    );
+}
+
+void MainPage::SliderPositionMoved() {
+    player->setPosition(ui->songSlider->sliderPosition());
+}
+
+void MainPage::on_changeDirButton_clicked()
+{
+    QFileDialog dirWindow(this);
+    dirWindow.setWindowTitle("Select Folder To Save Files");
+    dirWindow.setFileMode(QFileDialog::Directory);
+
+    if (dirWindow.exec()) {
+        QStringList selectedDirectories = dirWindow.selectedFiles();
+        working_dir_path = selectedDirectories[0] + "/";
+        Q_EMIT ui->tabWidget->tabBarClicked(ui->tabWidget->currentIndex());
+    }
+}
+
+void MainPage::on_verticalSlider_sliderMoved(int position) {
+    player->setVolume(ui->verticalSlider->sliderPosition());
+}
+
