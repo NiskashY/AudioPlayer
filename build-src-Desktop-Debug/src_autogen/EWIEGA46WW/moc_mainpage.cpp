@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainPage_t {
-    QByteArrayData data[13];
-    char stringdata0[240];
+    QByteArrayData data[19];
+    char stringdata0[368];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -44,7 +44,13 @@ QT_MOC_LITERAL(8, 139, 21), // "on_prevButton_clicked"
 QT_MOC_LITERAL(9, 161, 24), // "on_shuffleButton_clicked"
 QT_MOC_LITERAL(10, 186, 23), // "on_repeatButton_clicked"
 QT_MOC_LITERAL(11, 210, 8), // "PlaySong"
-QT_MOC_LITERAL(12, 219, 20) // "SetMaxSliderDuration"
+QT_MOC_LITERAL(12, 219, 24), // "SetCurrentSliderPosition"
+QT_MOC_LITERAL(13, 244, 20), // "SetMaxSliderPosition"
+QT_MOC_LITERAL(14, 265, 16), // "SetSongNameLabel"
+QT_MOC_LITERAL(15, 282, 19), // "SliderPositionMoved"
+QT_MOC_LITERAL(16, 302, 26), // "on_changeDirButton_clicked"
+QT_MOC_LITERAL(17, 329, 29), // "on_verticalSlider_sliderMoved"
+QT_MOC_LITERAL(18, 359, 8) // "position"
 
     },
     "MainPage\0on_backLogo_clicked\0\0"
@@ -53,7 +59,10 @@ QT_MOC_LITERAL(12, 219, 20) // "SetMaxSliderDuration"
     "on_pauseButton_clicked\0on_nextButton_clicked\0"
     "on_prevButton_clicked\0on_shuffleButton_clicked\0"
     "on_repeatButton_clicked\0PlaySong\0"
-    "SetMaxSliderDuration"
+    "SetCurrentSliderPosition\0SetMaxSliderPosition\0"
+    "SetSongNameLabel\0SliderPositionMoved\0"
+    "on_changeDirButton_clicked\0"
+    "on_verticalSlider_sliderMoved\0position"
 };
 #undef QT_MOC_LITERAL
 
@@ -63,7 +72,7 @@ static const uint qt_meta_data_MainPage[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-      10,   14, // methods
+      15,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -71,16 +80,21 @@ static const uint qt_meta_data_MainPage[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   64,    2, 0x08 /* Private */,
-       3,    0,   65,    2, 0x08 /* Private */,
-       4,    1,   66,    2, 0x08 /* Private */,
-       6,    0,   69,    2, 0x08 /* Private */,
-       7,    0,   70,    2, 0x08 /* Private */,
-       8,    0,   71,    2, 0x08 /* Private */,
-       9,    0,   72,    2, 0x08 /* Private */,
-      10,    0,   73,    2, 0x08 /* Private */,
-      11,    0,   74,    2, 0x08 /* Private */,
-      12,    0,   75,    2, 0x08 /* Private */,
+       1,    0,   89,    2, 0x08 /* Private */,
+       3,    0,   90,    2, 0x08 /* Private */,
+       4,    1,   91,    2, 0x08 /* Private */,
+       6,    0,   94,    2, 0x08 /* Private */,
+       7,    0,   95,    2, 0x08 /* Private */,
+       8,    0,   96,    2, 0x08 /* Private */,
+       9,    0,   97,    2, 0x08 /* Private */,
+      10,    0,   98,    2, 0x08 /* Private */,
+      11,    0,   99,    2, 0x08 /* Private */,
+      12,    0,  100,    2, 0x08 /* Private */,
+      13,    0,  101,    2, 0x08 /* Private */,
+      14,    0,  102,    2, 0x08 /* Private */,
+      15,    0,  103,    2, 0x08 /* Private */,
+      16,    0,  104,    2, 0x08 /* Private */,
+      17,    1,  105,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -93,6 +107,11 @@ static const uint qt_meta_data_MainPage[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,   18,
 
        0        // eod
 };
@@ -112,7 +131,12 @@ void MainPage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 6: _t->on_shuffleButton_clicked(); break;
         case 7: _t->on_repeatButton_clicked(); break;
         case 8: _t->PlaySong(); break;
-        case 9: _t->SetMaxSliderDuration(); break;
+        case 9: _t->SetCurrentSliderPosition(); break;
+        case 10: _t->SetMaxSliderPosition(); break;
+        case 11: _t->SetSongNameLabel(); break;
+        case 12: _t->SliderPositionMoved(); break;
+        case 13: _t->on_changeDirButton_clicked(); break;
+        case 14: _t->on_verticalSlider_sliderMoved((*reinterpret_cast< int(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -147,13 +171,13 @@ int MainPage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 10)
+        if (_id < 15)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 10;
+        _id -= 15;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 10)
+        if (_id < 15)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 10;
+        _id -= 15;
     }
     return _id;
 }

@@ -654,6 +654,16 @@ CMakeFiles/src.dir/communicatewithserver.cpp.o
  /usr/include/qt/QtCore/qjsonarray.h
  /usr/include/qt/QtCore/QJsonObject
  /usr/include/qt/QtCore/qjsonobject.h
+ /usr/include/c++/12.2.0/iomanip
+ /usr/include/c++/12.2.0/locale
+ /usr/include/c++/12.2.0/bits/locale_facets_nonio.h
+ /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/time_members.h
+ /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/messages_members.h
+ /usr/include/libintl.h
+ /usr/include/c++/12.2.0/bits/codecvt.h
+ /usr/include/c++/12.2.0/bits/locale_facets_nonio.tcc
+ /usr/include/c++/12.2.0/bits/locale_conv.h
+ /usr/include/c++/12.2.0/bits/quoted_string.h
 
 CMakeFiles/src.dir/layoutsdeleter.cpp.o
  /home/mint/GitRepos/AudioPlayer/src/layoutsdeleter.cpp
@@ -1496,6 +1506,16 @@ CMakeFiles/src.dir/loginwindow.cpp.o
  /usr/include/qt/QtCore/qjsonarray.h
  /usr/include/qt/QtCore/QJsonObject
  /usr/include/qt/QtCore/qjsonobject.h
+ /usr/include/c++/12.2.0/iomanip
+ /usr/include/c++/12.2.0/locale
+ /usr/include/c++/12.2.0/bits/locale_facets_nonio.h
+ /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/time_members.h
+ /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/messages_members.h
+ /usr/include/libintl.h
+ /usr/include/c++/12.2.0/bits/codecvt.h
+ /usr/include/c++/12.2.0/bits/locale_facets_nonio.tcc
+ /usr/include/c++/12.2.0/bits/locale_conv.h
+ /usr/include/c++/12.2.0/bits/quoted_string.h
  /home/mint/GitRepos/AudioPlayer/src/signupwindow.h
  /home/mint/GitRepos/AudioPlayer/src/checker/checker.h
  /usr/include/qt/QtCore/QPair
@@ -1996,6 +2016,16 @@ CMakeFiles/src.dir/main.cpp.o
  /usr/include/qt/QtCore/qjsonarray.h
  /usr/include/qt/QtCore/QJsonObject
  /usr/include/qt/QtCore/qjsonobject.h
+ /usr/include/c++/12.2.0/iomanip
+ /usr/include/c++/12.2.0/locale
+ /usr/include/c++/12.2.0/bits/locale_facets_nonio.h
+ /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/time_members.h
+ /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/messages_members.h
+ /usr/include/libintl.h
+ /usr/include/c++/12.2.0/bits/codecvt.h
+ /usr/include/c++/12.2.0/bits/locale_facets_nonio.tcc
+ /usr/include/c++/12.2.0/bits/locale_conv.h
+ /usr/include/c++/12.2.0/bits/quoted_string.h
  /home/mint/GitRepos/AudioPlayer/src/signupwindow.h
  /home/mint/GitRepos/AudioPlayer/src/checker/checker.h
  /usr/include/qt/QtCore/QPair
@@ -2460,6 +2490,16 @@ CMakeFiles/src.dir/mainpage.cpp.o
  /usr/include/qt/QtCore/qjsonarray.h
  /usr/include/qt/QtCore/QJsonObject
  /usr/include/qt/QtCore/qjsonobject.h
+ /usr/include/c++/12.2.0/iomanip
+ /usr/include/c++/12.2.0/locale
+ /usr/include/c++/12.2.0/bits/locale_facets_nonio.h
+ /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/time_members.h
+ /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/messages_members.h
+ /usr/include/libintl.h
+ /usr/include/c++/12.2.0/bits/codecvt.h
+ /usr/include/c++/12.2.0/bits/locale_facets_nonio.tcc
+ /usr/include/c++/12.2.0/bits/locale_conv.h
+ /usr/include/c++/12.2.0/bits/quoted_string.h
  /home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen/include/ui_mainpage.h
  /usr/include/qt/QtWidgets/QApplication
  /usr/include/qt/QtWidgets/qapplication.h
@@ -2928,6 +2968,16 @@ CMakeFiles/src.dir/signupwindow.cpp.o
  /usr/include/qt/QtCore/qjsonarray.h
  /usr/include/qt/QtCore/QJsonObject
  /usr/include/qt/QtCore/qjsonobject.h
+ /usr/include/c++/12.2.0/iomanip
+ /usr/include/c++/12.2.0/locale
+ /usr/include/c++/12.2.0/bits/locale_facets_nonio.h
+ /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/time_members.h
+ /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/messages_members.h
+ /usr/include/libintl.h
+ /usr/include/c++/12.2.0/bits/codecvt.h
+ /usr/include/c++/12.2.0/bits/locale_facets_nonio.tcc
+ /usr/include/c++/12.2.0/bits/locale_conv.h
+ /usr/include/c++/12.2.0/bits/quoted_string.h
 
 CMakeFiles/src.dir/src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o
  /home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen/OIBSYM6ORI/qrc_resourses.cpp
@@ -3302,6 +3352,16 @@ CMakeFiles/src.dir/src_autogen/mocs_compilation.cpp.o
  /usr/include/qt/QtCore/qjsonarray.h
  /usr/include/qt/QtCore/QJsonObject
  /usr/include/qt/QtCore/qjsonobject.h
+ /usr/include/c++/12.2.0/iomanip
+ /usr/include/c++/12.2.0/locale
+ /usr/include/c++/12.2.0/bits/locale_facets_nonio.h
+ /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/time_members.h
+ /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/messages_members.h
+ /usr/include/libintl.h
+ /usr/include/c++/12.2.0/bits/codecvt.h
+ /usr/include/c++/12.2.0/bits/locale_facets_nonio.tcc
+ /usr/include/c++/12.2.0/bits/locale_conv.h
+ /usr/include/c++/12.2.0/bits/quoted_string.h
  /home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen/EWIEGA46WW/moc_loginwindow.cpp
  /home/mint/GitRepos/AudioPlayer/src/loginwindow.h
  /usr/include/qt/QtWidgets/QMainWindow

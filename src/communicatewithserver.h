@@ -7,7 +7,9 @@
 #include <QJsonArray>
 #include <QJsonObject>
 
-// shared ptr
+// STL lib
+#include <sstream>
+#include <iomanip>
 #include <memory>
 
 enum class Existance {
@@ -43,3 +45,5 @@ private: // Private Variables
 QJsonArray CovertToJsonFormat(const QString& data);
 
 char* GetCurrentTime();
+
+QString TimeConvertFromMiliseconds(qint64);

@@ -651,7 +651,17 @@ CMakeFiles/src.dir/communicatewithserver.cpp.o: /home/mint/GitRepos/AudioPlayer/
   /usr/include/qt/QtCore/QJsonArray \
   /usr/include/qt/QtCore/qjsonarray.h \
   /usr/include/qt/QtCore/QJsonObject \
-  /usr/include/qt/QtCore/qjsonobject.h
+  /usr/include/qt/QtCore/qjsonobject.h \
+  /usr/include/c++/12.2.0/iomanip \
+  /usr/include/c++/12.2.0/locale \
+  /usr/include/c++/12.2.0/bits/locale_facets_nonio.h \
+  /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/time_members.h \
+  /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/12.2.0/bits/codecvt.h \
+  /usr/include/c++/12.2.0/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/12.2.0/bits/locale_conv.h \
+  /usr/include/c++/12.2.0/bits/quoted_string.h
 
 CMakeFiles/src.dir/layoutsdeleter.cpp.o: /home/mint/GitRepos/AudioPlayer/src/layoutsdeleter.cpp \
   /usr/include/stdc-predef.h \
@@ -1492,6 +1502,16 @@ CMakeFiles/src.dir/loginwindow.cpp.o: /home/mint/GitRepos/AudioPlayer/src/loginw
   /usr/include/qt/QtCore/qjsonarray.h \
   /usr/include/qt/QtCore/QJsonObject \
   /usr/include/qt/QtCore/qjsonobject.h \
+  /usr/include/c++/12.2.0/iomanip \
+  /usr/include/c++/12.2.0/locale \
+  /usr/include/c++/12.2.0/bits/locale_facets_nonio.h \
+  /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/time_members.h \
+  /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/12.2.0/bits/codecvt.h \
+  /usr/include/c++/12.2.0/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/12.2.0/bits/locale_conv.h \
+  /usr/include/c++/12.2.0/bits/quoted_string.h \
   /home/mint/GitRepos/AudioPlayer/src/signupwindow.h \
   /home/mint/GitRepos/AudioPlayer/src/checker/checker.h \
   /usr/include/qt/QtCore/QPair \
@@ -1991,6 +2011,16 @@ CMakeFiles/src.dir/main.cpp.o: /home/mint/GitRepos/AudioPlayer/src/main.cpp \
   /usr/include/qt/QtCore/qjsonarray.h \
   /usr/include/qt/QtCore/QJsonObject \
   /usr/include/qt/QtCore/qjsonobject.h \
+  /usr/include/c++/12.2.0/iomanip \
+  /usr/include/c++/12.2.0/locale \
+  /usr/include/c++/12.2.0/bits/locale_facets_nonio.h \
+  /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/time_members.h \
+  /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/12.2.0/bits/codecvt.h \
+  /usr/include/c++/12.2.0/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/12.2.0/bits/locale_conv.h \
+  /usr/include/c++/12.2.0/bits/quoted_string.h \
   /home/mint/GitRepos/AudioPlayer/src/signupwindow.h \
   /home/mint/GitRepos/AudioPlayer/src/checker/checker.h \
   /usr/include/qt/QtCore/QPair \
@@ -2454,6 +2484,16 @@ CMakeFiles/src.dir/mainpage.cpp.o: /home/mint/GitRepos/AudioPlayer/src/mainpage.
   /usr/include/qt/QtCore/qjsonarray.h \
   /usr/include/qt/QtCore/QJsonObject \
   /usr/include/qt/QtCore/qjsonobject.h \
+  /usr/include/c++/12.2.0/iomanip \
+  /usr/include/c++/12.2.0/locale \
+  /usr/include/c++/12.2.0/bits/locale_facets_nonio.h \
+  /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/time_members.h \
+  /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/12.2.0/bits/codecvt.h \
+  /usr/include/c++/12.2.0/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/12.2.0/bits/locale_conv.h \
+  /usr/include/c++/12.2.0/bits/quoted_string.h \
   src_autogen/include/ui_mainpage.h \
   /usr/include/qt/QtWidgets/QApplication \
   /usr/include/qt/QtWidgets/qapplication.h \
@@ -2920,7 +2960,17 @@ CMakeFiles/src.dir/signupwindow.cpp.o: /home/mint/GitRepos/AudioPlayer/src/signu
   /usr/include/qt/QtCore/QJsonArray \
   /usr/include/qt/QtCore/qjsonarray.h \
   /usr/include/qt/QtCore/QJsonObject \
-  /usr/include/qt/QtCore/qjsonobject.h
+  /usr/include/qt/QtCore/qjsonobject.h \
+  /usr/include/c++/12.2.0/iomanip \
+  /usr/include/c++/12.2.0/locale \
+  /usr/include/c++/12.2.0/bits/locale_facets_nonio.h \
+  /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/time_members.h \
+  /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/12.2.0/bits/codecvt.h \
+  /usr/include/c++/12.2.0/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/12.2.0/bits/locale_conv.h \
+  /usr/include/c++/12.2.0/bits/quoted_string.h
 
 CMakeFiles/src.dir/src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o: src_autogen/OIBSYM6ORI/qrc_resourses.cpp \
   /usr/include/stdc-predef.h
@@ -3293,6 +3343,16 @@ CMakeFiles/src.dir/src_autogen/mocs_compilation.cpp.o: src_autogen/mocs_compilat
   /usr/include/qt/QtCore/qjsonarray.h \
   /usr/include/qt/QtCore/QJsonObject \
   /usr/include/qt/QtCore/qjsonobject.h \
+  /usr/include/c++/12.2.0/iomanip \
+  /usr/include/c++/12.2.0/locale \
+  /usr/include/c++/12.2.0/bits/locale_facets_nonio.h \
+  /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/time_members.h \
+  /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/12.2.0/bits/codecvt.h \
+  /usr/include/c++/12.2.0/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/12.2.0/bits/locale_conv.h \
+  /usr/include/c++/12.2.0/bits/quoted_string.h \
   src_autogen/EWIEGA46WW/moc_loginwindow.cpp \
   /home/mint/GitRepos/AudioPlayer/src/loginwindow.h \
   /usr/include/qt/QtWidgets/QMainWindow \
@@ -3444,8 +3504,6 @@ src_autogen/include/ui_loginwindow.h:
 
 /usr/include/qt/QtMultimedia/qmediaresource.h:
 
-/usr/include/qt/QtMultimedia/qmediacontent.h:
-
 /usr/include/qt/QtMultimedia/qmultimedia.h:
 
 /usr/include/qt/QtMultimedia/qtmultimediaglobal.h:
@@ -3524,6 +3582,14 @@ src_autogen/EWIEGA46WW/moc_communicatewithserver.cpp:
 
 /usr/include/qt/QtWidgets/QWidget:
 
+/usr/include/c++/12.2.0/bits/locale_conv.h:
+
+/usr/include/qt/QtMultimedia/qmediacontent.h:
+
+/usr/include/c++/12.2.0/bits/locale_facets_nonio.tcc:
+
+/usr/include/c++/12.2.0/iomanip:
+
 /usr/include/qt/QtNetwork/qnetworkrequest.h:
 
 /usr/include/qt/QtCore/qjsonobject.h:
@@ -3532,9 +3598,13 @@ src_autogen/EWIEGA46WW/moc_communicatewithserver.cpp:
 
 /usr/include/qt/QtCore/QJsonArray:
 
+/usr/include/c++/12.2.0/bits/codecvt.h:
+
 /usr/include/qt/QtCore/qregularexpression.h:
 
 /usr/include/qt/QtCore/qcborcommon.h:
+
+/usr/include/c++/12.2.0/bits/quoted_string.h:
 
 /usr/include/qt/QtCore/qcborvalue.h:
 
@@ -3615,6 +3685,8 @@ src_autogen/EWIEGA46WW/moc_communicatewithserver.cpp:
 /usr/include/qt/QtWidgets/qcheckbox.h:
 
 /usr/include/qt/QtWidgets/QCheckBox:
+
+/usr/include/c++/12.2.0/bits/locale_facets_nonio.h:
 
 /usr/include/qt/QtCore/qvector.h:
 
@@ -3708,6 +3780,8 @@ src_autogen/EWIEGA46WW/moc_mainpage.cpp:
 
 /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/gthr-default.h:
 
+/usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/time_members.h:
+
 /usr/include/c++/12.2.0/bits/istream.tcc:
 
 /usr/include/wctype.h:
@@ -3747,6 +3821,8 @@ src_autogen/EWIEGA46WW/moc_mainpage.cpp:
 /usr/include/c++/12.2.0/numbers:
 
 /usr/include/c++/12.2.0/bits/localefwd.h:
+
+/usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/messages_members.h:
 
 /usr/include/bits/typesizes.h:
 
@@ -3974,6 +4050,8 @@ src_autogen/EWIEGA46WW/moc_signupwindow.cpp:
 
 /usr/include/c++/12.2.0/type_traits:
 
+/usr/include/libintl.h:
+
 /usr/include/bits/endianness.h:
 
 /usr/include/c++/12.2.0/bits/functional_hash.h:
@@ -4067,6 +4145,8 @@ src_autogen/include/ui_mainpage.h:
 /usr/include/c++/12.2.0/bits/ranges_util.h:
 
 /usr/include/sys/syscall.h:
+
+/usr/include/c++/12.2.0/locale:
 
 /usr/include/qt/QtNetwork/qtnetworkglobal.h:
 

@@ -88,3 +88,15 @@ char* GetCurrentTime() {
 
     return std::ctime(&current_time);
 }
+
+QString TimeConvertFromMiliseconds(qint64 miliseconds) {
+    std::stringstream ss;
+    const int total_seconds = miliseconds / 1000;
+    const int seconds = total_seconds % 60, minutes = total_seconds / 60;
+    const int kMaxWidth = 2;
+
+    ss << std::setw(kMaxWidth) << std::setfill('0') << minutes;
+    ss << ':';
+    ss << std::setw(kMaxWidth) << std::setfill('0') << seconds;
+    return QString::fromStdString(ss.str());
+}
