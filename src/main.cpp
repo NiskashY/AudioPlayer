@@ -2,7 +2,7 @@
 #include <QFile>
 
 // Include fiels with information about windows
-#include "loginwindow.h"
+#include "mainpage.h"
 
 void SetAppStyleSheet(QApplication&);
 
@@ -12,8 +12,8 @@ int main(int argc, char *argv[])
     // Setting up style sheet of buttons, font, background etc...
     SetAppStyleSheet(app);
 
-    LoginWindow lw;
-    lw.show();
+    MainPage main_page;
+    main_page.show();
 
     return QApplication::exec();
 }

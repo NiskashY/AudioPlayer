@@ -31,6 +31,11 @@ set(PROJECT_SOURCES
         mainpage.cpp
         mainpage.ui
 
+        #del
+        #mainpage_cp.h
+        #mainpage_cp.cpp
+        #mainpage_cp.ui
+
         # There stored all images for program
         Images/resourses.qrc
 

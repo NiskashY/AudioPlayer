@@ -2,7 +2,6 @@
     <qresource prefix="/resourses/songsCovers">
         <file>kotik.jpg</file>
         <file>hamster.jpg</file>
-        <file>sound.jpg</file>
         <file>default_song_cover.jpg</file>
         <file>query_song.png</file>
         <file>pause_song.png</file>
@@ -12,6 +11,8 @@
         <file>next_song.png</file>
         <file>repeat_on_song.png</file>
         <file>shuffle_on_song.png</file>
+        <file>exit_account.png</file>
+        <file>sound.jpg</file>
     </qresource>
     <qresource prefix="/styleSheets">
         <file>Combinear.qss</file>

@@ -76,6 +76,7 @@ src_autogen/OIBSYM6ORI/qrc_resourses.cpp: /home/mint/GitRepos/AudioPlayer/src/Im
 src_autogen/OIBSYM6ORI/qrc_resourses.cpp: /home/mint/GitRepos/AudioPlayer/src/Images/repeat_song.png
 src_autogen/OIBSYM6ORI/qrc_resourses.cpp: /home/mint/GitRepos/AudioPlayer/src/Images/default_song_cover.jpg
 src_autogen/OIBSYM6ORI/qrc_resourses.cpp: /home/mint/GitRepos/AudioPlayer/src/Images/prev_song.png
+src_autogen/OIBSYM6ORI/qrc_resourses.cpp: /home/mint/GitRepos/AudioPlayer/src/Images/exit_account.png
 src_autogen/OIBSYM6ORI/qrc_resourses.cpp: /home/mint/GitRepos/AudioPlayer/src/Images/query_song.png
 src_autogen/OIBSYM6ORI/qrc_resourses.cpp: /home/mint/GitRepos/AudioPlayer/src/Images/kotik.jpg
 src_autogen/OIBSYM6ORI/qrc_resourses.cpp: /home/mint/GitRepos/AudioPlayer/src/Images/sound.jpg

@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainPage_t {
     QByteArrayData data[19];
-    char stringdata0[368];
+    char stringdata0[377];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,28 +33,28 @@ struct qt_meta_stringdata_MainPage_t {
 static const qt_meta_stringdata_MainPage_t qt_meta_stringdata_MainPage = {
     {
 QT_MOC_LITERAL(0, 0, 8), // "MainPage"
-QT_MOC_LITERAL(1, 9, 19), // "on_backLogo_clicked"
-QT_MOC_LITERAL(2, 29, 0), // ""
-QT_MOC_LITERAL(3, 30, 30), // "on_addFromDeviceButton_clicked"
-QT_MOC_LITERAL(4, 61, 26), // "on_tabWidget_tabBarClicked"
-QT_MOC_LITERAL(5, 88, 5), // "index"
-QT_MOC_LITERAL(6, 94, 22), // "on_pauseButton_clicked"
-QT_MOC_LITERAL(7, 117, 21), // "on_nextButton_clicked"
-QT_MOC_LITERAL(8, 139, 21), // "on_prevButton_clicked"
-QT_MOC_LITERAL(9, 161, 24), // "on_shuffleButton_clicked"
-QT_MOC_LITERAL(10, 186, 23), // "on_repeatButton_clicked"
-QT_MOC_LITERAL(11, 210, 8), // "PlaySong"
-QT_MOC_LITERAL(12, 219, 24), // "SetCurrentSliderPosition"
-QT_MOC_LITERAL(13, 244, 20), // "SetMaxSliderPosition"
-QT_MOC_LITERAL(14, 265, 16), // "SetSongNameLabel"
-QT_MOC_LITERAL(15, 282, 19), // "SliderPositionMoved"
-QT_MOC_LITERAL(16, 302, 26), // "on_changeDirButton_clicked"
-QT_MOC_LITERAL(17, 329, 29), // "on_verticalSlider_sliderMoved"
-QT_MOC_LITERAL(18, 359, 8) // "position"
+QT_MOC_LITERAL(1, 9, 28), // "on_exitAccountButton_clicked"
+QT_MOC_LITERAL(2, 38, 0), // ""
+QT_MOC_LITERAL(3, 39, 30), // "on_addFromDeviceButton_clicked"
+QT_MOC_LITERAL(4, 70, 26), // "on_tabWidget_tabBarClicked"
+QT_MOC_LITERAL(5, 97, 5), // "index"
+QT_MOC_LITERAL(6, 103, 22), // "on_pauseButton_clicked"
+QT_MOC_LITERAL(7, 126, 21), // "on_nextButton_clicked"
+QT_MOC_LITERAL(8, 148, 21), // "on_prevButton_clicked"
+QT_MOC_LITERAL(9, 170, 24), // "on_shuffleButton_clicked"
+QT_MOC_LITERAL(10, 195, 23), // "on_repeatButton_clicked"
+QT_MOC_LITERAL(11, 219, 8), // "PlaySong"
+QT_MOC_LITERAL(12, 228, 24), // "SetCurrentSliderPosition"
+QT_MOC_LITERAL(13, 253, 20), // "SetMaxSliderPosition"
+QT_MOC_LITERAL(14, 274, 16), // "SetSongNameLabel"
+QT_MOC_LITERAL(15, 291, 19), // "SliderPositionMoved"
+QT_MOC_LITERAL(16, 311, 26), // "on_changeDirButton_clicked"
+QT_MOC_LITERAL(17, 338, 29), // "on_verticalSlider_sliderMoved"
+QT_MOC_LITERAL(18, 368, 8) // "position"
 
     },
-    "MainPage\0on_backLogo_clicked\0\0"
-    "on_addFromDeviceButton_clicked\0"
+    "MainPage\0on_exitAccountButton_clicked\0"
+    "\0on_addFromDeviceButton_clicked\0"
     "on_tabWidget_tabBarClicked\0index\0"
     "on_pauseButton_clicked\0on_nextButton_clicked\0"
     "on_prevButton_clicked\0on_shuffleButton_clicked\0"
@@ -122,7 +122,7 @@ void MainPage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         auto *_t = static_cast<MainPage *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->on_backLogo_clicked(); break;
+        case 0: _t->on_exitAccountButton_clicked(); break;
         case 1: _t->on_addFromDeviceButton_clicked(); break;
         case 2: _t->on_tabWidget_tabBarClicked((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 3: _t->on_pauseButton_clicked(); break;
@@ -143,7 +143,7 @@ void MainPage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
 }
 
 QT_INIT_METAOBJECT const QMetaObject MainPage::staticMetaObject = { {
-    QMetaObject::SuperData::link<QDialog::staticMetaObject>(),
+    QMetaObject::SuperData::link<QMainWindow::staticMetaObject>(),
     qt_meta_stringdata_MainPage.data,
     qt_meta_data_MainPage,
     qt_static_metacall,
@@ -162,12 +162,12 @@ void *MainPage::qt_metacast(const char *_clname)
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_meta_stringdata_MainPage.stringdata0))
         return static_cast<void*>(this);
-    return QDialog::qt_metacast(_clname);
+    return QMainWindow::qt_metacast(_clname);
 }
 
 int MainPage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QDialog::qt_metacall(_c, _id, _a);
+    _id = QMainWindow::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
