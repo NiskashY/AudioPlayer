@@ -39,13 +39,8 @@ void LoginWindow::on_SignInButton_clicked()
         CommunicateWithServer server;
         auto result = server.CheckAccount(username_input_value, password_input_value);
         if (result.second == Existance::Exist_And_Password_Correct) {
-            this->hide();
-
-            MainPage main_page;
-            main_page.setModal(true);
-            main_page.exec();
-
-            this->show();
+            //this->hide();
+            //this->show();
         } else {
             QMessageBox::critical(this, "Authorisation failed", "Wrong username or password");
         }

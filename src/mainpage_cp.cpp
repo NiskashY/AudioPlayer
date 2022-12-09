@@ -1,6 +1,12 @@
 #include "mainpage.h"
 #include "ui_mainpage.h"
 
+#define cnct connect
+#define disct disconnect
+#define CUSTOM_CONNECTION(connection_handler) (connection_handler == "connect" ? cnct : disct)
+
+#include <QSpacerItem>
+
 QString GetFileNameFromPath(const QString& path) {
     QString resultFileName;
 
@@ -63,7 +69,7 @@ MainPage::MainPage(QWidget *parent) :
     this->setWindowTitle("Main Page");
 
     // Set Images To Buttons on Main Page
-    ui->exitAccountButton->setStyleSheet(style_sheet_parametr.arg("exit_account.png"));
+    ui->backLogo->setStyleSheet(style_sheet_parametr.arg("sound.jpg"));
     ui->shuffleButton->setStyleSheet(style_sheet_parametr.arg("shuffle_song.png"));
     ui->prevButton->setStyleSheet(style_sheet_parametr.arg("prev_song.png"));
     ui->pauseButton->setStyleSheet(style_sheet_parametr.arg("query_song.png"));
@@ -73,7 +79,7 @@ MainPage::MainPage(QWidget *parent) :
     // Setting Up labels for tabs
     const int kLikedTracksPos = 0, kDownloadedTracksPos = 1;
     ui->tabWidget->setTabText(kLikedTracksPos, "Liked Tracks");
-    ui->tabWidget->setTabText(kDownloadedTracksPos, "Downloaded Tracks");
+    ui->tabWidget->setTabText(kDownloadedTracksPos, "Downloaded sTracks");
 
     // Initialize layout with spacer
     const int kNeededPosOfLayout = 1;
@@ -82,15 +88,14 @@ MainPage::MainPage(QWidget *parent) :
     auto current_tab_layout = current_tab_layouts.at(kNeededPosOfLayout);
     current_tab_layout->addStretch(2);
 
+    Q_EMIT ui->tabWidget->tabBarClicked(ui->tabWidget->currentIndex());  // Refresh likes page
+
     // Initialize player
     player = new QMediaPlayer();
     active_playlist = new QMediaPlaylist();
     received_playlist = new QMediaPlaylist();
     player->setPlaylist(active_playlist);
     player->playlist()->setPlaybackMode(QMediaPlaylist::PlaybackMode::Loop);
-
-    // Refresh Page
-    Q_EMIT ui->tabWidget->tabBarClicked(ui->tabWidget->currentIndex());
 
     // Setup Volume of sound and ui elements for this
     const int& kSoundVolume = 30;
@@ -112,8 +117,10 @@ MainPage::~MainPage()
     delete player;
 }
 
-void MainPage::on_exitAccountButton_clicked() {
-    QMessageBox::information(this, "Ogo", "Vi nashli sekret");
+
+void MainPage::on_backLogo_clicked()
+{
+    this->close();
 }
 
 void MainPage::on_addFromDeviceButton_clicked() {
@@ -393,3 +400,4 @@ void MainPage::on_changeDirButton_clicked()
 void MainPage::on_verticalSlider_sliderMoved(int position) {
     player->setVolume(ui->verticalSlider->sliderPosition());
 }
+

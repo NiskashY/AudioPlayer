@@ -2,16 +2,15 @@
 
 // Qt headers
 #include <QMainWindow>
-#include <QMessageBox>
-#include <QMediaPlayer>
-#include <QMediaPlaylist>
 #include <QFileDialog>
 #include <QMap>
 #include <QLabel>
 #include <QCheckBox>
 #include <QHBoxLayout>
+#include <QMediaPlayer>
+#include <QMediaPlaylist>
+#include <QMessageBox>
 #include <QSlider>
-#include <QSpacerItem>
 
 // Custom headers
 #include "layoutsdeleter.h"
@@ -36,7 +35,7 @@ public:
 
 private slots:
     // Buttons clicked
-    void on_exitAccountButton_clicked();
+    void on_backLogo_clicked();
     void on_addFromDeviceButton_clicked();
     void on_tabWidget_tabBarClicked(int index);
     void on_pauseButton_clicked();
@@ -77,5 +76,6 @@ private:
     QHash<QPushButton*, QHBoxLayout*> mButtonToLayoutMap;
     QStringList tracks_list, final_tracks_list;
 };
+
 
 QString GetFileNameFromPath(const QString&);
