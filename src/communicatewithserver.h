@@ -26,7 +26,8 @@ public slots:
     void sockReady();
     void sockDisc();
     QPair<bool, Existance>  CheckAccount(const QString&, const QString&);
-    void CreateAccount(const QString& username, const QString& password);
+    void CreateAccount(const QString&, const QString&);
+    QStringList GetUserLikedTracks(const QString&);
 
 private: // Private Functions
     bool isPasswordContainWrongSymbols(const QString&);

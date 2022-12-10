@@ -139,6 +139,7 @@ void MainPage::on_exitAccountButton_clicked() {
         ensure->exec();
 
         if (ensure->getIsNeedToExist()) {
+            DeleteLayout(ui->likesVLayout);
             ui->accountLabel->setText("Account is not selected");
             ui->accountLabel->setStyleSheet("QLabel { color : red; }");
             delete account;
@@ -194,7 +195,7 @@ void MainPage::on_tabWidget_tabBarClicked(int index) {
         for (int track_index = 0; track_index < (int)tracks_list.size(); ++track_index) {
             QString file_name = tracks_list[track_index];
             downloadedFiles[file_name] = {working_dir_path + file_name, track_index};
-            AddTrackToDownloadedTab(file_name);
+            AddTrackToTab(ui->downVLayout, file_name, true);
             received_playlist->addMedia(QUrl::fromLocalFile(working_dir_path + file_name));
         }
     } else {
@@ -202,6 +203,13 @@ void MainPage::on_tabWidget_tabBarClicked(int index) {
         if (isLogged) {
             ui->accountLabel->setText("Account: " + account->getUsername());
             ui->accountLabel->setStyleSheet("QLabel { color : green; }");
+            CommunicateWithServer server;
+            QStringList getted_tracks = server.GetUserLikedTracks(account->getUsername());
+            received_playlist->clear();
+
+            for (const auto& file_name : getted_tracks) {
+                AddTrackToTab(ui->likesVLayout, file_name, false);
+            }
         } else {
             account = nullptr;
         }
@@ -343,14 +351,16 @@ QHBoxLayout* MainPage::CreateSongLayout(QWidget*& parent_widget,
     return song_layout;
 }
 
-void MainPage::AddTrackToDownloadedTab(const QString& file_name) {
+void MainPage::AddTrackToTab(QVBoxLayout* const v_layout,
+                             const QString& file_name,
+                             bool isCheckBoxEnabled) {
     QHBoxLayout* song_layout = MainPage::CreateSongLayout(
-                ui->scrollAreaWidgetContentsDownload, file_name, true);
+                ui->scrollAreaWidgetContentsDownload, file_name, isCheckBoxEnabled);
 
-    if (ui->downVLayout->count() == 0) {
-        ui->downVLayout->addStretch(2);
+    if (v_layout->count() == 0) {
+        v_layout->addStretch(2);
     }
-    ui->downVLayout->insertLayout(0, song_layout);
+    v_layout->insertLayout(0, song_layout);
 }
 
 void MainPage::ChangeState(SetPlayerState player_state) {
