@@ -20,6 +20,8 @@
 		"/home/mint/GitRepos/AudioPlayer/src/Images/pause_song.png",
 		"/home/mint/GitRepos/AudioPlayer/src/Images/next_song.png",
 		"/home/mint/GitRepos/AudioPlayer/src/Images/shuffle_on_song.png",
+		"/home/mint/GitRepos/AudioPlayer/src/Images/icon_app_logo.svg",
+		"/home/mint/GitRepos/AudioPlayer/src/Images/app_logo.png",
 		"/home/mint/GitRepos/AudioPlayer/src/Images/Combinear.qss"
 	],
 	"LOCK_FILE" : "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/CMakeFiles/src_autogen.dir/AutoRcc_resourses_OIBSYM6ORI_Lock.lock",

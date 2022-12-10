@@ -2502,25 +2502,15 @@ CMakeFiles/src.dir/main.cpp.o: /home/mint/GitRepos/AudioPlayer/src/main.cpp \
   /usr/include/qt/QtCore/qfiledevice.h \
   /usr/include/qt/QtCore/qiodevice.h \
   /home/mint/GitRepos/AudioPlayer/src/mainpage.h \
-  /usr/include/qt/QtWidgets/QMainWindow \
-  /usr/include/qt/QtWidgets/qmainwindow.h \
-  /usr/include/qt/QtWidgets/qwidget.h \
-  /usr/include/qt/QtGui/qpaintdevice.h \
+  /usr/include/qt/QtWidgets/QStyle \
+  /usr/include/qt/QtWidgets/qstyle.h \
   /usr/include/qt/QtCore/qrect.h \
-  /usr/include/qt/QtGui/qpalette.h \
+  /usr/include/qt/QtGui/qicon.h \
+  /usr/include/qt/QtGui/qpixmap.h \
+  /usr/include/qt/QtGui/qpaintdevice.h \
   /usr/include/qt/QtGui/qcolor.h \
   /usr/include/qt/QtGui/qrgb.h \
   /usr/include/qt/QtGui/qrgba64.h \
-  /usr/include/qt/QtGui/qbrush.h \
-  /usr/include/qt/QtGui/qmatrix.h \
-  /usr/include/qt/QtGui/qpolygon.h \
-  /usr/include/qt/QtGui/qregion.h \
-  /usr/include/qt/QtCore/qdatastream.h \
-  /usr/include/qt/QtCore/qline.h \
-  /usr/include/qt/QtGui/qtransform.h \
-  /usr/include/qt/QtGui/qimage.h \
-  /usr/include/qt/QtGui/qpixelformat.h \
-  /usr/include/qt/QtGui/qpixmap.h \
   /usr/include/qt/QtCore/qsharedpointer.h \
   /usr/include/qt/QtCore/qsharedpointer_impl.h \
   /usr/include/c++/12.2.0/memory \
@@ -2535,13 +2525,27 @@ CMakeFiles/src.dir/main.cpp.o: /home/mint/GitRepos/AudioPlayer/src/main.cpp \
   /usr/include/c++/12.2.0/bits/ranges_uninitialized.h \
   /usr/include/c++/12.2.0/bits/uses_allocator_args.h \
   /usr/include/c++/12.2.0/pstl/glue_memory_defs.h \
+  /usr/include/qt/QtGui/qimage.h \
+  /usr/include/qt/QtGui/qpixelformat.h \
+  /usr/include/qt/QtGui/qtransform.h \
+  /usr/include/qt/QtGui/qmatrix.h \
+  /usr/include/qt/QtGui/qpolygon.h \
+  /usr/include/qt/QtGui/qregion.h \
+  /usr/include/qt/QtCore/qdatastream.h \
+  /usr/include/qt/QtCore/qline.h \
+  /usr/include/qt/QtGui/qpalette.h \
+  /usr/include/qt/QtGui/qbrush.h \
+  /usr/include/qt/QtWidgets/qsizepolicy.h \
+  /usr/include/qt/QtWidgets/QDesktopWidget \
+  /usr/include/qt/QtWidgets/qdesktopwidget.h \
+  /usr/include/qt/QtWidgets/qwidget.h \
   /usr/include/qt/QtGui/qfont.h \
   /usr/include/qt/QtGui/qfontmetrics.h \
   /usr/include/qt/QtGui/qfontinfo.h \
-  /usr/include/qt/QtWidgets/qsizepolicy.h \
   /usr/include/qt/QtGui/qkeysequence.h \
+  /usr/include/qt/QtWidgets/QMainWindow \
+  /usr/include/qt/QtWidgets/qmainwindow.h \
   /usr/include/qt/QtWidgets/qtabwidget.h \
-  /usr/include/qt/QtGui/qicon.h \
   /usr/include/qt/QtWidgets/QMessageBox \
   /usr/include/qt/QtWidgets/qmessagebox.h \
   /usr/include/qt/QtWidgets/qdialog.h \
@@ -2650,8 +2654,8 @@ CMakeFiles/src.dir/main.cpp.o: /home/mint/GitRepos/AudioPlayer/src/main.cpp \
 CMakeFiles/src.dir/mainpage.cpp.o: /home/mint/GitRepos/AudioPlayer/src/mainpage.cpp \
   /usr/include/stdc-predef.h \
   /home/mint/GitRepos/AudioPlayer/src/mainpage.h \
-  /usr/include/qt/QtWidgets/QMainWindow \
-  /usr/include/qt/QtWidgets/qmainwindow.h \
+  /usr/include/qt/QtWidgets/QStyle \
+  /usr/include/qt/QtWidgets/qstyle.h \
   /usr/include/qt/QtWidgets/qtwidgetsglobal.h \
   /usr/include/qt/QtGui/qtguiglobal.h \
   /usr/include/qt/QtCore/qglobal.h \
@@ -2880,12 +2884,10 @@ CMakeFiles/src.dir/mainpage.cpp.o: /home/mint/GitRepos/AudioPlayer/src/mainpage.
   /usr/include/qt/QtCore/qversiontagging.h \
   /usr/include/qt/QtGui/qtgui-config.h \
   /usr/include/qt/QtWidgets/qtwidgets-config.h \
-  /usr/include/qt/QtWidgets/qwidget.h \
-  /usr/include/qt/QtGui/qwindowdefs.h \
+  /usr/include/qt/QtCore/qobject.h \
   /usr/include/qt/QtCore/qobjectdefs.h \
   /usr/include/qt/QtCore/qnamespace.h \
   /usr/include/qt/QtCore/qobjectdefs_impl.h \
-  /usr/include/qt/QtCore/qobject.h \
   /usr/include/qt/QtCore/qstring.h \
   /usr/include/qt/QtCore/qchar.h \
   /usr/include/qt/QtCore/qbytearray.h \
@@ -2976,26 +2978,17 @@ CMakeFiles/src.dir/mainpage.cpp.o: /home/mint/GitRepos/AudioPlayer/src/mainpage.
   /usr/include/c++/12.2.0/bits/ostream.tcc \
   /usr/include/c++/12.2.0/bits/istream.tcc \
   /usr/include/c++/12.2.0/bits/sstream.tcc \
-  /usr/include/qt/QtCore/qmargins.h \
-  /usr/include/qt/QtGui/qpaintdevice.h \
   /usr/include/qt/QtCore/qrect.h \
+  /usr/include/qt/QtCore/qmargins.h \
   /usr/include/qt/QtCore/qsize.h \
   /usr/include/qt/QtCore/qpoint.h \
-  /usr/include/qt/QtGui/qpalette.h \
+  /usr/include/qt/QtGui/qicon.h \
+  /usr/include/qt/QtGui/qpixmap.h \
+  /usr/include/qt/QtGui/qpaintdevice.h \
+  /usr/include/qt/QtGui/qwindowdefs.h \
   /usr/include/qt/QtGui/qcolor.h \
   /usr/include/qt/QtGui/qrgb.h \
   /usr/include/qt/QtGui/qrgba64.h \
-  /usr/include/qt/QtGui/qbrush.h \
-  /usr/include/qt/QtGui/qmatrix.h \
-  /usr/include/qt/QtGui/qpolygon.h \
-  /usr/include/qt/QtGui/qregion.h \
-  /usr/include/qt/QtCore/qdatastream.h \
-  /usr/include/qt/QtCore/qiodevice.h \
-  /usr/include/qt/QtCore/qline.h \
-  /usr/include/qt/QtGui/qtransform.h \
-  /usr/include/qt/QtGui/qimage.h \
-  /usr/include/qt/QtGui/qpixelformat.h \
-  /usr/include/qt/QtGui/qpixmap.h \
   /usr/include/qt/QtCore/qsharedpointer.h \
   /usr/include/qt/QtCore/qshareddata.h \
   /usr/include/qt/QtCore/qhash.h \
@@ -3012,14 +3005,29 @@ CMakeFiles/src.dir/mainpage.cpp.o: /home/mint/GitRepos/AudioPlayer/src/mainpage.
   /usr/include/c++/12.2.0/bits/ranges_uninitialized.h \
   /usr/include/c++/12.2.0/bits/uses_allocator_args.h \
   /usr/include/c++/12.2.0/pstl/glue_memory_defs.h \
+  /usr/include/qt/QtGui/qimage.h \
+  /usr/include/qt/QtGui/qpixelformat.h \
+  /usr/include/qt/QtGui/qtransform.h \
+  /usr/include/qt/QtGui/qmatrix.h \
+  /usr/include/qt/QtGui/qpolygon.h \
+  /usr/include/qt/QtGui/qregion.h \
+  /usr/include/qt/QtCore/qdatastream.h \
+  /usr/include/qt/QtCore/qiodevice.h \
+  /usr/include/qt/QtCore/qline.h \
+  /usr/include/qt/QtGui/qpalette.h \
+  /usr/include/qt/QtGui/qbrush.h \
+  /usr/include/qt/QtWidgets/qsizepolicy.h \
+  /usr/include/qt/QtWidgets/QDesktopWidget \
+  /usr/include/qt/QtWidgets/qdesktopwidget.h \
+  /usr/include/qt/QtWidgets/qwidget.h \
   /usr/include/qt/QtGui/qfont.h \
   /usr/include/qt/QtGui/qfontmetrics.h \
   /usr/include/qt/QtGui/qfontinfo.h \
-  /usr/include/qt/QtWidgets/qsizepolicy.h \
   /usr/include/qt/QtGui/qcursor.h \
   /usr/include/qt/QtGui/qkeysequence.h \
+  /usr/include/qt/QtWidgets/QMainWindow \
+  /usr/include/qt/QtWidgets/qmainwindow.h \
   /usr/include/qt/QtWidgets/qtabwidget.h \
-  /usr/include/qt/QtGui/qicon.h \
   /usr/include/qt/QtWidgets/QMessageBox \
   /usr/include/qt/QtWidgets/qmessagebox.h \
   /usr/include/qt/QtWidgets/qdialog.h \
@@ -4041,6 +4049,10 @@ CMakeFiles/src.dir/src_autogen/mocs_compilation.cpp.o: src_autogen/mocs_compilat
   /home/mint/GitRepos/AudioPlayer/src/account.h \
   src_autogen/EWIEGA46WW/moc_mainpage.cpp \
   /home/mint/GitRepos/AudioPlayer/src/mainpage.h \
+  /usr/include/qt/QtWidgets/QStyle \
+  /usr/include/qt/QtWidgets/qstyle.h \
+  /usr/include/qt/QtWidgets/QDesktopWidget \
+  /usr/include/qt/QtWidgets/qdesktopwidget.h \
   /usr/include/qt/QtMultimedia/QMediaPlayer \
   /usr/include/qt/QtMultimedia/qmediaplayer.h \
   /usr/include/qt/QtMultimedia/qtmultimediaglobal.h \
@@ -4128,6 +4140,10 @@ src_autogen/include/ui_signupwindow.h:
 
 /usr/include/qt/QtMultimedia/qtmultimediaglobal.h:
 
+/usr/include/qt/QtWidgets/qdesktopwidget.h:
+
+/usr/include/qt/QtWidgets/QDesktopWidget:
+
 /usr/include/qt/QtCore/qfiledevice.h:
 
 /usr/include/qt/QtCore/qfile.h:
@@ -4167,6 +4183,8 @@ src_autogen/include/ui_loginwindow.h:
 /usr/include/qt/QtCore/qjsonobject.h:
 
 /usr/include/qt/QtCore/qjsonarray.h:
+
+/usr/include/qt/QtWidgets/qstyle.h:
 
 /usr/include/qt/QtCore/QJsonArray:
 
@@ -4419,6 +4437,8 @@ src_autogen/EWIEGA46WW/moc_communicatewithserver.cpp:
 /usr/include/c++/12.2.0/bits/basic_ios.h:
 
 /usr/include/c++/12.2.0/ostream:
+
+/usr/include/qt/QtWidgets/QStyle:
 
 /usr/include/c++/12.2.0/tuple:
 

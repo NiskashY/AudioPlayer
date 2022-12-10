@@ -12,47 +12,54 @@ QString GetFileNameFromPath(const QString& path) {
     return resultFileName;
 }
 
-void MainPage::ConnectionManipulation(bool isConnect)
-{
+void MainPage::ConnectionHandler(bool isConnect) {
     if (isConnect) {
-        // Connect Sound Signals for player and UI
-        connect (
-                player, &QMediaPlayer::positionChanged,
-                this, &MainPage::SetCurrentSliderPosition
-        ); // song 'progress bar' update
+            // Connect Sound Signals for player and UI
+            connect (
+                    player, &QMediaPlayer::positionChanged,
+                    this, &MainPage::SetCurrentSliderPosition
+            ); // song 'progress bar' update
 
-        connect (
-                player, &QMediaPlayer::durationChanged,
-                this, &MainPage::SetMaxSliderPosition
-        ); // song time update
-        connect (
-                player, &QMediaPlayer::currentMediaChanged,
-                this, &MainPage::SetSongNameLabel
-        ); // song name update
-        connect (
-                ui->songSlider, &QSlider::sliderMoved,
-                this, &MainPage::SliderPositionMoved
-        ); // slider moved -> change position in the soundtrack
-    } else {
-        // Disconnect  Sound Signals for player and UI
-        disconnect (
-                player, &QMediaPlayer::positionChanged,
-                this, &MainPage::SetCurrentSliderPosition
-        ); // song 'progress bar' update
+            connect (
+                    player, &QMediaPlayer::durationChanged,
+                    this, &MainPage::SetMaxSliderPosition
+            ); // song time update
+            connect (
+                    player, &QMediaPlayer::currentMediaChanged,
+                    this, &MainPage::SetSongNameLabel
+            ); // song name update
+            connect (
+                    ui->songSlider, &QSlider::sliderMoved,
+                    this, &MainPage::SliderPositionMoved
+            ); // slider moved -> change position in the soundtrack
+            connect (
+                    ui->songSlider, &QSlider::sliderPressed,
+                    player, &QMediaPlayer::pause
+            ); // slider pause -> avoid sound interferences
+            connect (
+                    ui->songSlider, &QSlider::sliderReleased,
+                    player, &QMediaPlayer::play
+            ); // slider released -> continue playing
+        } else {
+            // Disconnect  Sound Signals for player and UI
+            disconnect (
+                    player, &QMediaPlayer::positionChanged,
+                    this, &MainPage::SetCurrentSliderPosition
+            ); // song 'progress bar' update
 
-        disconnect (
-                player, &QMediaPlayer::durationChanged,
-                this, &MainPage::SetMaxSliderPosition
-        ); // song time update
-        disconnect (
-                player, &QMediaPlayer::currentMediaChanged,
-                this, &MainPage::SetSongNameLabel
-        ); // song name update
-        disconnect (
-                ui->songSlider, &QSlider::sliderMoved,
-                this, &MainPage::SliderPositionMoved
-        ); // slider moved -> change position in the soundtrack
-    }
+            disconnect (
+                    player, &QMediaPlayer::durationChanged,
+                    this, &MainPage::SetMaxSliderPosition
+            ); // song time update
+            disconnect (
+                    player, &QMediaPlayer::currentMediaChanged,
+                    this, &MainPage::SetSongNameLabel
+            ); // song name update
+            disconnect (
+                    ui->songSlider, &QSlider::sliderMoved,
+                    this, &MainPage::SliderPositionMoved
+            ); // slider moved -> change position in the soundtrack
+        }
 }
 
 MainPage::MainPage(QWidget *parent) :
@@ -60,6 +67,15 @@ MainPage::MainPage(QWidget *parent) :
     ui(new Ui::MainPage)
 {
     ui->setupUi(this);
+    this->setGeometry(
+                QStyle::alignedRect(
+                    Qt::LeftToRight,
+                    Qt::AlignCenter,
+                    this->size(),
+                    qApp->desktop()->availableGeometry()
+                )
+    );
+
     this->setWindowTitle("Main Page");
 
     // Set Images To Buttons on Main Page
@@ -78,7 +94,7 @@ MainPage::MainPage(QWidget *parent) :
     // Initialize layout with spacer
     const int kNeededPosOfLayout = 1;
     auto current_tab = qobject_cast<QWidget*>(ui->tabWidget->currentWidget());
-    auto current_tab_layouts = current_tab->findChildren<QVBoxLayout*>();
+    const auto& current_tab_layouts  = current_tab->findChildren<QVBoxLayout*>();
     auto current_tab_layout = current_tab_layouts.at(kNeededPosOfLayout);
     current_tab_layout->addStretch(2);
 
@@ -99,7 +115,7 @@ MainPage::MainPage(QWidget *parent) :
     player->setVolume(kSoundVolume);
 
     // Connect Sound Signals for player and UI
-    MainPage::ConnectionManipulation(true); // connect slots
+    MainPage::ConnectionHandler(true); // connect slots
 
     // Set Account Label
     ui->accountLabel->setText("Account is not selected");
@@ -107,7 +123,7 @@ MainPage::MainPage(QWidget *parent) :
 
 MainPage::~MainPage()
 {
-    MainPage::ConnectionManipulation(false);    // disconnect slots
+    MainPage::ConnectionHandler(false); // disconnect slots
     delete ui;
     player->stop();
     player->playlist()->clear();
@@ -283,6 +299,23 @@ void MainPage::on_repeatButton_clicked()
     }
 }
 
+void MainPage::on_changeDirButton_clicked() {
+    QFileDialog dirWindow(this);
+    dirWindow.setWindowTitle("Select Folder To Save Files");
+    dirWindow.setFileMode(QFileDialog::Directory);
+
+    if (dirWindow.exec()) {
+        QStringList selectedDirectories = dirWindow.selectedFiles();
+        working_dir_path = selectedDirectories[0] + "/";
+        Q_EMIT ui->tabWidget->tabBarClicked(ui->tabWidget->currentIndex());
+    }
+}
+
+void MainPage::on_verticalSlider_sliderMoved(int position) {
+    player->setVolume(ui->verticalSlider->sliderPosition());
+}
+
+
 QHBoxLayout* MainPage::CreateSongLayout(QWidget*& parent_widget,
                                         const QString& file_name,
                                         bool isDownloaded = false)
@@ -398,19 +431,3 @@ void MainPage::SliderPositionMoved() {
     player->setPosition(ui->songSlider->sliderPosition());
 }
 
-void MainPage::on_changeDirButton_clicked()
-{
-    QFileDialog dirWindow(this);
-    dirWindow.setWindowTitle("Select Folder To Save Files");
-    dirWindow.setFileMode(QFileDialog::Directory);
-
-    if (dirWindow.exec()) {
-        QStringList selectedDirectories = dirWindow.selectedFiles();
-        working_dir_path = selectedDirectories[0] + "/";
-        Q_EMIT ui->tabWidget->tabBarClicked(ui->tabWidget->currentIndex());
-    }
-}
-
-void MainPage::on_verticalSlider_sliderMoved(int position) {
-    player->setVolume(ui->verticalSlider->sliderPosition());
-}

@@ -343,27 +343,37 @@ public:
 
         shuffleButton = new QPushButton(centralwidget);
         shuffleButton->setObjectName(QString::fromUtf8("shuffleButton"));
+        sizePolicy2.setHeightForWidth(shuffleButton->sizePolicy().hasHeightForWidth());
+        shuffleButton->setSizePolicy(sizePolicy2);
 
         TrackControllLayout->addWidget(shuffleButton);
 
         prevButton = new QPushButton(centralwidget);
         prevButton->setObjectName(QString::fromUtf8("prevButton"));
+        sizePolicy2.setHeightForWidth(prevButton->sizePolicy().hasHeightForWidth());
+        prevButton->setSizePolicy(sizePolicy2);
 
         TrackControllLayout->addWidget(prevButton);
 
         pauseButton = new QPushButton(centralwidget);
         pauseButton->setObjectName(QString::fromUtf8("pauseButton"));
+        sizePolicy2.setHeightForWidth(pauseButton->sizePolicy().hasHeightForWidth());
+        pauseButton->setSizePolicy(sizePolicy2);
         pauseButton->setIconSize(QSize(5, 5));
 
         TrackControllLayout->addWidget(pauseButton);
 
         nextButton = new QPushButton(centralwidget);
         nextButton->setObjectName(QString::fromUtf8("nextButton"));
+        sizePolicy2.setHeightForWidth(nextButton->sizePolicy().hasHeightForWidth());
+        nextButton->setSizePolicy(sizePolicy2);
 
         TrackControllLayout->addWidget(nextButton);
 
         repeatButton = new QPushButton(centralwidget);
         repeatButton->setObjectName(QString::fromUtf8("repeatButton"));
+        sizePolicy2.setHeightForWidth(repeatButton->sizePolicy().hasHeightForWidth());
+        repeatButton->setSizePolicy(sizePolicy2);
 
         TrackControllLayout->addWidget(repeatButton);
 

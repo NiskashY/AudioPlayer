@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
 }
 
 void SetAppStyleSheet(QApplication& app) {
+    app.setWindowIcon(QPixmap(":/resourses/songsCovers/icon_app_logo.svg"));
     const QString& kFileName = ":/styleSheets/Combinear.qss";
     QFile styleSheetFile(kFileName);
     styleSheetFile.open(QFile::ReadOnly);
