@@ -43,14 +43,14 @@ private slots:
     // Buttons clicked
     void on_exitAccountButton_clicked();
     void on_addFromDeviceButton_clicked();
-    void on_tabWidget_tabBarClicked(int index);
+    void on_tabWidget_tabBarClicked(int);
     void on_pauseButton_clicked();
     void on_nextButton_clicked();
     void on_prevButton_clicked();
     void on_shuffleButton_clicked();
     void on_repeatButton_clicked();
     void on_changeDirButton_clicked();
-    void on_verticalSlider_sliderMoved(int position);
+    void on_verticalSlider_sliderMoved(int);
 
     // Sound Manipulation
     void PlaySong();                 // start song & change elements of ui for that
@@ -59,9 +59,8 @@ private slots:
     void SetSongNameLabel();         // set ui current song name
     void SliderPositionMoved();      // move soundtrack player to new position
 
-
 private:
-    void AddTrackToDownloadedTab(const QString& file_name);
+    void AddTrackToTab(QVBoxLayout*const, const QString&, bool);
     QHBoxLayout* CreateSongLayout(QWidget*& parent_widget,
                                   const QString& file_name,
                                   bool isDownloaded);

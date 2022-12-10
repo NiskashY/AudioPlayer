@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainPage_t {
-    QByteArrayData data[19];
-    char stringdata0[377];
+    QByteArrayData data[17];
+    char stringdata0[362];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -37,33 +37,30 @@ QT_MOC_LITERAL(1, 9, 28), // "on_exitAccountButton_clicked"
 QT_MOC_LITERAL(2, 38, 0), // ""
 QT_MOC_LITERAL(3, 39, 30), // "on_addFromDeviceButton_clicked"
 QT_MOC_LITERAL(4, 70, 26), // "on_tabWidget_tabBarClicked"
-QT_MOC_LITERAL(5, 97, 5), // "index"
-QT_MOC_LITERAL(6, 103, 22), // "on_pauseButton_clicked"
-QT_MOC_LITERAL(7, 126, 21), // "on_nextButton_clicked"
-QT_MOC_LITERAL(8, 148, 21), // "on_prevButton_clicked"
-QT_MOC_LITERAL(9, 170, 24), // "on_shuffleButton_clicked"
-QT_MOC_LITERAL(10, 195, 23), // "on_repeatButton_clicked"
-QT_MOC_LITERAL(11, 219, 26), // "on_changeDirButton_clicked"
-QT_MOC_LITERAL(12, 246, 29), // "on_verticalSlider_sliderMoved"
-QT_MOC_LITERAL(13, 276, 8), // "position"
-QT_MOC_LITERAL(14, 285, 8), // "PlaySong"
-QT_MOC_LITERAL(15, 294, 24), // "SetCurrentSliderPosition"
-QT_MOC_LITERAL(16, 319, 20), // "SetMaxSliderPosition"
-QT_MOC_LITERAL(17, 340, 16), // "SetSongNameLabel"
-QT_MOC_LITERAL(18, 357, 19) // "SliderPositionMoved"
+QT_MOC_LITERAL(5, 97, 22), // "on_pauseButton_clicked"
+QT_MOC_LITERAL(6, 120, 21), // "on_nextButton_clicked"
+QT_MOC_LITERAL(7, 142, 21), // "on_prevButton_clicked"
+QT_MOC_LITERAL(8, 164, 24), // "on_shuffleButton_clicked"
+QT_MOC_LITERAL(9, 189, 23), // "on_repeatButton_clicked"
+QT_MOC_LITERAL(10, 213, 26), // "on_changeDirButton_clicked"
+QT_MOC_LITERAL(11, 240, 29), // "on_verticalSlider_sliderMoved"
+QT_MOC_LITERAL(12, 270, 8), // "PlaySong"
+QT_MOC_LITERAL(13, 279, 24), // "SetCurrentSliderPosition"
+QT_MOC_LITERAL(14, 304, 20), // "SetMaxSliderPosition"
+QT_MOC_LITERAL(15, 325, 16), // "SetSongNameLabel"
+QT_MOC_LITERAL(16, 342, 19) // "SliderPositionMoved"
 
     },
     "MainPage\0on_exitAccountButton_clicked\0"
     "\0on_addFromDeviceButton_clicked\0"
-    "on_tabWidget_tabBarClicked\0index\0"
+    "on_tabWidget_tabBarClicked\0"
     "on_pauseButton_clicked\0on_nextButton_clicked\0"
     "on_prevButton_clicked\0on_shuffleButton_clicked\0"
     "on_repeatButton_clicked\0"
     "on_changeDirButton_clicked\0"
-    "on_verticalSlider_sliderMoved\0position\0"
-    "PlaySong\0SetCurrentSliderPosition\0"
-    "SetMaxSliderPosition\0SetSongNameLabel\0"
-    "SliderPositionMoved"
+    "on_verticalSlider_sliderMoved\0PlaySong\0"
+    "SetCurrentSliderPosition\0SetMaxSliderPosition\0"
+    "SetSongNameLabel\0SliderPositionMoved"
 };
 #undef QT_MOC_LITERAL
 
@@ -84,30 +81,30 @@ static const uint qt_meta_data_MainPage[] = {
        1,    0,   89,    2, 0x08 /* Private */,
        3,    0,   90,    2, 0x08 /* Private */,
        4,    1,   91,    2, 0x08 /* Private */,
-       6,    0,   94,    2, 0x08 /* Private */,
-       7,    0,   95,    2, 0x08 /* Private */,
-       8,    0,   96,    2, 0x08 /* Private */,
-       9,    0,   97,    2, 0x08 /* Private */,
-      10,    0,   98,    2, 0x08 /* Private */,
-      11,    0,   99,    2, 0x08 /* Private */,
-      12,    1,  100,    2, 0x08 /* Private */,
-      14,    0,  103,    2, 0x08 /* Private */,
-      15,    0,  104,    2, 0x08 /* Private */,
-      16,    0,  105,    2, 0x08 /* Private */,
-      17,    0,  106,    2, 0x08 /* Private */,
-      18,    0,  107,    2, 0x08 /* Private */,
+       5,    0,   94,    2, 0x08 /* Private */,
+       6,    0,   95,    2, 0x08 /* Private */,
+       7,    0,   96,    2, 0x08 /* Private */,
+       8,    0,   97,    2, 0x08 /* Private */,
+       9,    0,   98,    2, 0x08 /* Private */,
+      10,    0,   99,    2, 0x08 /* Private */,
+      11,    1,  100,    2, 0x08 /* Private */,
+      12,    0,  103,    2, 0x08 /* Private */,
+      13,    0,  104,    2, 0x08 /* Private */,
+      14,    0,  105,    2, 0x08 /* Private */,
+      15,    0,  106,    2, 0x08 /* Private */,
+      16,    0,  107,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,    5,
+    QMetaType::Void, QMetaType::Int,    2,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,   13,
+    QMetaType::Void, QMetaType::Int,    2,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
