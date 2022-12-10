@@ -1,6 +1,8 @@
 #pragma once
 
 // Qt headers
+#include <QStyle>
+#include <QDesktopWidget>
 #include <QMainWindow>
 #include <QMessageBox>
 #include <QMediaPlayer>
@@ -64,7 +66,7 @@ private:
                                   const QString& file_name,
                                   bool isDownloaded);
     void ChangeState(SetPlayerState player_state = SetPlayerState::Default);
-    void ConnectionManipulation(bool isConnect);
+    void ConnectionHandler(bool);
 
     Account* account = nullptr;         // account for network operations
     Ui::MainPage *ui;

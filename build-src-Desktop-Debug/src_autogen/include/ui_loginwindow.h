@@ -69,7 +69,8 @@ public:
         LogoLayout->setObjectName(QString::fromUtf8("LogoLayout"));
         Logo = new QLabel(LoginWindow);
         Logo->setObjectName(QString::fromUtf8("Logo"));
-        Logo->setPixmap(QPixmap(QString::fromUtf8(":/resourses/songsCovers/sound.jpg")));
+        Logo->setPixmap(QPixmap(QString::fromUtf8(":/resourses/songsCovers/app_logo.png")));
+        Logo->setScaledContents(true);
         Logo->setAlignment(Qt::AlignCenter);
 
         LogoLayout->addWidget(Logo);

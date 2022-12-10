@@ -52,7 +52,6 @@ set(PROJECT_SOURCES
         # Layouts deleter
         layoutsdeleter.h
         layoutsdeleter.cpp
-
 )
 
 add_executable(src

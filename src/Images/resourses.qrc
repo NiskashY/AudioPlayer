@@ -7,12 +7,14 @@
         <file>pause_song.png</file>
         <file>prev_song.png</file>
         <file>repeat_song.png</file>
-        <file>shuffle_song.png</file>
         <file>next_song.png</file>
         <file>repeat_on_song.png</file>
         <file>shuffle_on_song.png</file>
         <file>exit_account.png</file>
         <file>sound.jpg</file>
+        <file>shuffle_song.png</file>
+        <file>app_logo.png</file>
+        <file>icon_app_logo.svg</file>
     </qresource>
     <qresource prefix="/styleSheets">
         <file>Combinear.qss</file>

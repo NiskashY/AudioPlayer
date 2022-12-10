@@ -84,6 +84,8 @@ src_autogen/OIBSYM6ORI/qrc_resourses.cpp: /home/mint/GitRepos/AudioPlayer/src/Im
 src_autogen/OIBSYM6ORI/qrc_resourses.cpp: /home/mint/GitRepos/AudioPlayer/src/Images/pause_song.png
 src_autogen/OIBSYM6ORI/qrc_resourses.cpp: /home/mint/GitRepos/AudioPlayer/src/Images/next_song.png
 src_autogen/OIBSYM6ORI/qrc_resourses.cpp: /home/mint/GitRepos/AudioPlayer/src/Images/shuffle_on_song.png
+src_autogen/OIBSYM6ORI/qrc_resourses.cpp: /home/mint/GitRepos/AudioPlayer/src/Images/icon_app_logo.svg
+src_autogen/OIBSYM6ORI/qrc_resourses.cpp: /home/mint/GitRepos/AudioPlayer/src/Images/app_logo.png
 src_autogen/OIBSYM6ORI/qrc_resourses.cpp: /home/mint/GitRepos/AudioPlayer/src/Images/Combinear.qss
 src_autogen/OIBSYM6ORI/qrc_resourses.cpp: /usr/bin/rcc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic RCC for Images/resourses.qrc"
