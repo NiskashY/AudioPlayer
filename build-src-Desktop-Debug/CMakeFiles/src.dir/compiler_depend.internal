@@ -948,9 +948,10 @@ CMakeFiles/src.dir/communicatewithserver.cpp.o
  /home/mint/GitRepos/AudioPlayer/src/communicatewithserver.cpp
  /usr/include/stdc-predef.h
  /home/mint/GitRepos/AudioPlayer/src/communicatewithserver.h
- /usr/include/qt/QtNetwork/QTcpSocket
- /usr/include/qt/QtNetwork/qtcpsocket.h
- /usr/include/qt/QtNetwork/qtnetworkglobal.h
+ /usr/include/qt/QtWidgets/QApplication
+ /usr/include/qt/QtWidgets/qapplication.h
+ /usr/include/qt/QtWidgets/qtwidgetsglobal.h
+ /usr/include/qt/QtGui/qtguiglobal.h
  /usr/include/qt/QtCore/qglobal.h
  /usr/include/c++/12.2.0/type_traits
  /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/c++config.h
@@ -1175,17 +1176,14 @@ CMakeFiles/src.dir/communicatewithserver.cpp.o
  /usr/include/qt/QtCore/qglobalstatic.h
  /usr/include/qt/QtCore/qnumeric.h
  /usr/include/qt/QtCore/qversiontagging.h
- /usr/include/qt/QtNetwork/qtnetwork-config.h
- /usr/include/qt/QtNetwork/qabstractsocket.h
- /usr/include/qt/QtCore/qiodevice.h
- /usr/include/qt/QtCore/qobject.h
- /usr/include/qt/QtCore/qobjectdefs.h
- /usr/include/qt/QtCore/qnamespace.h
- /usr/include/qt/QtCore/qobjectdefs_impl.h
+ /usr/include/qt/QtGui/qtgui-config.h
+ /usr/include/qt/QtWidgets/qtwidgets-config.h
+ /usr/include/qt/QtCore/qcoreapplication.h
  /usr/include/qt/QtCore/qstring.h
  /usr/include/qt/QtCore/qchar.h
  /usr/include/qt/QtCore/qbytearray.h
  /usr/include/qt/QtCore/qrefcount.h
+ /usr/include/qt/QtCore/qnamespace.h
  /usr/include/qt/QtCore/qarraydata.h
  /usr/include/string.h
  /usr/include/strings.h
@@ -1204,6 +1202,9 @@ CMakeFiles/src.dir/communicatewithserver.cpp.o
  /usr/include/qt/QtCore/qstringliteral.h
  /usr/include/qt/QtCore/qstringalgorithms.h
  /usr/include/qt/QtCore/qstringview.h
+ /usr/include/qt/QtCore/qobject.h
+ /usr/include/qt/QtCore/qobjectdefs.h
+ /usr/include/qt/QtCore/qobjectdefs_impl.h
  /usr/include/qt/QtCore/qlist.h
  /usr/include/qt/QtCore/qalgorithms.h
  /usr/include/qt/QtCore/qiterator.h
@@ -1272,14 +1273,32 @@ CMakeFiles/src.dir/communicatewithserver.cpp.o
  /usr/include/c++/12.2.0/bits/ostream.tcc
  /usr/include/c++/12.2.0/bits/istream.tcc
  /usr/include/c++/12.2.0/bits/sstream.tcc
- /usr/include/qt/QtCore/qdebug.h
- /usr/include/qt/QtCore/qhash.h
- /usr/include/qt/QtCore/qmap.h
- /usr/include/qt/QtCore/qtextstream.h
+ /usr/include/qt/QtCore/qcoreevent.h
+ /usr/include/qt/QtCore/qeventloop.h
+ /usr/include/qt/QtGui/qwindowdefs.h
+ /usr/include/qt/QtCore/qpoint.h
+ /usr/include/qt/QtCore/qsize.h
+ /usr/include/qt/QtCore/qmargins.h
+ /usr/include/qt/QtGui/qcursor.h
+ /usr/include/qt/QtGui/qguiapplication.h
+ /usr/include/qt/QtGui/qinputmethod.h
  /usr/include/qt/QtCore/qlocale.h
  /usr/include/qt/QtCore/qvariant.h
+ /usr/include/qt/QtCore/qmap.h
+ /usr/include/qt/QtCore/qhash.h
  /usr/include/c++/12.2.0/variant
  /usr/include/qt/QtCore/qshareddata.h
+ /usr/include/qt/QtCore/QFile
+ /usr/include/qt/QtCore/qfile.h
+ /usr/include/qt/QtCore/qfiledevice.h
+ /usr/include/qt/QtCore/qiodevice.h
+ /usr/include/qt/QtNetwork/QTcpSocket
+ /usr/include/qt/QtNetwork/qtcpsocket.h
+ /usr/include/qt/QtNetwork/qtnetworkglobal.h
+ /usr/include/qt/QtNetwork/qtnetwork-config.h
+ /usr/include/qt/QtNetwork/qabstractsocket.h
+ /usr/include/qt/QtCore/qdebug.h
+ /usr/include/qt/QtCore/qtextstream.h
  /usr/include/qt/QtCore/qset.h
  /usr/include/qt/QtCore/qcontiguouscache.h
  /usr/include/qt/QtCore/qsharedpointer.h
@@ -2080,17 +2099,27 @@ CMakeFiles/src.dir/loginwindow.cpp.o
  /usr/include/qt/QtWidgets/qmessagebox.h
  /usr/include/qt/QtWidgets/qdialog.h
  /home/mint/GitRepos/AudioPlayer/src/communicatewithserver.h
+ /usr/include/qt/QtWidgets/QApplication
+ /usr/include/qt/QtWidgets/qapplication.h
+ /usr/include/qt/QtCore/qcoreapplication.h
+ /usr/include/qt/QtCore/qcoreevent.h
+ /usr/include/qt/QtCore/qeventloop.h
+ /usr/include/qt/QtGui/qguiapplication.h
+ /usr/include/qt/QtGui/qinputmethod.h
+ /usr/include/qt/QtCore/qlocale.h
+ /usr/include/qt/QtCore/qvariant.h
+ /usr/include/qt/QtCore/qmap.h
+ /usr/include/c++/12.2.0/variant
+ /usr/include/qt/QtCore/QFile
+ /usr/include/qt/QtCore/qfile.h
+ /usr/include/qt/QtCore/qfiledevice.h
  /usr/include/qt/QtNetwork/QTcpSocket
  /usr/include/qt/QtNetwork/qtcpsocket.h
  /usr/include/qt/QtNetwork/qtnetworkglobal.h
  /usr/include/qt/QtNetwork/qtnetwork-config.h
  /usr/include/qt/QtNetwork/qabstractsocket.h
  /usr/include/qt/QtCore/qdebug.h
- /usr/include/qt/QtCore/qmap.h
  /usr/include/qt/QtCore/qtextstream.h
- /usr/include/qt/QtCore/qlocale.h
- /usr/include/qt/QtCore/qvariant.h
- /usr/include/c++/12.2.0/variant
  /usr/include/qt/QtCore/qset.h
  /usr/include/qt/QtCore/qcontiguouscache.h
  /usr/include/qt/QtNetwork/QTcpServer
@@ -2132,12 +2161,6 @@ CMakeFiles/src.dir/loginwindow.cpp.o
  /usr/include/qt/QtCore/QVariant
  /usr/include/qt/QtCore/qvariant.h
  /usr/include/qt/QtWidgets/QApplication
- /usr/include/qt/QtWidgets/qapplication.h
- /usr/include/qt/QtCore/qcoreapplication.h
- /usr/include/qt/QtCore/qcoreevent.h
- /usr/include/qt/QtCore/qeventloop.h
- /usr/include/qt/QtGui/qguiapplication.h
- /usr/include/qt/QtGui/qinputmethod.h
  /usr/include/qt/QtWidgets/QDialog
  /usr/include/qt/QtWidgets/QHBoxLayout
  /usr/include/qt/QtWidgets/qboxlayout.h
@@ -3110,6 +3133,15 @@ CMakeFiles/src.dir/mainpage.cpp.o
  /usr/include/qt/QtWidgets/QBoxLayout
  /usr/include/c++/12.2.0/iostream
  /home/mint/GitRepos/AudioPlayer/src/communicatewithserver.h
+ /usr/include/qt/QtWidgets/QApplication
+ /usr/include/qt/QtWidgets/qapplication.h
+ /usr/include/qt/QtCore/qcoreapplication.h
+ /usr/include/qt/QtCore/qcoreevent.h
+ /usr/include/qt/QtCore/qeventloop.h
+ /usr/include/qt/QtGui/qguiapplication.h
+ /usr/include/qt/QtGui/qinputmethod.h
+ /usr/include/qt/QtCore/QFile
+ /usr/include/qt/QtCore/qfile.h
  /usr/include/qt/QtNetwork/QTcpSocket
  /usr/include/qt/QtNetwork/qtcpsocket.h
  /usr/include/qt/QtNetwork/qabstractsocket.h
@@ -3147,12 +3179,6 @@ CMakeFiles/src.dir/mainpage.cpp.o
  /usr/include/qt/QtCore/qpair.h
  /home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen/include/ui_mainpage.h
  /usr/include/qt/QtWidgets/QApplication
- /usr/include/qt/QtWidgets/qapplication.h
- /usr/include/qt/QtCore/qcoreapplication.h
- /usr/include/qt/QtCore/qcoreevent.h
- /usr/include/qt/QtCore/qeventloop.h
- /usr/include/qt/QtGui/qguiapplication.h
- /usr/include/qt/QtGui/qinputmethod.h
  /usr/include/qt/QtWidgets/QHBoxLayout
  /usr/include/qt/QtWidgets/QLabel
  /usr/include/qt/QtWidgets/QMainWindow
@@ -3586,6 +3612,10 @@ CMakeFiles/src.dir/signupwindow.cpp.o
  /usr/include/qt/QtWidgets/qlayoutitem.h
  /usr/include/qt/QtWidgets/QVBoxLayout
  /home/mint/GitRepos/AudioPlayer/src/communicatewithserver.h
+ /usr/include/qt/QtWidgets/QApplication
+ /usr/include/qt/QtCore/QFile
+ /usr/include/qt/QtCore/qfile.h
+ /usr/include/qt/QtCore/qfiledevice.h
  /usr/include/qt/QtNetwork/QTcpSocket
  /usr/include/qt/QtNetwork/qtcpsocket.h
  /usr/include/qt/QtNetwork/qtnetworkglobal.h
@@ -4004,17 +4034,27 @@ CMakeFiles/src.dir/src_autogen/mocs_compilation.cpp.o
  /usr/include/qt/QtGui/qicon.h
  /home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/src_autogen/EWIEGA46WW/moc_communicatewithserver.cpp
  /home/mint/GitRepos/AudioPlayer/src/communicatewithserver.h
+ /usr/include/qt/QtWidgets/QApplication
+ /usr/include/qt/QtWidgets/qapplication.h
+ /usr/include/qt/QtCore/qcoreapplication.h
+ /usr/include/qt/QtCore/qcoreevent.h
+ /usr/include/qt/QtCore/qeventloop.h
+ /usr/include/qt/QtGui/qguiapplication.h
+ /usr/include/qt/QtGui/qinputmethod.h
+ /usr/include/qt/QtCore/qlocale.h
+ /usr/include/qt/QtCore/qvariant.h
+ /usr/include/qt/QtCore/qmap.h
+ /usr/include/c++/12.2.0/variant
+ /usr/include/qt/QtCore/QFile
+ /usr/include/qt/QtCore/qfile.h
+ /usr/include/qt/QtCore/qfiledevice.h
  /usr/include/qt/QtNetwork/QTcpSocket
  /usr/include/qt/QtNetwork/qtcpsocket.h
  /usr/include/qt/QtNetwork/qtnetworkglobal.h
  /usr/include/qt/QtNetwork/qtnetwork-config.h
  /usr/include/qt/QtNetwork/qabstractsocket.h
  /usr/include/qt/QtCore/qdebug.h
- /usr/include/qt/QtCore/qmap.h
  /usr/include/qt/QtCore/qtextstream.h
- /usr/include/qt/QtCore/qlocale.h
- /usr/include/qt/QtCore/qvariant.h
- /usr/include/c++/12.2.0/variant
  /usr/include/qt/QtCore/qset.h
  /usr/include/qt/QtCore/qcontiguouscache.h
  /usr/include/qt/QtNetwork/QTcpServer
@@ -4092,7 +4132,6 @@ CMakeFiles/src.dir/src_autogen/mocs_compilation.cpp.o
  /usr/include/qt/QtCore/qdir.h
  /usr/include/qt/QtCore/qfileinfo.h
  /usr/include/qt/QtCore/qfile.h
- /usr/include/qt/QtCore/qfiledevice.h
  /usr/include/qt/QtCore/QMap
  /usr/include/qt/QtCore/qmap.h
  /usr/include/qt/QtWidgets/QLabel

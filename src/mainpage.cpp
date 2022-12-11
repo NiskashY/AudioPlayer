@@ -34,11 +34,11 @@ void MainPage::ConnectionHandler(bool isConnect) {
             ); // slider moved -> change position in the soundtrack
             connect (
                     ui->songSlider, &QSlider::sliderPressed,
-                    player, &QMediaPlayer::pause
+                    this, &MainPage::pauseFromSLider
             ); // slider pause -> avoid sound interferences
             connect (
                     ui->songSlider, &QSlider::sliderReleased,
-                    player, &QMediaPlayer::play
+                    this, &MainPage::playFromSLider
             ); // slider released -> continue playing
         } else {
             // Disconnect  Sound Signals for player and UI
@@ -59,6 +59,14 @@ void MainPage::ConnectionHandler(bool isConnect) {
                     ui->songSlider, &QSlider::sliderMoved,
                     this, &MainPage::SliderPositionMoved
             ); // slider moved -> change position in the soundtrack
+            disconnect (
+                    ui->songSlider, &QSlider::sliderPressed,
+                    this, &MainPage::pauseFromSLider
+            ); // slider pause -> avoid sound interferences
+            disconnect (
+                    ui->songSlider, &QSlider::sliderReleased,
+                    this, &MainPage::playFromSLider
+            ); // slider released -> continue playing
         }
 }
 
@@ -179,6 +187,7 @@ void MainPage::on_tabWidget_tabBarClicked(int index) {
     tracks_list.clear();
     downloadedFiles.clear();
     mButtonToLayoutMap.clear();
+    received_playlist->clear();
 
     if (kRefreshDownload == index) {
         // Get all files with file extension = {.mp3, .wav}
@@ -189,7 +198,7 @@ void MainPage::on_tabWidget_tabBarClicked(int index) {
 
         tracks_list = std::move(working_directory.entryList());
 
-        received_playlist->clear();
+
         //player->setPlaylist(received_playlist);
         // Go from behind -> i want to add
         for (int track_index = 0; track_index < (int)tracks_list.size(); ++track_index) {
@@ -205,10 +214,10 @@ void MainPage::on_tabWidget_tabBarClicked(int index) {
             ui->accountLabel->setStyleSheet("QLabel { color : green; }");
             CommunicateWithServer server;
             QStringList getted_tracks = server.GetUserLikedTracks(account->getUsername());
-            received_playlist->clear();
 
             for (const auto& file_name : getted_tracks) {
                 AddTrackToTab(ui->likesVLayout, file_name, false);
+                tracks_list.append(file_name);
             }
         } else {
             account = nullptr;
@@ -344,7 +353,9 @@ QHBoxLayout* MainPage::CreateSongLayout(QWidget*& parent_widget,
 
     song_layout->addWidget(checkBoxDownloaded);
     QObject::connect(play_button, &QPushButton::clicked,
-                     this, &MainPage::PlaySong);
+                     this, (isDownloaded ? &MainPage::PlaySong :
+                                           &MainPage::PlayLikedSong)
+    );
 
     mButtonToLayoutMap.insert(play_button, song_layout);
 
@@ -370,8 +381,12 @@ void MainPage::ChangeState(SetPlayerState player_state) {
         player_state == SetPlayerState::Default) ||
         player_state == SetPlayerState::ForcePlay)
     {
-        player->play();
-        MainPage::SetSongNameLabel();
+        if (!player->currentMedia().isNull()) {
+            player->play();
+            MainPage::SetSongNameLabel();
+        } else {
+            button_cover_image = "query_song.png";
+        }
     } else {
         player->pause();
         button_cover_image = "query_song.png";
@@ -418,6 +433,56 @@ void MainPage::PlaySong() {
     MainPage::ChangeState(SetPlayerState::ForcePlay);
 }
 
+void MainPage::PlayLikedSong()
+{
+    QPushButton* play_button = qobject_cast<QPushButton*>(sender());
+    QHBoxLayout* song_layout = mButtonToLayoutMap.value(play_button);
+
+    const int kFileNamePos = 2;
+    // Get QLabel of layout -> then get text from label
+    QString file_name = qobject_cast<QLabel*>(
+                song_layout->itemAt(kFileNamePos)->widget()
+    )->text();
+
+    player->stop();
+
+    if (received_playlist->isEmpty()) {
+        CommunicateWithServer server;
+        QString file_path = server.GetFilePathFromServer(file_name);
+        bool isAdded = received_playlist->addMedia(QUrl::fromLocalFile(file_path));
+        if (!isAdded) {
+            QMessageBox::critical(this, "f", "f");
+            return;
+        }
+    }
+
+    if (!received_playlist->isEmpty()) {
+        QMediaPlaylist::PlaybackMode prev_playback_mode_state
+                = player->playlist()->playbackMode();
+        disconnect(
+                player, &QMediaPlayer::currentMediaChanged,
+                this, &MainPage::SetSongNameLabel
+        );                                        // disconnect slot to prevent asking from deleted area
+
+        delete active_playlist;                   // delete pointer to old_playlist
+        active_playlist = received_playlist;      // copy pointer (that pointer will be deleted on next playlist change)
+        received_playlist = new QMediaPlaylist(); // disconnect received_playlist ptr from memory,
+                                                  // that now belongs to active_playlist
+        std::swap(final_tracks_list, tracks_list);// swap to avoid copying
+
+        connect(
+                player, &QMediaPlayer::currentMediaChanged,
+                this, &MainPage::SetSongNameLabel
+        );                                        // connect again to change song name label
+
+        player->setPlaylist(active_playlist);
+        player->playlist()->setPlaybackMode(prev_playback_mode_state);
+    }
+
+    player->playlist()->setCurrentIndex(0);
+    MainPage::ChangeState(SetPlayerState::ForcePlay);
+}
+
 void MainPage::SetCurrentSliderPosition() {
     const int current_player_position= player->position();
     ui->songSlider->setValue(current_player_position);
@@ -439,5 +504,13 @@ void MainPage::SetSongNameLabel() {
 
 void MainPage::SliderPositionMoved() {
     player->setPosition(ui->songSlider->sliderPosition());
+}
+
+void MainPage::pauseFromSLider() {
+    MainPage::ChangeState(SetPlayerState::ForcePause);
+}
+
+void MainPage::playFromSLider() {
+    MainPage::ChangeState(SetPlayerState::ForcePlay);
 }
 

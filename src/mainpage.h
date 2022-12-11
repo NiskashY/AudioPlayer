@@ -54,10 +54,13 @@ private slots:
 
     // Sound Manipulation
     void PlaySong();                 // start song & change elements of ui for that
+    void PlayLikedSong();
     void SetCurrentSliderPosition(); // get player_position and set ui_slider position
     void SetMaxSliderPosition();     // get max player position set ui_slider max position
     void SetSongNameLabel();         // set ui current song name
     void SliderPositionMoved();      // move soundtrack player to new position
+    void pauseFromSLider();
+    void playFromSLider();
 
 private:
     void AddTrackToTab(QVBoxLayout*const, const QString&, bool);
