@@ -1,6 +1,8 @@
 #pragma once
 
 // Qt modules
+#include <QApplication>
+#include <QFile>
 #include <QTcpSocket>
 #include <QTcpServer>
 #include <QJsonDocument>
@@ -28,6 +30,8 @@ public slots:
     QPair<bool, Existance>  CheckAccount(const QString&, const QString&);
     void CreateAccount(const QString&, const QString&);
     QStringList GetUserLikedTracks(const QString&);
+    QString GetFilePathFromServer(const QString&);  // if file with this name does not exist in working_dir -> return new file name
+                                       // else return old file name
 
 private: // Private Functions
     bool isPasswordContainWrongSymbols(const QString&);
@@ -39,6 +43,7 @@ private: // Private Variables
     QByteArray data;
     bool isConnected = false;
 
+    QString working_dir_path{};
     const QString wrongSymbols = "*/\\.-+,@#№$%^&";
     const int kMinPasswordSize = 8;
 };

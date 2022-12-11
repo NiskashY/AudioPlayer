@@ -9,6 +9,7 @@ QJsonArray CovertToJsonFormat(const QString& data) {   // return ARRAY!
 CommunicateWithServer::CommunicateWithServer() {
     socket = new QTcpSocket(this);
 
+    working_dir_path = QApplication::applicationDirPath() + "/serv_part_files/";
     // if something in the stream of socket -> this how socket will react
     connect(socket, SIGNAL(readyRead()), this, SLOT(sockReady()));
 
@@ -25,7 +26,11 @@ CommunicateWithServer::CommunicateWithServer() {
 }
 
 void CommunicateWithServer::sockReady() {
-    data = socket->readAll();
+    data.clear();
+    while (socket->bytesAvailable()) {
+        data.append(socket->readAll());
+        socket->waitForReadyRead(300);
+    }
 }
 
 void CommunicateWithServer::sockDisc() {
@@ -42,7 +47,7 @@ QPair<bool, Existance> CommunicateWithServer::CheckAccount(const QString& userna
     ).arg(sql_field_nickname, sql_field_password, username).toStdString();
 
     socket->write(sql_query.c_str());
-    socket->waitForReadyRead(100);
+    socket->waitForReadyRead(500);
     QJsonObject json_response = CovertToJsonFormat(QString(data))[0].toObject();
     QString response_nickname = json_response.value(sql_field_nickname).toString();
     QString response_password = json_response.value(sql_field_password).toString();
@@ -76,13 +81,12 @@ void CommunicateWithServer::CreateAccount(const QString& username, const QString
 QStringList CommunicateWithServer::GetUserLikedTracks(const QString& username) {
     // Check for existance of this user_name
     const QString sql_field_song_title= "song_title";
-    const QString sql_field_user_id = "id_user";
     std::string sql_query = QString(
         "SELECT %1 FROM songs WHERE id_user = (SELECT id FROM users WHERE user_nickname = '%2');"
     ).arg(sql_field_song_title, username).toStdString();
 
     socket->write(sql_query.c_str());
-    socket->waitForReadyRead(500);
+    socket->waitForReadyRead(100);
     QStringList response_list;
     QJsonArray received_array = CovertToJsonFormat(QString(data));
 
@@ -93,6 +97,24 @@ QStringList CommunicateWithServer::GetUserLikedTracks(const QString& username) {
 
     return response_list;
 }
+
+QString CommunicateWithServer::GetFilePathFromServer(const QString & file_name) {
+    const auto& file_path = working_dir_path + file_name;
+    QFile source_file(file_path);
+
+    if (!source_file.exists()) {    // if file already exist -> dont need to download file
+        const std::string& request("PLAY: " + file_name.toStdString());
+        socket->write(request.c_str());
+        socket->waitForReadyRead(1000);
+        if (source_file.open(QIODevice::WriteOnly)) {
+            source_file.write(data);
+        }
+    }
+
+    return file_path;
+}
+
+
 
 char* GetCurrentTime() {
     auto current_seconds = std::chrono::system_clock::now();
