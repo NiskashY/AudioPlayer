@@ -1,17 +1,6 @@
 #include "mainpage.h"
 #include "ui_mainpage.h"
 
-QString GetFileNameFromPath(const QString& path) {
-    QString resultFileName;
-
-    for (int i = (int)path.size() - 1; i >= 0 && path[i] != '/'; --i) {
-        resultFileName += path[i];
-    }
-
-    std::reverse(resultFileName.begin(), resultFileName.end());
-    return resultFileName;
-}
-
 void MainPage::ConnectionHandler(bool isConnect) {
     if (isConnect) {
             // Connect Sound Signals for player and UI
@@ -118,7 +107,7 @@ MainPage::MainPage(QWidget *parent) :
     ui->exitAccountButton->click();
 
     // Setup Volume of sound and ui elements for this
-    const int& kSoundVolume = 30;
+    const int& kSoundVolume = 10    ;
     ui->verticalSlider->setSliderPosition(kSoundVolume);
     player->setVolume(kSoundVolume);
 
@@ -173,7 +162,13 @@ void MainPage::on_addFromDeviceButton_clicked() {
             QFile::copy(file_path, working_dir_path + file_name);
         }
 
-        ui->tabWidget->tabBarClicked(ui->tabWidget->currentIndex());
+        const int kLikesPage = 0;
+        if (ui->tabWidget->currentIndex() == kLikesPage) {
+            CommunicateWithServer server;
+            server.UploadFiles(selectedFiles, account->getUsername());
+        }
+
+        Q_EMIT ui->tabWidget->tabBarClicked(ui->tabWidget->currentIndex());
     }
 }
 

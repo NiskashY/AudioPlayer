@@ -85,4 +85,3 @@ private:
     QStringList tracks_list, final_tracks_list;
 };
 
-QString GetFileNameFromPath(const QString&);

@@ -944,8 +944,8 @@ CMakeFiles/src.dir/checker/ensuremessagebox.cpp.o: /home/mint/GitRepos/AudioPlay
 CMakeFiles/src.dir/communicatewithserver.cpp.o: /home/mint/GitRepos/AudioPlayer/src/communicatewithserver.cpp \
   /usr/include/stdc-predef.h \
   /home/mint/GitRepos/AudioPlayer/src/communicatewithserver.h \
-  /usr/include/qt/QtWidgets/QApplication \
-  /usr/include/qt/QtWidgets/qapplication.h \
+  /usr/include/qt/QtWidgets/QMessageBox \
+  /usr/include/qt/QtWidgets/qmessagebox.h \
   /usr/include/qt/QtWidgets/qtwidgetsglobal.h \
   /usr/include/qt/QtGui/qtguiglobal.h \
   /usr/include/qt/QtCore/qglobal.h \
@@ -1174,12 +1174,17 @@ CMakeFiles/src.dir/communicatewithserver.cpp.o: /home/mint/GitRepos/AudioPlayer/
   /usr/include/qt/QtCore/qversiontagging.h \
   /usr/include/qt/QtGui/qtgui-config.h \
   /usr/include/qt/QtWidgets/qtwidgets-config.h \
-  /usr/include/qt/QtCore/qcoreapplication.h \
+  /usr/include/qt/QtWidgets/qdialog.h \
+  /usr/include/qt/QtWidgets/qwidget.h \
+  /usr/include/qt/QtGui/qwindowdefs.h \
+  /usr/include/qt/QtCore/qobjectdefs.h \
+  /usr/include/qt/QtCore/qnamespace.h \
+  /usr/include/qt/QtCore/qobjectdefs_impl.h \
+  /usr/include/qt/QtCore/qobject.h \
   /usr/include/qt/QtCore/qstring.h \
   /usr/include/qt/QtCore/qchar.h \
   /usr/include/qt/QtCore/qbytearray.h \
   /usr/include/qt/QtCore/qrefcount.h \
-  /usr/include/qt/QtCore/qnamespace.h \
   /usr/include/qt/QtCore/qarraydata.h \
   /usr/include/string.h \
   /usr/include/strings.h \
@@ -1198,9 +1203,6 @@ CMakeFiles/src.dir/communicatewithserver.cpp.o: /home/mint/GitRepos/AudioPlayer/
   /usr/include/qt/QtCore/qstringliteral.h \
   /usr/include/qt/QtCore/qstringalgorithms.h \
   /usr/include/qt/QtCore/qstringview.h \
-  /usr/include/qt/QtCore/qobject.h \
-  /usr/include/qt/QtCore/qobjectdefs.h \
-  /usr/include/qt/QtCore/qobjectdefs_impl.h \
   /usr/include/qt/QtCore/qlist.h \
   /usr/include/qt/QtCore/qalgorithms.h \
   /usr/include/qt/QtCore/qiterator.h \
@@ -1269,35 +1271,29 @@ CMakeFiles/src.dir/communicatewithserver.cpp.o: /home/mint/GitRepos/AudioPlayer/
   /usr/include/c++/12.2.0/bits/ostream.tcc \
   /usr/include/c++/12.2.0/bits/istream.tcc \
   /usr/include/c++/12.2.0/bits/sstream.tcc \
-  /usr/include/qt/QtCore/qcoreevent.h \
-  /usr/include/qt/QtCore/qeventloop.h \
-  /usr/include/qt/QtGui/qwindowdefs.h \
-  /usr/include/qt/QtCore/qpoint.h \
-  /usr/include/qt/QtCore/qsize.h \
   /usr/include/qt/QtCore/qmargins.h \
-  /usr/include/qt/QtGui/qcursor.h \
-  /usr/include/qt/QtGui/qguiapplication.h \
-  /usr/include/qt/QtGui/qinputmethod.h \
-  /usr/include/qt/QtCore/qlocale.h \
-  /usr/include/qt/QtCore/qvariant.h \
-  /usr/include/qt/QtCore/qmap.h \
-  /usr/include/qt/QtCore/qhash.h \
-  /usr/include/c++/12.2.0/variant \
-  /usr/include/qt/QtCore/qshareddata.h \
-  /usr/include/qt/QtCore/QFile \
-  /usr/include/qt/QtCore/qfile.h \
-  /usr/include/qt/QtCore/qfiledevice.h \
+  /usr/include/qt/QtGui/qpaintdevice.h \
+  /usr/include/qt/QtCore/qrect.h \
+  /usr/include/qt/QtCore/qsize.h \
+  /usr/include/qt/QtCore/qpoint.h \
+  /usr/include/qt/QtGui/qpalette.h \
+  /usr/include/qt/QtGui/qcolor.h \
+  /usr/include/qt/QtGui/qrgb.h \
+  /usr/include/qt/QtGui/qrgba64.h \
+  /usr/include/qt/QtGui/qbrush.h \
+  /usr/include/qt/QtGui/qmatrix.h \
+  /usr/include/qt/QtGui/qpolygon.h \
+  /usr/include/qt/QtGui/qregion.h \
+  /usr/include/qt/QtCore/qdatastream.h \
   /usr/include/qt/QtCore/qiodevice.h \
-  /usr/include/qt/QtNetwork/QTcpSocket \
-  /usr/include/qt/QtNetwork/qtcpsocket.h \
-  /usr/include/qt/QtNetwork/qtnetworkglobal.h \
-  /usr/include/qt/QtNetwork/qtnetwork-config.h \
-  /usr/include/qt/QtNetwork/qabstractsocket.h \
-  /usr/include/qt/QtCore/qdebug.h \
-  /usr/include/qt/QtCore/qtextstream.h \
-  /usr/include/qt/QtCore/qset.h \
-  /usr/include/qt/QtCore/qcontiguouscache.h \
+  /usr/include/qt/QtCore/qline.h \
+  /usr/include/qt/QtGui/qtransform.h \
+  /usr/include/qt/QtGui/qimage.h \
+  /usr/include/qt/QtGui/qpixelformat.h \
+  /usr/include/qt/QtGui/qpixmap.h \
   /usr/include/qt/QtCore/qsharedpointer.h \
+  /usr/include/qt/QtCore/qshareddata.h \
+  /usr/include/qt/QtCore/qhash.h \
   /usr/include/qt/QtCore/qsharedpointer_impl.h \
   /usr/include/c++/12.2.0/memory \
   /usr/include/c++/12.2.0/bits/stl_raw_storage_iter.h \
@@ -1311,6 +1307,35 @@ CMakeFiles/src.dir/communicatewithserver.cpp.o: /home/mint/GitRepos/AudioPlayer/
   /usr/include/c++/12.2.0/bits/ranges_uninitialized.h \
   /usr/include/c++/12.2.0/bits/uses_allocator_args.h \
   /usr/include/c++/12.2.0/pstl/glue_memory_defs.h \
+  /usr/include/qt/QtGui/qfont.h \
+  /usr/include/qt/QtGui/qfontmetrics.h \
+  /usr/include/qt/QtGui/qfontinfo.h \
+  /usr/include/qt/QtWidgets/qsizepolicy.h \
+  /usr/include/qt/QtGui/qcursor.h \
+  /usr/include/qt/QtGui/qkeysequence.h \
+  /usr/include/qt/QtWidgets/QApplication \
+  /usr/include/qt/QtWidgets/qapplication.h \
+  /usr/include/qt/QtCore/qcoreapplication.h \
+  /usr/include/qt/QtCore/qcoreevent.h \
+  /usr/include/qt/QtCore/qeventloop.h \
+  /usr/include/qt/QtGui/qguiapplication.h \
+  /usr/include/qt/QtGui/qinputmethod.h \
+  /usr/include/qt/QtCore/qlocale.h \
+  /usr/include/qt/QtCore/qvariant.h \
+  /usr/include/qt/QtCore/qmap.h \
+  /usr/include/c++/12.2.0/variant \
+  /usr/include/qt/QtCore/QFile \
+  /usr/include/qt/QtCore/qfile.h \
+  /usr/include/qt/QtCore/qfiledevice.h \
+  /usr/include/qt/QtNetwork/QTcpSocket \
+  /usr/include/qt/QtNetwork/qtcpsocket.h \
+  /usr/include/qt/QtNetwork/qtnetworkglobal.h \
+  /usr/include/qt/QtNetwork/qtnetwork-config.h \
+  /usr/include/qt/QtNetwork/qabstractsocket.h \
+  /usr/include/qt/QtCore/qdebug.h \
+  /usr/include/qt/QtCore/qtextstream.h \
+  /usr/include/qt/QtCore/qset.h \
+  /usr/include/qt/QtCore/qcontiguouscache.h \
   /usr/include/qt/QtNetwork/QTcpServer \
   /usr/include/qt/QtNetwork/qtcpserver.h \
   /usr/include/qt/QtNetwork/qhostaddress.h \
@@ -4023,6 +4048,9 @@ CMakeFiles/src.dir/src_autogen/mocs_compilation.cpp.o: src_autogen/mocs_compilat
   /usr/include/qt/QtGui/qicon.h \
   src_autogen/EWIEGA46WW/moc_communicatewithserver.cpp \
   /home/mint/GitRepos/AudioPlayer/src/communicatewithserver.h \
+  /usr/include/qt/QtWidgets/QMessageBox \
+  /usr/include/qt/QtWidgets/qmessagebox.h \
+  /usr/include/qt/QtWidgets/qdialog.h \
   /usr/include/qt/QtWidgets/QApplication \
   /usr/include/qt/QtWidgets/qapplication.h \
   /usr/include/qt/QtCore/qcoreapplication.h \
@@ -4077,9 +4105,6 @@ CMakeFiles/src.dir/src_autogen/mocs_compilation.cpp.o: src_autogen/mocs_compilat
   /usr/include/qt/QtWidgets/QMainWindow \
   /usr/include/qt/QtWidgets/qmainwindow.h \
   /usr/include/qt/QtWidgets/qtabwidget.h \
-  /usr/include/qt/QtWidgets/QMessageBox \
-  /usr/include/qt/QtWidgets/qmessagebox.h \
-  /usr/include/qt/QtWidgets/qdialog.h \
   /home/mint/GitRepos/AudioPlayer/src/signupwindow.h \
   /home/mint/GitRepos/AudioPlayer/src/checker/checker.h \
   /usr/include/qt/QtCore/QPair \
@@ -4197,8 +4222,6 @@ src_autogen/include/ui_signupwindow.h:
 
 src_autogen/include/ui_loginwindow.h:
 
-/usr/include/qt/QtWidgets/qmessagebox.h:
-
 /usr/include/qt/QtWidgets/qtabwidget.h:
 
 /usr/include/qt/QtMultimedia/qmediaplayer.h:
@@ -4252,6 +4275,8 @@ src_autogen/include/ui_loginwindow.h:
 /usr/include/qt/QtCore/qfiledevice.h:
 
 /usr/include/qt/QtCore/qfile.h:
+
+/usr/include/qt/QtWidgets/qmessagebox.h:
 
 /home/mint/GitRepos/AudioPlayer/src/communicatewithserver.h:
 
