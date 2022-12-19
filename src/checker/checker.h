@@ -18,11 +18,11 @@ public:
 
 protected:
     const int kMinPasswordSize = 8;
-    const QString wrongSymbols = "*/\\.-+,@#№$%^&";
+    const QString wrongSymbols = "*/\\.-+,@#№$%^& ";
     // Msg for output
     const QString emptyMsg = "Fields must be non-empty";
     const QString minPasswordSizeMsg = QString("Minimal password size is %1").arg(kMinPasswordSize);
-    const QString wrongSymbolsMsg = "Password can't contain " + wrongSymbols;
+    const QString wrongSymbolsMsg = "Password can't contain " + wrongSymbols + "or space";
     const QString successMsg = "All ok";
 
 private:

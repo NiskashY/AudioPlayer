@@ -379,6 +379,30 @@ mainpage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/mainpage.cpp.s
 .PHONY : mainpage.cpp.s
 
+mainpage_buttons.o: mainpage_buttons.cpp.o
+.PHONY : mainpage_buttons.o
+
+# target to build an object file
+mainpage_buttons.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/mainpage_buttons.cpp.o
+.PHONY : mainpage_buttons.cpp.o
+
+mainpage_buttons.i: mainpage_buttons.cpp.i
+.PHONY : mainpage_buttons.i
+
+# target to preprocess a source file
+mainpage_buttons.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/mainpage_buttons.cpp.i
+.PHONY : mainpage_buttons.cpp.i
+
+mainpage_buttons.s: mainpage_buttons.cpp.s
+.PHONY : mainpage_buttons.s
+
+# target to generate assembly for a file
+mainpage_buttons.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/mainpage_buttons.cpp.s
+.PHONY : mainpage_buttons.cpp.s
+
 signupwindow.o: signupwindow.cpp.o
 .PHONY : signupwindow.o
 
@@ -489,6 +513,9 @@ help:
 	@echo "... mainpage.o"
 	@echo "... mainpage.i"
 	@echo "... mainpage.s"
+	@echo "... mainpage_buttons.o"
+	@echo "... mainpage_buttons.i"
+	@echo "... mainpage_buttons.s"
 	@echo "... signupwindow.o"
 	@echo "... signupwindow.i"
 	@echo "... signupwindow.s"

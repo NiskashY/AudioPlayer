@@ -40,7 +40,7 @@ public:
     ~MainPage();
 
 private slots:
-    // Buttons clicked
+    // Buttons clicked - definition in mainpage_buttons.cpp
     void on_exitAccountButton_clicked();
     void on_addFromDeviceButton_clicked();
     void on_tabWidget_tabBarClicked(int);
@@ -59,8 +59,9 @@ private slots:
     void SetMaxSliderPosition();     // get max player position set ui_slider max position
     void SetSongNameLabel();         // set ui current song name
     void SliderPositionMoved();      // move soundtrack player to new position
-    void pauseFromSLider();
-    void playFromSLider();
+    void PauseFromSLider();
+    void PlayFromSLider();
+    void CheckBoxClicked();
 
 private:
     void AddTrackToTab(QVBoxLayout*const, const QString&, bool);
@@ -76,12 +77,11 @@ private:
     QMediaPlaylist* active_playlist = nullptr;
     QMediaPlaylist* received_playlist = nullptr;
 
-    // TODO: пусть пользователь сам меняет свою рабочую директорию
-    QString working_dir_path = "/home/mint/GitRepos/AudioPlayer/build-src-Desktop-Debug/saved-tracks/";
+    QString working_dir_path;
     const QString style_sheet_parametr = "border-image:url(:/resourses/songsCovers/%1);"; // for setting up buttons images
 
     QMap<QString, std::pair<QString, int>> downloadedFiles; // first -> file_name, second -> file_path
-    QHash<QPushButton*, QHBoxLayout*> mButtonToLayoutMap;
+    QHash<QAbstractButton*, QHBoxLayout*> mButtonToLayoutMap;
     QStringList tracks_list, final_tracks_list;
 };
 

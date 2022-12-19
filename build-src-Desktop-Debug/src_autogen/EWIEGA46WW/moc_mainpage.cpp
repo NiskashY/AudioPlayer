@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainPage_t {
-    QByteArrayData data[20];
-    char stringdata0[407];
+    QByteArrayData data[21];
+    char stringdata0[423];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -50,8 +50,9 @@ QT_MOC_LITERAL(14, 293, 24), // "SetCurrentSliderPosition"
 QT_MOC_LITERAL(15, 318, 20), // "SetMaxSliderPosition"
 QT_MOC_LITERAL(16, 339, 16), // "SetSongNameLabel"
 QT_MOC_LITERAL(17, 356, 19), // "SliderPositionMoved"
-QT_MOC_LITERAL(18, 376, 15), // "pauseFromSLider"
-QT_MOC_LITERAL(19, 392, 14) // "playFromSLider"
+QT_MOC_LITERAL(18, 376, 15), // "PauseFromSLider"
+QT_MOC_LITERAL(19, 392, 14), // "PlayFromSLider"
+QT_MOC_LITERAL(20, 407, 15) // "CheckBoxClicked"
 
     },
     "MainPage\0on_exitAccountButton_clicked\0"
@@ -64,8 +65,8 @@ QT_MOC_LITERAL(19, 392, 14) // "playFromSLider"
     "on_verticalSlider_sliderMoved\0PlaySong\0"
     "PlayLikedSong\0SetCurrentSliderPosition\0"
     "SetMaxSliderPosition\0SetSongNameLabel\0"
-    "SliderPositionMoved\0pauseFromSLider\0"
-    "playFromSLider"
+    "SliderPositionMoved\0PauseFromSLider\0"
+    "PlayFromSLider\0CheckBoxClicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -75,7 +76,7 @@ static const uint qt_meta_data_MainPage[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-      18,   14, // methods
+      19,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -83,24 +84,25 @@ static const uint qt_meta_data_MainPage[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,  104,    2, 0x08 /* Private */,
-       3,    0,  105,    2, 0x08 /* Private */,
-       4,    1,  106,    2, 0x08 /* Private */,
-       5,    0,  109,    2, 0x08 /* Private */,
-       6,    0,  110,    2, 0x08 /* Private */,
-       7,    0,  111,    2, 0x08 /* Private */,
-       8,    0,  112,    2, 0x08 /* Private */,
-       9,    0,  113,    2, 0x08 /* Private */,
-      10,    0,  114,    2, 0x08 /* Private */,
-      11,    1,  115,    2, 0x08 /* Private */,
-      12,    0,  118,    2, 0x08 /* Private */,
-      13,    0,  119,    2, 0x08 /* Private */,
-      14,    0,  120,    2, 0x08 /* Private */,
-      15,    0,  121,    2, 0x08 /* Private */,
-      16,    0,  122,    2, 0x08 /* Private */,
-      17,    0,  123,    2, 0x08 /* Private */,
-      18,    0,  124,    2, 0x08 /* Private */,
-      19,    0,  125,    2, 0x08 /* Private */,
+       1,    0,  109,    2, 0x08 /* Private */,
+       3,    0,  110,    2, 0x08 /* Private */,
+       4,    1,  111,    2, 0x08 /* Private */,
+       5,    0,  114,    2, 0x08 /* Private */,
+       6,    0,  115,    2, 0x08 /* Private */,
+       7,    0,  116,    2, 0x08 /* Private */,
+       8,    0,  117,    2, 0x08 /* Private */,
+       9,    0,  118,    2, 0x08 /* Private */,
+      10,    0,  119,    2, 0x08 /* Private */,
+      11,    1,  120,    2, 0x08 /* Private */,
+      12,    0,  123,    2, 0x08 /* Private */,
+      13,    0,  124,    2, 0x08 /* Private */,
+      14,    0,  125,    2, 0x08 /* Private */,
+      15,    0,  126,    2, 0x08 /* Private */,
+      16,    0,  127,    2, 0x08 /* Private */,
+      17,    0,  128,    2, 0x08 /* Private */,
+      18,    0,  129,    2, 0x08 /* Private */,
+      19,    0,  130,    2, 0x08 /* Private */,
+      20,    0,  131,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -113,6 +115,7 @@ static const uint qt_meta_data_MainPage[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, QMetaType::Int,    2,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -147,8 +150,9 @@ void MainPage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 13: _t->SetMaxSliderPosition(); break;
         case 14: _t->SetSongNameLabel(); break;
         case 15: _t->SliderPositionMoved(); break;
-        case 16: _t->pauseFromSLider(); break;
-        case 17: _t->playFromSLider(); break;
+        case 16: _t->PauseFromSLider(); break;
+        case 17: _t->PlayFromSLider(); break;
+        case 18: _t->CheckBoxClicked(); break;
         default: ;
         }
     }
@@ -183,13 +187,13 @@ int MainPage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 18)
+        if (_id < 19)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 18;
+        _id -= 19;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 18)
+        if (_id < 19)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 18;
+        _id -= 19;
     }
     return _id;
 }
