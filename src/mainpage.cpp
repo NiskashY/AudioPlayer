@@ -172,7 +172,19 @@ QHBoxLayout* MainPage::CreateSongLayout(QWidget*& parent_widget,
     return song_layout;
 }
 
-void MainPage::AddTrackToTab(QVBoxLayout* const v_layout,
+QHBoxLayout *MainPage::CreateEmptyPage(QWidget *&parent_widget) {
+    QHBoxLayout* empty_notifer_layout = new QHBoxLayout(parent_widget);
+    empty_notifer_layout->addStretch(2);     // Add Stretchable Spacer Item
+
+    QLabel* empty_notifer_label = new QLabel("Current track list is empty", parent_widget);
+    empty_notifer_label->setStyleSheet("QLabel { color : orange; }");
+    empty_notifer_layout->addWidget(empty_notifer_label);
+    empty_notifer_layout ->addStretch(2);     // Add Stretchable Spacer Item
+
+    return empty_notifer_layout;
+}
+
+void MainPage::AddLayoutToTab(QVBoxLayout* const v_layout,
                              const QString& file_name,
                              bool isCheckBoxEnabled) {
     QHBoxLayout* song_layout = MainPage::CreateSongLayout(
@@ -182,6 +194,17 @@ void MainPage::AddTrackToTab(QVBoxLayout* const v_layout,
         v_layout->addStretch(2);
     }
     v_layout->insertLayout(0, song_layout);
+}
+
+void MainPage::AddLayoutToTab(QVBoxLayout* const v_layout) {
+    QHBoxLayout* song_layout = MainPage::CreateEmptyPage(
+                ui->scrollAreaWidgetContentsDownload);
+
+    if (v_layout->count() == 0) {
+        v_layout->addStretch(2);
+    }
+    v_layout->insertLayout(0, song_layout);
+    v_layout->insertStretch(0, 2);
 }
 
 void MainPage::ChangeState(SetPlayerState player_state) {
@@ -207,7 +230,6 @@ void MainPage::ChangeState(SetPlayerState player_state) {
 void MainPage::PlaySong() {
     QPushButton* play_button = qobject_cast<QPushButton*>(sender());
     QHBoxLayout* song_layout = mButtonToLayoutMap.value(play_button);
-
     const int kFileNamePos = 2;
     // Get QLabel of layout -> then get text from label
     QString file_name = qobject_cast<QLabel*>(
@@ -229,13 +251,12 @@ void MainPage::PlaySong() {
         received_playlist = new QMediaPlaylist(); // disconnect received_playlist ptr from memory,
                                                   // that now belongs to active_playlist
         std::swap(final_tracks_list, tracks_list);// swap to avoid copying
+        player->setPlaylist(active_playlist);
 
         connect(
                 player, &QMediaPlayer::currentMediaChanged,
                 this, &MainPage::SetSongNameLabel
         );                                        // connect again to change song name label
-
-        player->setPlaylist(active_playlist);
         player->playlist()->setPlaybackMode(prev_playback_mode_state);
     }
 
@@ -292,13 +313,13 @@ void MainPage::PlayLikedSong()
         received_playlist = new QMediaPlaylist(); // disconnect received_playlist ptr from memory,
                                                   // that now belongs to active_playlist
         std::swap(final_tracks_list, tracks_list);// swap to avoid copying
+        player->setPlaylist(active_playlist);
 
         connect(
                 player, &QMediaPlayer::currentMediaChanged,
                 this, &MainPage::SetSongNameLabel
         );                                        // connect again to change song name label
 
-        player->setPlaylist(active_playlist);
         player->playlist()->setPlaybackMode(prev_playback_mode_state);
     }
 
@@ -318,8 +339,31 @@ void MainPage::SetMaxSliderPosition() {
     ui->totalTimeLabel->setText(TimeConvertFromMiliseconds(current_duration));
 }
 
+void MainPage::ChangeTitleColor(QString color) {
+    int total_items = player->playlist()->mediaCount();
+    int index = total_items - prev_index - 1;
+    if (ui->tabWidget->currentIndex() == 1) {
+        QVBoxLayout* cur_layout = ui->downVLayout;
+        if (index >= 0 && index < cur_layout->count()) {
+            QHBoxLayout* cur_song_layout = qobject_cast<QHBoxLayout*>(
+                 cur_layout->itemAt(index)->layout()
+            );
+            const int kSongNamePos = 2;
+            qobject_cast<QLabel*>(
+                cur_song_layout->itemAt(kSongNamePos)->widget()
+            )->setStyleSheet(QString("QLabel { color : %1}").arg(color));
+        }
+    }
+}
+
 void MainPage::SetSongNameLabel() {
+    if (prev_index != -1) {
+        MainPage::ChangeTitleColor("white");
+    }
     auto cur_index = player->playlist()->currentIndex();
+    prev_index = cur_index;
+    MainPage::ChangeTitleColor("orange");
+
     ui->songNameLabel->setText(
         final_tracks_list.at(cur_index)
     );

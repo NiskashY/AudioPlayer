@@ -23,7 +23,7 @@ void RemoveAllSpaceSymbols(T& file_name) {
         return (symbol >= 'a' && symbol <= 'z' ||
                 symbol >= 'A' && symbol <= 'Z' ||
                 symbol >= '0' && symbol <= '9' ||
-                symbol == '!');
+                symbol == '!' || symbol == '.');
     };
 
     for (auto& symbol : file_name) {
