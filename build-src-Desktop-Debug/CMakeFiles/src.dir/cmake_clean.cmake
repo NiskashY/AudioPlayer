@@ -18,6 +18,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/src.dir/main.cpp.o.d"
   "CMakeFiles/src.dir/mainpage.cpp.o"
   "CMakeFiles/src.dir/mainpage.cpp.o.d"
+  "CMakeFiles/src.dir/mainpage_buttons.cpp.o"
+  "CMakeFiles/src.dir/mainpage_buttons.cpp.o.d"
   "CMakeFiles/src.dir/signupwindow.cpp.o"
   "CMakeFiles/src.dir/signupwindow.cpp.o.d"
   "CMakeFiles/src.dir/src_autogen/OIBSYM6ORI/qrc_resourses.cpp.o"

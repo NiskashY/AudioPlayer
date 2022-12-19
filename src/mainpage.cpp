@@ -23,11 +23,11 @@ void MainPage::ConnectionHandler(bool isConnect) {
             ); // slider moved -> change position in the soundtrack
             connect (
                     ui->songSlider, &QSlider::sliderPressed,
-                    this, &MainPage::pauseFromSLider
+                    this, &MainPage::PauseFromSLider
             ); // slider pause -> avoid sound interferences
             connect (
                     ui->songSlider, &QSlider::sliderReleased,
-                    this, &MainPage::playFromSLider
+                    this, &MainPage::PlayFromSLider
             ); // slider released -> continue playing
         } else {
             // Disconnect  Sound Signals for player and UI
@@ -50,11 +50,11 @@ void MainPage::ConnectionHandler(bool isConnect) {
             ); // slider moved -> change position in the soundtrack
             disconnect (
                     ui->songSlider, &QSlider::sliderPressed,
-                    this, &MainPage::pauseFromSLider
+                    this, &MainPage::PauseFromSLider
             ); // slider pause -> avoid sound interferences
             disconnect (
                     ui->songSlider, &QSlider::sliderReleased,
-                    this, &MainPage::playFromSLider
+                    this, &MainPage::PlayFromSLider
             ); // slider released -> continue playing
         }
 }
@@ -102,12 +102,13 @@ MainPage::MainPage(QWidget *parent) :
     player->setPlaylist(active_playlist);
     player->playlist()->setPlaybackMode(QMediaPlaylist::PlaybackMode::Loop);
 
+    // Initialise current working_dir with application folder
+    working_dir_path = QApplication::applicationDirPath() + "/saved-tracks/";
     // Refresh Page
     Q_EMIT ui->tabWidget->tabBarClicked(ui->tabWidget->currentIndex());
-    ui->exitAccountButton->click();
 
     // Setup Volume of sound and ui elements for this
-    const int& kSoundVolume = 10    ;
+    const int& kSoundVolume = 10;
     ui->verticalSlider->setSliderPosition(kSoundVolume);
     player->setVolume(kSoundVolume);
 
@@ -116,6 +117,8 @@ MainPage::MainPage(QWidget *parent) :
 
     // Set Account Label
     ui->accountLabel->setText("Account is not selected");
+    ui->standardDirLabel->setText(".../saved-tracks/");
+    ui->standardDirLabel->setStyleSheet("QLabel { color : orange; }");
 }
 
 MainPage::~MainPage()
@@ -129,208 +132,9 @@ MainPage::~MainPage()
     delete player;
 }
 
-void MainPage::on_exitAccountButton_clicked() {
-    if (account != nullptr) {
-        EnsureMessageBox* ensure = new EnsureMessageBox;
-        ensure->setModal(true);
-        ensure->exec();
-
-        if (ensure->getIsNeedToExist()) {
-            DeleteLayout(ui->likesVLayout);
-            ui->accountLabel->setText("Account is not selected");
-            ui->accountLabel->setStyleSheet("QLabel { color : red; }");
-            delete account;
-            account = nullptr;
-        }
-        delete ensure;
-    }
-}
-
-void MainPage::on_addFromDeviceButton_clicked() {
-    QFileDialog dirWindow(this);
-    dirWindow.setWindowTitle("Select Music File");
-    dirWindow.setFileMode(QFileDialog::ExistingFile);
-    dirWindow.setNameFilter("Audio files (*.mp3 *.wav)");
-    dirWindow.setDirectory(QApplication::applicationDirPath());
-
-    if (dirWindow.exec()) {
-        QStringList selectedFiles = dirWindow.selectedFiles();
-
-        // Copying Files if they not in ..../Audioplayer/*
-        for (const auto& file_path : selectedFiles) {
-            QString file_name = GetFileNameFromPath(file_path);
-            QFile::copy(file_path, working_dir_path + file_name);
-        }
-
-        const int kLikesPage = 0;
-        if (ui->tabWidget->currentIndex() == kLikesPage) {
-            CommunicateWithServer server;
-            server.UploadFiles(selectedFiles, account->getUsername());
-        }
-
-        Q_EMIT ui->tabWidget->tabBarClicked(ui->tabWidget->currentIndex());
-    }
-}
-
-void MainPage::on_tabWidget_tabBarClicked(int index) {
-    const int kRefreshLikes = 0, kRefreshDownload = 1;
-
-    // Delete old layouts.
-    DeleteLayout(ui->downVLayout);
-    DeleteLayout(ui->likesVLayout);
-
-    tracks_list.clear();
-    downloadedFiles.clear();
-    mButtonToLayoutMap.clear();
-    received_playlist->clear();
-
-    if (kRefreshDownload == index) {
-        // Get all files with file extension = {.mp3, .wav}
-        // from current folder to QHas mButtonToLayoutMap
-        QDir working_directory(working_dir_path);
-        working_directory.setFilter(QDir::Files | QDir::NoSymLinks);
-        working_directory.setNameFilters(QStringList{"*.mp3", "*.wav"});
-
-        tracks_list = std::move(working_directory.entryList());
-
-
-        //player->setPlaylist(received_playlist);
-        // Go from behind -> i want to add
-        for (int track_index = 0; track_index < (int)tracks_list.size(); ++track_index) {
-            QString file_name = tracks_list[track_index];
-            downloadedFiles[file_name] = {working_dir_path + file_name, track_index};
-            AddTrackToTab(ui->downVLayout, file_name, true);
-            received_playlist->addMedia(QUrl::fromLocalFile(working_dir_path + file_name));
-        }
-    } else {
-        bool isLogged = StartLoginProccess(this, account);
-        if (isLogged) {
-            ui->accountLabel->setText("Account: " + account->getUsername());
-            ui->accountLabel->setStyleSheet("QLabel { color : green; }");
-            CommunicateWithServer server;
-            QStringList getted_tracks = server.GetUserLikedTracks(account->getUsername());
-
-            for (const auto& file_name : getted_tracks) {
-                AddTrackToTab(ui->likesVLayout, file_name, false);
-                tracks_list.append(file_name);
-            }
-        } else {
-            account = nullptr;
-        }
-    }
-
-    ui->lastUpdateTimeLabel->setText(GetCurrentTime()); // set last update time
-}
-
-void MainPage::on_pauseButton_clicked()
-{
-    const int kNeededPosOfLayout = 1;
-    auto current_tab = qobject_cast<QWidget*>(ui->tabWidget->currentWidget());
-    auto current_tab_layouts = current_tab->findChildren<QVBoxLayout*>();
-    auto current_tab_layout = current_tab_layouts.at(kNeededPosOfLayout);
-
-    if (current_tab_layout== nullptr) {
-        QMessageBox::critical(this, "FFF", "SegFault");
-        return;
-    }
-
-    if (player->state() == QMediaPlayer::StoppedState) {
-        const int kMinCount = 1;    // 1 -> because downVLayout by default have spacer
-        const int kMinItemPos =                                                     0;  // 0 -> because i want to play track from top of the list
-        if (current_tab_layout->count() > kMinCount) {
-            qobject_cast<QPushButton*>(current_tab_layout->itemAt(kMinItemPos)->
-                                       layout()->itemAt(kMinItemPos)->widget()
-            )->click(); // activate button
-            ui->pauseButton->setStyleSheet(style_sheet_parametr.arg("pause_song.png"));
-        }
-    } else {
-        MainPage::ChangeState();
-    }
-}
-
-void MainPage::on_nextButton_clicked()
-{
-    // In my layout view i have reversed view of track list
-    // Therefore i need to swap buttons =>  next = prev; prev = next
-    const int kCurrentPosInPlaylist = player->playlist()->currentIndex();
-    int kNextPos = player->playlist()->previousIndex(); // swapped
-
-    // Check if i need to shuffle tracks
-    if (player->playlist()->playbackMode() == QMediaPlaylist::Random) {
-        srand(time(0));
-        const int totalMediaCount = (player->playlist()->mediaCount());
-        do {
-            kNextPos = rand() % totalMediaCount;
-        } while (kNextPos == kCurrentPosInPlaylist && totalMediaCount > 1);
-    }
-    player->playlist()->setCurrentIndex(kNextPos);
-}
-
-void MainPage::on_prevButton_clicked()
-{
-    // In my layout view i have reversed view of track list
-    // Therefore i need to swap buttons =>  next = prev; prev = next
-    const int kCurrentPosInPlaylist = player->playlist()->currentIndex();
-    int kNextPos = player->playlist()->nextIndex(); // swapped
-
-    if (player->playlist()->playbackMode() == QMediaPlaylist::Random) {
-        srand(time(0));
-        const int totalMediaCount = (player->playlist()->mediaCount());
-        do {
-            kNextPos = rand() % totalMediaCount;
-        } while (kNextPos == kCurrentPosInPlaylist && totalMediaCount > 1);
-    }
-    player->playlist()->setCurrentIndex(kNextPos);
-}
-
-void MainPage::on_shuffleButton_clicked()
-{
-    if (player->playlist()->playbackMode() != QMediaPlaylist::PlaybackMode::Random) {
-        if (player->playlist()->playbackMode() == QMediaPlaylist::PlaybackMode::CurrentItemInLoop) {
-            ui->repeatButton->click();
-        }
-        ui->shuffleButton->setStyleSheet(style_sheet_parametr.arg("shuffle_on_song.png"));
-        player->playlist()->setPlaybackMode(QMediaPlaylist::PlaybackMode::Random);
-    } else {
-        ui->shuffleButton->setStyleSheet(style_sheet_parametr.arg("shuffle_song.png"));
-        player->playlist()->setPlaybackMode(QMediaPlaylist::PlaybackMode::Loop);
-    }
-}
-
-void MainPage::on_repeatButton_clicked()
-{
-    if (player->playlist()->playbackMode() != QMediaPlaylist::PlaybackMode::CurrentItemInLoop) {
-        if (player->playlist()->playbackMode() == QMediaPlaylist::PlaybackMode::Random) {
-            ui->shuffleButton->click();
-        }
-        player->playlist()->setPlaybackMode(QMediaPlaylist::PlaybackMode::CurrentItemInLoop);
-        ui->repeatButton->setStyleSheet(style_sheet_parametr.arg("repeat_on_song.png"));
-    } else {
-        player->playlist()->setPlaybackMode(QMediaPlaylist::PlaybackMode::Loop);
-        ui->repeatButton->setStyleSheet(style_sheet_parametr.arg("repeat_song.png"));
-    }
-}
-
-void MainPage::on_changeDirButton_clicked() {
-    QFileDialog dirWindow(this);
-    dirWindow.setWindowTitle("Select Folder To Save Files");
-    dirWindow.setFileMode(QFileDialog::Directory);
-
-    if (dirWindow.exec()) {
-        QStringList selectedDirectories = dirWindow.selectedFiles();
-        working_dir_path = selectedDirectories[0] + "/";
-        Q_EMIT ui->tabWidget->tabBarClicked(ui->tabWidget->currentIndex());
-    }
-}
-
-void MainPage::on_verticalSlider_sliderMoved(int position) {
-    player->setVolume(ui->verticalSlider->sliderPosition());
-}
-
-
 QHBoxLayout* MainPage::CreateSongLayout(QWidget*& parent_widget,
                                         const QString& file_name,
-                                        bool isDownloaded = false)
+                                        bool isDownload = false)
 {
     QHBoxLayout* song_layout = new QHBoxLayout(parent_widget);
     QPushButton* play_button = new QPushButton("", parent_widget);
@@ -344,13 +148,24 @@ QHBoxLayout* MainPage::CreateSongLayout(QWidget*& parent_widget,
 
     QCheckBox* checkBoxDownloaded = new QCheckBox("download", parent_widget);
     checkBoxDownloaded->setChecked(Qt::CheckState(downloadedFiles.contains(file_name)));
-    checkBoxDownloaded->setEnabled(Qt::CheckState(!isDownloaded));
+    checkBoxDownloaded->setEnabled(Qt::CheckState(!isDownload));
 
     song_layout->addWidget(checkBoxDownloaded);
     QObject::connect(play_button, &QPushButton::clicked,
-                     this, (isDownloaded ? &MainPage::PlaySong :
+                     this, (isDownload ? &MainPage::PlaySong :
                                            &MainPage::PlayLikedSong)
     );
+
+    if (!isDownload) {
+        QObject::connect(checkBoxDownloaded, &QCheckBox::clicked,
+                         this, &MainPage::CheckBoxClicked
+        );
+        mButtonToLayoutMap.insert(checkBoxDownloaded, song_layout);
+        QFile source_file(working_dir_path + file_name);
+        if (source_file.exists()) {
+            checkBoxDownloaded->click();
+        }
+    }
 
     mButtonToLayoutMap.insert(play_button, song_layout);
 
@@ -439,16 +254,29 @@ void MainPage::PlayLikedSong()
                 song_layout->itemAt(kFileNamePos)->widget()
     )->text();
 
-    player->stop();
-
-    if (received_playlist->isEmpty()) {
+    QString file_path;
+    try {
         CommunicateWithServer server;
-        QString file_path = server.GetFilePathFromServer(file_name);
-        bool isAdded = received_playlist->addMedia(QUrl::fromLocalFile(file_path));
-        if (!isAdded) {
-            QMessageBox::critical(this, "f", "f");
-            return;
-        }
+        file_path = server.GetFilePathFromServer(file_name);
+    }  catch(std::runtime_error e) {
+        QMessageBox::critical(this, "Server Problem", e.what());
+        return;
+    }
+
+    player->stop();
+    tracks_list.clear();
+    received_playlist->clear();
+
+    const int kCheckBoxPos = 4;
+    qobject_cast<QCheckBox*>(
+            song_layout->itemAt(kCheckBoxPos)->widget()
+    )->click();
+
+    tracks_list.append(file_name);
+    bool isAdded = received_playlist->addMedia(QUrl::fromLocalFile(file_path));
+    if (!isAdded) {
+        QMessageBox::critical(this, "f", "f");
+        return;
     }
 
     if (!received_playlist->isEmpty()) {
@@ -501,11 +329,30 @@ void MainPage::SliderPositionMoved() {
     player->setPosition(ui->songSlider->sliderPosition());
 }
 
-void MainPage::pauseFromSLider() {
+void MainPage::PauseFromSLider() {
     MainPage::ChangeState(SetPlayerState::ForcePause);
 }
 
-void MainPage::playFromSLider() {
+void MainPage::PlayFromSLider() {
     MainPage::ChangeState(SetPlayerState::ForcePlay);
 }
 
+void MainPage::CheckBoxClicked() {
+    QCheckBox* clicked_check_box = qobject_cast<QCheckBox*>(sender());
+    QHBoxLayout* song_layout = mButtonToLayoutMap.value(clicked_check_box);
+
+    const int kFileNamePos = 2;
+    QString file_name = qobject_cast<QLabel*>(
+                song_layout->itemAt(kFileNamePos)->widget()
+    )->text();
+    try {
+        CommunicateWithServer server;
+        server.GetFilePathFromServer(file_name, working_dir_path);
+    }  catch(std::runtime_error e) {
+        QMessageBox::critical(this, "Server Problem", e.what());
+        return;
+    }
+
+    clicked_check_box->setChecked(true);
+    clicked_check_box->setEnabled(false); // cancel redownload
+}

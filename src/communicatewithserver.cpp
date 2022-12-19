@@ -17,10 +17,26 @@ QString GetFileNameFromPath(const QString& path) {
     return resultFileName;
 }
 
+template <class T>
+void RemoveAllSpaceSymbols(T& file_name) {
+    auto check_symbol = [&](char symbol) {
+        return (symbol >= 'a' && symbol <= 'z' ||
+                symbol >= 'A' && symbol <= 'Z' ||
+                symbol >= '0' && symbol <= '9' ||
+                symbol == '!');
+    };
+
+    for (auto& symbol : file_name) {
+        if (!check_symbol(symbol)) {
+            symbol = '#';
+        }
+    }
+}
+
 CommunicateWithServer::CommunicateWithServer() {
     socket = new QTcpSocket(this);
 
-    working_dir_path = QApplication::applicationDirPath() + "/serv_part_files/";
+    working_dir_path = QApplication::applicationDirPath() + "/saved-tracks/";
     // if something in the stream of socket -> this how socket will react
     connect(socket, SIGNAL(readyRead()), this, SLOT(sockReady()));
 
@@ -110,7 +126,11 @@ QStringList CommunicateWithServer::GetUserLikedTracks(const QString& username) {
     return response_list;
 }
 
-QString CommunicateWithServer::GetFilePathFromServer(const QString & file_name) {
+QString CommunicateWithServer::GetFilePathFromServer(const QString & file_name, const QString& dir_path) {
+    if (!dir_path.isEmpty()) {
+        working_dir_path = dir_path;
+    }
+
     const auto& file_path = working_dir_path + file_name;
     QFile source_file(file_path);
 
@@ -133,6 +153,7 @@ bool CommunicateWithServer::UploadFiles(const QStringList& file_pathes, QString 
         QFile file(file_path);
         if (file.open(QIODevice::ReadOnly)) {
             std::string file_name = GetFileNameFromPath(file_path).toStdString();
+            RemoveAllSpaceSymbols(file_name);
             QByteArray information_to_write = (flag + ' ' + std_account_name + ' ' + file_name + ' ').c_str();
             information_to_write.append(file.readAll());
 

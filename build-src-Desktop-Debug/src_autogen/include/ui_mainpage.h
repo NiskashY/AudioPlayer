@@ -40,6 +40,9 @@ public:
     QSpacerItem *verticalSpacer;
     QLabel *accountLabel;
     QSpacerItem *verticalSpacer_3;
+    QHBoxLayout *horizontalLayout_2;
+    QLabel *dirLabel;
+    QLabel *standardDirLabel;
     QPushButton *changeDirButton;
     QHBoxLayout *SearchLayout;
     QPushButton *addFromDeviceButton;
@@ -146,6 +149,26 @@ public:
 
         SideMenuLayout->addItem(verticalSpacer_3);
 
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        dirLabel = new QLabel(centralwidget);
+        dirLabel->setObjectName(QString::fromUtf8("dirLabel"));
+        QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Minimum);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(dirLabel->sizePolicy().hasHeightForWidth());
+        dirLabel->setSizePolicy(sizePolicy1);
+
+        horizontalLayout_2->addWidget(dirLabel);
+
+        standardDirLabel = new QLabel(centralwidget);
+        standardDirLabel->setObjectName(QString::fromUtf8("standardDirLabel"));
+
+        horizontalLayout_2->addWidget(standardDirLabel);
+
+
+        SideMenuLayout->addLayout(horizontalLayout_2);
+
         changeDirButton = new QPushButton(centralwidget);
         changeDirButton->setObjectName(QString::fromUtf8("changeDirButton"));
 
@@ -156,11 +179,11 @@ public:
         SearchLayout->setSizeConstraint(QLayout::SetDefaultConstraint);
         addFromDeviceButton = new QPushButton(centralwidget);
         addFromDeviceButton->setObjectName(QString::fromUtf8("addFromDeviceButton"));
-        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Preferred);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(addFromDeviceButton->sizePolicy().hasHeightForWidth());
-        addFromDeviceButton->setSizePolicy(sizePolicy1);
+        QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(addFromDeviceButton->sizePolicy().hasHeightForWidth());
+        addFromDeviceButton->setSizePolicy(sizePolicy2);
 
         SearchLayout->addWidget(addFromDeviceButton);
 
@@ -302,11 +325,11 @@ public:
 
         currentTimeLabel = new QLabel(centralwidget);
         currentTimeLabel->setObjectName(QString::fromUtf8("currentTimeLabel"));
-        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(currentTimeLabel->sizePolicy().hasHeightForWidth());
-        currentTimeLabel->setSizePolicy(sizePolicy2);
+        QSizePolicy sizePolicy3(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(currentTimeLabel->sizePolicy().hasHeightForWidth());
+        currentTimeLabel->setSizePolicy(sizePolicy3);
 
         SliderLayout_3->addWidget(currentTimeLabel);
 
@@ -318,8 +341,8 @@ public:
 
         totalTimeLabel = new QLabel(centralwidget);
         totalTimeLabel->setObjectName(QString::fromUtf8("totalTimeLabel"));
-        sizePolicy2.setHeightForWidth(totalTimeLabel->sizePolicy().hasHeightForWidth());
-        totalTimeLabel->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(totalTimeLabel->sizePolicy().hasHeightForWidth());
+        totalTimeLabel->setSizePolicy(sizePolicy3);
 
         SliderLayout_3->addWidget(totalTimeLabel);
 
@@ -343,37 +366,37 @@ public:
 
         shuffleButton = new QPushButton(centralwidget);
         shuffleButton->setObjectName(QString::fromUtf8("shuffleButton"));
-        sizePolicy2.setHeightForWidth(shuffleButton->sizePolicy().hasHeightForWidth());
-        shuffleButton->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(shuffleButton->sizePolicy().hasHeightForWidth());
+        shuffleButton->setSizePolicy(sizePolicy3);
 
         TrackControllLayout->addWidget(shuffleButton);
 
         prevButton = new QPushButton(centralwidget);
         prevButton->setObjectName(QString::fromUtf8("prevButton"));
-        sizePolicy2.setHeightForWidth(prevButton->sizePolicy().hasHeightForWidth());
-        prevButton->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(prevButton->sizePolicy().hasHeightForWidth());
+        prevButton->setSizePolicy(sizePolicy3);
 
         TrackControllLayout->addWidget(prevButton);
 
         pauseButton = new QPushButton(centralwidget);
         pauseButton->setObjectName(QString::fromUtf8("pauseButton"));
-        sizePolicy2.setHeightForWidth(pauseButton->sizePolicy().hasHeightForWidth());
-        pauseButton->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(pauseButton->sizePolicy().hasHeightForWidth());
+        pauseButton->setSizePolicy(sizePolicy3);
         pauseButton->setIconSize(QSize(5, 5));
 
         TrackControllLayout->addWidget(pauseButton);
 
         nextButton = new QPushButton(centralwidget);
         nextButton->setObjectName(QString::fromUtf8("nextButton"));
-        sizePolicy2.setHeightForWidth(nextButton->sizePolicy().hasHeightForWidth());
-        nextButton->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(nextButton->sizePolicy().hasHeightForWidth());
+        nextButton->setSizePolicy(sizePolicy3);
 
         TrackControllLayout->addWidget(nextButton);
 
         repeatButton = new QPushButton(centralwidget);
         repeatButton->setObjectName(QString::fromUtf8("repeatButton"));
-        sizePolicy2.setHeightForWidth(repeatButton->sizePolicy().hasHeightForWidth());
-        repeatButton->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(repeatButton->sizePolicy().hasHeightForWidth());
+        repeatButton->setSizePolicy(sizePolicy3);
 
         TrackControllLayout->addWidget(repeatButton);
 
@@ -424,6 +447,8 @@ public:
         timeInfoLabel->setText(QCoreApplication::translate("MainPage", "Last Update Time:", nullptr));
         lastUpdateTimeLabel->setText(QString());
         accountLabel->setText(QString());
+        dirLabel->setText(QCoreApplication::translate("MainPage", "Directory:", nullptr));
+        standardDirLabel->setText(QString());
         changeDirButton->setText(QCoreApplication::translate("MainPage", "Change Standard Dir", nullptr));
         addFromDeviceButton->setText(QCoreApplication::translate("MainPage", " Add From Device ", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(likedTracks), QCoreApplication::translate("MainPage", "Tab 1", nullptr));

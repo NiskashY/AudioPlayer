@@ -233,6 +233,11 @@
 		[ "/home/mint/GitRepos/AudioPlayer/src/loginwindow.cpp", "MU", null ],
 		[ "/home/mint/GitRepos/AudioPlayer/src/main.cpp", "MU", null ],
 		[ "/home/mint/GitRepos/AudioPlayer/src/mainpage.cpp", "MU", null ],
+		[
+			"/home/mint/GitRepos/AudioPlayer/src/mainpage_buttons.cpp",
+			"MU",
+			null
+		],
 		[ "/home/mint/GitRepos/AudioPlayer/src/signupwindow.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],

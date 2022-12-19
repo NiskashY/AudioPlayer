@@ -30,6 +30,7 @@ set(PROJECT_SOURCES
         mainpage.h
         mainpage.cpp
         mainpage.ui
+        mainpage_buttons.cpp
 
         # Account files
         account.h
