@@ -1,6 +1,7 @@
 #pragma once
 
 // Qt modules
+#include <QMessageBox>
 #include <QApplication>
 #include <QFile>
 #include <QTcpSocket>
@@ -32,7 +33,7 @@ public slots:
     QStringList GetUserLikedTracks(const QString&);
     QString GetFilePathFromServer(const QString&);  // if file with this name does not exist in working_dir -> return new file name
                                        // else return old file name
-
+    bool UploadFiles(const QStringList&, QString);
 private: // Private Functions
     bool isPasswordContainWrongSymbols(const QString&);
 
@@ -53,3 +54,5 @@ QJsonArray CovertToJsonFormat(const QString& data);
 char* GetCurrentTime();
 
 QString TimeConvertFromMiliseconds(qint64);
+
+QString GetFileNameFromPath(const QString&);

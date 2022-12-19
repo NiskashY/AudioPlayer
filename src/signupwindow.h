@@ -24,8 +24,6 @@ private slots:
 
 private: // Private variables;
     Ui::SignUpWindow *ui;
-    const QString wrongSymbols = "*/\\.-+,@#№$%^&";
-    const int kMinPasswordSize = 8;
 };
 
 #endif // SIGNUPWINDOW_H

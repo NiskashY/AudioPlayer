@@ -6,6 +6,17 @@ QJsonArray CovertToJsonFormat(const QString& data) {   // return ARRAY!
     return jResponseArray;
 }
 
+QString GetFileNameFromPath(const QString& path) {
+    QString resultFileName;
+
+    for (int i = (int)path.size() - 1; i >= 0 && path[i] != '/'; --i) {
+        resultFileName += path[i];
+    }
+
+    std::reverse(resultFileName.begin(), resultFileName.end());
+    return resultFileName;
+}
+
 CommunicateWithServer::CommunicateWithServer() {
     socket = new QTcpSocket(this);
 
@@ -29,7 +40,7 @@ void CommunicateWithServer::sockReady() {
     data.clear();
     while (socket->bytesAvailable()) {
         data.append(socket->readAll());
-        socket->waitForReadyRead(300);
+        socket->waitForReadyRead(100);
     }
 }
 
@@ -60,6 +71,7 @@ QPair<bool, Existance> CommunicateWithServer::CheckAccount(const QString& userna
     }
 }
 
+// TODO:
 bool CommunicateWithServer::isPasswordContainWrongSymbols(const QString& password) {
     for (const auto& symbol : password) {
         if (wrongSymbols.contains(symbol)) {
@@ -86,7 +98,7 @@ QStringList CommunicateWithServer::GetUserLikedTracks(const QString& username) {
     ).arg(sql_field_song_title, username).toStdString();
 
     socket->write(sql_query.c_str());
-    socket->waitForReadyRead(100);
+    socket->waitForReadyRead(500);
     QStringList response_list;
     QJsonArray received_array = CovertToJsonFormat(QString(data));
 
@@ -114,7 +126,26 @@ QString CommunicateWithServer::GetFilePathFromServer(const QString & file_name) 
     return file_path;
 }
 
+bool CommunicateWithServer::UploadFiles(const QStringList& file_pathes, QString account_name) {
+    std::string flag = "UPLOAD:";
+    std::string std_account_name = account_name.toStdString();
+    for (auto& file_path : file_pathes) {
+        QFile file(file_path);
+        if (file.open(QIODevice::ReadOnly)) {
+            std::string file_name = GetFileNameFromPath(file_path).toStdString();
+            QByteArray information_to_write = (flag + ' ' + std_account_name + ' ' + file_name + ' ').c_str();
+            information_to_write.append(file.readAll());
 
+            qint64 current_progress = 0;
+            while (current_progress < information_to_write.size()) {
+                current_progress += socket->write(information_to_write);
+            }
+        }
+    }
+    socket->waitForReadyRead(1000);
+
+    return false;
+}
 
 char* GetCurrentTime() {
     auto current_seconds = std::chrono::system_clock::now();
