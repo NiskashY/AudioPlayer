@@ -62,12 +62,15 @@ private slots:
     void PauseFromSLider();
     void PlayFromSLider();
     void CheckBoxClicked();
-
 private:
-    void AddTrackToTab(QVBoxLayout*const, const QString&, bool);
+    void ChangeTitleColor(QString color);
+    void AddLayoutToTab(QVBoxLayout*const, const QString&, bool); // for filled pages
+    void AddLayoutToTab(QVBoxLayout*const); // for empty pages
     QHBoxLayout* CreateSongLayout(QWidget*& parent_widget,
                                   const QString& file_name,
                                   bool isDownloaded);
+    QHBoxLayout* CreateEmptyPage(QWidget*& parent_widget);
+
     void ChangeState(SetPlayerState player_state = SetPlayerState::Default);
     void ConnectionHandler(bool);
 
@@ -83,5 +86,7 @@ private:
     QMap<QString, std::pair<QString, int>> downloadedFiles; // first -> file_name, second -> file_path
     QHash<QAbstractButton*, QHBoxLayout*> mButtonToLayoutMap;
     QStringList tracks_list, final_tracks_list;
+
+    int prev_index = -1;
 };
 

@@ -15,6 +15,7 @@ void MainPage::on_exitAccountButton_clicked() {
             account = nullptr;
         }
         delete ensure;
+        AddLayoutToTab(ui->likesVLayout);
     }
 }
 
@@ -60,6 +61,7 @@ void MainPage::on_tabWidget_tabBarClicked(int index) {
     downloadedFiles.clear();
     mButtonToLayoutMap.clear();
     received_playlist->clear();
+    prev_index = -1;
 
     if (kRefreshDownload == index) {
         // Get all files with file extension = {.mp3, .wav}
@@ -69,15 +71,16 @@ void MainPage::on_tabWidget_tabBarClicked(int index) {
         working_directory.setNameFilters(QStringList{"*.mp3", "*.wav"});
 
         tracks_list = std::move(working_directory.entryList());
-
-
-        //player->setPlaylist(received_playlist);
-        // Go from behind -> i want to add
-        for (int track_index = 0; track_index < (int)tracks_list.size(); ++track_index) {
-            QString file_name = tracks_list[track_index];
-            downloadedFiles[file_name] = {working_dir_path + file_name, track_index};
-            AddTrackToTab(ui->downVLayout, file_name, true);
-            received_playlist->addMedia(QUrl::fromLocalFile(working_dir_path + file_name));
+        if (tracks_list.isEmpty()) {
+            AddLayoutToTab(ui->downVLayout);
+        } else {
+            // Go from behind -> i want to add
+            for (int track_index = 0; track_index < (int)tracks_list.size(); ++track_index) {
+                QString file_name = tracks_list[track_index];
+                downloadedFiles[file_name] = {working_dir_path + file_name, track_index};
+                AddLayoutToTab(ui->downVLayout, file_name, true);
+                received_playlist->addMedia(QUrl::fromLocalFile(working_dir_path + file_name));
+            }
         }
     } else {
         bool isLogged = StartLoginProccess(this, account);
@@ -92,12 +95,17 @@ void MainPage::on_tabWidget_tabBarClicked(int index) {
                 QMessageBox::critical(this, "Server Problem", e.what());
             }
 
-            for (const auto& file_name : getted_tracks) {
-                AddTrackToTab(ui->likesVLayout, file_name, false);
-                tracks_list.append(file_name);
+            if (getted_tracks.isEmpty()) {
+                AddLayoutToTab(ui->likesVLayout);   // create 'empty notifer' page
+            } else {
+                for (const auto& file_name : getted_tracks) {
+                    AddLayoutToTab(ui->likesVLayout, file_name, false);
+                    tracks_list.append(file_name);
+                }
             }
         } else {
             account = nullptr;
+            AddLayoutToTab(ui->likesVLayout);
         }
     }
 
@@ -113,8 +121,8 @@ void MainPage::on_pauseButton_clicked()
 
     if (player->state() == QMediaPlayer::StoppedState) {
         const int kMinCount = 1;    // 1 -> because downVLayout by default have spacer
-        const int kMinItemPos =                                                     0;  // 0 -> because i want to play track from top of the list
-        if (current_tab_layout->count() > kMinCount) {
+        const int kMinItemPos = 0;  // 0 -> because i want to play track from top of the list
+        if (!tracks_list.isEmpty()) {
             qobject_cast<QPushButton*>(current_tab_layout->itemAt(kMinItemPos)->
                                        layout()->itemAt(kMinItemPos)->widget()
             )->click(); // activate button
