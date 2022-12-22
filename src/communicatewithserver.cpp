@@ -20,10 +20,11 @@ QString GetFileNameFromPath(const QString& path) {
 template <class T>
 void RemoveAllSpaceSymbols(T& file_name) {
     auto check_symbol = [&](char symbol) {
+        const QString special_symbols = "!.-_";
         return (symbol >= 'a' && symbol <= 'z' ||
                 symbol >= 'A' && symbol <= 'Z' ||
                 symbol >= '0' && symbol <= '9' ||
-                symbol == '!' || symbol == '.');
+                special_symbols.contains(symbol) );
     };
 
     for (auto& symbol : file_name) {
