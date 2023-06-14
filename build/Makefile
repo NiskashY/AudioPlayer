@@ -162,37 +162,85 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named src
+# Target rules for targets named LwSound
 
 # Build rule for target.
-src: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src
-.PHONY : src
+LwSound: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LwSound
+.PHONY : LwSound
 
 # fast build rule for target.
-src/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/build
-.PHONY : src/fast
+LwSound/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/build
+.PHONY : LwSound/fast
 
 #=============================================================================
-# Target rules for targets named src_autogen
+# Target rules for targets named LwSound_autogen
 
 # Build rule for target.
-src_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src_autogen
-.PHONY : src_autogen
+LwSound_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LwSound_autogen
+.PHONY : LwSound_autogen
 
 # fast build rule for target.
-src_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src_autogen.dir/build.make CMakeFiles/src_autogen.dir/build
-.PHONY : src_autogen/fast
+LwSound_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound_autogen.dir/build.make CMakeFiles/LwSound_autogen.dir/build
+.PHONY : LwSound_autogen/fast
+
+LwSound_autogen/4UGIYD6VGQ/qrc_resourses.o: LwSound_autogen/4UGIYD6VGQ/qrc_resourses.cpp.o
+.PHONY : LwSound_autogen/4UGIYD6VGQ/qrc_resourses.o
+
+# target to build an object file
+LwSound_autogen/4UGIYD6VGQ/qrc_resourses.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/LwSound_autogen/4UGIYD6VGQ/qrc_resourses.cpp.o
+.PHONY : LwSound_autogen/4UGIYD6VGQ/qrc_resourses.cpp.o
+
+LwSound_autogen/4UGIYD6VGQ/qrc_resourses.i: LwSound_autogen/4UGIYD6VGQ/qrc_resourses.cpp.i
+.PHONY : LwSound_autogen/4UGIYD6VGQ/qrc_resourses.i
+
+# target to preprocess a source file
+LwSound_autogen/4UGIYD6VGQ/qrc_resourses.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/LwSound_autogen/4UGIYD6VGQ/qrc_resourses.cpp.i
+.PHONY : LwSound_autogen/4UGIYD6VGQ/qrc_resourses.cpp.i
+
+LwSound_autogen/4UGIYD6VGQ/qrc_resourses.s: LwSound_autogen/4UGIYD6VGQ/qrc_resourses.cpp.s
+.PHONY : LwSound_autogen/4UGIYD6VGQ/qrc_resourses.s
+
+# target to generate assembly for a file
+LwSound_autogen/4UGIYD6VGQ/qrc_resourses.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/LwSound_autogen/4UGIYD6VGQ/qrc_resourses.cpp.s
+.PHONY : LwSound_autogen/4UGIYD6VGQ/qrc_resourses.cpp.s
+
+LwSound_autogen/mocs_compilation.o: LwSound_autogen/mocs_compilation.cpp.o
+.PHONY : LwSound_autogen/mocs_compilation.o
+
+# target to build an object file
+LwSound_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/LwSound_autogen/mocs_compilation.cpp.o
+.PHONY : LwSound_autogen/mocs_compilation.cpp.o
+
+LwSound_autogen/mocs_compilation.i: LwSound_autogen/mocs_compilation.cpp.i
+.PHONY : LwSound_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+LwSound_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/LwSound_autogen/mocs_compilation.cpp.i
+.PHONY : LwSound_autogen/mocs_compilation.cpp.i
+
+LwSound_autogen/mocs_compilation.s: LwSound_autogen/mocs_compilation.cpp.s
+.PHONY : LwSound_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+LwSound_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/LwSound_autogen/mocs_compilation.cpp.s
+.PHONY : LwSound_autogen/mocs_compilation.cpp.s
 
 src/account.o: src/account.cpp.o
 .PHONY : src/account.o
 
 # target to build an object file
 src/account.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/account.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/account.cpp.o
 .PHONY : src/account.cpp.o
 
 src/account.i: src/account.cpp.i
@@ -200,7 +248,7 @@ src/account.i: src/account.cpp.i
 
 # target to preprocess a source file
 src/account.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/account.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/account.cpp.i
 .PHONY : src/account.cpp.i
 
 src/account.s: src/account.cpp.s
@@ -208,7 +256,7 @@ src/account.s: src/account.cpp.s
 
 # target to generate assembly for a file
 src/account.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/account.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/account.cpp.s
 .PHONY : src/account.cpp.s
 
 src/checker/checker.o: src/checker/checker.cpp.o
@@ -216,7 +264,7 @@ src/checker/checker.o: src/checker/checker.cpp.o
 
 # target to build an object file
 src/checker/checker.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/checker/checker.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/checker/checker.cpp.o
 .PHONY : src/checker/checker.cpp.o
 
 src/checker/checker.i: src/checker/checker.cpp.i
@@ -224,7 +272,7 @@ src/checker/checker.i: src/checker/checker.cpp.i
 
 # target to preprocess a source file
 src/checker/checker.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/checker/checker.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/checker/checker.cpp.i
 .PHONY : src/checker/checker.cpp.i
 
 src/checker/checker.s: src/checker/checker.cpp.s
@@ -232,7 +280,7 @@ src/checker/checker.s: src/checker/checker.cpp.s
 
 # target to generate assembly for a file
 src/checker/checker.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/checker/checker.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/checker/checker.cpp.s
 .PHONY : src/checker/checker.cpp.s
 
 src/checker/ensuremessagebox.o: src/checker/ensuremessagebox.cpp.o
@@ -240,7 +288,7 @@ src/checker/ensuremessagebox.o: src/checker/ensuremessagebox.cpp.o
 
 # target to build an object file
 src/checker/ensuremessagebox.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/checker/ensuremessagebox.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/checker/ensuremessagebox.cpp.o
 .PHONY : src/checker/ensuremessagebox.cpp.o
 
 src/checker/ensuremessagebox.i: src/checker/ensuremessagebox.cpp.i
@@ -248,7 +296,7 @@ src/checker/ensuremessagebox.i: src/checker/ensuremessagebox.cpp.i
 
 # target to preprocess a source file
 src/checker/ensuremessagebox.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/checker/ensuremessagebox.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/checker/ensuremessagebox.cpp.i
 .PHONY : src/checker/ensuremessagebox.cpp.i
 
 src/checker/ensuremessagebox.s: src/checker/ensuremessagebox.cpp.s
@@ -256,7 +304,7 @@ src/checker/ensuremessagebox.s: src/checker/ensuremessagebox.cpp.s
 
 # target to generate assembly for a file
 src/checker/ensuremessagebox.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/checker/ensuremessagebox.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/checker/ensuremessagebox.cpp.s
 .PHONY : src/checker/ensuremessagebox.cpp.s
 
 src/communicatewithserver.o: src/communicatewithserver.cpp.o
@@ -264,7 +312,7 @@ src/communicatewithserver.o: src/communicatewithserver.cpp.o
 
 # target to build an object file
 src/communicatewithserver.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/communicatewithserver.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/communicatewithserver.cpp.o
 .PHONY : src/communicatewithserver.cpp.o
 
 src/communicatewithserver.i: src/communicatewithserver.cpp.i
@@ -272,7 +320,7 @@ src/communicatewithserver.i: src/communicatewithserver.cpp.i
 
 # target to preprocess a source file
 src/communicatewithserver.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/communicatewithserver.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/communicatewithserver.cpp.i
 .PHONY : src/communicatewithserver.cpp.i
 
 src/communicatewithserver.s: src/communicatewithserver.cpp.s
@@ -280,7 +328,7 @@ src/communicatewithserver.s: src/communicatewithserver.cpp.s
 
 # target to generate assembly for a file
 src/communicatewithserver.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/communicatewithserver.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/communicatewithserver.cpp.s
 .PHONY : src/communicatewithserver.cpp.s
 
 src/layoutsdeleter.o: src/layoutsdeleter.cpp.o
@@ -288,7 +336,7 @@ src/layoutsdeleter.o: src/layoutsdeleter.cpp.o
 
 # target to build an object file
 src/layoutsdeleter.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/layoutsdeleter.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/layoutsdeleter.cpp.o
 .PHONY : src/layoutsdeleter.cpp.o
 
 src/layoutsdeleter.i: src/layoutsdeleter.cpp.i
@@ -296,7 +344,7 @@ src/layoutsdeleter.i: src/layoutsdeleter.cpp.i
 
 # target to preprocess a source file
 src/layoutsdeleter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/layoutsdeleter.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/layoutsdeleter.cpp.i
 .PHONY : src/layoutsdeleter.cpp.i
 
 src/layoutsdeleter.s: src/layoutsdeleter.cpp.s
@@ -304,39 +352,15 @@ src/layoutsdeleter.s: src/layoutsdeleter.cpp.s
 
 # target to generate assembly for a file
 src/layoutsdeleter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/layoutsdeleter.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/layoutsdeleter.cpp.s
 .PHONY : src/layoutsdeleter.cpp.s
-
-src/loginwindow.o: src/loginwindow.cpp.o
-.PHONY : src/loginwindow.o
-
-# target to build an object file
-src/loginwindow.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/loginwindow.cpp.o
-.PHONY : src/loginwindow.cpp.o
-
-src/loginwindow.i: src/loginwindow.cpp.i
-.PHONY : src/loginwindow.i
-
-# target to preprocess a source file
-src/loginwindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/loginwindow.cpp.i
-.PHONY : src/loginwindow.cpp.i
-
-src/loginwindow.s: src/loginwindow.cpp.s
-.PHONY : src/loginwindow.s
-
-# target to generate assembly for a file
-src/loginwindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/loginwindow.cpp.s
-.PHONY : src/loginwindow.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -344,7 +368,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -352,128 +376,104 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/mainpage.o: src/mainpage.cpp.o
-.PHONY : src/mainpage.o
+src/view/loginwindow.o: src/view/loginwindow.cpp.o
+.PHONY : src/view/loginwindow.o
 
 # target to build an object file
-src/mainpage.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/mainpage.cpp.o
-.PHONY : src/mainpage.cpp.o
+src/view/loginwindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/view/loginwindow.cpp.o
+.PHONY : src/view/loginwindow.cpp.o
 
-src/mainpage.i: src/mainpage.cpp.i
-.PHONY : src/mainpage.i
+src/view/loginwindow.i: src/view/loginwindow.cpp.i
+.PHONY : src/view/loginwindow.i
 
 # target to preprocess a source file
-src/mainpage.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/mainpage.cpp.i
-.PHONY : src/mainpage.cpp.i
+src/view/loginwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/view/loginwindow.cpp.i
+.PHONY : src/view/loginwindow.cpp.i
 
-src/mainpage.s: src/mainpage.cpp.s
-.PHONY : src/mainpage.s
+src/view/loginwindow.s: src/view/loginwindow.cpp.s
+.PHONY : src/view/loginwindow.s
 
 # target to generate assembly for a file
-src/mainpage.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/mainpage.cpp.s
-.PHONY : src/mainpage.cpp.s
+src/view/loginwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/view/loginwindow.cpp.s
+.PHONY : src/view/loginwindow.cpp.s
 
-src/mainpage_buttons.o: src/mainpage_buttons.cpp.o
-.PHONY : src/mainpage_buttons.o
+src/view/mainwindow.o: src/view/mainwindow.cpp.o
+.PHONY : src/view/mainwindow.o
 
 # target to build an object file
-src/mainpage_buttons.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/mainpage_buttons.cpp.o
-.PHONY : src/mainpage_buttons.cpp.o
+src/view/mainwindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/view/mainwindow.cpp.o
+.PHONY : src/view/mainwindow.cpp.o
 
-src/mainpage_buttons.i: src/mainpage_buttons.cpp.i
-.PHONY : src/mainpage_buttons.i
+src/view/mainwindow.i: src/view/mainwindow.cpp.i
+.PHONY : src/view/mainwindow.i
 
 # target to preprocess a source file
-src/mainpage_buttons.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/mainpage_buttons.cpp.i
-.PHONY : src/mainpage_buttons.cpp.i
+src/view/mainwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/view/mainwindow.cpp.i
+.PHONY : src/view/mainwindow.cpp.i
 
-src/mainpage_buttons.s: src/mainpage_buttons.cpp.s
-.PHONY : src/mainpage_buttons.s
+src/view/mainwindow.s: src/view/mainwindow.cpp.s
+.PHONY : src/view/mainwindow.s
 
 # target to generate assembly for a file
-src/mainpage_buttons.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/mainpage_buttons.cpp.s
-.PHONY : src/mainpage_buttons.cpp.s
+src/view/mainwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/view/mainwindow.cpp.s
+.PHONY : src/view/mainwindow.cpp.s
 
-src/signupwindow.o: src/signupwindow.cpp.o
-.PHONY : src/signupwindow.o
+src/view/mainwindow_buttons.o: src/view/mainwindow_buttons.cpp.o
+.PHONY : src/view/mainwindow_buttons.o
 
 # target to build an object file
-src/signupwindow.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/signupwindow.cpp.o
-.PHONY : src/signupwindow.cpp.o
+src/view/mainwindow_buttons.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/view/mainwindow_buttons.cpp.o
+.PHONY : src/view/mainwindow_buttons.cpp.o
 
-src/signupwindow.i: src/signupwindow.cpp.i
-.PHONY : src/signupwindow.i
+src/view/mainwindow_buttons.i: src/view/mainwindow_buttons.cpp.i
+.PHONY : src/view/mainwindow_buttons.i
 
 # target to preprocess a source file
-src/signupwindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/signupwindow.cpp.i
-.PHONY : src/signupwindow.cpp.i
+src/view/mainwindow_buttons.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/view/mainwindow_buttons.cpp.i
+.PHONY : src/view/mainwindow_buttons.cpp.i
 
-src/signupwindow.s: src/signupwindow.cpp.s
-.PHONY : src/signupwindow.s
+src/view/mainwindow_buttons.s: src/view/mainwindow_buttons.cpp.s
+.PHONY : src/view/mainwindow_buttons.s
 
 # target to generate assembly for a file
-src/signupwindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src/signupwindow.cpp.s
-.PHONY : src/signupwindow.cpp.s
+src/view/mainwindow_buttons.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/view/mainwindow_buttons.cpp.s
+.PHONY : src/view/mainwindow_buttons.cpp.s
 
-src_autogen/4UGIYD6VGQ/qrc_resourses.o: src_autogen/4UGIYD6VGQ/qrc_resourses.cpp.o
-.PHONY : src_autogen/4UGIYD6VGQ/qrc_resourses.o
+src/view/signupwindow.o: src/view/signupwindow.cpp.o
+.PHONY : src/view/signupwindow.o
 
 # target to build an object file
-src_autogen/4UGIYD6VGQ/qrc_resourses.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src_autogen/4UGIYD6VGQ/qrc_resourses.cpp.o
-.PHONY : src_autogen/4UGIYD6VGQ/qrc_resourses.cpp.o
+src/view/signupwindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/view/signupwindow.cpp.o
+.PHONY : src/view/signupwindow.cpp.o
 
-src_autogen/4UGIYD6VGQ/qrc_resourses.i: src_autogen/4UGIYD6VGQ/qrc_resourses.cpp.i
-.PHONY : src_autogen/4UGIYD6VGQ/qrc_resourses.i
-
-# target to preprocess a source file
-src_autogen/4UGIYD6VGQ/qrc_resourses.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src_autogen/4UGIYD6VGQ/qrc_resourses.cpp.i
-.PHONY : src_autogen/4UGIYD6VGQ/qrc_resourses.cpp.i
-
-src_autogen/4UGIYD6VGQ/qrc_resourses.s: src_autogen/4UGIYD6VGQ/qrc_resourses.cpp.s
-.PHONY : src_autogen/4UGIYD6VGQ/qrc_resourses.s
-
-# target to generate assembly for a file
-src_autogen/4UGIYD6VGQ/qrc_resourses.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src_autogen/4UGIYD6VGQ/qrc_resourses.cpp.s
-.PHONY : src_autogen/4UGIYD6VGQ/qrc_resourses.cpp.s
-
-src_autogen/mocs_compilation.o: src_autogen/mocs_compilation.cpp.o
-.PHONY : src_autogen/mocs_compilation.o
-
-# target to build an object file
-src_autogen/mocs_compilation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src_autogen/mocs_compilation.cpp.o
-.PHONY : src_autogen/mocs_compilation.cpp.o
-
-src_autogen/mocs_compilation.i: src_autogen/mocs_compilation.cpp.i
-.PHONY : src_autogen/mocs_compilation.i
+src/view/signupwindow.i: src/view/signupwindow.cpp.i
+.PHONY : src/view/signupwindow.i
 
 # target to preprocess a source file
-src_autogen/mocs_compilation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src_autogen/mocs_compilation.cpp.i
-.PHONY : src_autogen/mocs_compilation.cpp.i
+src/view/signupwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/view/signupwindow.cpp.i
+.PHONY : src/view/signupwindow.cpp.i
 
-src_autogen/mocs_compilation.s: src_autogen/mocs_compilation.cpp.s
-.PHONY : src_autogen/mocs_compilation.s
+src/view/signupwindow.s: src/view/signupwindow.cpp.s
+.PHONY : src/view/signupwindow.s
 
 # target to generate assembly for a file
-src_autogen/mocs_compilation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/src_autogen/mocs_compilation.cpp.s
-.PHONY : src_autogen/mocs_compilation.cpp.s
+src/view/signupwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LwSound.dir/build.make CMakeFiles/LwSound.dir/src/view/signupwindow.cpp.s
+.PHONY : src/view/signupwindow.cpp.s
 
 # Help Target
 help:
@@ -487,8 +487,14 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... src_autogen"
-	@echo "... src"
+	@echo "... LwSound_autogen"
+	@echo "... LwSound"
+	@echo "... LwSound_autogen/4UGIYD6VGQ/qrc_resourses.o"
+	@echo "... LwSound_autogen/4UGIYD6VGQ/qrc_resourses.i"
+	@echo "... LwSound_autogen/4UGIYD6VGQ/qrc_resourses.s"
+	@echo "... LwSound_autogen/mocs_compilation.o"
+	@echo "... LwSound_autogen/mocs_compilation.i"
+	@echo "... LwSound_autogen/mocs_compilation.s"
 	@echo "... src/account.o"
 	@echo "... src/account.i"
 	@echo "... src/account.s"
@@ -504,27 +510,21 @@ help:
 	@echo "... src/layoutsdeleter.o"
 	@echo "... src/layoutsdeleter.i"
 	@echo "... src/layoutsdeleter.s"
-	@echo "... src/loginwindow.o"
-	@echo "... src/loginwindow.i"
-	@echo "... src/loginwindow.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/mainpage.o"
-	@echo "... src/mainpage.i"
-	@echo "... src/mainpage.s"
-	@echo "... src/mainpage_buttons.o"
-	@echo "... src/mainpage_buttons.i"
-	@echo "... src/mainpage_buttons.s"
-	@echo "... src/signupwindow.o"
-	@echo "... src/signupwindow.i"
-	@echo "... src/signupwindow.s"
-	@echo "... src_autogen/4UGIYD6VGQ/qrc_resourses.o"
-	@echo "... src_autogen/4UGIYD6VGQ/qrc_resourses.i"
-	@echo "... src_autogen/4UGIYD6VGQ/qrc_resourses.s"
-	@echo "... src_autogen/mocs_compilation.o"
-	@echo "... src_autogen/mocs_compilation.i"
-	@echo "... src_autogen/mocs_compilation.s"
+	@echo "... src/view/loginwindow.o"
+	@echo "... src/view/loginwindow.i"
+	@echo "... src/view/loginwindow.s"
+	@echo "... src/view/mainwindow.o"
+	@echo "... src/view/mainwindow.i"
+	@echo "... src/view/mainwindow.s"
+	@echo "... src/view/mainwindow_buttons.o"
+	@echo "... src/view/mainwindow_buttons.i"
+	@echo "... src/view/mainwindow_buttons.s"
+	@echo "... src/view/signupwindow.o"
+	@echo "... src/view/signupwindow.i"
+	@echo "... src/view/signupwindow.s"
 .PHONY : help
 
 

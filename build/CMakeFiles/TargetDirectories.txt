@@ -1,8 +1,8 @@
-/home/mint/GitRepos/AudioPlayer/build/CMakeFiles/src.dir
+/home/mint/GitRepos/AudioPlayer/build/CMakeFiles/LwSound.dir
 /home/mint/GitRepos/AudioPlayer/build/CMakeFiles/edit_cache.dir
 /home/mint/GitRepos/AudioPlayer/build/CMakeFiles/rebuild_cache.dir
 /home/mint/GitRepos/AudioPlayer/build/CMakeFiles/list_install_components.dir
 /home/mint/GitRepos/AudioPlayer/build/CMakeFiles/install.dir
 /home/mint/GitRepos/AudioPlayer/build/CMakeFiles/install/local.dir
 /home/mint/GitRepos/AudioPlayer/build/CMakeFiles/install/strip.dir
-/home/mint/GitRepos/AudioPlayer/build/CMakeFiles/src_autogen.dir
+/home/mint/GitRepos/AudioPlayer/build/CMakeFiles/LwSound_autogen.dir
