@@ -107,13 +107,13 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "CMakeFiles/src_autogen.dir/AutogenInfo.json"
-  "CMakeFiles/src_autogen.dir/AutoRcc_resourses_4UGIYD6VGQ_Info.json"
+  "CMakeFiles/LwSound_autogen.dir/AutogenInfo.json"
+  "CMakeFiles/LwSound_autogen.dir/AutoRcc_resourses_4UGIYD6VGQ_Info.json"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/src.dir/DependInfo.cmake"
-  "CMakeFiles/src_autogen.dir/DependInfo.cmake"
+  "CMakeFiles/LwSound.dir/DependInfo.cmake"
+  "CMakeFiles/LwSound_autogen.dir/DependInfo.cmake"
   )

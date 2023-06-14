@@ -1,3 +1,3 @@
 # Hashes of file build rules.
-972f39f0a18121cd67399c7663d2c2bf CMakeFiles/src_autogen
-56ba2093a901d02ec7f86f614579b85f src_autogen/4UGIYD6VGQ/qrc_resourses.cpp
+585c6394f3027b0676f2517fdfd1f1e0 CMakeFiles/LwSound_autogen
+3dc8baa64c75e7b524960108a2b520ee LwSound_autogen/4UGIYD6VGQ/qrc_resourses.cpp

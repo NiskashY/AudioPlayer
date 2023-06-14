@@ -21,10 +21,10 @@ template <class T>
 void RemoveAllSpaceSymbols(T& file_name) {
     auto check_symbol = [&](char symbol) {
         const QString special_symbols = "!.-_";
-        return (symbol >= 'a' && symbol <= 'z' ||
-                symbol >= 'A' && symbol <= 'Z' ||
-                symbol >= '0' && symbol <= '9' ||
-                special_symbols.contains(symbol) );
+        return (('a' <= symbol && symbol <= 'z') ||
+                ('A' <= symbol && symbol <= 'Z') ||
+                ('0' <= symbol && symbol <= '9') ||
+                special_symbols.contains(symbol));
     };
 
     for (auto& symbol : file_name) {
