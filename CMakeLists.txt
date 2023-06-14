@@ -23,6 +23,7 @@ file(GLOB SRC_FILES
     ${PROJECT_SOURCE_DIR}/src/*.cpp
     ${PROJECT_SOURCE_DIR}/src/checker/*.cpp
     ${PROJECT_SOURCE_DIR}/src/view/*.cpp
+    ${PROJECT_SOURCE_DIR}/src/view/mainwindow/*.cpp
 )
 
 # Define .h files for QtCreator
@@ -32,9 +33,10 @@ file(GLOB HDR_FILES
 
 # Define .ui files for QtCreator
 file(GLOB UI_FILES
-    ${PROJECT_SOURCES}/src/*.ui
-    ${PROJECT_SOURCES}/src/checker/*.ui
-    ${PROJECT_SOURCES}/src/view/*.ui
+    ${PROJECT_SOURCE_DIR}/src/*.ui
+    ${PROJECT_SOURCE_DIR}/src/checker/*.ui
+    ${PROJECT_SOURCE_DIR}/src/view/*.ui
+    ${PROJECT_SOURCE_DIR}/src/view/mainwindow/*.ui
 )
 
 set(PROJECT_SOURCES
