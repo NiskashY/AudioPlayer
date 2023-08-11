@@ -4,7 +4,6 @@ logs.txt
 
 # Prerequisites
 *.d
-
 # Compiled Object files
 *.slo
 *.lo
@@ -39,3 +38,5 @@ logs.txt
 .db_parametrs
 
 *build*
+.cache
+CMakeLists.txt.user

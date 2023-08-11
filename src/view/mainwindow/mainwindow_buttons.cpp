@@ -70,7 +70,7 @@ void MainWindow::on_tabWidget_tabBarClicked(int index) {
         working_directory.setFilter(QDir::Files | QDir::NoSymLinks);
         working_directory.setNameFilters(QStringList{"*.mp3", "*.wav"});
 
-        tracks_list = std::move(working_directory.entryList());
+        tracks_list = working_directory.entryList();
         if (tracks_list.isEmpty()) {
             AddLayoutToTab(ui->downVLayout);
         } else {

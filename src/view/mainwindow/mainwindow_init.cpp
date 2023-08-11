@@ -75,62 +75,44 @@ QString getWorkingDir() {
 
 }   // end anonymous namespace
 
+
+template <typename T1, typename T2,
+          typename T3, typename T4>
+void choose_connection_type(bool is_connect, T1 arg1, T2 arg2, T3 arg3, T4 arg4) {
+    if (is_connect) {
+         QObject::connect (arg1, arg2, arg3, arg4);
+    } else {
+         QObject::disconnect (arg1, arg2, arg3, arg4);
+    }
+}
+
 void MainWindow::ConnectionHandler(bool isConnect) {
-    if (isConnect) {
-            // Connect Sound Signals for player and UI
-            connect (
-                    player, &QMediaPlayer::positionChanged,
-                    this, &MainWindow::SetCurrentSliderPosition
-            ); // song 'progress bar' update
+    // Connect Sound Signals for player and UI
+    choose_connection_type( isConnect,
+            player, &QMediaPlayer::positionChanged,
+            this, &MainWindow::SetCurrentSliderPosition
+    ); // song 'progress bar' update
 
-            connect (
-                    player, &QMediaPlayer::durationChanged,
-                    this, &MainWindow::SetMaxSliderPosition
-            ); // song time update
-            connect (
-                    player, &QMediaPlayer::currentMediaChanged,
-                    this, &MainWindow::SetSongNameLabel
-            ); // song name update
-            connect (
-                    ui->songSlider, &QSlider::sliderMoved,
-                    this, &MainWindow::SliderPositionMoved
-            ); // slider moved -> change position in the soundtrack
-            connect (
-                    ui->songSlider, &QSlider::sliderPressed,
-                    this, &MainWindow::PauseFromSLider
-            ); // slider pause -> avoid sound interferences
-            connect (
-                    ui->songSlider, &QSlider::sliderReleased,
-                    this, &MainWindow::PlayFromSLider
-            ); // slider released -> continue playing
-        } else {
-            // Disconnect  Sound Signals for player and UI
-            disconnect (
-                    player, &QMediaPlayer::positionChanged,
-                    this, &MainWindow::SetCurrentSliderPosition
-            ); // song 'progress bar' update
-
-            disconnect (
-                    player, &QMediaPlayer::durationChanged,
-                    this, &MainWindow::SetMaxSliderPosition
-            ); // song time update
-            disconnect (
-                    player, &QMediaPlayer::currentMediaChanged,
-                    this, &MainWindow::SetSongNameLabel
-            ); // song name update
-            disconnect (
-                    ui->songSlider, &QSlider::sliderMoved,
-                    this, &MainWindow::SliderPositionMoved
-            ); // slider moved -> change position in the soundtrack
-            disconnect (
-                    ui->songSlider, &QSlider::sliderPressed,
-                    this, &MainWindow::PauseFromSLider
-            ); // slider pause -> avoid sound interferences
-            disconnect (
-                    ui->songSlider, &QSlider::sliderReleased,
-                    this, &MainWindow::PlayFromSLider
-            ); // slider released -> continue playing
-        }
+    choose_connection_type( isConnect,
+            player, &QMediaPlayer::durationChanged,
+            this, &MainWindow::SetMaxSliderPosition
+    ); // song time update
+    choose_connection_type( isConnect,
+            player, &QMediaPlayer::currentMediaChanged,
+            this, &MainWindow::SetSongNameLabel
+    ); // song name update
+    choose_connection_type( isConnect,
+            ui->songSlider, &QSlider::sliderMoved,
+            this, &MainWindow::SliderPositionMoved
+    ); // slider moved -> change position in the soundtrack
+    choose_connection_type( isConnect,
+            ui->songSlider, &QSlider::sliderPressed,
+            this, &MainWindow::PauseFromSLider
+    ); // slider pause -> avoid sound interferences
+    choose_connection_type( isConnect,
+            ui->songSlider, &QSlider::sliderReleased,
+            this, &MainWindow::PlayFromSLider
+    ); // slider released -> continue playing
 }
 
 MainWindow::MainWindow(QWidget *parent) :
